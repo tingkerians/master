@@ -11,6 +11,7 @@
 		7615F2771C7597E900ACBD3E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F2671C75973400ACBD3E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; };
 		7615F27C1C7597EF00ACBD3E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */; };
 		DF101BD41C6C12510006B4D3 /* RecentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD21C6C12510006B4D3 /* RecentTableViewController.swift */; };
 		DF101BD51C6C12510006B4D3 /* RecentTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BD31C6C12510006B4D3 /* RecentTableViewController.xib */; };
 		DF101BD81C6C14310006B4D3 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD61C6C14310006B4D3 /* RecentTableViewCell.swift */; };
@@ -223,6 +224,7 @@
 /* Begin PBXFileReference section */
 		7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
 		DF101BD21C6C12510006B4D3 /* RecentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewController.swift; sourceTree = "<group>"; };
 		DF101BD31C6C12510006B4D3 /* RecentTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentTableViewController.xib; sourceTree = "<group>"; };
 		DF101BD61C6C14310006B4D3 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 				DFF4CBBA1C6B0BD2008973D3 /* Assets.xcassets */,
 				DFF4CBBC1C6B0BD2008973D3 /* LaunchScreen.storyboard */,
 				DFF4CBBF1C6B0BD2008973D3 /* Info.plist */,
+				7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */,
 			);
 			path = doharmony;
 			sourceTree = "<group>";
@@ -947,6 +950,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF4CBF11C6B0CF2008973D3 /* MoodCollectionViewCell.swift in Sources */,
+				7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */,
 				DFF4CC0C1C6B2A2F008973D3 /* Recording2ViewController.swift in Sources */,
 				DFF4CC081C6B2A26008973D3 /* LayoutPage1ViewController.swift in Sources */,
 				DF526F731C6D9EBC009971FF /* AllMembersTableViewController.swift in Sources */,
@@ -1243,6 +1247,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */,
+			);
+			currentVersion = 7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */;
+			path = doharmony.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DFF4CBA81C6B0BD2008973D3 /* Project object */;
 }
