@@ -30,7 +30,7 @@ class RecordingViewController: UIViewController {
         print("Dup \(template.frame.width)")
         let bounds = UIScreen.mainScreen().bounds
         let width = bounds.size.width
-        let height = bounds.size.height
+        //let height = bounds.size.height
         //        print("screen width: \(width)")
         //        print("screen height: \(height)")
         

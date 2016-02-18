@@ -36,7 +36,7 @@ class Recording2ViewController: UIViewController {
         print("Dup \(template.frame.width)")
         let bounds = UIScreen.mainScreen().bounds
         let width = bounds.size.width
-        let height = bounds.size.height
+        //let height = bounds.size.height
 //        print("screen width: \(width)")
 //        print("screen height: \(height)")
         
@@ -101,7 +101,7 @@ class Recording2ViewController: UIViewController {
         let hframe1 : CGFloat = 604
         let frame1:UIView = UIView.init(frame: CGRectMake( xframe1 , yframe1, wframe1, hframe1))
         frame1.backgroundColor = UIColor.darkGrayColor()
-        let horizontalConstraint = NSLayoutConstraint(item: defaultTemplate, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        //let horizontalConstraint = NSLayoutConstraint(item: defaultTemplate, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
 //        frame1.addConstraint(horizontalConstraint)
         defaultTemplate.addSubview(frame1)
         
