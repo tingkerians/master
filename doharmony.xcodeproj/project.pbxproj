@@ -71,10 +71,6 @@
 		DFF4CBFC1C6B1988008973D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CBFB1C6B1988008973D3 /* ProfileViewController.swift */; };
 		DFF4CBFE1C6B1A47008973D3 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CBFD1C6B1A47008973D3 /* FriendsViewController.swift */; };
 		DFF4CC021C6B1BCA008973D3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CC011C6B1BCA008973D3 /* TabBarController.swift */; };
-		DFF4CC081C6B2A26008973D3 /* LayoutPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CC051C6B2A26008973D3 /* LayoutPage1ViewController.swift */; };
-		DFF4CC091C6B2A26008973D3 /* LayoutPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CC061C6B2A26008973D3 /* LayoutPage2ViewController.swift */; };
-		DFF4CC0A1C6B2A26008973D3 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CC071C6B2A26008973D3 /* LayoutViewController.swift */; };
-		DFF4CC0C1C6B2A2F008973D3 /* Recording2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4CC0B1C6B2A2F008973D3 /* Recording2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,10 +286,6 @@
 		DFF4CBFB1C6B1988008973D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DFF4CBFD1C6B1A47008973D3 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		DFF4CC011C6B1BCA008973D3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		DFF4CC051C6B2A26008973D3 /* LayoutPage1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutPage1ViewController.swift; sourceTree = "<group>"; };
-		DFF4CC061C6B2A26008973D3 /* LayoutPage2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutPage2ViewController.swift; sourceTree = "<group>"; };
-		DFF4CC071C6B2A26008973D3 /* LayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
-		DFF4CC0B1C6B2A2F008973D3 /* Recording2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,23 +648,11 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		DFF4CC0D1C6B2A37008973D3 /* Select Layout */ = {
-			isa = PBXGroup;
-			children = (
-				DFF4CC051C6B2A26008973D3 /* LayoutPage1ViewController.swift */,
-				DFF4CC061C6B2A26008973D3 /* LayoutPage2ViewController.swift */,
-				DFF4CC071C6B2A26008973D3 /* LayoutViewController.swift */,
-			);
-			name = "Select Layout";
-			sourceTree = "<group>";
-		};
 		DFF4CC0E1C6B2A41008973D3 /* Recording */ = {
 			isa = PBXGroup;
 			children = (
 				DF16A0B71C754FD1006E4019 /* Recording */,
 				DF16A0B21C754DB6006E4019 /* Template */,
-				DFF4CC0D1C6B2A37008973D3 /* Select Layout */,
-				DFF4CC0B1C6B2A2F008973D3 /* Recording2ViewController.swift */,
 			);
 			name = Recording;
 			sourceTree = "<group>";
@@ -951,17 +931,13 @@
 			files = (
 				DFF4CBF11C6B0CF2008973D3 /* MoodCollectionViewCell.swift in Sources */,
 				7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */,
-				DFF4CC0C1C6B2A2F008973D3 /* Recording2ViewController.swift in Sources */,
-				DFF4CC081C6B2A26008973D3 /* LayoutPage1ViewController.swift in Sources */,
 				DF526F731C6D9EBC009971FF /* AllMembersTableViewController.swift in Sources */,
 				DF526F771C6D9FBB009971FF /* AllMembersTableViewCell.swift in Sources */,
 				DF16A0B51C754E32006E4019 /* TemplateViewController.swift in Sources */,
-				DFF4CC0A1C6B2A26008973D3 /* LayoutViewController.swift in Sources */,
 				DFF4CBB61C6B0BD2008973D3 /* HomeViewController.swift in Sources */,
 				DF16A0BA1C755007006E4019 /* RecordingViewController.swift in Sources */,
 				DFF4CC021C6B1BCA008973D3 /* TabBarController.swift in Sources */,
 				DF101BEB1C6C19080006B4D3 /* ProjectsTableViewController.swift in Sources */,
-				DFF4CC091C6B2A26008973D3 /* LayoutPage2ViewController.swift in Sources */,
 				DF101BD81C6C14310006B4D3 /* RecentTableViewCell.swift in Sources */,
 				DFF4CBF71C6B0CF2008973D3 /* TestViewController.swift in Sources */,
 				DF526F5D1C6D5EB6009971FF /* MyFriendsTableViewCell.swift in Sources */,
