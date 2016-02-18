@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="AllMembersTableViewCell" customModule="doharmony" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="417" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="civ-g1-B7y">
+                        <rect key="frame" x="87" y="7" width="156" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="civ-g1-B7y" secondAttribute="height" multiplier="26:7" id="zGb-cr-cXa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-kQ-g3Z">
+                        <rect key="frame" x="319" y="19" width="22" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Wz2-QE-qzP"/>
+                            <constraint firstAttribute="width" constant="22" id="bQm-Ms-OCs"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7VY-QL-gWu">
+                        <rect key="frame" x="8" y="6" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="7VY-QL-gWu" secondAttribute="height" multiplier="1:1" id="iYp-n1-tqP"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="follow" translatesAutoresizingMaskIntoConstraints="NO" id="ZEX-oM-1EF">
+                        <rect key="frame" x="293" y="19" width="18" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="nQW-d8-ndx"/>
+                            <constraint firstAttribute="height" constant="15" id="tai-le-4Ua"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friend" translatesAutoresizingMaskIntoConstraints="NO" id="A8X-Ms-eev">
+                        <rect key="frame" x="266" y="19" width="18" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="lpz-7l-psO"/>
+                            <constraint firstAttribute="width" constant="18" id="m8p-W6-ZrR"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge1" translatesAutoresizingMaskIntoConstraints="NO" id="v5z-J8-a8T">
+                        <rect key="frame" x="63" y="16" width="10" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="v5z-J8-a8T" secondAttribute="height" multiplier="5:12" id="EuU-PF-qjx"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="civ-g1-B7y" firstAttribute="leading" secondItem="v5z-J8-a8T" secondAttribute="trailing" constant="14" id="0zX-hD-20y"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="civ-g1-B7y" secondAttribute="bottom" constant="1" id="5SW-5F-RQQ"/>
+                    <constraint firstItem="A8X-Ms-eev" firstAttribute="top" secondItem="ZEX-oM-1EF" secondAttribute="top" id="66C-t4-xwx"/>
+                    <constraint firstItem="A8X-Ms-eev" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="HBj-Ag-bvl"/>
+                    <constraint firstItem="7VY-QL-gWu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IPe-Tu-w5R"/>
+                    <constraint firstItem="A8X-Ms-eev" firstAttribute="leading" secondItem="civ-g1-B7y" secondAttribute="trailing" constant="23" id="MoS-jU-J9I"/>
+                    <constraint firstItem="v5z-J8-a8T" firstAttribute="centerY" secondItem="civ-g1-B7y" secondAttribute="centerY" id="Ph0-uI-yli"/>
+                    <constraint firstItem="civ-g1-B7y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="Tnj-QD-Dfs"/>
+                    <constraint firstItem="gsN-kQ-g3Z" firstAttribute="top" secondItem="ZEX-oM-1EF" secondAttribute="top" id="aaD-GV-Gsk"/>
+                    <constraint firstItem="7VY-QL-gWu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dk7-Sj-vQV"/>
+                    <constraint firstItem="7VY-QL-gWu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="eyH-lY-oCU"/>
+                    <constraint firstItem="gsN-kQ-g3Z" firstAttribute="leading" secondItem="ZEX-oM-1EF" secondAttribute="trailing" constant="8" symbolic="YES" id="g2W-if-pAe"/>
+                    <constraint firstItem="ZEX-oM-1EF" firstAttribute="leading" secondItem="A8X-Ms-eev" secondAttribute="trailing" constant="9" id="hGS-Bx-N6U"/>
+                    <constraint firstItem="v5z-J8-a8T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="nzj-Kg-gY1"/>
+                    <constraint firstItem="v5z-J8-a8T" firstAttribute="leading" secondItem="7VY-QL-gWu" secondAttribute="trailing" constant="9" id="se6-vp-Mym"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="ProfileName" destination="civ-g1-B7y" id="Ztg-RB-g5z"/>
+                <outlet property="ProfilePicture" destination="7VY-QL-gWu" id="muH-M6-qm8"/>
+            </connections>
+            <point key="canvasLocation" x="410.5" y="312.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="badge1" width="32" height="61"/>
+        <image name="follow" width="46" height="57"/>
+        <image name="friend" width="55" height="53"/>
+        <image name="mail" width="49" height="34"/>
+    </resources>
+</document>

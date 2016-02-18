@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordingViewController" customModule="doharmony" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWU-Vv-DXC">
+                    <rect key="frame" x="278" y="481" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="ANx-KK-OeA"/>
+                        <constraint firstAttribute="width" constant="44" id="Cwi-L5-dTP"/>
+                        <constraint firstAttribute="height" constant="44" id="I3P-CA-5Jq"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="cU8-XK-Skz"/>
+                    </constraints>
+                    <state key="normal" image="play"/>
+                    <connections>
+                        <action selector="PlayButton:" destination="-1" eventType="touchUpInside" id="E1n-1n-qvS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-Hv-Y2J">
+                    <rect key="frame" x="28" y="488" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="7y2-ib-b0Z"/>
+                        <constraint firstAttribute="height" constant="33" id="Oie-cV-FAr"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="sRq-PE-ONL"/>
+                        <constraint firstAttribute="width" constant="33" id="yad-xz-PGa"/>
+                    </constraints>
+                    <state key="normal" image="metronome"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfD-kQ-deG">
+                    <rect key="frame" x="114" y="53" width="372" height="372"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-fX-JdD">
+                            <rect key="frame" x="2" y="2" width="183" height="368"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="RYI-fX-JdD" secondAttribute="height" multiplier="183:368" id="tIn-TY-3LZ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-TV-nRk">
+                            <rect key="frame" x="187" y="187" width="183" height="183"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="tWB-TV-nRk" secondAttribute="height" multiplier="1:1" id="TEd-7t-B9c"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOV-gc-XVn">
+                            <rect key="frame" x="187" y="2" width="183" height="183"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hOV-gc-XVn" secondAttribute="height" multiplier="1:1" id="VAM-ac-aeo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="RYI-fX-JdD" firstAttribute="leading" secondItem="tfD-kQ-deG" secondAttribute="leading" constant="2" id="2pC-gv-k8S"/>
+                        <constraint firstItem="tWB-TV-nRk" firstAttribute="top" secondItem="hOV-gc-XVn" secondAttribute="bottom" constant="2" id="5kP-qC-bWe"/>
+                        <constraint firstItem="hOV-gc-XVn" firstAttribute="leading" secondItem="RYI-fX-JdD" secondAttribute="trailing" constant="2" id="85V-cK-WnS"/>
+                        <constraint firstItem="RYI-fX-JdD" firstAttribute="bottom" secondItem="tWB-TV-nRk" secondAttribute="bottom" id="88z-5q-668"/>
+                        <constraint firstItem="tWB-TV-nRk" firstAttribute="top" secondItem="hOV-gc-XVn" secondAttribute="bottom" constant="2" id="CoN-5d-c0j"/>
+                        <constraint firstItem="hOV-gc-XVn" firstAttribute="top" secondItem="RYI-fX-JdD" secondAttribute="top" id="F8Y-nO-hPT"/>
+                        <constraint firstItem="RYI-fX-JdD" firstAttribute="centerY" secondItem="tfD-kQ-deG" secondAttribute="centerY" id="IuL-eS-cQ7"/>
+                        <constraint firstItem="tWB-TV-nRk" firstAttribute="leading" secondItem="RYI-fX-JdD" secondAttribute="trailing" constant="2" id="WTj-JG-NBX"/>
+                        <constraint firstItem="hOV-gc-XVn" firstAttribute="leading" secondItem="RYI-fX-JdD" secondAttribute="trailing" constant="2" id="Zmn-hh-nf1"/>
+                        <constraint firstItem="RYI-fX-JdD" firstAttribute="top" secondItem="tfD-kQ-deG" secondAttribute="top" constant="2" id="fBk-gd-9ez"/>
+                        <constraint firstAttribute="trailing" secondItem="hOV-gc-XVn" secondAttribute="trailing" constant="2" id="fM0-H6-pzy"/>
+                        <constraint firstItem="hOV-gc-XVn" firstAttribute="trailing" secondItem="tWB-TV-nRk" secondAttribute="trailing" id="ppQ-5Y-vKM"/>
+                        <constraint firstItem="hOV-gc-XVn" firstAttribute="leading" secondItem="tWB-TV-nRk" secondAttribute="leading" id="qkV-Mp-jJG"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dr-Jv-gGY">
+                    <rect key="frame" x="547" y="488" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="FNL-A9-95s"/>
+                        <constraint firstAttribute="height" constant="33" id="iTg-rs-VjQ"/>
+                        <constraint firstAttribute="width" constant="33" id="wmj-al-z6S"/>
+                    </constraints>
+                    <state key="normal" image="cam"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mOg-Hv-Y2J" secondAttribute="bottom" constant="79" id="2Kh-Ja-GEX"/>
+                <constraint firstItem="mOg-Hv-Y2J" firstAttribute="bottom" secondItem="vWU-Vv-DXC" secondAttribute="bottom" constant="-4" id="4YI-qc-76f"/>
+                <constraint firstItem="tfD-kQ-deG" firstAttribute="centerX" secondItem="vWU-Vv-DXC" secondAttribute="centerX" id="9tP-WP-ltT"/>
+                <constraint firstItem="5dr-Jv-gGY" firstAttribute="top" secondItem="mOg-Hv-Y2J" secondAttribute="top" id="GRX-Yq-7tH"/>
+                <constraint firstItem="mOg-Hv-Y2J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="KOJ-lL-zuB"/>
+                <constraint firstItem="5dr-Jv-gGY" firstAttribute="bottom" secondItem="vWU-Vv-DXC" secondAttribute="bottom" constant="-4" id="LxU-wk-yGW"/>
+                <constraint firstAttribute="trailing" secondItem="5dr-Jv-gGY" secondAttribute="trailing" constant="20" id="O7Y-Zs-SKS"/>
+                <constraint firstItem="vWU-Vv-DXC" firstAttribute="top" secondItem="tfD-kQ-deG" secondAttribute="bottom" constant="56" id="re3-6H-Ax0"/>
+                <constraint firstItem="vWU-Vv-DXC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uN7-y2-dui"/>
+                <constraint firstItem="tfD-kQ-deG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="53" id="vgm-5G-ECq"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="cam" width="94" height="94"/>
+        <image name="metronome" width="94" height="94"/>
+        <image name="play" width="137" height="137"/>
+    </resources>
+</document>

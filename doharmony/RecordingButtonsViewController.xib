@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordingButtonsViewController" customModule="doharmony" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="191" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21j-oD-1ye">
+                    <rect key="frame" x="0.0" y="5" width="43" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="21j-oD-1ye" secondAttribute="height" multiplier="43:26" id="mcZ-0v-6u3"/>
+                    </constraints>
+                    <state key="normal" image="recording"/>
+                    <connections>
+                        <action selector="recordButton:" destination="-1" eventType="touchUpInside" id="Aat-PH-qAb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdc-oo-pKb">
+                    <rect key="frame" x="74" y="1" width="43" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Vdc-oo-pKb" secondAttribute="height" multiplier="43:33" id="XyR-05-wtf"/>
+                    </constraints>
+                    <state key="normal" image="import"/>
+                    <connections>
+                        <action selector="importButton:" destination="-1" eventType="touchUpInside" id="ntF-L3-vZG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi5-pH-pA2">
+                    <rect key="frame" x="150" y="0.0" width="41" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Gi5-pH-pA2" secondAttribute="height" multiplier="41:40" id="Ool-vT-cgM"/>
+                    </constraints>
+                    <state key="normal" image="invite"/>
+                    <connections>
+                        <action selector="inviteButton:" destination="-1" eventType="touchUpInside" id="TZe-f4-Anm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Gi5-pH-pA2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3pI-Iw-1Kw"/>
+                <constraint firstItem="Gi5-pH-pA2" firstAttribute="leading" secondItem="Vdc-oo-pKb" secondAttribute="trailing" constant="33" id="49M-Uh-PAe"/>
+                <constraint firstAttribute="bottom" secondItem="Gi5-pH-pA2" secondAttribute="bottom" id="C1Y-2n-ckE"/>
+                <constraint firstItem="Vdc-oo-pKb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nnw-Nd-LXH"/>
+                <constraint firstAttribute="trailing" secondItem="Gi5-pH-pA2" secondAttribute="trailing" id="cPp-Qd-H8P"/>
+                <constraint firstItem="21j-oD-1ye" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vVa-ye-ecv"/>
+                <constraint firstItem="Vdc-oo-pKb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="1" id="weh-uj-pth"/>
+                <constraint firstItem="21j-oD-1ye" firstAttribute="centerY" secondItem="Vdc-oo-pKb" secondAttribute="centerY" id="xoT-GU-0fj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="359.5" y="86"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="import" width="65" height="56"/>
+        <image name="invite" width="47" height="46"/>
+        <image name="recording" width="43" height="26"/>
+    </resources>
+</document>

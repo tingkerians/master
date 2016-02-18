@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateViewController" customModule="doharmony" customModuleProvider="target">
+            <connections>
+                <outlet property="LayoutSelectionView" destination="i5M-Pr-FkT" id="2HY-W0-8vJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-ml-Sz8">
+                    <rect key="frame" x="250" y="105" width="100" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v32-G8-2vH">
+                            <rect key="frame" x="2" y="2" width="96" height="96"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="v32-G8-2vH" secondAttribute="height" multiplier="1:1" id="9uP-Nt-Ews"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="v32-G8-2vH" firstAttribute="top" secondItem="ZFT-ml-Sz8" secondAttribute="top" constant="2" id="5M9-2z-xAe"/>
+                        <constraint firstItem="v32-G8-2vH" firstAttribute="leading" secondItem="ZFT-ml-Sz8" secondAttribute="leading" constant="2" id="HVV-1d-DnL"/>
+                        <constraint firstAttribute="width" secondItem="ZFT-ml-Sz8" secondAttribute="height" multiplier="1:1" id="I9r-qw-gmE"/>
+                        <constraint firstAttribute="bottom" secondItem="v32-G8-2vH" secondAttribute="bottom" constant="2" id="RPH-t0-2dY"/>
+                        <constraint firstAttribute="trailing" secondItem="v32-G8-2vH" secondAttribute="trailing" constant="2" id="Zc9-Nb-lq3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ql-XI-Fdr">
+                    <rect key="frame" x="250" y="230" width="100" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jK5-J4-pKQ">
+                            <rect key="frame" x="2" y="2" width="47" height="96"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="jK5-J4-pKQ" secondAttribute="height" multiplier="47:96" id="5E6-NQ-xIn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiJ-3P-ht4">
+                            <rect key="frame" x="51" y="2" width="47" height="96"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="TiJ-3P-ht4" secondAttribute="height" multiplier="47:96" id="Y4b-GX-2dv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="TiJ-3P-ht4" secondAttribute="trailing" constant="2" id="3Ge-uU-rJH"/>
+                        <constraint firstAttribute="width" secondItem="4Ql-XI-Fdr" secondAttribute="height" multiplier="1:1" id="GZT-0G-EPv"/>
+                        <constraint firstItem="TiJ-3P-ht4" firstAttribute="top" secondItem="4Ql-XI-Fdr" secondAttribute="top" constant="2" id="Ghk-lE-I0f"/>
+                        <constraint firstItem="jK5-J4-pKQ" firstAttribute="top" secondItem="4Ql-XI-Fdr" secondAttribute="top" constant="2" id="SqY-Gd-4v7"/>
+                        <constraint firstAttribute="bottom" secondItem="TiJ-3P-ht4" secondAttribute="bottom" constant="2" id="iOx-23-HOw"/>
+                        <constraint firstItem="jK5-J4-pKQ" firstAttribute="leading" secondItem="4Ql-XI-Fdr" secondAttribute="leading" constant="2" id="rlg-Yh-AMF"/>
+                        <constraint firstAttribute="bottom" secondItem="jK5-J4-pKQ" secondAttribute="bottom" constant="2" id="v2T-Sd-zEu"/>
+                        <constraint firstItem="TiJ-3P-ht4" firstAttribute="leading" secondItem="jK5-J4-pKQ" secondAttribute="trailing" constant="2" id="wT3-4x-xTN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="4Ql-XI-Fdr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="La1-QW-XzC"/>
+                <constraint firstItem="4Ql-XI-Fdr" firstAttribute="width" secondItem="4Ql-XI-Fdr" secondAttribute="height" multiplier="1:1" id="vAN-Zh-bbt"/>
+                <constraint firstItem="ZFT-ml-Sz8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="w3Q-mQ-eF6"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
