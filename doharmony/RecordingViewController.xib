@@ -8,6 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordingViewController" customModule="doharmony" customModuleProvider="target">
             <connections>
+                <outlet property="defaultFrame1" destination="RYI-fX-JdD" id="Yxg-Qa-rDa"/>
+                <outlet property="defaultFrame2" destination="hOV-gc-XVn" id="AaC-tH-ZQH"/>
+                <outlet property="defaultFrame3" destination="tWB-TV-nRk" id="XGb-SG-eA3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,25 +42,34 @@
                     </constraints>
                     <state key="normal" image="metronome"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dr-Jv-gGY">
+                    <rect key="frame" x="547" y="488" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="FNL-A9-95s"/>
+                        <constraint firstAttribute="height" constant="33" id="iTg-rs-VjQ"/>
+                        <constraint firstAttribute="width" constant="33" id="wmj-al-z6S"/>
+                    </constraints>
+                    <state key="normal" image="cam"/>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfD-kQ-deG">
-                    <rect key="frame" x="114" y="53" width="372" height="372"/>
+                    <rect key="frame" x="129" y="70" width="342" height="342"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-fX-JdD">
-                            <rect key="frame" x="2" y="2" width="183" height="368"/>
+                            <rect key="frame" x="2" y="2" width="168" height="338"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="RYI-fX-JdD" secondAttribute="height" multiplier="183:368" id="tIn-TY-3LZ"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-TV-nRk">
-                            <rect key="frame" x="187" y="187" width="183" height="183"/>
+                            <rect key="frame" x="172" y="172" width="168" height="168"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="tWB-TV-nRk" secondAttribute="height" multiplier="1:1" id="TEd-7t-B9c"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOV-gc-XVn">
-                            <rect key="frame" x="187" y="2" width="183" height="183"/>
+                            <rect key="frame" x="172" y="2" width="168" height="168"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="hOV-gc-XVn" secondAttribute="height" multiplier="1:1" id="VAM-ac-aeo"/>
@@ -81,15 +93,6 @@
                         <constraint firstItem="hOV-gc-XVn" firstAttribute="leading" secondItem="tWB-TV-nRk" secondAttribute="leading" id="qkV-Mp-jJG"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dr-Jv-gGY">
-                    <rect key="frame" x="547" y="488" width="33" height="33"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="FNL-A9-95s"/>
-                        <constraint firstAttribute="height" constant="33" id="iTg-rs-VjQ"/>
-                        <constraint firstAttribute="width" constant="33" id="wmj-al-z6S"/>
-                    </constraints>
-                    <state key="normal" image="cam"/>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -100,9 +103,9 @@
                 <constraint firstItem="mOg-Hv-Y2J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="KOJ-lL-zuB"/>
                 <constraint firstItem="5dr-Jv-gGY" firstAttribute="bottom" secondItem="vWU-Vv-DXC" secondAttribute="bottom" constant="-4" id="LxU-wk-yGW"/>
                 <constraint firstAttribute="trailing" secondItem="5dr-Jv-gGY" secondAttribute="trailing" constant="20" id="O7Y-Zs-SKS"/>
-                <constraint firstItem="vWU-Vv-DXC" firstAttribute="top" secondItem="tfD-kQ-deG" secondAttribute="bottom" constant="56" id="re3-6H-Ax0"/>
+                <constraint firstItem="vWU-Vv-DXC" firstAttribute="top" secondItem="tfD-kQ-deG" secondAttribute="bottom" constant="69" id="re3-6H-Ax0"/>
                 <constraint firstItem="vWU-Vv-DXC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uN7-y2-dui"/>
-                <constraint firstItem="tfD-kQ-deG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="53" id="vgm-5G-ECq"/>
+                <constraint firstItem="tfD-kQ-deG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="vgm-5G-ECq"/>
             </constraints>
         </view>
     </objects>

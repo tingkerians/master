@@ -10,15 +10,18 @@ import UIKit
 
 class RecordingViewController: UIViewController {
 
+    @IBOutlet weak var defaultFrame1: UIView!
+    @IBOutlet weak var defaultFrame2: UIView!
+    @IBOutlet weak var defaultFrame3: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        defaultFrame1.addSubview(buttonsView(defaultFrame1))
+        defaultFrame2.addSubview(buttonsView(defaultFrame2))
+        defaultFrame3.addSubview(buttonsView(defaultFrame3))
     }
     
     @IBAction func PlayButton(sender: AnyObject) {
@@ -61,19 +64,19 @@ class RecordingViewController: UIViewController {
             let frame:UIView = UIView.init(frame: size)
             frame.backgroundColor = UIColor.darkGrayColor()
             newTemplate.addSubview(frame)
-            frame.addSubview(buttonsView(frame,w: h,h: h))
+            frame.addSubview(buttonsView(frame))
         }
         
         
     }
 
-    func buttonsView(frame:UIView,w:CGFloat,h:CGFloat) -> UIView {
-        let xButtonsView = w / 3.2
-        let yButtonsView = h / 2
-        //        print("wframe: \(w)")
-        //        print("xButtonsView: \(xButtonsView)")
+    func buttonsView(frame:UIView) -> UIView {
+        let wFrame = frame.frame.size.width
+        let hFrame = frame.frame.size.height
+        let xButtonsView = wFrame / 3.2
+        let yButtonsView = hFrame / 2
         
-        let size = CGRectMake( xButtonsView , yButtonsView , w * 0.4, 50)
+        let size = CGRectMake( xButtonsView , yButtonsView , wFrame * 0.4, 50)
         let buttonsView:UIView = UIView.init(frame: size)
         
         let rec = UIImage(named: "recording") as UIImage?
