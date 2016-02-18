@@ -15,7 +15,7 @@ class PostsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.backgroundColor = UIColor .clearColor()
+        
         self.ProfilePicture.layer.masksToBounds = true
         self.ProfilePicture.layer.cornerRadius = self.ProfilePicture.frame.width / 2
     }
@@ -26,4 +26,12 @@ class PostsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//    func toPlayPost(sender: UITapGestureRecognizer){
+//                Template = sender.view
+//                for subview:UIView in Template.subviews{
+//                    Frames.append(subview)
+//                }
+//                self.performSegueWithIdentifier("toRecordingPage", sender: sender)
+//    }
+//
 }

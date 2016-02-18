@@ -9,7 +9,7 @@
 import UIKit
 
 class PostsTableViewController: UITableViewController {
-        
+var Template:UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +44,15 @@ class PostsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 130.0
     }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+         print("You selected cell #\(indexPath.row)!")
+        let vc = PlayPostViewController(nibName: "PlayPostViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+       // self.view.addSubview(vc.view)
+         self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
