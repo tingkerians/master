@@ -1,5 +1,5 @@
 //
-//  RecentlyTableViewController.swift
+//  LocalTableViewController.swift
 //  doharmony
 //
 //  Created by Eleazer Toluan on 2/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecentTableViewController: UITableViewController {
+class LocalTableViewController: UITableViewController {
     
     var namesArray : [String] = ["Little Star", "Jingle Bell", "Canon", "Two Tiger", "Bayer No.8", "Silent Night", "The Painter", "Gavotte", "Minuet 1", "Moments"]
     var photoNameArray : [String] = ["littleStar", "jingleBell", "canon", "default", "default", "default", "default", "default", "default", "default"]
@@ -16,7 +16,7 @@ class RecentTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("recent")
-        self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "LocalTableViewCell", bundle: nil), forCellReuseIdentifier: "LocalTableViewCell")
         
 //        var nib = UINib(nibName: "TrackDetailsViewController", bundle: nil)
 //        self.registerNib(nib, forCellReuseIIdentifier: "cell")
@@ -41,7 +41,7 @@ class RecentTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
+        let cell : LocalTableViewCell = tableView.dequeueReusableCellWithIdentifier("LocalTableViewCell") as! LocalTableViewCell
 
         cell.TitleLabel.text = namesArray[indexPath.row]
         cell.ImageView.image = UIImage(named: photoNameArray[indexPath.row])

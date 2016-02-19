@@ -6,9 +6,10 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayPostViewController" customModule="doharmony" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackDetailsViewController" customModule="doharmony" customModuleProvider="target">
             <connections>
                 <outlet property="CommentTableView" destination="wtH-zg-Vhr" id="AfN-qL-YM0"/>
+                <outlet property="TrackTitle" destination="fys-3K-dS1" id="qt5-DT-uC0"/>
                 <outlet property="commentBox" destination="7Zr-q4-Yp8" id="vrR-aJ-ftz"/>
                 <outlet property="commentBoxHeight" destination="hOP-iX-wla" id="eEw-uc-9cV"/>
                 <outlet property="commentTextView" destination="hcb-Wi-igF" id="Qvc-Wv-Ljw"/>

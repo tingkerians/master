@@ -1,37 +1,37 @@
 //
-//  MyProfileViewController.swift
+//  SignUpViewController.swift
 //  doharmony
 //
-//  Created by Eleazer Toluan on 2/11/16.
+//  Created by eliakim on 2/19/16.
 //  Copyright © 2016 Eleazer Toluan. All rights reserved.
 //
 
 import UIKit
 
-class MyProfileViewController: UIViewController {
-
-    @IBAction func LoginButton(sender: AnyObject) {
-        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.presentViewController(vc, animated: true, completion: nil)
-        
+class SignUpViewController: UIViewController {
+    
+    @IBOutlet var FirstnameTextField: UITextField!
+    @IBOutlet var LastnameTextField: UITextField!
+    @IBOutlet var EmailTextField: UITextField!
+    @IBOutlet var UsernameTextField: UITextField!
+    @IBOutlet var PasswordTextField: UITextField!
+    @IBOutlet var RetypePasswordTextField: UITextField!
+    
+    @IBAction func CancelButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
-    
-    @IBOutlet weak var ProfilePicture: UIImageView!
-    
+    @IBAction func CloseButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        ProfilePicture.layer.cornerRadius = ProfilePicture.frame.width / 2
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
 

@@ -46,11 +46,10 @@ var Template:UIView!
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-         print("You selected cell #\(indexPath.row)!")
-        let vc = PlayPostViewController(nibName: "PlayPostViewController", bundle: nil)
+        print("You selected cell #\(indexPath.row)!")
+        let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
-       // self.view.addSubview(vc.view)
-         self.presentViewController(vc, animated: true, completion: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     
