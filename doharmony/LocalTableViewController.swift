@@ -55,7 +55,7 @@ class LocalTableViewController: UITableViewController {
     var valueToPass = "hello world"
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
  
-        let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
+        let vc = PlayTrackViewController(nibName: "PlayTrackViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
         self.presentViewController(vc, animated: true, completion: nil)
         

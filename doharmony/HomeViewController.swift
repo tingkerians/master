@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         
         var controllerArray : [UIViewController] = []
         
-        let controller1 : RecentTableViewController = RecentTableViewController(nibName: "RecentTableViewController", bundle: nil)
+        let controller1 : RecentViewController = RecentViewController(nibName: "RecentViewController", bundle: nil)
         controller1.title = "Recent"
         controllerArray.append(controller1)
         let controller2 : PopularViewController = PopularViewController(nibName: "PopularViewController", bundle: nil)
