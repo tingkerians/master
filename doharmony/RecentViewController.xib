@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentViewController">
+            <connections>
+                <outlet property="SearchBar" destination="mOH-Xc-UDr" id="LTf-2A-gpi"/>
+                <outlet property="tableView" destination="IhC-UX-6tc" id="x7I-ni-pFt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mOH-Xc-UDr">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="OXa-Yq-oZf"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IhC-UX-6tc">
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="a9f-oa-s7O"/>
+                        <outlet property="delegate" destination="-1" id="Cgk-U4-Fe7"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.047120418849999998" green="0.047120418849999998" blue="0.047120418849999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IhC-UX-6tc" secondAttribute="bottom" id="22T-1a-4Au"/>
+                <constraint firstItem="IhC-UX-6tc" firstAttribute="top" secondItem="mOH-Xc-UDr" secondAttribute="bottom" id="23l-JW-bfa"/>
+                <constraint firstItem="IhC-UX-6tc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Df-fI-5Ym"/>
+                <constraint firstItem="IhC-UX-6tc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9jo-Du-bmx"/>
+                <constraint firstAttribute="trailing" secondItem="IhC-UX-6tc" secondAttribute="trailing" id="Ban-Ym-xKR"/>
+                <constraint firstItem="mOH-Xc-UDr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UQI-Mu-8jH"/>
+                <constraint firstItem="mOH-Xc-UDr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WIL-5i-tb4"/>
+                <constraint firstItem="mOH-Xc-UDr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aA3-Ax-glC"/>
+                <constraint firstAttribute="trailing" secondItem="mOH-Xc-UDr" secondAttribute="trailing" id="rHa-M0-rgy"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

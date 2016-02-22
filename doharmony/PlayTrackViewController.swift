@@ -1,37 +1,24 @@
 //
-//  MyProfileViewController.swift
+//  PlayTrackViewController.swift
 //  doharmony
 //
-//  Created by Eleazer Toluan on 2/11/16.
+//  Created by eliakim on 2/19/16.
 //  Copyright © 2016 Eleazer Toluan. All rights reserved.
 //
 
 import UIKit
 
-class MyProfileViewController: UIViewController {
+class PlayTrackViewController: UIViewController {
 
-    @IBAction func LoginButton(sender: AnyObject) {
-        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.presentViewController(vc, animated: true, completion: nil)
-        
-    }
-    
-    @IBOutlet weak var ProfilePicture: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        ProfilePicture.layer.cornerRadius = ProfilePicture.frame.width / 2
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
 

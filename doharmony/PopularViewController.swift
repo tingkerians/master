@@ -22,13 +22,13 @@ class PopularViewController: UIViewController {
         
         var controllerArray : [UIViewController] = []
         
-        let controller1 : RecentTableViewController = RecentTableViewController(nibName: "RecentTableViewController", bundle: nil)
+        let controller1 : RecentViewController = RecentViewController(nibName: "RecentViewController", bundle: nil)
         controller1.title = "Last Week"
         controllerArray.append(controller1)
         let controller2 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
         controller2.title = "Last Month"
         controllerArray.append(controller2)
-        let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
+        let controller3 : LocalTableViewController = LocalTableViewController(nibName: "LocalTableViewController", bundle: nil)
         controller3.title = "All Time"
         controllerArray.append(controller3)
         

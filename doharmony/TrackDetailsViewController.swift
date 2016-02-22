@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PlayPostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIScrollViewDelegate{
+class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIScrollViewDelegate{
+    var label = UILabel()
     @IBOutlet weak var commentBoxHeight: NSLayoutConstraint!
     @IBOutlet weak var commentBox: UIView!
     
@@ -16,10 +17,13 @@ class PlayPostViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet var commentTextView: UITextView!
     @IBOutlet weak var CommentTableView: UITableView!
+    @IBOutlet weak var TrackTitle: UILabel!
+    
     @IBAction func closeButton(sender: AnyObject) {
         print("close")
         self.dismissViewControllerAnimated(false, completion: nil)
     }
+    
     
     let memberName = ["Daryl Decoyna", "Khemer", "Kyle", "Mark"]
     let comment = ["In publishing and graphic design, lorem ipsum.", "The lorem ipsum text is typically a scrambled section of De finibus bonorum et malorum, a 1st-century BC Latin text by Cicero, with words altered, added, and removed to make it nonsensical, improper Latin.","Great!!!", "bye"]
@@ -27,17 +31,18 @@ class PlayPostViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.TrackTitle.label = self.TrackTitle
+
         self.commentBoxHeight.constant = 60
         self.postButton.hidden = true
         self.postButtonHeight.constant = 0
         self.commentTextView.text = "Add comment"
         self.commentTextView.textColor = UIColor.lightGrayColor()
         
-        self.CommentTableView.registerNib(UINib(nibName: "commentBoxCell", bundle: nil), forCellReuseIdentifier: "commentBoxCell")
         self.CommentTableView.registerNib(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
         self.CommentTableView.estimatedRowHeight = 80
         self.CommentTableView.rowHeight = UITableViewAutomaticDimension
-        
+
         self.CommentTableView.setNeedsLayout()
         self.CommentTableView.layoutIfNeeded()
         
@@ -54,18 +59,7 @@ class PlayPostViewController: UIViewController, UITableViewDataSource, UITableVi
     func numberOfSectionsInTableView(CommentTableView: UITableView) -> Int {
         return 1
     }
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        self.commentBoxHeight.constant = 0
-        self.commentBox.hidden = true
-        print("scrolllllllllling")
-        
-        
-        let scrollOffset = scrollView.contentOffset.y
-        if scrollOffset == 0{
-            self.commentBoxHeight.constant = 60
-            self.commentBox.hidden = false
-        }
-    }
+    
     func tableView(CommentTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let mycount = self.profilePic.count
         print(mycount)
@@ -100,6 +94,18 @@ class PlayPostViewController: UIViewController, UITableViewDataSource, UITableVi
         commentTextView.resignFirstResponder()
     }
     // End dismiss keyboard
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        self.commentBoxHeight.constant = 0
+        self.commentBox.hidden = true
+        print("scrolllllllllling")
+        
+        
+        let scrollOffset = scrollView.contentOffset.y
+        if scrollOffset == 0{
+            self.commentBoxHeight.constant = 60
+            self.commentBox.hidden = false
+        }
+    }
     func textViewDidBeginEditing(commentTextView: UITextView) {
         if commentTextView.textColor == UIColor.lightGrayColor(){
             commentTextView.text = nil

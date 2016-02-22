@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         
         var controllerArray : [UIViewController] = []
         
-        let controller1 : RecentTableViewController = RecentTableViewController(nibName: "RecentTableViewController", bundle: nil)
+        let controller1 : RecentViewController = RecentViewController(nibName: "RecentViewController", bundle: nil)
         controller1.title = "Recent"
         controllerArray.append(controller1)
         let controller2 : PopularViewController = PopularViewController(nibName: "PopularViewController", bundle: nil)
@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         let controller3 : BestTableViewController = BestTableViewController(nibName: "BestTableViewController", bundle: nil)
         controller3.title = "Best"
         controllerArray.append(controller3)
-        let controller4 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
+        let controller4 : LocalTableViewController = LocalTableViewController(nibName: "LocalTableViewController", bundle: nil)
         controller4.title = "Local"
         controllerArray.append(controller4)
         

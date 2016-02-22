@@ -1,5 +1,5 @@
 //
-//  RecentlyTableViewController.swift
+//  LocalTableViewController.swift
 //  doharmony
 //
 //  Created by Eleazer Toluan on 2/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecentTableViewController: UITableViewController {
+class LocalTableViewController: UITableViewController {
     
     var namesArray : [String] = ["Little Star", "Jingle Bell", "Canon", "Two Tiger", "Bayer No.8", "Silent Night", "The Painter", "Gavotte", "Minuet 1", "Moments"]
     var photoNameArray : [String] = ["littleStar", "jingleBell", "canon", "default", "default", "default", "default", "default", "default", "default"]
@@ -16,7 +16,10 @@ class RecentTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("recent")
-        self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "LocalTableViewCell", bundle: nil), forCellReuseIdentifier: "LocalTableViewCell")
+        
+//        var nib = UINib(nibName: "TrackDetailsViewController", bundle: nil)
+//        self.registerNib(nib, forCellReuseIIdentifier: "cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +41,7 @@ class RecentTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
+        let cell : LocalTableViewCell = tableView.dequeueReusableCellWithIdentifier("LocalTableViewCell") as! LocalTableViewCell
 
         cell.TitleLabel.text = namesArray[indexPath.row]
         cell.ImageView.image = UIImage(named: photoNameArray[indexPath.row])
@@ -49,7 +52,27 @@ class RecentTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 50.0
     }
-
+    var valueToPass = "hello world"
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+ 
+        let vc = PlayTrackViewController(nibName: "PlayTrackViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+//        let indexPath = tableView.indexPathForSelectedRow!
+//        let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
+//        
+//        
+//        performSegueWithIdentifier("TrackDetailsViewController", sender: self)
+    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "TrackDetailsViewController" {
+//            let viewController = segue.destinationViewController as! TrackDetailsViewController
+//            
+//            viewController.TrackTitle = valueToPass
+//            print("im kim")
+//        }
+//    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
