@@ -5,7 +5,10 @@
 //  Created by Eleazer Toluan on 2/12/16.
 //  Copyright © 2016 Eleazer Toluan. All rights reserved.
 //
-
+//  To do:
+//    Fetch data from server every `n` secs.
+//    Fetching of initial data must be only done once, and not every navigation
+//
 import UIKit
 import Alamofire
 import SwiftyJSON

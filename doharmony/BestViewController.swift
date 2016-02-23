@@ -5,6 +5,10 @@
 //  Created by Mark Bermillo on 23/02/2016.
 //  Copyright © 2016 Eleazer Toluan. All rights reserved.
 //
+//  To do:
+//    Fetch data from server every `n` secs.
+//    Fetching of initial data must be only done once, and not every navigation
+//
 
 import UIKit
 import Alamofire
