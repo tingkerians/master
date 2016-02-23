@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3374E3C61C7BEF5E0000B9A3 /* PopularCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E3C41C7BEF5E0000B9A3 /* PopularCategoryTableViewController.swift */; };
+		3374E3C71C7BEF5E0000B9A3 /* PopularCategoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3374E3C51C7BEF5E0000B9A3 /* PopularCategoryTableViewController.xib */; };
+		3374E3CA1C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E3C81C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.swift */; };
+		3374E3CB1C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3374E3C91C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.xib */; };
+		3374E3CF1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E3CD1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.swift */; };
+		3374E3D01C7BF2FC0000B9A3 /* BestCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3374E3CE1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.xib */; };
+		3374E3D31C7BF3180000B9A3 /* BestCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E3D11C7BF3180000B9A3 /* BestCategoryTableViewController.swift */; };
+		3374E3D41C7BF3180000B9A3 /* BestCategoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3374E3D21C7BF3180000B9A3 /* BestCategoryTableViewController.xib */; };
+		3374E3D61C7BFA860000B9A3 /* All_time_folder_is_not_used.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3374E3D51C7BFA860000B9A3 /* All_time_folder_is_not_used.txt */; };
+		3374E3DD1C7C2A740000B9A3 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374E3DB1C7C2A740000B9A3 /* BestViewController.swift */; };
+		3374E3DE1C7C2A740000B9A3 /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3374E3DC1C7C2A740000B9A3 /* BestViewController.xib */; };
 		7615F2761C7597E900ACBD3E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F2671C75973400ACBD3E /* SwiftyJSON.framework */; };
 		7615F2771C7597E900ACBD3E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F2671C75973400ACBD3E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; };
@@ -22,8 +33,6 @@
 		DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BEA1C6C19080006B4D3 /* ProjectsTableViewController.xib */; };
 		DF101BF11C6C197F0006B4D3 /* PopularTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BEF1C6C197F0006B4D3 /* PopularTableViewController.swift */; };
 		DF101BF21C6C197F0006B4D3 /* PopularTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BF01C6C197F0006B4D3 /* PopularTableViewController.xib */; };
-		DF101BF61C6C1B350006B4D3 /* BestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BF41C6C1B350006B4D3 /* BestTableViewController.swift */; };
-		DF101BF71C6C1B350006B4D3 /* BestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BF51C6C1B350006B4D3 /* BestTableViewController.xib */; };
 		DF101BFF1C6C2F940006B4D3 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BFD1C6C2F940006B4D3 /* PopularTableViewCell.swift */; };
 		DF101C001C6C2F940006B4D3 /* PopularTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BFE1C6C2F940006B4D3 /* PopularTableViewCell.xib */; };
 		DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */; };
@@ -232,6 +241,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3374E3C41C7BEF5E0000B9A3 /* PopularCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularCategoryTableViewController.swift; sourceTree = "<group>"; };
+		3374E3C51C7BEF5E0000B9A3 /* PopularCategoryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularCategoryTableViewController.xib; sourceTree = "<group>"; };
+		3374E3C81C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		3374E3C91C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		3374E3CD1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		3374E3CE1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		3374E3D11C7BF3180000B9A3 /* BestCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestCategoryTableViewController.swift; sourceTree = "<group>"; };
+		3374E3D21C7BF3180000B9A3 /* BestCategoryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestCategoryTableViewController.xib; sourceTree = "<group>"; };
+		3374E3D51C7BFA860000B9A3 /* All_time_folder_is_not_used.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = All_time_folder_is_not_used.txt; sourceTree = "<group>"; };
+		3374E3DB1C7C2A740000B9A3 /* BestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
+		3374E3DC1C7C2A740000B9A3 /* BestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestViewController.xib; sourceTree = "<group>"; };
 		7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
@@ -245,8 +265,6 @@
 		DF101BEA1C6C19080006B4D3 /* ProjectsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsTableViewController.xib; sourceTree = "<group>"; };
 		DF101BEF1C6C197F0006B4D3 /* PopularTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularTableViewController.swift; sourceTree = "<group>"; };
 		DF101BF01C6C197F0006B4D3 /* PopularTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularTableViewController.xib; sourceTree = "<group>"; };
-		DF101BF41C6C1B350006B4D3 /* BestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestTableViewController.swift; sourceTree = "<group>"; };
-		DF101BF51C6C1B350006B4D3 /* BestTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestTableViewController.xib; sourceTree = "<group>"; };
 		DF101BFD1C6C2F940006B4D3 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
 		DF101BFE1C6C2F940006B4D3 /* PopularTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularTableViewCell.xib; sourceTree = "<group>"; };
 		DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -343,6 +361,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3374E3B31C7BEF1B0000B9A3 /* PopularCategory */ = {
+			isa = PBXGroup;
+			children = (
+				3374E3C41C7BEF5E0000B9A3 /* PopularCategoryTableViewController.swift */,
+				3374E3C51C7BEF5E0000B9A3 /* PopularCategoryTableViewController.xib */,
+				3374E3C81C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.swift */,
+				3374E3C91C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.xib */,
+			);
+			name = PopularCategory;
+			sourceTree = "<group>";
+		};
+		3374E3CC1C7BF2DC0000B9A3 /* BestCategory */ = {
+			isa = PBXGroup;
+			children = (
+				3374E3CD1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.swift */,
+				3374E3CE1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.xib */,
+				3374E3D11C7BF3180000B9A3 /* BestCategoryTableViewController.swift */,
+				3374E3D21C7BF3180000B9A3 /* BestCategoryTableViewController.xib */,
+			);
+			name = BestCategory;
+			sourceTree = "<group>";
+		};
 		7615F2451C75972800ACBD3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,10 +513,9 @@
 		DF101BEE1C6C196A0006B4D3 /* Popular */ = {
 			isa = PBXGroup;
 			children = (
+				3374E3B31C7BEF1B0000B9A3 /* PopularCategory */,
 				DF526F6C1C6D94A9009971FF /* PopularViewController.swift */,
 				DF526F6D1C6D94A9009971FF /* PopularViewController.xib */,
-				DF16A0BD1C7593E3006E4019 /* Last Month */,
-				DF16A0BC1C7593AD006E4019 /* Last Week */,
 				DF526F701C6D94B0009971FF /* All time */,
 			);
 			name = Popular;
@@ -485,8 +524,9 @@
 		DF101BF31C6C1B0B0006B4D3 /* Best */ = {
 			isa = PBXGroup;
 			children = (
-				DF101BF41C6C1B350006B4D3 /* BestTableViewController.swift */,
-				DF101BF51C6C1B350006B4D3 /* BestTableViewController.xib */,
+				3374E3CC1C7BF2DC0000B9A3 /* BestCategory */,
+				3374E3DB1C7C2A740000B9A3 /* BestViewController.swift */,
+				3374E3DC1C7C2A740000B9A3 /* BestViewController.xib */,
 			);
 			name = Best;
 			sourceTree = "<group>";
@@ -514,20 +554,6 @@
 				DF16A0B91C755007006E4019 /* RecordingViewController.xib */,
 			);
 			name = Recording;
-			sourceTree = "<group>";
-		};
-		DF16A0BC1C7593AD006E4019 /* Last Week */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Last Week";
-			sourceTree = "<group>";
-		};
-		DF16A0BD1C7593E3006E4019 /* Last Month */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Last Month";
 			sourceTree = "<group>";
 		};
 		DF526F511C6D5E01009971FF /* Friends */ = {
@@ -580,6 +606,7 @@
 				DF101BF01C6C197F0006B4D3 /* PopularTableViewController.xib */,
 				DF101BFD1C6C2F940006B4D3 /* PopularTableViewCell.swift */,
 				DF101BFE1C6C2F940006B4D3 /* PopularTableViewCell.xib */,
+				3374E3D51C7BFA860000B9A3 /* All_time_folder_is_not_used.txt */,
 			);
 			name = "All time";
 			sourceTree = "<group>";
@@ -953,11 +980,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF4CBF01C6B0CF2008973D3 /* images in Resources */,
-				DF101BF71C6C1B350006B4D3 /* BestTableViewController.xib in Resources */,
 				F64802221C75AFEE00F6F083 /* TrackDetailsViewController.xib in Resources */,
 				DF101BD51C6C12510006B4D3 /* LocalTableViewController.xib in Resources */,
 				F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */,
 				DF526F621C6D73D1009971FF /* LibrariesTableViewCell.xib in Resources */,
+				3374E3D01C7BF2FC0000B9A3 /* BestCategoryTableViewCell.xib in Resources */,
 				F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */,
 				DF526F5E1C6D5EB6009971FF /* MyFriendsTableViewCell.xib in Resources */,
 				DFF4CBF21C6B0CF2008973D3 /* MoodCollectionViewCell.xib in Resources */,
@@ -973,11 +1000,13 @@
 				DFF4CBBB1C6B0BD2008973D3 /* Assets.xcassets in Resources */,
 				DF526F781C6D9FBB009971FF /* AllMembersTableViewCell.xib in Resources */,
 				DF101BF21C6C197F0006B4D3 /* PopularTableViewController.xib in Resources */,
+				3374E3D61C7BFA860000B9A3 /* All_time_folder_is_not_used.txt in Resources */,
 				F6B5FB941C769E6C001B8868 /* LoginViewController.xib in Resources */,
 				DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */,
 				DF16A0B61C754E32006E4019 /* TemplateViewController.xib in Resources */,
 				DF526F581C6D5E63009971FF /* MyFriendsTableViewController.xib in Resources */,
 				DFF4CBB91C6B0BD2008973D3 /* Main.storyboard in Resources */,
+				3374E3C71C7BEF5E0000B9A3 /* PopularCategoryTableViewController.xib in Resources */,
 				DFF4CBF41C6B0CF2008973D3 /* TestCollectionViewController.xib in Resources */,
 				F6B5FB991C76B20D001B8868 /* SignUpViewController.xib in Resources */,
 				DF101C001C6C2F940006B4D3 /* PopularTableViewCell.xib in Resources */,
@@ -985,6 +1014,9 @@
 				DF101BD91C6C14310006B4D3 /* LocalTableViewCell.xib in Resources */,
 				DFF4CBEF1C6B0CF2008973D3 /* FriendTableViewCell.xib in Resources */,
 				F6B5FBA81C76C1BA001B8868 /* RecentTableViewCell.xib in Resources */,
+				3374E3D41C7BF3180000B9A3 /* BestCategoryTableViewController.xib in Resources */,
+				3374E3CB1C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.xib in Resources */,
+				3374E3DE1C7C2A740000B9A3 /* BestViewController.xib in Resources */,
 				F648021E1C75AFEE00F6F083 /* PostsTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,6 +1045,7 @@
 				DFF4CBF11C6B0CF2008973D3 /* MoodCollectionViewCell.swift in Sources */,
 				7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */,
 				DF526F731C6D9EBC009971FF /* AllMembersTableViewController.swift in Sources */,
+				3374E3C61C7BEF5E0000B9A3 /* PopularCategoryTableViewController.swift in Sources */,
 				DF526F771C6D9FBB009971FF /* AllMembersTableViewCell.swift in Sources */,
 				DF16A0B51C754E32006E4019 /* TemplateViewController.swift in Sources */,
 				DFF4CBB61C6B0BD2008973D3 /* HomeViewController.swift in Sources */,
@@ -1025,6 +1058,7 @@
 				DF101BF11C6C197F0006B4D3 /* PopularTableViewController.swift in Sources */,
 				DFF4CBB41C6B0BD2008973D3 /* AppDelegate.swift in Sources */,
 				DFF4CBED1C6B0CF2008973D3 /* CAPSPageMenu.swift in Sources */,
+				3374E3DD1C7C2A740000B9A3 /* BestViewController.swift in Sources */,
 				DFF4CBF31C6B0CF2008973D3 /* TestCollectionViewController.swift in Sources */,
 				F648021F1C75AFEE00F6F083 /* PostsTableViewCell.swift in Sources */,
 				DF101BFF1C6C2F940006B4D3 /* PopularTableViewCell.swift in Sources */,
@@ -1034,6 +1068,7 @@
 				F648021D1C75AFEE00F6F083 /* PostsTableViewController.swift in Sources */,
 				F64802231C75AFEE00F6F083 /* CommentTableViewCell.swift in Sources */,
 				F6CC20551C76C49D0033CF70 /* RecentViewController.swift in Sources */,
+				3374E3D31C7BF3180000B9A3 /* BestCategoryTableViewController.swift in Sources */,
 				F6CC205C1C76DAE50033CF70 /* PlayTrackViewController.swift in Sources */,
 				DFF4CBFE1C6B1A47008973D3 /* FriendsViewController.swift in Sources */,
 				DF526F571C6D5E63009971FF /* MyFriendsTableViewController.swift in Sources */,
@@ -1043,10 +1078,11 @@
 				DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */,
 				F6B5FBA71C76C1BA001B8868 /* RecentTableViewCell.swift in Sources */,
 				F6B5FB981C76B20D001B8868 /* SignUpViewController.swift in Sources */,
-				DF101BF61C6C1B350006B4D3 /* BestTableViewController.swift in Sources */,
 				F6B5FB931C769E6C001B8868 /* LoginViewController.swift in Sources */,
 				DF526F6E1C6D94A9009971FF /* PopularViewController.swift in Sources */,
+				3374E3CA1C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.swift in Sources */,
 				DFF4CBF51C6B0CF2008973D3 /* TestTableViewController.swift in Sources */,
+				3374E3CF1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.swift in Sources */,
 				DFF4CBEE1C6B0CF2008973D3 /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

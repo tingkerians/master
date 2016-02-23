@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -17,43 +15,59 @@
                 <rect key="frame" x="0.0" y="0.0" width="516" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-O1-ywH">
-                        <rect key="frame" x="95" y="8" width="315" height="59"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-O1-ywH">
+                        <rect key="frame" x="82" y="8" width="298" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="298" id="riy-dS-THQ"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AVX-a7-RhO">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AVX-a7-RhO">
                         <rect key="frame" x="15" y="8" width="59" height="59"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="AVX-a7-RhO" secondAttribute="height" multiplier="1:1" id="8tJ-Ws-tCz"/>
+                            <constraint firstAttribute="width" constant="59" id="bUh-Vy-I6K"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDP-I5-UhC">
-                        <rect key="frame" x="426" y="8" width="82" height="59"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="publish_date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDP-I5-UhC">
+                        <rect key="frame" x="337" y="21" width="162" height="59"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="162" id="WGm-1k-vyH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0F-cA-CWc">
+                        <rect key="frame" x="82" y="26" width="201" height="49"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="AVX-a7-RhO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="3Vj-9g-SJu"/>
-                    <constraint firstItem="MDP-I5-UhC" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Jfu-fa-GT1"/>
-                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-98" id="Ki1-HO-LQM"/>
-                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="leading" secondItem="AVX-a7-RhO" secondAttribute="trailing" constant="21" id="XLU-XO-6IS"/>
-                    <constraint firstItem="AVX-a7-RhO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="aJQ-46-fu1"/>
-                    <constraint firstItem="MDP-I5-UhC" firstAttribute="firstBaseline" secondItem="Ofb-O1-ywH" secondAttribute="firstBaseline" constant="-2" id="gu8-2F-TnI"/>
-                    <constraint firstItem="MDP-I5-UhC" firstAttribute="baseline" secondItem="Ofb-O1-ywH" secondAttribute="baseline" constant="1" id="j4I-FM-xGR"/>
-                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="centerY" secondItem="AVX-a7-RhO" secondAttribute="centerY" id="knw-qd-7jA"/>
-                    <constraint firstItem="MDP-I5-UhC" firstAttribute="leading" secondItem="Ofb-O1-ywH" secondAttribute="trailing" constant="16" id="nCD-hh-Jlb"/>
-                    <constraint firstItem="AVX-a7-RhO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oUf-Mt-b3X"/>
-                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-1" id="sSI-oU-N3Q"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="E0F-cA-CWc" secondAttribute="bottom" constant="-7" id="2CH-qc-zT2"/>
+                    <constraint firstItem="MDP-I5-UhC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="3Bx-Mv-CuQ"/>
+                    <constraint firstItem="E0F-cA-CWc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="8Oh-lB-Gj7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MDP-I5-UhC" secondAttribute="trailing" constant="9" id="Hko-4O-Iug"/>
+                    <constraint firstItem="E0F-cA-CWc" firstAttribute="centerY" secondItem="MDP-I5-UhC" secondAttribute="centerY" id="QOk-Ue-7cp"/>
+                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Qa3-n5-QlJ"/>
+                    <constraint firstItem="AVX-a7-RhO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="RCE-3D-9Od"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ofb-O1-ywH" secondAttribute="bottom" constant="20" id="SFs-RJ-ifo"/>
+                    <constraint firstItem="MDP-I5-UhC" firstAttribute="leading" secondItem="E0F-cA-CWc" secondAttribute="trailing" constant="54" id="TI1-cG-WKK"/>
+                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="top" secondItem="AVX-a7-RhO" secondAttribute="top" id="UfY-rF-6aw"/>
+                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="leading" secondItem="AVX-a7-RhO" secondAttribute="trailing" constant="8" symbolic="YES" id="Xyb-f8-pbh"/>
+                    <constraint firstItem="Ofb-O1-ywH" firstAttribute="leading" secondItem="E0F-cA-CWc" secondAttribute="leading" id="aPS-28-9Kz"/>
+                    <constraint firstItem="AVX-a7-RhO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jbS-nF-sLp"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
-                <outlet property="ImageView" destination="AVX-a7-RhO" id="A34-ac-YKe"/>
-                <outlet property="TitleLabel" destination="Ofb-O1-ywH" id="ZcC-cG-E7f"/>
+                <outlet property="UIimageView" destination="AVX-a7-RhO" id="cUy-kQ-kBg"/>
+                <outlet property="authorLabel" destination="E0F-cA-CWc" id="gtN-Ij-6GT"/>
+                <outlet property="publishDate" destination="MDP-I5-UhC" id="s8z-LY-Dz2"/>
+                <outlet property="titleLabel" destination="Ofb-O1-ywH" id="q6j-wx-AOn"/>
             </connections>
             <point key="canvasLocation" x="377" y="351.5"/>
         </tableViewCell>

@@ -1,58 +1,25 @@
 //
-//  BestTableViewController.swift
+//  PopularCategoryTableViewController.swift
 //  doharmony
 //
-//  Created by Eleazer Toluan on 2/11/16.
+//  Created by Mark Bermillo on 23/02/2016.
 //  Copyright © 2016 Eleazer Toluan. All rights reserved.
 //
+// This `PopularCategoryTableViewController` will be the controller for the 3 subviews
+// under `Popular` tab navigation, namely: `Last Week`, `Last Month`, and
+// `All Time`
 
 import UIKit
+import SwiftyJSON
 
-class BestTableViewController: UITableViewController {
+class PopularCategoryTableViewController: UITableViewController {
     
-    var pageMenu : CAPSPageMenu?
+    // Variable that will hold json results from the server
+    var trackList: [JSON] = [];
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        var controllerArray : [UIViewController] = []
-        
-        let controller1 : RecentViewController = RecentViewController(nibName: "RecentViewController", bundle: nil)
-        controller1.title = "Last Week"
-        controllerArray.append(controller1)
-        let controller2 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
-        controller2.title = "Last Month"
-        controllerArray.append(controller2)
-        let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
-        controller3.title = "All Time"
-        controllerArray.append(controller3)
-        
-        // Customize menu (Optional)
-        let parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
-            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
-            .SelectionIndicatorColor(UIColor.orangeColor()),
-            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
-            .MenuHeight(40.0),
-            .MenuItemWidth(90.0),
-            .CenterMenuItems(true)
-        ]
-        
-        // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
-        
-        self.addChildViewController(pageMenu!)
-        self.view.addSubview(pageMenu!.view)
-        
-        pageMenu!.didMoveToParentViewController(self)
-        
+        super.viewDidLoad();
+        self.tableView.registerNib(UINib(nibName: "PopularCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularCategoryTableViewCell");
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,23 +31,27 @@ class BestTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1;
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return trackList.count;
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell : PopularCategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("PopularCategoryTableViewCell") as! PopularCategoryTableViewCell
+        
+        let coverArt: String = "http://192.168.0.137:8080/api/coverart/\(trackList[indexPath.row]["id"].stringValue)";
+        
+        cell.titleLabel.text = trackList[indexPath.row]["title"].stringValue;
+        cell.UIimageView.image =
+            UIImage(data: NSData(contentsOfURL: NSURL(string: coverArt)!)!);
+        cell.authorLabel.text = trackList[indexPath.row]["author"].stringValue;
+        cell.viewsLabel.text = trackList[indexPath.row]["views"].stringValue;
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
