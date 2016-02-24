@@ -10,8 +10,8 @@ import UIKit
 
 class PopularTableViewController: UITableViewController {
     
-    var namesArray : [String] = ["Little Star", "Jingle Bell", "Canon", "Two Tiger", "Bayer No.8", "Silent Night", "The Painter", "Gavotte", "Minuet 1", "Moments"]
-    var photoNameArray : [String] = ["littleStar", "jingleBell", "canon", "default", "default", "default", "default", "default", "default", "default"]
+    var TitleArray : [String] = ["Little Star", "Jingle Bell", "Canon", "Two Tiger", "Bayer No.8", "Silent Night", "The Painter", "Gavotte", "Minuet 1", "Moments"]
+    var CoverArray : [String] = ["littleStar", "jingleBell", "canon", "default", "default", "default", "default", "default", "default", "default"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,21 +33,21 @@ class PopularTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return namesArray.count
+        return TitleArray.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : PopularTableViewCell = tableView.dequeueReusableCellWithIdentifier("PopularTableViewCell") as! PopularTableViewCell
 
         // Configure the cell...
-        if let label = cell.TitleLabel {
-            label.text = namesArray[indexPath.row]
-        }
-        if let image = cell.ImageView {
-            image.image = UIImage(named: photoNameArray[indexPath.row])
-        }
-//        cell.TitleLabel.text = namesArray[indexPath.row]
-//        cell.ImageView.image = UIImage(named: photoNameArray[indexPath.row])
+//        if let label = cell.TitleLabel {
+//            label.text = namesArray[indexPath.row]
+//        }
+//        if let image = cell.ImageView {
+//            image.image = UIImage(named: photoNameArray[indexPath.row])
+//        }
+        cell.TitleLabel.text = TitleArray[indexPath.row]
+        cell.ImageView.image = UIImage(named: CoverArray[indexPath.row])
         
         return cell
     }
@@ -56,6 +56,15 @@ class PopularTableViewController: UITableViewController {
         return 50.0
     }
 
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .darkGrayColor()
+    }
+    
+    override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

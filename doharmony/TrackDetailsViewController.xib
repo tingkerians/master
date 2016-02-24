@@ -150,7 +150,7 @@
                         <constraint firstAttribute="height" constant="1" id="yOg-3s-u2R"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ALL COMMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dai-Pe-kUG">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="COMMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dai-Pe-kUG">
                     <rect key="frame" x="8" y="416" width="154" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="lRw-Fg-fxJ"/>
@@ -161,7 +161,7 @@
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-zg-Vhr">
                     <rect key="frame" x="0.0" y="517" width="600" height="382"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Xbb-N6-00T"/>
                         <outlet property="delegate" destination="-1" id="boC-mb-PZ3"/>
@@ -209,7 +209,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="MvL-jl-C0J" firstAttribute="leading" secondItem="6G9-SX-nOM" secondAttribute="trailing" constant="3" id="32M-ZX-DRA"/>
                 <constraint firstItem="6G9-SX-nOM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="3PE-va-AUm"/>

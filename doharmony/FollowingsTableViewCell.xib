@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="opc-CE-EYs" customClass="FollowingsTableViewCell" customModule="doharmony" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="498" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="opc-CE-EYs" id="O0i-82-HpG">
+                <rect key="frame" x="0.0" y="0.0" width="498" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UwN-jF-qlG">
+                        <rect key="frame" x="15" y="10" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UwN-jF-qlG" secondAttribute="height" multiplier="1:1" id="qGh-GV-Red"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5a-uq-Mtq">
+                        <rect key="frame" x="82" y="8" width="226" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="V5a-uq-Mtq" secondAttribute="height" multiplier="349:68" constant="-40.882352941176464" id="IVK-Ts-GDP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-5a-yoU">
+                        <rect key="frame" x="393" y="24" width="20" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="3m5-mw-Ipk"/>
+                            <constraint firstAttribute="height" constant="16" id="f5Z-7c-BrC"/>
+                        </constraints>
+                        <state key="normal" image="follow"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-dZ-CXq">
+                        <rect key="frame" x="428" y="24" width="20" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Icp-Zu-oND"/>
+                            <constraint firstAttribute="width" constant="20" id="rDb-8w-eJA"/>
+                        </constraints>
+                        <state key="normal" image="tab-home"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-Oa-7bV">
+                        <rect key="frame" x="465" y="24" width="20" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="1sK-za-IwQ"/>
+                            <constraint firstAttribute="width" constant="20" id="sQI-Yh-COd"/>
+                        </constraints>
+                        <state key="normal" image="mail"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="lXG-Oa-7bV" secondAttribute="trailing" constant="5" id="6eG-oJ-qHd"/>
+                    <constraint firstItem="UwN-jF-qlG" firstAttribute="bottom" secondItem="V5a-uq-Mtq" secondAttribute="bottom" constant="-4" id="88W-r5-Kk5"/>
+                    <constraint firstItem="V5a-uq-Mtq" firstAttribute="top" secondItem="O0i-82-HpG" secondAttribute="topMargin" id="DQf-n4-7gz"/>
+                    <constraint firstItem="V5a-uq-Mtq" firstAttribute="leading" secondItem="UwN-jF-qlG" secondAttribute="trailing" constant="21" id="NwT-hJ-6i3"/>
+                    <constraint firstItem="vMO-5a-yoU" firstAttribute="top" secondItem="O0i-82-HpG" secondAttribute="topMargin" constant="16" id="RDS-G8-DUQ"/>
+                    <constraint firstItem="UwN-jF-qlG" firstAttribute="top" secondItem="V5a-uq-Mtq" secondAttribute="top" constant="2" id="Xi2-q9-4uw"/>
+                    <constraint firstItem="lXG-Oa-7bV" firstAttribute="leading" secondItem="fpN-dZ-CXq" secondAttribute="trailing" constant="17" id="ZhS-RN-lZX"/>
+                    <constraint firstItem="V5a-uq-Mtq" firstAttribute="bottom" secondItem="O0i-82-HpG" secondAttribute="bottomMargin" constant="4" id="fPC-GH-NS9"/>
+                    <constraint firstItem="UwN-jF-qlG" firstAttribute="leading" secondItem="O0i-82-HpG" secondAttribute="leadingMargin" constant="7" id="gtH-ak-2Tk"/>
+                    <constraint firstItem="fpN-dZ-CXq" firstAttribute="top" secondItem="O0i-82-HpG" secondAttribute="topMargin" constant="16" id="qJT-mX-Qis"/>
+                    <constraint firstItem="lXG-Oa-7bV" firstAttribute="top" secondItem="O0i-82-HpG" secondAttribute="topMargin" constant="16" id="rjI-Jx-4zZ"/>
+                    <constraint firstItem="fpN-dZ-CXq" firstAttribute="leading" secondItem="vMO-5a-yoU" secondAttribute="trailing" constant="15" id="zXo-hI-EQu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="ProfileName" destination="V5a-uq-Mtq" id="YJd-B5-Sh5"/>
+                <outlet property="ProfilePicture" destination="UwN-jF-qlG" id="SKW-tf-W0p"/>
+            </connections>
+            <point key="canvasLocation" x="432" y="317.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="follow" width="46" height="57"/>
+        <image name="mail" width="49" height="34"/>
+        <image name="tab-home" width="24" height="26"/>
+    </resources>
+</document>

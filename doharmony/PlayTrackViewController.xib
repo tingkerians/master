@@ -51,6 +51,9 @@
                     <state key="normal" title="X">
                         <color key="titleColor" red="0.90588235289999997" green="0.31764705879999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="fNE-dc-Kfj"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My first doharmony video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU2-OW-XhQ">
                     <rect key="frame" x="199" y="35" width="203" height="21"/>
@@ -103,7 +106,7 @@
                     </constraints>
                 </slider>
             </subviews>
-            <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="dtt-z3-vqR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="01H-pe-1r6"/>
                 <constraint firstItem="TR7-Zw-EMg" firstAttribute="leading" secondItem="Eip-NN-LAn" secondAttribute="trailing" constant="4" id="6WU-AU-5v3"/>
@@ -131,7 +134,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fullScreen" width="512" height="512"/>
+        <image name="fullScreen" width="24" height="26"/>
         <image name="loop" width="63" height="40"/>
         <image name="next" width="49" height="54"/>
         <image name="play" width="137" height="137"/>

@@ -5,9 +5,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopularViewController" customModule="doharmony" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BestViewController" customModule="doharmony" customModuleProvider="target">
             <connections>
-                <outlet property="SearchBar" destination="7Nv-ZF-5J9" id="V7n-BC-fUA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,23 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7Nv-ZF-5J9">
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oFV-Yp-2jh">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="B01-2J-IYk"/>
+                        <constraint firstAttribute="height" constant="44" id="DM4-k1-xcQ"/>
                     </constraints>
                     <color key="barTintColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="gdv-Bm-EIS"/>
-                    </connections>
                 </searchBar>
             </subviews>
             <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="7Nv-ZF-5J9" secondAttribute="trailing" id="BMW-jl-SAA"/>
-                <constraint firstItem="7Nv-ZF-5J9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KFA-nb-JfY"/>
-                <constraint firstItem="7Nv-ZF-5J9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uai-5K-fbi"/>
+                <constraint firstItem="oFV-Yp-2jh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="71C-Lz-zno"/>
+                <constraint firstItem="oFV-Yp-2jh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ed2-vc-zZ4"/>
+                <constraint firstAttribute="trailing" secondItem="oFV-Yp-2jh" secondAttribute="trailing" id="z8v-CK-zlk"/>
             </constraints>
         </view>
     </objects>

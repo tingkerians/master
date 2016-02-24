@@ -26,6 +26,17 @@ class PostsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func unButton(sender: AnyObject) {
+        print("unfriend")
+    }
+    
+    @IBAction func viewTracksButton(sender: AnyObject) {
+            print("view tracks")
+    }
+    
+    @IBAction func contactButton(sender: AnyObject) {
+        print("contact")
+    }
 //    func toPlayPost(sender: UITapGestureRecognizer){
 //                Template = sender.view
 //                for subview:UIView in Template.subviews{

@@ -8,12 +8,23 @@
 
 import UIKit
 
-class MyFriendsTableViewCell: UITableViewCell {
+class  MyFriendsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ProfileName: UILabel!
 
     @IBOutlet weak var ProfilePicture: UIImageView!
     
+    @IBAction func unfriendButton(sender: AnyObject) {
+        print("unfriend")
+    }
+    
+    @IBAction func viewTracksButton(sender: AnyObject) {
+            print("view tracks")
+    }
+    
+    @IBAction func contactButton(sender: AnyObject) {
+        print("contact")
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

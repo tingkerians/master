@@ -24,11 +24,14 @@ class FriendsViewController: UIViewController {
         controller1.title = "Posts"
         controllerArray.append(controller1)
         let controller2 : MyFriendsTableViewController = MyFriendsTableViewController(nibName: "MyFriendsTableViewController", bundle: nil)
-        controller2.title = "My Friends"
+        controller2.title = "Friends"
         controllerArray.append(controller2)
-        let controller3 : AllMembersTableViewController = AllMembersTableViewController(nibName: "AllMembersTableViewController", bundle: nil)
-        controller3.title = "All Members"
+        let controller3 : FollowingsTableViewController = FollowingsTableViewController(nibName: "FollowingsTableViewController", bundle: nil)
+        controller3.title = "Followings"
         controllerArray.append(controller3)
+        let controller4 : AllMembersTableViewController = AllMembersTableViewController(nibName: "AllMembersTableViewController", bundle: nil)
+        controller4.title = "All"
+        controllerArray.append(controller4)
         
         
         // Customize menu (Optional)

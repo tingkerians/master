@@ -12,7 +12,9 @@ class TemplateViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var pageMenu : CAPSPageMenu?
     @IBOutlet var LayoutSelectionView: UIView!
-
+    @IBOutlet weak var TemplateScrollView: UIScrollView!
+   
+    
     var Template:UIView!
     var Frames = [UIView]()
     
@@ -20,7 +22,27 @@ class TemplateViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let bounds = UIScreen.mainScreen().bounds
+        let screenWidth = bounds.size.width
+        print("screen width: \(screenWidth)")
+        self.TemplateScrollView.contentSize.width = screenWidth
+        print(self.TemplateScrollView.frame.size.width)
+            
+        addTemplateTapAction()
         
+        let tap = UITapGestureRecognizer(target: self, action: nil)
+        tap.delegate = self
+        LayoutSelectionView.addGestureRecognizer(tap)
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+ 
+//        let bounds = UIScreen.mainScreen().bounds
+//        let screenWidth = bounds.size.width
+//        print("screen width: \(screenWidth)")
+//        self.TemplateScrollView.contentSize.width = screenWidth - 100
+//        print(self.TemplateScrollView.frame.size.width)
         
         addTemplateTapAction()
         
@@ -29,6 +51,7 @@ class TemplateViewController: UIViewController, UIGestureRecognizerDelegate {
         LayoutSelectionView.addGestureRecognizer(tap)
 
     }
+    
  
     func addTemplateTapAction(){
 
@@ -50,8 +73,8 @@ class TemplateViewController: UIViewController, UIGestureRecognizerDelegate {
 //        pageMenu!.moveToPage(1)
         
         
-        //        let recordPage: RecordingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RecordingPage") as! RecordingViewController
-        //        recordPage.daryl = Template
+//                let recordPage: RecordingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RecordingPage") as! RecordingViewController
+//                recordPage.daryl = Template
         //
         //        self.dismissViewControllerAnimated(false, completion: nil)
 //        self.dismissViewControllerAnimated(false, completion: { ()  -> Void in
