@@ -13,6 +13,17 @@ class AllMembersTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ProfileName: UILabel!
     
+    @IBAction func addfriendButton(sender: AnyObject) {
+        print("add friend")
+    }
+    
+    @IBAction func followButton(sender: AnyObject) {
+        print("follow")
+    }
+    @IBAction func contactButton(sender: AnyObject) {
+        print("contact")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

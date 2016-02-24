@@ -38,6 +38,9 @@
                             <constraint firstAttribute="width" constant="20" id="dg6-50-Ciz"/>
                         </constraints>
                         <state key="normal" image="friend"/>
+                        <connections>
+                            <action selector="addfriendButton:" destination="aqE-ZC-aLS" eventType="touchUpInside" id="wRY-D7-VAb"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzT-q9-Fkg">
                         <rect key="frame" x="428" y="24" width="20" height="16"/>
@@ -46,6 +49,9 @@
                             <constraint firstAttribute="width" constant="20" id="cZV-Q3-xBE"/>
                         </constraints>
                         <state key="normal" image="follow"/>
+                        <connections>
+                            <action selector="followButton:" destination="aqE-ZC-aLS" eventType="touchUpInside" id="c9S-vM-khQ"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwP-lR-ptf">
                         <rect key="frame" x="465" y="24" width="20" height="16"/>
@@ -54,6 +60,9 @@
                             <constraint firstAttribute="height" constant="16" id="uAp-FQ-Ald"/>
                         </constraints>
                         <state key="normal" image="mail"/>
+                        <connections>
+                            <action selector="contactButton:" destination="aqE-ZC-aLS" eventType="touchUpInside" id="Akl-e5-fUS"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDL-HW-Z3A">
                         <rect key="frame" x="71" y="19" width="14" height="30"/>

@@ -38,6 +38,9 @@
                             <constraint firstAttribute="height" constant="16" id="f5Z-7c-BrC"/>
                         </constraints>
                         <state key="normal" image="follow"/>
+                        <connections>
+                            <action selector="unfollowButton:" destination="opc-CE-EYs" eventType="touchUpInside" id="26G-kn-EDK"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-dZ-CXq">
                         <rect key="frame" x="428" y="24" width="20" height="16"/>
@@ -46,6 +49,9 @@
                             <constraint firstAttribute="width" constant="20" id="rDb-8w-eJA"/>
                         </constraints>
                         <state key="normal" image="tab-home"/>
+                        <connections>
+                            <action selector="viewTracksButton:" destination="opc-CE-EYs" eventType="touchUpInside" id="YlF-pY-FIJ"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-Oa-7bV">
                         <rect key="frame" x="465" y="24" width="20" height="16"/>
@@ -54,6 +60,9 @@
                             <constraint firstAttribute="width" constant="20" id="sQI-Yh-COd"/>
                         </constraints>
                         <state key="normal" image="mail"/>
+                        <connections>
+                            <action selector="contactButton:" destination="opc-CE-EYs" eventType="touchUpInside" id="gEu-JB-VHx"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
