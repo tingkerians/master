@@ -50,7 +50,7 @@
                     <constraint firstItem="Ofb-O1-ywH" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-1" id="sSI-oU-N3Q"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="ImageView" destination="AVX-a7-RhO" id="A34-ac-YKe"/>
                 <outlet property="TitleLabel" destination="Ofb-O1-ywH" id="ZcC-cG-E7f"/>

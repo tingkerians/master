@@ -22,20 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUR-zs-mgB">
-                    <rect key="frame" x="578" y="13" width="17" height="29"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="17" id="Ioa-gD-T0l"/>
-                        <constraint firstAttribute="height" constant="29" id="lFm-CI-o89"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="X">
-                        <color key="titleColor" red="0.90588235289999997" green="0.31764705879999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="CloseButton:" destination="-1" eventType="touchUpInside" id="dhU-V8-MOT"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doharmony" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-zL-5Eb">
                     <rect key="frame" x="188" y="95" width="225" height="65"/>
                     <constraints>
@@ -142,11 +128,24 @@
                         <action selector="CancelButton:" destination="-1" eventType="touchUpInside" id="rZO-NJ-eNd"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUR-zs-mgB">
+                    <rect key="frame" x="8" y="8" width="17" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="17" id="iOh-Ym-HmF"/>
+                        <constraint firstAttribute="height" constant="29" id="tyF-ZQ-ynB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" red="0.90588235289999997" green="0.31764705879999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="CloseButton:" destination="-1" eventType="touchUpInside" id="dhU-V8-MOT"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Tkk-hm-gcL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="42Q-dG-5fr"/>
-                <constraint firstAttribute="trailing" secondItem="WUR-zs-mgB" secondAttribute="trailing" constant="5" id="5Qi-v2-a1g"/>
                 <constraint firstItem="j6w-yD-tjm" firstAttribute="top" secondItem="Cnc-fM-fix" secondAttribute="bottom" constant="7" id="5v4-6z-3TV"/>
                 <constraint firstItem="5lT-mJ-yMw" firstAttribute="top" secondItem="6ZM-Td-ztA" secondAttribute="bottom" constant="41" id="6cr-z1-GqH"/>
                 <constraint firstItem="VFB-9I-qSz" firstAttribute="top" secondItem="P0R-u2-zIB" secondAttribute="bottom" constant="7" id="917-ZU-F0r"/>
@@ -158,12 +157,13 @@
                 <constraint firstItem="j6w-yD-tjm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kkj-q9-rar"/>
                 <constraint firstItem="TbE-zL-5Eb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MsJ-iR-GOS"/>
                 <constraint firstItem="Tkk-hm-gcL" firstAttribute="top" secondItem="5lT-mJ-yMw" secondAttribute="bottom" constant="7" id="Qq4-wB-WSm"/>
+                <constraint firstItem="WUR-zs-mgB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="U3u-tI-Rwg"/>
                 <constraint firstItem="QPI-55-if5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uij-DR-f81"/>
                 <constraint firstItem="Cnc-fM-fix" firstAttribute="top" secondItem="QPI-55-if5" secondAttribute="bottom" constant="19" id="WM4-nq-CjE"/>
                 <constraint firstItem="VFB-9I-qSz" firstAttribute="top" secondItem="P0R-u2-zIB" secondAttribute="bottom" constant="7" id="Wez-Yp-mmf"/>
                 <constraint firstItem="6ZM-Td-ztA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XE8-62-bhI"/>
-                <constraint firstItem="WUR-zs-mgB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="amj-q1-aLQ"/>
                 <constraint firstItem="P0R-u2-zIB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b2m-f8-aVL"/>
+                <constraint firstItem="WUR-zs-mgB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="bW1-vS-aAX"/>
                 <constraint firstItem="5lT-mJ-yMw" firstAttribute="top" secondItem="nQ6-8P-bkS" secondAttribute="bottom" constant="7" id="c91-kS-XKV"/>
                 <constraint firstItem="Tkk-hm-gcL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-14" id="dfe-qb-hea"/>
                 <constraint firstItem="5lT-mJ-yMw" firstAttribute="top" secondItem="nQ6-8P-bkS" secondAttribute="bottom" constant="7" id="e85-4f-QqI"/>

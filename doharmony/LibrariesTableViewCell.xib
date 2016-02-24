@@ -33,10 +33,10 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzq-Sd-54i">
-                        <rect key="frame" x="266" y="17" width="32" height="32"/>
+                        <rect key="frame" x="438" y="16" width="32" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="32" id="Hmb-yF-QR0"/>
-                            <constraint firstAttribute="width" constant="32" id="z4m-Mz-za7"/>
+                            <constraint firstAttribute="width" constant="32" id="PxX-R9-xoA"/>
+                            <constraint firstAttribute="height" constant="32" id="gZr-gm-GZA"/>
                         </constraints>
                         <color key="tintColor" red="0.89411764709999997" green="0.30980392159999998" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" image="play-music"/>
@@ -45,14 +45,14 @@
                 <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="90X-r3-j1a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9SC-gc-x41"/>
-                    <constraint firstItem="Vzq-Sd-54i" firstAttribute="leading" secondItem="90X-r3-j1a" secondAttribute="trailing" constant="-130" id="YlI-Gj-5EY"/>
+                    <constraint firstItem="Vzq-Sd-54i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="IKz-BH-UBz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Vzq-Sd-54i" secondAttribute="trailing" constant="6" id="KAq-6Q-rrT"/>
                     <constraint firstItem="90X-r3-j1a" firstAttribute="leading" secondItem="tgB-uB-Zpm" secondAttribute="trailing" constant="33" id="brG-WM-cmA"/>
-                    <constraint firstItem="Vzq-Sd-54i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="iL3-jY-Cah"/>
                     <constraint firstItem="tgB-uB-Zpm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="nhR-M2-WlW"/>
                     <constraint firstItem="tgB-uB-Zpm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="zwD-0f-SD5"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="477" y="280.5"/>
         </tableViewCell>
     </objects>

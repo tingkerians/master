@@ -42,16 +42,26 @@ var Template:UIView!
     
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 130.0
+        return 147
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
         let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .darkGrayColor()
+    }
+    
+    override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
     
     /*
     // Override to support conditional editing of the table view.

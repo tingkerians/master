@@ -55,9 +55,20 @@ class AllMembersTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Row \(indexPath.row) selected")
-        let cell = tableView.dequeueReusableCellWithIdentifier("AllMembersTableViewCell") as! AllMembersTableViewCell
-        cell.backgroundColor = UIColor.redColor()
+        print("You selected cell #\(indexPath.row)!")
+        let vc = UserDetailsViewController(nibName: "UserDetailsViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .darkGrayColor()
+    }
+    
+    override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
     }
     /*
     // Override to support conditional editing of the table view.

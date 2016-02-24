@@ -20,7 +20,7 @@
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mOH-Xc-UDr">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                     <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="barTintColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <textInputTraits key="textInputTraits"/>
                     <scopeButtonTitles>
                         <string>Title</string>
@@ -30,7 +30,7 @@
                         <outlet property="delegate" destination="-1" id="OXa-Yq-oZf"/>
                     </connections>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IhC-UX-6tc">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IhC-UX-6tc">
                     <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
@@ -39,7 +39,7 @@
                     </connections>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.047120418849999998" green="0.047120418849999998" blue="0.047120418849999998" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="IhC-UX-6tc" secondAttribute="bottom" id="22T-1a-4Au"/>
                 <constraint firstItem="IhC-UX-6tc" firstAttribute="top" secondItem="mOH-Xc-UDr" secondAttribute="bottom" id="23l-JW-bfa"/>

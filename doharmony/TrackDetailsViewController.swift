@@ -61,9 +61,7 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(CommentTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let mycount = self.profilePic.count
-        print(mycount)
-        return mycount
+        return memberName.count
     }
     
     func tableView(CommentTableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -97,7 +95,7 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
     func scrollViewDidScroll(scrollView: UIScrollView) {
         self.commentBoxHeight.constant = 0
         self.commentBox.hidden = true
-        print("scrolllllllllling")
+//        print("scrolllllllllling")
         
         
         let scrollOffset = scrollView.contentOffset.y

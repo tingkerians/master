@@ -1,14 +1,14 @@
 //
-//  PopularViewController.swift
+//  BestViewController.swift
 //  doharmony
 //
-//  Created by Eleazer Toluan on 2/12/16.
+//  Created by Eleazer Toluan on 2/24/16.
 //  Copyright © 2016 Eleazer Toluan. All rights reserved.
 //
 
 import UIKit
 
-class PopularViewController: UIViewController, UISearchBarDelegate {
+class BestViewController: UIViewController, UISearchBarDelegate  {
 
     var pageMenu : CAPSPageMenu?
     
@@ -53,5 +53,5 @@ class PopularViewController: UIViewController, UISearchBarDelegate {
         
         pageMenu!.didMoveToParentViewController(self)
     }
-    
+
 }

@@ -41,7 +41,7 @@ class RecordViewController: UIViewController {
         controller2.title = "Record"
         controllerArray.append(controller2)
         let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
-        controller3.title = "Tracks"
+        controller3.title = "Local"
         controllerArray.append(controller3)
 
         
@@ -65,7 +65,7 @@ class RecordViewController: UIViewController {
         
         pageMenu!.didMoveToParentViewController(self)
         
-        pageMenu!.scrollAnimationDurationOnMenuItemTap = 10
+        pageMenu!.scrollAnimationDurationOnMenuItemTap = 0
         pageMenu!.moveToPage(defaultIndex)
         pageMenu!.scrollAnimationDurationOnMenuItemTap = 500
     }

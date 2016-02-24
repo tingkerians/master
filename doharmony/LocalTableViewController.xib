@@ -11,11 +11,11 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="i5M-Pr-FkT">
+        <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" red="0.04655448718" green="0.04655448718" blue="0.04655448718" alpha="1" colorSpace="calibratedRGB"/>
-            <color key="separatorColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="separatorColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
                 <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
