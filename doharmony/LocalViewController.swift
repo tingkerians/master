@@ -7,23 +7,35 @@
 //
 
 import UIKit
+import CoreData
 
 class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
     
-    var titleArray : [String] = ["Little Star", "Jingle Bell", "Canon", "Two Tiger", "Bayer No.8", "Silent Night", "The Painter", "Gavotte", "Minuet 1", "Moments"]
-    var coverArray : [String] = ["littleStar", "jingleBell", "canon", "default", "default", "default", "default", "default", "default", "default"]
-    
-    var authorArray : [String] = ["daryl", "kim", "zer", "kyle", "rex", "mark", "rain", "kimor", "dc", "ton"]
+    var coreData = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "LocalTableViewCell", bundle: nil), forCellReuseIdentifier: "LocalTableViewCell")
-        // Do any additional setup after loading the view.
+//        let _ = test()
+        fetchCoreData(nil)
+    }
+    
+    func fetchCoreData(filter: NSPredicate?){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+       
+        let fetchRequest = NSFetchRequest(entityName: "Tracks")
+        fetchRequest.predicate = filter
+        do{
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            coreData = results as! [NSManagedObject]
+        } catch{
+            print("error3")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,10 +43,12 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         // Dispose of any resources that can be recreated.
     }
     
+    //scroll delegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
         searchBar.resignFirstResponder()
     }
     
+    //table delegate
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -42,15 +56,15 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return titleArray.count
+        return coreData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : LocalTableViewCell = tableView.dequeueReusableCellWithIdentifier("LocalTableViewCell") as! LocalTableViewCell
         
-        cell.TitleLabel.text = titleArray[indexPath.row]
-        cell.authorLabel.text = authorArray[indexPath.row]
-        cell.ImageView.image = UIImage(named: coverArray[indexPath.row])
+        cell.TitleLabel.text = coreData[indexPath.row].valueForKey("trackname") as? String
+        cell.authorLabel.text = coreData[indexPath.row].valueForKey("username") as? String
+        cell.ImageView.image = UIImage(named: (coreData[indexPath.row].valueForKey("trackimage") as? String)!)
         
         return cell
     }
@@ -77,4 +91,20 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         let cell  = tableView.cellForRowAtIndexPath(indexPath)
         cell!.contentView.backgroundColor = .clearColor()
     }
+
+    //search delegate
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        let filter: NSPredicate?
+        if(searchText.isEmpty){
+            filter = nil
+        }else{
+            filter = NSPredicate(format: "ANY trackname CONTAINS[c] %@", searchText)
+        }
+        
+        fetchCoreData(filter)
+        tableView.reloadData()
+        
+    }
+    
+    
 }
