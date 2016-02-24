@@ -5,9 +5,6 @@
 //  Created by eliakim on 2/19/16.
 //  Copyright © 2016 Eleazer Toluan. All rights reserved.
 //
-//  To do: 
-//    Fetch data from server every `n` secs.
-//    Fetching of initial data must be only done once, and not every navigation
 //
 
 import UIKit
@@ -20,19 +17,19 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     @IBOutlet weak var tableView: UITableView!
     
     // Variable that will hold json results from the server
-    var trackList: [JSON] = [];
-    // Server url for `recently added` tracks
+    var tracks = [JSON]();
+    // Server url for tracks data
     let url = "http://192.168.0.137:8080/api/tracks";
     
     override func viewDidAppear(animated: Bool) {
-        print("recent tracks");
+//        print("recent tracks");
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchBar.delegate = self
         // Fetch data from the server if there's no existing data
-        if trackList.count <= 0 {
+        if tracks.count <= 0 {
             // Fetch json of `recently` added tracks
             fetchTrackData();
         }
@@ -45,22 +42,26 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     }
     
     /*
-    Fetch track data from the server and store it in the `trackList` variable
+    Fetch track data from the server and store it in the `tracks` variable
     */
     func fetchTrackData() {
         print("fetching `recent tracks` data");
         
-        Alamofire.request(.GET, url, parameters: nil)
+        let parameters = [
+            "category" : "recent"
+        ];
+        
+        Alamofire.request(.GET, url, parameters: parameters)
             .validate()
             .responseJSON { response in
                 switch response.result {
                 case .Success:
                     let result = JSON(response.result.value!);
                     if let data = result["data"].arrayValue as [JSON]?{
-                        self.trackList = data;
+                        self.tracks = data;
                         self.tableView.reloadData();
                     }
-                    
+
                 case .Failure(let error):
                     print("HTTP RESPONSE:\n\(response.response)");
                     self.showAlert("Fetch data failed", message: String(error.localizedDescription));
@@ -68,6 +69,7 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         }
         return;
     }
+
     
     /*
     Used to show alerts and message
@@ -95,19 +97,18 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return trackList.count
+        return tracks.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
         
-        let coverArt: String = "http://192.168.0.137:8080/api/coverart/\(trackList[indexPath.row]["id"].stringValue)";
-        
-        cell.titleLabel.text = trackList[indexPath.row]["title"].stringValue;
+        let coverArt: String = "http://192.168.0.137:8080/api/coverart/\(tracks[indexPath.row]["id"].stringValue)";
+        cell.titleLabel.text = tracks[indexPath.row]["title"].stringValue;
         cell.UIimageView.image =
             UIImage(data: NSData(contentsOfURL: NSURL(string: coverArt)!)!);
-        cell.authorLabel.text = trackList[indexPath.row]["author"].stringValue;
-        cell.publishDate.text = trackList[indexPath.row]["publish_date"].stringValue;
+        cell.authorLabel.text = tracks[indexPath.row]["author"].stringValue;
+        cell.publishDate.text = tracks[indexPath.row]["date_created"].stringValue;
         return cell
     }
     

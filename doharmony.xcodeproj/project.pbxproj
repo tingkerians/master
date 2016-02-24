@@ -365,8 +365,8 @@
 			isa = PBXGroup;
 			children = (
 				3374E3C41C7BEF5E0000B9A3 /* PopularCategoryTableViewController.swift */,
-				3374E3C51C7BEF5E0000B9A3 /* PopularCategoryTableViewController.xib */,
 				3374E3C81C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.swift */,
+				3374E3C51C7BEF5E0000B9A3 /* PopularCategoryTableViewController.xib */,
 				3374E3C91C7BF1AB0000B9A3 /* PopularCategoryTableViewCell.xib */,
 			);
 			name = PopularCategory;
@@ -375,9 +375,9 @@
 		3374E3CC1C7BF2DC0000B9A3 /* BestCategory */ = {
 			isa = PBXGroup;
 			children = (
+				3374E3D11C7BF3180000B9A3 /* BestCategoryTableViewController.swift */,
 				3374E3CD1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.swift */,
 				3374E3CE1C7BF2FC0000B9A3 /* BestCategoryTableViewCell.xib */,
-				3374E3D11C7BF3180000B9A3 /* BestCategoryTableViewController.swift */,
 				3374E3D21C7BF3180000B9A3 /* BestCategoryTableViewController.xib */,
 			);
 			name = BestCategory;
@@ -503,9 +503,9 @@
 			isa = PBXGroup;
 			children = (
 				F6CC20531C76C49D0033CF70 /* RecentViewController.swift */,
-				F6CC20541C76C49D0033CF70 /* RecentViewController.xib */,
 				F6B5FBA31C76C1BA001B8868 /* RecentTableViewCell.swift */,
 				F6B5FBA41C76C1BA001B8868 /* RecentTableViewCell.xib */,
+				F6CC20541C76C49D0033CF70 /* RecentViewController.xib */,
 			);
 			name = Recently;
 			sourceTree = "<group>";

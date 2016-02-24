@@ -7,18 +7,73 @@
 //
 
 import UIKit
+import Alamofire
 import SwiftyJSON
 
 class BestCategoryTableViewController: UITableViewController {
     
     // Variable that will hold json results from the server
-    var trackList: [JSON] = [];
+    var tracks = [JSON]();
+    // `timeCategory` is used in determining the `data` to be fetched
+    // from the server i9.e. last week, last month, or all time
+    var timeCategory = String();
+    // Server url for fetching tracks data
+    let url = "http://192.168.0.137:8080/api/tracks";
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Fetch data from the server if there's no existing data
+        if tracks.count <= 0 {
+            // Fetch json of `best` tracks
+            fetchTrackData();
+        }
         self.tableView.registerNib(UINib(nibName: "BestCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "BestCategoryTableViewCell");
     }
+    
+    /*
+    Fetch track data from the server and store it in the `tracks` variable
+    */
+    func fetchTrackData() {
+        print("fetching `best tracks` data");
 
+        let parameters = [
+            "category" : "best",
+            "date" : timeCategory
+        ];
+        
+        Alamofire.request(.GET, url, parameters: parameters)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    let result = JSON(response.result.value!);
+                    if let data = result["data"].arrayValue as [JSON]?{
+                        self.tracks = data;
+                        self.tableView.reloadData();
+                    }
+                    
+                case .Failure(let error):
+                    print("HTTP RESPONSE:\n\(response.response)");
+                    self.showAlert("Fetch data failed", message: String(error.localizedDescription));
+                }
+        }
+        return;
+    }
+
+    /*
+    Used to show alerts and message
+    */
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+            message: message, preferredStyle: .Alert);
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil);
+        
+        alert.addAction(action);
+        
+        self.presentViewController(alert, animated: true, completion: nil);
+        return;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,19 +88,19 @@ class BestCategoryTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return trackList.count;
+        return tracks.count;
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : BestCategoryTableViewCell = tableView.dequeueReusableCellWithIdentifier("BestCategoryTableViewCell") as! BestCategoryTableViewCell
         
-        let coverArt: String = "http://192.168.0.137:8080/api/coverart/\(trackList[indexPath.row]["id"].stringValue)";
+        let coverArt: String = "http://192.168.0.137:8080/api/coverart/\(tracks[indexPath.row]["id"].stringValue)";
         
-        cell.titleLabel.text = trackList[indexPath.row]["title"].stringValue;
+        cell.titleLabel.text = tracks[indexPath.row]["title"].stringValue;
         cell.UIimageView.image =
             UIImage(data: NSData(contentsOfURL: NSURL(string: coverArt)!)!);
-        cell.authorLabel.text = trackList[indexPath.row]["author"].stringValue;
-        cell.likesLabel.text = trackList[indexPath.row]["likes"].stringValue;
+        cell.authorLabel.text = tracks[indexPath.row]["author"].stringValue;
+        cell.likesLabel.text = tracks[indexPath.row]["likes"].stringValue;
         return cell
     }
     
