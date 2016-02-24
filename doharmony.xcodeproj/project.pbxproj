@@ -16,8 +16,6 @@
 		DF069AB71C7D36F00004702F /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF069AB51C7D36EF0004702F /* BestViewController.xib */; };
 		DF069ABA1C7D3F1B0004702F /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF069AB81C7D3F1B0004702F /* LocalViewController.swift */; };
 		DF069ABB1C7D3F1B0004702F /* LocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF069AB91C7D3F1B0004702F /* LocalViewController.xib */; };
-		DF101BD41C6C12510006B4D3 /* LocalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */; };
-		DF101BD51C6C12510006B4D3 /* LocalTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */; };
 		DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */; };
 		DF101BD91C6C14310006B4D3 /* LocalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BD71C6C14310006B4D3 /* LocalTableViewCell.xib */; };
 		DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BE41C6C18C00006B4D3 /* LibrariesTableViewController.swift */; };
@@ -238,8 +236,6 @@
 		DF069AB51C7D36EF0004702F /* BestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestViewController.xib; sourceTree = "<group>"; };
 		DF069AB81C7D3F1B0004702F /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		DF069AB91C7D3F1B0004702F /* LocalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalViewController.xib; sourceTree = "<group>"; };
-		DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewController.swift; sourceTree = "<group>"; };
-		DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalTableViewController.xib; sourceTree = "<group>"; };
 		DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewCell.swift; sourceTree = "<group>"; };
 		DF101BD71C6C14310006B4D3 /* LocalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalTableViewCell.xib; sourceTree = "<group>"; };
 		DF101BE41C6C18C00006B4D3 /* LibrariesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibrariesTableViewController.swift; sourceTree = "<group>"; };
@@ -579,8 +575,6 @@
 			children = (
 				DF069AB81C7D3F1B0004702F /* LocalViewController.swift */,
 				DF069AB91C7D3F1B0004702F /* LocalViewController.xib */,
-				DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */,
-				DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */,
 				DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */,
 				DF101BD71C6C14310006B4D3 /* LocalTableViewCell.xib */,
 			);
@@ -966,7 +960,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64802221C75AFEE00F6F083 /* TrackDetailsViewController.xib in Resources */,
-				DF101BD51C6C12510006B4D3 /* LocalTableViewController.xib in Resources */,
 				F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */,
 				DF6B70611C7AE33900B655B6 /* UserDetailsViewController.xib in Resources */,
 				DF526F621C6D73D1009971FF /* LibrariesTableViewCell.xib in Resources */,
@@ -1041,7 +1034,6 @@
 				F64802211C75AFEE00F6F083 /* TrackDetailsViewController.swift in Sources */,
 				DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */,
 				DF069ABA1C7D3F1B0004702F /* LocalViewController.swift in Sources */,
-				DF101BD41C6C12510006B4D3 /* LocalTableViewController.swift in Sources */,
 				F648021D1C75AFEE00F6F083 /* PostsTableViewController.swift in Sources */,
 				DF6B705B1C7ADF2200B655B6 /* FollowingsTableViewCell.swift in Sources */,
 				F64802231C75AFEE00F6F083 /* CommentTableViewCell.swift in Sources */,

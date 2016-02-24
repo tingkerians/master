@@ -12,9 +12,7 @@ class ProfileViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    override func viewDidLoad() {
         // MARK: - Scroll menu setup
         
         // Initialize view controllers to display and place in array
@@ -29,7 +27,7 @@ class ProfileViewController: UIViewController {
         let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
         controller3.title = "My Projects"
         controllerArray.append(controller3)
-               
+        
         // Customize menu (Optional)
         let parameters: [CAPSPageMenuOption] = [
             .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
@@ -47,34 +45,13 @@ class ProfileViewController: UIViewController {
         
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        pageMenu!.didMoveToParentViewController(self)
     }
-    
-    func didTapGoToLeft() {
-        let currentIndex = pageMenu!.currentPageIndex
-        
-        if currentIndex > 0 {
-            pageMenu!.moveToPage(currentIndex - 1)
-        }
-    }
-    
-    func didTapGoToRight() {
-        let currentIndex = pageMenu!.currentPageIndex
-        
-        if currentIndex < pageMenu!.controllerArray.count {
-            pageMenu!.moveToPage(currentIndex + 1)
-        }
-    }
-    
-    // MARK: - Container View Controller
-    override func shouldAutomaticallyForwardAppearanceMethods() -> Bool {
-        return true
-    }
-    
-    override func shouldAutomaticallyForwardRotationMethods() -> Bool {
-        return true
-    }
+
 }
 
 

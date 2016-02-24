@@ -40,9 +40,9 @@ class RecordViewController: UIViewController {
         let controller2 : RecordingViewController = RecordingViewController(nibName: "RecordingViewController", bundle: nil)
         controller2.title = "Record"
         controllerArray.append(controller2)
-        let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
-        controller3.title = "Local"
-        controllerArray.append(controller3)
+//        let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
+//        controller3.title = "Local"
+//        controllerArray.append(controller3)
 
         
         let parameters: [CAPSPageMenuOption] = [

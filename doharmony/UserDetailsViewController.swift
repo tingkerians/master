@@ -14,8 +14,6 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-   
-
     @IBOutlet weak var friendImage: UIButton!
     @IBOutlet weak var ProfilePicture: UIImageView!
     @IBOutlet weak var TracksTableView: UITableView!
@@ -38,6 +36,7 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         FriendFollowButton(friendImage)
     }
+
     
     @IBAction func unFriendFollowButton(sender: AnyObject) {
         var Image : UIImage!

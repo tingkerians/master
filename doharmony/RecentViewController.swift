@@ -61,8 +61,7 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
         self.presentViewController(vc, animated: true, completion: nil)
-        
-    
+
     }
     
     func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {

@@ -19,14 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab-home" id="TXb-cd-LbW">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="100"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="tab-home" id="M2F-lE-NAJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="553" y="230"/>
+            <point key="canvasLocation" x="553" y="194"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="AEh-qh-lfi">
@@ -79,7 +77,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="nAs-NR-xv4"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XjH-9Y-4o1"/>
                         <segue destination="CF4-OB-Ijd" kind="relationship" relationship="viewControllers" id="zmM-FT-c9K"/>
                         <segue destination="CIJ-iy-iBE" kind="relationship" relationship="viewControllers" id="aAj-JN-S0j"/>
                         <segue destination="mgu-Xp-G3O" kind="relationship" relationship="viewControllers" id="NOl-0B-SVU"/>
