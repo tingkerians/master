@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         let controller3 : BestTableViewController = BestTableViewController(nibName: "BestTableViewController", bundle: nil)
         controller3.title = "Best"
         controllerArray.append(controller3)
-        let controller4 : LocalTableViewController = LocalTableViewController(nibName: "LocalTableViewController", bundle: nil)
+        let controller4 : LocalViewController = LocalViewController(nibName: "LocalViewController", bundle: nil)
         controller4.title = "Local"
         controllerArray.append(controller4)
         

@@ -9,7 +9,11 @@
 import UIKit
 
 class PlayTrackViewController: UIViewController {
+    
 
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

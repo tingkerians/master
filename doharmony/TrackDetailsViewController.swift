@@ -9,11 +9,10 @@
 import UIKit
 
 class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIScrollViewDelegate{
+    @IBOutlet weak var ScrollView: UIScrollView!
     var label = UILabel()
-    @IBOutlet weak var commentBoxHeight: NSLayoutConstraint!
-    @IBOutlet weak var commentBox: UIView!
     
-    @IBOutlet weak var postButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var commentBox: UIView!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet var commentTextView: UITextView!
     @IBOutlet weak var CommentTableView: UITableView!
@@ -24,25 +23,21 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
         self.dismissViewControllerAnimated(false, completion: nil)
     }
     
-    
-    let memberName = ["Daryl Decoyna", "Khemer", "Kyle", "Mark"]
-    let comment = ["In publishing and graphic design, lorem ipsum.", "The lorem ipsum text is typically a scrambled section of De finibus bonorum et malorum, a 1st-century BC Latin text by Cicero, with words altered, added, and removed to make it nonsensical, improper Latin.","Great!!!", "bye"]
-    let profilePic = [UIImage(named: "man4"),UIImage(named: "man1"),UIImage(named: "man3"),UIImage(named: "man1")]
+    let memberName = ["Daryl Decoyna", "Khemer", "Kyle", "Mark","Daryl Decoyna", "Eliakim"]
+    let comment = ["In publishing and graphic design, lorem ipsum.", "The lorem ipsum text is typically a scrambled section of De finibus bonorum et malorum, a 1st-century BC Latin text by Cicero, with words altered, added, and removed to make it nonsensical, improper Latin.","Great!!!", "bye","In publishing and graphic design, lorem ipsum.", "hello wolrd"]
+    let profilePic = [UIImage(named: "man4"),UIImage(named: "man1"),UIImage(named: "man3"),UIImage(named: "man1"),UIImage(named: "man4"),UIImage(named: "man3")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.TrackTitle.label = self.TrackTitle
-
-        self.commentBoxHeight.constant = 60
-        self.postButton.hidden = true
-        self.postButtonHeight.constant = 0
+        
+        CommentTableView.estimatedRowHeight = 100.0
+        CommentTableView.rowHeight = UITableViewAutomaticDimension
+        
         self.commentTextView.text = "Add comment"
         self.commentTextView.textColor = UIColor.lightGrayColor()
-        
-        self.CommentTableView.registerNib(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
-        self.CommentTableView.estimatedRowHeight = 80
-        self.CommentTableView.rowHeight = UITableViewAutomaticDimension
+//        self.ScrollView.contentSize.height = 15000
 
+        self.CommentTableView.registerNib(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
         self.CommentTableView.setNeedsLayout()
         self.CommentTableView.layoutIfNeeded()
         
@@ -62,7 +57,6 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(CommentTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let mycount = self.profilePic.count
-        print(mycount)
         return mycount
     }
     
@@ -75,9 +69,10 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-    func tableView(CommentTableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80.0
-    }
+//    func tableView(CommentTableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//           return 100.0
+//    }
+    
     // Dismiss Keyboard
     func keyboardWillShow(sender: NSNotification) {
         self.view.frame.origin.y -= 150
@@ -91,37 +86,24 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
         return true
     }
     func tap(gesture: UITapGestureRecognizer){
+        commentTextView.text = ""
         commentTextView.resignFirstResponder()
     }
     // End dismiss keyboard
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        self.commentBoxHeight.constant = 0
-        self.commentBox.hidden = true
-        print("scrolllllllllling")
-        
-        
-        let scrollOffset = scrollView.contentOffset.y
-        if scrollOffset == 0{
-            self.commentBoxHeight.constant = 60
-            self.commentBox.hidden = false
-        }
-    }
+
     func textViewDidBeginEditing(commentTextView: UITextView) {
         if commentTextView.textColor == UIColor.lightGrayColor(){
             commentTextView.text = nil
             commentTextView.textColor = UIColor.blackColor()
         }
-        self.commentBoxHeight.constant = 100
-        self.postButtonHeight.constant = 20
         self.postButton.hidden = false
     }
     func textViewDidEndEditing(commentTextView: UITextView) {
-        self.commentBoxHeight.constant = 60
-        self.postButtonHeight.constant = 0
-        self.postButton.hidden = true
+
         if commentTextView.text.isEmpty{
             commentTextView.text = "Add comment"
             commentTextView.textColor = UIColor.lightGrayColor()
         }
     }
+    
 }

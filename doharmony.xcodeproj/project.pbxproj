@@ -12,8 +12,6 @@
 		7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; };
 		7615F27C1C7597EF00ACBD3E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */; };
-		DF101BD41C6C12510006B4D3 /* LocalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */; };
-		DF101BD51C6C12510006B4D3 /* LocalTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */; };
 		DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */; };
 		DF101BD91C6C14310006B4D3 /* LocalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BD71C6C14310006B4D3 /* LocalTableViewCell.xib */; };
 		DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BE41C6C18C00006B4D3 /* LibrariesTableViewController.swift */; };
@@ -85,6 +83,8 @@
 		F6CC20561C76C49D0033CF70 /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CC20541C76C49D0033CF70 /* RecentViewController.xib */; };
 		F6CC205C1C76DAE50033CF70 /* PlayTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC205A1C76DAE50033CF70 /* PlayTrackViewController.swift */; };
 		F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CC205B1C76DAE50033CF70 /* PlayTrackViewController.xib */; };
+		F6D4C3921C7C257A002076C9 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D4C3901C7C257A002076C9 /* LocalViewController.swift */; };
+		F6D4C3931C7C257A002076C9 /* LocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D4C3911C7C257A002076C9 /* LocalViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,8 +235,6 @@
 		7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
-		DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewController.swift; sourceTree = "<group>"; };
-		DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalTableViewController.xib; sourceTree = "<group>"; };
 		DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewCell.swift; sourceTree = "<group>"; };
 		DF101BD71C6C14310006B4D3 /* LocalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalTableViewCell.xib; sourceTree = "<group>"; };
 		DF101BE41C6C18C00006B4D3 /* LibrariesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibrariesTableViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +312,8 @@
 		F6CC20541C76C49D0033CF70 /* RecentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentViewController.xib; sourceTree = "<group>"; };
 		F6CC205A1C76DAE50033CF70 /* PlayTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayTrackViewController.swift; sourceTree = "<group>"; };
 		F6CC205B1C76DAE50033CF70 /* PlayTrackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayTrackViewController.xib; sourceTree = "<group>"; };
+		F6D4C3901C7C257A002076C9 /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
+		F6D4C3911C7C257A002076C9 /* LocalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,8 +565,8 @@
 		DF526F6B1C6D9397009971FF /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */,
-				DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */,
+				F6D4C3901C7C257A002076C9 /* LocalViewController.swift */,
+				F6D4C3911C7C257A002076C9 /* LocalViewController.xib */,
 				DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */,
 				DF101BD71C6C14310006B4D3 /* LocalTableViewCell.xib */,
 			);
@@ -955,7 +955,6 @@
 				DFF4CBF01C6B0CF2008973D3 /* images in Resources */,
 				DF101BF71C6C1B350006B4D3 /* BestTableViewController.xib in Resources */,
 				F64802221C75AFEE00F6F083 /* TrackDetailsViewController.xib in Resources */,
-				DF101BD51C6C12510006B4D3 /* LocalTableViewController.xib in Resources */,
 				F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */,
 				DF526F621C6D73D1009971FF /* LibrariesTableViewCell.xib in Resources */,
 				F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */,
@@ -975,6 +974,7 @@
 				DF101BF21C6C197F0006B4D3 /* PopularTableViewController.xib in Resources */,
 				F6B5FB941C769E6C001B8868 /* LoginViewController.xib in Resources */,
 				DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */,
+				F6D4C3931C7C257A002076C9 /* LocalViewController.xib in Resources */,
 				DF16A0B61C754E32006E4019 /* TemplateViewController.xib in Resources */,
 				DF526F581C6D5E63009971FF /* MyFriendsTableViewController.xib in Resources */,
 				DFF4CBB91C6B0BD2008973D3 /* Main.storyboard in Resources */,
@@ -1030,7 +1030,6 @@
 				DF101BFF1C6C2F940006B4D3 /* PopularTableViewCell.swift in Sources */,
 				F64802211C75AFEE00F6F083 /* TrackDetailsViewController.swift in Sources */,
 				DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */,
-				DF101BD41C6C12510006B4D3 /* LocalTableViewController.swift in Sources */,
 				F648021D1C75AFEE00F6F083 /* PostsTableViewController.swift in Sources */,
 				F64802231C75AFEE00F6F083 /* CommentTableViewCell.swift in Sources */,
 				F6CC20551C76C49D0033CF70 /* RecentViewController.swift in Sources */,
@@ -1043,6 +1042,7 @@
 				DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */,
 				F6B5FBA71C76C1BA001B8868 /* RecentTableViewCell.swift in Sources */,
 				F6B5FB981C76B20D001B8868 /* SignUpViewController.swift in Sources */,
+				F6D4C3921C7C257A002076C9 /* LocalViewController.swift in Sources */,
 				DF101BF61C6C1B350006B4D3 /* BestTableViewController.swift in Sources */,
 				F6B5FB931C769E6C001B8868 /* LoginViewController.swift in Sources */,
 				DF526F6E1C6D94A9009971FF /* PopularViewController.swift in Sources */,

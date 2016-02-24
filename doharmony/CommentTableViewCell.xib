@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentTableViewCell" customModule="doharmony" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="KGk-i7-Jjw" customClass="CommentTableViewCell" customModule="doharmony" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="368" height="82"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="CommentTableViewCell" customModule="doharmony" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="368" height="81"/>
+                <rect key="frame" x="0.0" y="0.0" width="368" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVA-wS-7i4">
@@ -26,21 +26,15 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfI-8b-Slq">
                         <rect key="frame" x="302" y="10" width="58" height="16"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="cfI-8b-Slq" secondAttribute="height" multiplier="29:8" id="ax4-Kl-198"/>
+                            <constraint firstAttribute="height" constant="16" id="Sxk-xd-Cmh"/>
+                            <constraint firstAttribute="width" constant="58" id="TR2-bG-9Qc"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Make a symbolic breakpoint at UI View Alert For Unsatisfiable Constraints." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rtB-es-nGn">
-                        <rect key="frame" x="66" y="27" width="295" height="54"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eliakim Toluan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUI-6C-0Oj">
-                        <rect key="frame" x="66" y="8" width="222" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Eliakim Toluan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUI-6C-0Oj">
+                        <rect key="frame" x="63" y="8" width="222" height="20"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="DUI-6C-0Oj" secondAttribute="height" multiplier="111:10" id="rO3-gG-VyY"/>
@@ -49,28 +43,67 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nex-ao-zNT">
+                        <rect key="frame" x="62" y="67" width="76" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="MOW-St-OwN"/>
+                            <constraint firstAttribute="width" constant="76" id="coz-vR-NTH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="see more">
+                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="seeMore:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Cmy-Tt-KVM"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a symbolic breakpoint at UI View Alert For Unsatisfiable Constraints." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="1000" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-ab-YXp">
+                        <rect key="frame" x="70" y="26" width="294" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv2-we-MIQ">
+                        <rect key="frame" x="64" y="67" width="76" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="76" id="90Z-51-JZl"/>
+                            <constraint firstAttribute="height" constant="18" id="U7u-zb-M0H"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="show less">
+                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="showLess:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="n5W-yT-tBt"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="cfI-8b-Slq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="2GX-gi-gdB"/>
-                    <constraint firstItem="DUI-6C-0Oj" firstAttribute="leading" secondItem="iVA-wS-7i4" secondAttribute="trailing" constant="8" id="65D-pn-Cw4"/>
+                    <constraint firstItem="Zv2-we-MIQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="64" id="2hw-EI-nwg"/>
+                    <constraint firstItem="DUI-6C-0Oj" firstAttribute="leading" secondItem="iVA-wS-7i4" secondAttribute="trailing" constant="5" id="65D-pn-Cw4"/>
                     <constraint firstItem="iVA-wS-7i4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="6Mw-dV-iUC"/>
-                    <constraint firstItem="rtB-es-nGn" firstAttribute="leading" secondItem="iVA-wS-7i4" secondAttribute="trailing" constant="8" id="8K5-I3-hpx"/>
                     <constraint firstItem="DUI-6C-0Oj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9Yu-RZ-wnE"/>
-                    <constraint firstAttribute="trailing" secondItem="rtB-es-nGn" secondAttribute="trailing" constant="7" id="QsV-xU-rwA"/>
+                    <constraint firstItem="0DA-ab-YXp" firstAttribute="leading" secondItem="iVA-wS-7i4" secondAttribute="trailing" constant="12" id="UeM-az-hFn"/>
                     <constraint firstItem="iVA-wS-7i4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Upl-xh-8KW"/>
-                    <constraint firstAttribute="bottom" secondItem="rtB-es-nGn" secondAttribute="bottom" id="rJK-k0-pTN"/>
-                    <constraint firstItem="cfI-8b-Slq" firstAttribute="leading" secondItem="DUI-6C-0Oj" secondAttribute="trailing" constant="14" id="ueJ-pR-f4d"/>
-                    <constraint firstItem="rtB-es-nGn" firstAttribute="top" secondItem="cfI-8b-Slq" secondAttribute="bottom" constant="1" id="wFA-bs-HwT"/>
-                    <constraint firstItem="cfI-8b-Slq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="zuf-u7-4kh"/>
+                    <constraint firstItem="0DA-ab-YXp" firstAttribute="top" secondItem="cfI-8b-Slq" secondAttribute="bottom" id="VYF-n6-fNV"/>
+                    <constraint firstAttribute="bottom" secondItem="Zv2-we-MIQ" secondAttribute="bottom" constant="7" id="a6X-VT-yso"/>
+                    <constraint firstItem="cfI-8b-Slq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="bnd-2F-aFC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0DA-ab-YXp" secondAttribute="trailing" constant="-4" id="f2f-ut-PII"/>
+                    <constraint firstItem="cfI-8b-Slq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="h0d-IB-1mf"/>
+                    <constraint firstItem="nex-ao-zNT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="hA8-6Z-U9C"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0DA-ab-YXp" secondAttribute="bottom" constant="10" id="hFO-8K-YH1"/>
+                    <constraint firstAttribute="bottom" secondItem="nex-ao-zNT" secondAttribute="bottom" constant="7" id="xkh-Pw-NHt"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="commentLabel" destination="rtB-es-nGn" id="z2J-8F-wnK"/>
+                <outlet property="commentLabel" destination="0DA-ab-YXp" id="T0M-EF-oDc"/>
                 <outlet property="nameLabel" destination="DUI-6C-0Oj" id="NEm-jl-Hok"/>
                 <outlet property="profilePicImage" destination="iVA-wS-7i4" id="ukh-Ug-g2g"/>
+                <outlet property="seeMore" destination="nex-ao-zNT" id="ruq-tF-OOb"/>
+                <outlet property="showLess" destination="Zv2-we-MIQ" id="cyz-79-Lgk"/>
             </connections>
-            <point key="canvasLocation" x="526" y="364"/>
+            <point key="canvasLocation" x="526" y="367"/>
         </tableViewCell>
     </objects>
 </document>

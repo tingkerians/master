@@ -75,11 +75,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkD-tk-Fyb">
-                    <rect key="frame" x="268" y="431" width="64" height="26"/>
+                    <rect key="frame" x="268" y="567" width="64" height="26"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="nkD-tk-Fyb" secondAttribute="height" multiplier="32:13" id="A1F-1G-GJK"/>
-                        <constraint firstAttribute="width" constant="64" id="uJb-ir-MGf"/>
-                        <constraint firstAttribute="height" constant="26" id="w0X-1D-qYd"/>
+                        <constraint firstAttribute="width" constant="64" id="2AJ-a1-JIO"/>
+                        <constraint firstAttribute="height" constant="26" id="B0F-8O-tCx"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="Sign Up">
@@ -101,19 +100,52 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnb-nL-4Mr">
+                    <rect key="frame" x="254" y="440" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="I3C-F8-97L"/>
+                        <constraint firstAttribute="width" constant="40" id="NAv-H3-a25"/>
+                    </constraints>
+                    <state key="normal" title=" " backgroundImage="fb"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In With" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjE-lL-kuk">
+                    <rect key="frame" x="251" y="414" width="98" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="74u-cp-mu0"/>
+                        <constraint firstAttribute="width" constant="98" id="Em5-ql-RbA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcT-0l-4Xs">
+                    <rect key="frame" x="307" y="439" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KSt-jc-waT"/>
+                        <constraint firstAttribute="width" constant="40" id="nhw-SU-NE6"/>
+                    </constraints>
+                    <state key="normal" title=" " backgroundImage="google"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="rYA-DK-Ywx" firstAttribute="top" secondItem="o5S-Fk-nMj" secondAttribute="bottom" constant="8" id="0HB-im-lh2"/>
                 <constraint firstItem="GXg-Xj-dbu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Yb-8Y-XWW"/>
+                <constraint firstItem="bcT-0l-4Xs" firstAttribute="top" secondItem="wjE-lL-kuk" secondAttribute="bottom" constant="4" id="6db-WF-NzZ"/>
+                <constraint firstItem="Fnb-nL-4Mr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-26" id="8LT-QK-LeF"/>
+                <constraint firstItem="Fnb-nL-4Mr" firstAttribute="top" secondItem="wjE-lL-kuk" secondAttribute="bottom" constant="5" id="9k2-FQ-Dj7"/>
                 <constraint firstItem="YVs-7y-Zbn" firstAttribute="top" secondItem="Bg1-Px-Umf" secondAttribute="bottom" constant="8" id="CRK-kU-1fQ"/>
+                <constraint firstItem="bcT-0l-4Xs" firstAttribute="leading" secondItem="Fnb-nL-4Mr" secondAttribute="trailing" constant="13" id="HIA-cd-km7"/>
+                <constraint firstItem="wjE-lL-kuk" firstAttribute="top" secondItem="rYA-DK-Ywx" secondAttribute="bottom" constant="8" id="HU9-on-MC9"/>
+                <constraint firstItem="wjE-lL-kuk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="J0h-E3-bxE"/>
                 <constraint firstItem="Bg1-Px-Umf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QU3-YE-IjP"/>
+                <constraint firstItem="bcT-0l-4Xs" firstAttribute="top" secondItem="wjE-lL-kuk" secondAttribute="bottom" constant="4" id="TRD-J6-iGR"/>
                 <constraint firstItem="o5S-Fk-nMj" firstAttribute="top" secondItem="vs1-h9-Pri" secondAttribute="bottom" constant="23" id="VZ3-Dd-ViR"/>
                 <constraint firstItem="YVs-7y-Zbn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z4K-Rn-D2F"/>
-                <constraint firstItem="nkD-tk-Fyb" firstAttribute="top" secondItem="rYA-DK-Ywx" secondAttribute="bottom" constant="25" id="fnI-Fc-rbB"/>
-                <constraint firstItem="nkD-tk-Fyb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lfa-gx-VuI"/>
+                <constraint firstItem="bcT-0l-4Xs" firstAttribute="leading" secondItem="Fnb-nL-4Mr" secondAttribute="trailing" constant="13" id="a5W-lT-ifO"/>
+                <constraint firstItem="nkD-tk-Fyb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cnV-XH-hHo"/>
+                <constraint firstAttribute="bottom" secondItem="nkD-tk-Fyb" secondAttribute="bottom" constant="7" id="mQa-6z-nNY"/>
                 <constraint firstItem="YVs-7y-Zbn" firstAttribute="top" secondItem="GXg-Xj-dbu" secondAttribute="bottom" constant="41" id="msz-Ia-a2v"/>
-                <constraint firstItem="nkD-tk-Fyb" firstAttribute="top" secondItem="rYA-DK-Ywx" secondAttribute="bottom" constant="25" id="nPs-DK-GaJ"/>
                 <constraint firstItem="vs1-h9-Pri" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pvc-oG-Gh8"/>
                 <constraint firstItem="o5S-Fk-nMj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qof-xv-6RA"/>
                 <constraint firstItem="vs1-h9-Pri" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="thY-SJ-Ka8"/>
@@ -124,5 +156,7 @@
     </objects>
     <resources>
         <image name="doharmony" width="336" height="72"/>
+        <image name="fb" width="2000" height="2000"/>
+        <image name="google" width="2000" height="2000"/>
     </resources>
 </document>

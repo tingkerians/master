@@ -48,9 +48,13 @@
                         <constraint firstAttribute="height" constant="24" id="be7-Uw-aMC"/>
                         <constraint firstAttribute="width" constant="20" id="wSM-y9-MgM"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <state key="normal" title="X">
                         <color key="titleColor" red="0.90588235289999997" green="0.31764705879999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="GTv-zQ-Phb"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My first doharmony video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU2-OW-XhQ">
                     <rect key="frame" x="199" y="35" width="203" height="21"/>
