@@ -12,6 +12,8 @@
 		7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; };
 		7615F27C1C7597EF00ACBD3E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */; };
+		76DD6D391C7C2BF300CB5694 /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6D381C7C2BF300CB5694 /* auth.swift */; };
+		76DD6D3C1C7C2D0000CB5694 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6D3B1C7C2D0000CB5694 /* config.swift */; };
 		DF101BD41C6C12510006B4D3 /* LocalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */; };
 		DF101BD51C6C12510006B4D3 /* LocalTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */; };
 		DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */; };
@@ -235,6 +237,8 @@
 		7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
+		76DD6D381C7C2BF300CB5694 /* auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
+		76DD6D3B1C7C2D0000CB5694 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		DF101BD21C6C12510006B4D3 /* LocalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewController.swift; sourceTree = "<group>"; };
 		DF101BD31C6C12510006B4D3 /* LocalTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalTableViewController.xib; sourceTree = "<group>"; };
 		DF101BD61C6C14310006B4D3 /* LocalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewCell.swift; sourceTree = "<group>"; };
@@ -378,6 +382,22 @@
 				7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */,
 			);
 			name = Library;
+			sourceTree = "<group>";
+		};
+		76DD6D001C7C258900CB5694 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				76DD6D381C7C2BF300CB5694 /* auth.swift */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		76DD6D3A1C7C2CE100CB5694 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				76DD6D3B1C7C2D0000CB5694 /* config.swift */,
+			);
+			name = configuration;
 			sourceTree = "<group>";
 		};
 		DF101BC91C6C07F90006B4D3 /* Home */ = {
@@ -609,6 +629,8 @@
 			isa = PBXGroup;
 			children = (
 				DFF4CBB31C6B0BD2008973D3 /* AppDelegate.swift */,
+				76DD6D3A1C7C2CE100CB5694 /* configuration */,
+				76DD6D001C7C258900CB5694 /* Module */,
 				DF101BDC1C6C16F80006B4D3 /* Music */,
 				DF101BDB1C6C16ED0006B4D3 /* Libraries */,
 				DFF4CBFA1C6B1961008973D3 /* Controllers */,
@@ -1020,8 +1042,10 @@
 				DFF4CC021C6B1BCA008973D3 /* TabBarController.swift in Sources */,
 				DF101BEB1C6C19080006B4D3 /* ProjectsTableViewController.swift in Sources */,
 				DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */,
+				76DD6D391C7C2BF300CB5694 /* auth.swift in Sources */,
 				DFF4CBF71C6B0CF2008973D3 /* TestViewController.swift in Sources */,
 				DF526F5D1C6D5EB6009971FF /* MyFriendsTableViewCell.swift in Sources */,
+				76DD6D3C1C7C2D0000CB5694 /* config.swift in Sources */,
 				DF101BF11C6C197F0006B4D3 /* PopularTableViewController.swift in Sources */,
 				DFF4CBB41C6B0BD2008973D3 /* AppDelegate.swift in Sources */,
 				DFF4CBED1C6B0CF2008973D3 /* CAPSPageMenu.swift in Sources */,
