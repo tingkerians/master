@@ -12,9 +12,10 @@ class FriendsViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-                
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        self.navigationController?.navigationBarHidden = true
+        
         // MARK: - Scroll menu setup
         
         // Initialize view controllers to display and place in array
@@ -51,34 +52,47 @@ class FriendsViewController: UIViewController {
         
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
+    }
+    
+//    override func viewWillDisappear(animated: Bool)
+//    {
+//        super.viewWillDisappear(animated)
+//        self.navigationController?.navigationBarHidden = false
+//    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+//        self.navigationController?.navigationBarHidden = true
         
-        pageMenu!.didMoveToParentViewController(self)
-    }
-    
-    func didTapGoToLeft() {
-        let currentIndex = pageMenu!.currentPageIndex
         
-        if currentIndex > 0 {
-            pageMenu!.moveToPage(currentIndex - 1)
-        }
-    }
-    
-    func didTapGoToRight() {
-        let currentIndex = pageMenu!.currentPageIndex
         
-        if currentIndex < pageMenu!.controllerArray.count {
-            pageMenu!.moveToPage(currentIndex + 1)
-        }
+//        pageMenu!.didMoveToParentViewController(self)
     }
     
-    // MARK: - Container View Controller
-    override func shouldAutomaticallyForwardAppearanceMethods() -> Bool {
-        return true
-    }
-    
-    override func shouldAutomaticallyForwardRotationMethods() -> Bool {
-        return true
-    }
+//    func didTapGoToLeft() {
+//        let currentIndex = pageMenu!.currentPageIndex
+//        
+//        if currentIndex > 0 {
+//            pageMenu!.moveToPage(currentIndex - 1)
+//        }
+//    }
+//    
+//    func didTapGoToRight() {
+//        let currentIndex = pageMenu!.currentPageIndex
+//        
+//        if currentIndex < pageMenu!.controllerArray.count {
+//            pageMenu!.moveToPage(currentIndex + 1)
+//        }
+//    }
+//    
+//    // MARK: - Container View Controller
+//    override func shouldAutomaticallyForwardAppearanceMethods() -> Bool {
+//        return true
+//    }
+//    
+//    override func shouldAutomaticallyForwardRotationMethods() -> Bool {
+//        return true
+//    }
 }
 
 

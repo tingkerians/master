@@ -12,10 +12,9 @@ class HomeViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
         // MARK: - Scroll menu setup
         
         // Initialize view controllers to display and place in array
@@ -52,34 +51,14 @@ class HomeViewController: UIViewController {
         
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        pageMenu!.didMoveToParentViewController(self)
+       
     }
-    
-    func didTapGoToLeft() {
-        let currentIndex = pageMenu!.currentPageIndex
-        
-        if currentIndex > 0 {
-            pageMenu!.moveToPage(currentIndex - 1)
-        }
-    }
-    
-    func didTapGoToRight() {
-        let currentIndex = pageMenu!.currentPageIndex
-        
-        if currentIndex < pageMenu!.controllerArray.count {
-            pageMenu!.moveToPage(currentIndex + 1)
-        }
-    }
-    
-    // MARK: - Container View Controller
-    override func shouldAutomaticallyForwardAppearanceMethods() -> Bool {
-        return true
-    }
-    
-    override func shouldAutomaticallyForwardRotationMethods() -> Bool {
-        return true
-    }
+
 }
 
 

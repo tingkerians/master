@@ -14,6 +14,18 @@ class FollowingsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ProfileName: UILabel!
     
+    @IBAction func unfollowButton(sender: AnyObject) {
+        print("unfollow!!!")
+    }
+    
+    @IBAction func viewTracksButton(sender: AnyObject) {
+        print("view tracks")
+    }
+    
+    @IBAction func contactButton(sender: AnyObject) {
+        print("contact")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
