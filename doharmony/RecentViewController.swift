@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate{
     
@@ -18,6 +19,12 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let tracks = _tracks()
+//        tracks.setCategory("recent").setSearch("aw").request { (tracks) -> Void in
+//            print(tracks)
+//        }
+        
         SearchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
         // Do any additional setup after loading the view.

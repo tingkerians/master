@@ -20,7 +20,7 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         super.viewDidLoad()
         searchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "LocalTableViewCell", bundle: nil), forCellReuseIdentifier: "LocalTableViewCell")
-//        let _ = test()
+        let _ = test()
         fetchCoreData(nil)
     }
     
@@ -75,10 +75,9 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
+        let vc = PlayTrackViewController(nibName: "PlayTrackViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
         self.presentViewController(vc, animated: true, completion: nil)
-        
         
     }
     

@@ -13,6 +13,7 @@
 		7615F27C1C7597EF00ACBD3E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */; };
 		765071C81C7D511700798B76 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765071C71C7D511700798B76 /* test.swift */; };
+		765071E61C7D8FC800798B76 /* tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765071E51C7D8FC800798B76 /* tracks.swift */; };
 		76DD6D391C7C2BF300CB5694 /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6D381C7C2BF300CB5694 /* auth.swift */; };
 		76DD6D3C1C7C2D0000CB5694 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6D3B1C7C2D0000CB5694 /* config.swift */; };
 		DF069AB61C7D36F00004702F /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF069AB41C7D36EF0004702F /* BestViewController.swift */; };
@@ -236,6 +237,7 @@
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
 		765071C71C7D511700798B76 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		765071E51C7D8FC800798B76 /* tracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tracks.swift; sourceTree = "<group>"; };
 		76DD6D381C7C2BF300CB5694 /* auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
 		76DD6D3B1C7C2D0000CB5694 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		DF069AB41C7D36EF0004702F /* BestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 			children = (
 				76DD6D381C7C2BF300CB5694 /* auth.swift */,
 				765071C71C7D511700798B76 /* test.swift */,
+				765071E51C7D8FC800798B76 /* tracks.swift */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -834,7 +837,7 @@
 				TargetAttributes = {
 					DFF4CBAF1C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = MY7PN5V7K8;
+						DevelopmentTeam = 3L7S37R5K7;
 					};
 					DFF4CBC31C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1046,6 +1049,7 @@
 				DF526F771C6D9FBB009971FF /* AllMembersTableViewCell.swift in Sources */,
 				DFF4CBB61C6B0BD2008973D3 /* HomeViewController.swift in Sources */,
 				DF16A0BA1C755007006E4019 /* RecordingViewController.swift in Sources */,
+				765071E61C7D8FC800798B76 /* tracks.swift in Sources */,
 				DFF4CC021C6B1BCA008973D3 /* TabBarController.swift in Sources */,
 				DF101BEB1C6C19080006B4D3 /* ProjectsTableViewController.swift in Sources */,
 				DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */,
@@ -1237,7 +1241,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyy;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1253,7 +1257,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyy;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
