@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Promijeniti";
+
+"Hello world" = "Bok svijete";
+
+"Reset" = "Reset";
+
+"Recent" = "nedavni";
+
+"Popular" = "Popularan";
+
+"Best" = "Najbolje";
+
+"Local" = "lokalne";
+
+"Last Week" = "Prošli tjedan";
+
+"Last Month" = "Prošli mjesec";
+
+"All Time" = "Cijelo vrijeme";
+
+"Post" = "pošta";
+
+"My Friends" = "Moji prijatelji";
+
+"All Members" = "Svi članovi";
+
+"Templates" = "Predlošci";
+
+"Record" = "Snimiti";
+
+"Tracks" = "Pjesme";
+
+"My Profile" = "Moj profil";
+
+"My Tracks" = "Moje staze";
+
+"My Projects" = "Moji projekti";
+
+"Videos" = "Video";
+
+"Friends" = "Prijatelji";
+
+"Followers" = "sljedbenici";
+
+"Following" = "sljedeći";
+
+"Notification" = "Obavijest";
+
+"Welcome" = "Dobrodošli";
+
+"Login" = "Prijaviti se";
+
+"Logout" = "Odjaviti se";
+
+"All" = "svi";

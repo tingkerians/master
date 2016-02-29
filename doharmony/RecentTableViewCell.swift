@@ -12,6 +12,9 @@ class RecentTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var LikeLabel: UILabel!
+    @IBOutlet weak var ViewLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

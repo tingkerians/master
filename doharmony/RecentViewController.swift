@@ -7,27 +7,26 @@
 //
 
 import UIKit
-import Alamofire
+import SwiftyJSON
 
 class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate{
     
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var namesArray : [String] = ["Little Star", "Jingle Bell", "Canon", "Two Tiger", "Bayer No.8", "Silent Night", "The Painter", "Gavotte", "Minuet 1", "Moments"]
-    var photoNameArray : [String] = ["littleStar", "jingleBell", "canon", "default", "default", "default", "default", "default", "default", "default"]
+    var data: [JSON]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let tracks = _tracks()
-//        tracks.setCategory("recent").setSearch("aw").request { (tracks) -> Void in
-//            print(tracks)
-//        }
-        
         SearchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
-        // Do any additional setup after loading the view.
+        
+        let tracks = _tracks()
+        tracks.setCategory("recent").request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +36,6 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
         SearchBar.resignFirstResponder()
-        print("scrolllllllllling")
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -47,20 +45,30 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return namesArray.count
+        if(self.data == nil){
+            return 0
+        }else{
+            return self.data!.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
         
-        cell.TitleLabel.text = namesArray[indexPath.row]
-        cell.ImageView.image = UIImage(named: photoNameArray[indexPath.row])
+        let tracks = self.data!
+        let coverArt: String = "http://192.168.0.137:8080/api/coverart/\(tracks[indexPath.row]["id"].stringValue)"
         
+        cell.TitleLabel.text = tracks[indexPath.row]["title"].stringValue
+        cell.ImageView.image =
+            UIImage(data: NSData(contentsOfURL: NSURL(string: coverArt)!)!)
+        cell.ViewLabel.text = tracks[indexPath.row]["views"].stringValue + ""
+        cell.LikeLabel.text = tracks[indexPath.row]["likes"].stringValue + ""
+        cell.DateLabel.text = tracks[indexPath.row]["date_updated"].stringValue
         return cell
     }
     
    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50.0
+        return 60.0
     }
 
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -80,14 +88,18 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         let cell  = tableView.cellForRowAtIndexPath(indexPath)
         cell!.contentView.backgroundColor = .clearColor()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //search delegate
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        let tracks = _tracks()
+        tracks.setCategory("recent").setSearch(searchText).request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+        }
     }
-    */
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
 
 }

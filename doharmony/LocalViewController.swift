@@ -105,5 +105,9 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         
     }
     
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
     
 }

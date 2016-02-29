@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Schimbare";
+
+"Hello world" = "Salut Lume";
+
+"Reset" = "restabili";
+
+"Recent" = "Recent";
+
+"Popular" = "Popular";
+
+"Best" = "Cel mai bun";
+
+"Local" = "Local";
+
+"Last Week" = "Săptămâna trecută";
+
+"Last Month" = "Luna trecuta";
+
+"All Time" = "Tot timpul";
+
+"Post" = "Post";
+
+"My Friends" = "Prietenii mei";
+
+"All Members" = "toti Membrii";
+
+"Templates" = "template-uri";
+
+"Record" = "Record";
+
+"Tracks" = "piste";
+
+"My Profile" = "Profilul meu";
+
+"My Tracks" = "Traseele mele";
+
+"My Projects" = "Proiectele mele";
+
+"Videos" = "Videoclipuri";
+
+"Friends" = "Prieteni";
+
+"Followers" = "adepți";
+
+"Following" = "Ca urmare a";
+
+"Notification" = "Notificare";
+
+"Welcome" = "Bine ati venit";
+
+"Login" = "Logare";
+
+"Logout" = "Ieșire";
+
+"All" = "Toate";

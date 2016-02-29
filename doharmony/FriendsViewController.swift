@@ -22,13 +22,13 @@ class FriendsViewController: UIViewController {
         var controllerArray : [UIViewController] = []
         
         let controller1 : PostsTableViewController = PostsTableViewController(nibName: "PostsTableViewController", bundle: nil)
-        controller1.title = "Posts"
+        controller1.title = "Post"
         controllerArray.append(controller1)
         let controller2 : MyFriendsTableViewController = MyFriendsTableViewController(nibName: "MyFriendsTableViewController", bundle: nil)
-        controller2.title = "Friends"
+        controller2.title = "Friend"
         controllerArray.append(controller2)
         let controller3 : FollowingsTableViewController = FollowingsTableViewController(nibName: "FollowingsTableViewController", bundle: nil)
-        controller3.title = "Followings"
+        controller3.title = "Following"
         controllerArray.append(controller3)
         let controller4 : AllMembersTableViewController = AllMembersTableViewController(nibName: "AllMembersTableViewController", bundle: nil)
         controller4.title = "All"

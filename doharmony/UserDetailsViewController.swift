@@ -49,7 +49,7 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         friendImage.setImage(tintedImage, forState: .Normal)
         friendImage.tintColor = UIColor.whiteColor()
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+//        self.dismissViewControllerAnimated(true, completion: nil)
         print("un\(relationship)!!!")
     }
 

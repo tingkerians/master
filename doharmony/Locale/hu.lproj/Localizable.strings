@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Változás";
+
+"Hello world" = "Helló Világ";
+
+"Reset" = "visszaállítása";
+
+"Recent" = "új";
+
+"Popular" = "Népszerű";
+
+"Best" = "Legjobb";
+
+"Local" = "Helyi";
+
+"Last Week" = "Múlt hét";
+
+"Last Month" = "Múlt hónap";
+
+"All Time" = "Mindig";
+
+"Post" = "állás";
+
+"My Friends" = "A barátaim";
+
+"All Members" = "minden tag";
+
+"Templates" = "sablonok";
+
+"Record" = "Rekord";
+
+"Tracks" = "Számok";
+
+"My Profile" = "A profilom";
+
+"My Tracks" = "Saját útvonalak";
+
+"My Projects" = "Saját projektek";
+
+"Videos" = "Videók";
+
+"Friends" = "barátok";
+
+"Followers" = "Követő";
+
+"Following" = "Következő";
+
+"Notification" = "Bejelentés";
+
+"Welcome" = "Üdvözöljük";
+
+"Login" = "Bejelentkezés";
+
+"All" = "Minden";
+
+"Logout" = "Kijelentkezés";

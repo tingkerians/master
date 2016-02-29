@@ -22,16 +22,16 @@ class HomeViewController: UIViewController {
         var controllerArray : [UIViewController] = []
         
         let controller1 : RecentViewController = RecentViewController(nibName: "RecentViewController", bundle: nil)
-        controller1.title = "Recent"
+        controller1.title = locale.Recent
         controllerArray.append(controller1)
         let controller2 : PopularViewController = PopularViewController(nibName: "PopularViewController", bundle: nil)
-        controller2.title = "Popular"
+        controller2.title = locale.Popular
         controllerArray.append(controller2)
         let controller3 : BestViewController = BestViewController(nibName: "BestViewController", bundle: nil)
-        controller3.title = "Best"
+        controller3.title = locale.Best
         controllerArray.append(controller3)
         let controller4 : LocalViewController = LocalViewController(nibName: "LocalViewController", bundle: nil)
-        controller4.title = "Local"
+        controller4.title = locale.Local
         controllerArray.append(controller4)
         
         // Customize menu (Optional)

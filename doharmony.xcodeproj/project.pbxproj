@@ -12,10 +12,20 @@
 		7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; };
 		7615F27C1C7597EF00ACBD3E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */; };
+		7629CF8D1C7E967A0092C5F3 /* Alessia Cara - Here.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF861C7E967A0092C5F3 /* Alessia Cara - Here.mp4 */; };
+		7629CF8E1C7E967A0092C5F3 /* BlackBerry.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF871C7E967A0092C5F3 /* BlackBerry.mov */; };
+		7629CF8F1C7E967A0092C5F3 /* Hello.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF881C7E967A0092C5F3 /* Hello.mp4 */; };
+		7629CF901C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF891C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 */; };
+		7629CF911C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF8A1C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 */; };
+		7629CF921C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF8B1C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 */; };
+		7629CF931C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF8C1C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 */; };
 		765071C81C7D511700798B76 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765071C71C7D511700798B76 /* test.swift */; };
 		765071E61C7D8FC800798B76 /* tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765071E51C7D8FC800798B76 /* tracks.swift */; };
+		765B22FB1C7FF1810089FF48 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B22FA1C7FF1810089FF48 /* config.swift */; };
+		765B23001C7FF2FC0089FF48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 765B22FE1C7FF2FC0089FF48 /* Localizable.strings */; };
+		765B232B1C7FF94D0089FF48 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765B23281C7FF8AD0089FF48 /* Localize_Swift.framework */; };
+		765B232C1C7FF94D0089FF48 /* Localize_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765B23281C7FF8AD0089FF48 /* Localize_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76DD6D391C7C2BF300CB5694 /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6D381C7C2BF300CB5694 /* auth.swift */; };
-		76DD6D3C1C7C2D0000CB5694 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6D3B1C7C2D0000CB5694 /* config.swift */; };
 		DF069AB61C7D36F00004702F /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF069AB41C7D36EF0004702F /* BestViewController.swift */; };
 		DF069AB71C7D36F00004702F /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF069AB51C7D36EF0004702F /* BestViewController.xib */; };
 		DF069ABA1C7D3F1B0004702F /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF069AB81C7D3F1B0004702F /* LocalViewController.swift */; };
@@ -26,10 +36,10 @@
 		DF101BE71C6C18C00006B4D3 /* LibrariesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BE51C6C18C00006B4D3 /* LibrariesTableViewController.xib */; };
 		DF101BEB1C6C19080006B4D3 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BE91C6C19080006B4D3 /* ProjectsTableViewController.swift */; };
 		DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BEA1C6C19080006B4D3 /* ProjectsTableViewController.xib */; };
-		DF101BF11C6C197F0006B4D3 /* PopularTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BEF1C6C197F0006B4D3 /* PopularTableViewController.swift */; };
-		DF101BF21C6C197F0006B4D3 /* PopularTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BF01C6C197F0006B4D3 /* PopularTableViewController.xib */; };
-		DF101BFF1C6C2F940006B4D3 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BFD1C6C2F940006B4D3 /* PopularTableViewCell.swift */; };
-		DF101C001C6C2F940006B4D3 /* PopularTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BFE1C6C2F940006B4D3 /* PopularTableViewCell.xib */; };
+		DF101BF11C6C197F0006B4D3 /* PopularBestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BEF1C6C197F0006B4D3 /* PopularBestTableViewController.swift */; };
+		DF101BF21C6C197F0006B4D3 /* PopularBestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BF01C6C197F0006B4D3 /* PopularBestTableViewController.xib */; };
+		DF101BFF1C6C2F940006B4D3 /* PopularBestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BFD1C6C2F940006B4D3 /* PopularBestTableViewCell.swift */; };
+		DF101C001C6C2F940006B4D3 /* PopularBestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BFE1C6C2F940006B4D3 /* PopularBestTableViewCell.xib */; };
 		DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */; };
 		DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */; };
 		DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16A0B01C754C84006E4019 /* RecordViewController.swift */; };
@@ -201,6 +211,27 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		765B23271C7FF8AD0089FF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765B23221C7FF8AD0089FF48 /* Localize_Swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3433F2361C518AF7003AE34D;
+			remoteInfo = Localize_Swift;
+		};
+		765B23291C7FF8AD0089FF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765B23221C7FF8AD0089FF48 /* Localize_Swift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3433F2401C518AF7003AE34D;
+			remoteInfo = Localize_SwiftTests;
+		};
+		765B232D1C7FF94D0089FF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765B23221C7FF8AD0089FF48 /* Localize_Swift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3433F2351C518AF7003AE34D;
+			remoteInfo = Localize_Swift;
+		};
 		DFF4CBC51C6B0BD2008973D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DFF4CBA81C6B0BD2008973D3 /* Project object */;
@@ -225,6 +256,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7615F2771C7597E900ACBD3E /* SwiftyJSON.framework in Embed Frameworks */,
+				765B232C1C7FF94D0089FF48 /* Localize_Swift.framework in Embed Frameworks */,
 				7615F27C1C7597EF00ACBD3E /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -236,10 +268,52 @@
 		7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
+		7629CF861C7E967A0092C5F3 /* Alessia Cara - Here.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alessia Cara - Here.mp4"; sourceTree = "<group>"; };
+		7629CF871C7E967A0092C5F3 /* BlackBerry.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BlackBerry.mov; sourceTree = "<group>"; };
+		7629CF881C7E967A0092C5F3 /* Hello.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hello.mp4; sourceTree = "<group>"; };
+		7629CF891C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4"; sourceTree = "<group>"; };
+		7629CF8A1C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4"; sourceTree = "<group>"; };
+		7629CF8B1C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Chainsmokers - Roses (Official Video) ft. ROZES.mp4"; sourceTree = "<group>"; };
+		7629CF8C1C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4"; sourceTree = "<group>"; };
 		765071C71C7D511700798B76 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		765071E51C7D8FC800798B76 /* tracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tracks.swift; sourceTree = "<group>"; };
+		765B22FA1C7FF1810089FF48 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		765B22FF1C7FF2FC0089FF48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Locale/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23011C7FF3110089FF48 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = Locale/ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23021C7FF3310089FF48 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = Locale/ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23031C7FF34D0089FF48 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = Locale/cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23041C7FF3660089FF48 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = Locale/da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23051C7FF3840089FF48 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Locale/de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23061C7FF3AD0089FF48 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = Locale/el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23071C7FF3C30089FF48 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "Locale/es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		765B23081C7FF3D10089FF48 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Locale/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23091C7FF3DD0089FF48 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Locale/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B230A1C7FF3E90089FF48 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Locale/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B230B1C7FF3F90089FF48 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = Locale/he.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B230C1C7FF4030089FF48 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = Locale/hr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B230D1C7FF4120089FF48 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = Locale/hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B230E1C7FF41B0089FF48 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = Locale/id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B230F1C7FF42A0089FF48 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Locale/it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23101C7FF43A0089FF48 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Locale/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23111C7FF4440089FF48 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = Locale/ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23121C7FF4500089FF48 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = Locale/ms.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23131C7FF45E0089FF48 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = Locale/nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23141C7FF46D0089FF48 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Locale/nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23151C7FF4800089FF48 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Locale/pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23161C7FF48B0089FF48 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "Locale/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		765B23171C7FF4970089FF48 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "Locale/pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		765B23181C7FF4A60089FF48 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = Locale/ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23191C7FF4B30089FF48 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Locale/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B231A1C7FF4C20089FF48 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = Locale/sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B231B1C7FF4D50089FF48 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Locale/sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B231C1C7FF4DD0089FF48 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = Locale/th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B231D1C7FF4F80089FF48 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = Locale/tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B231E1C7FF50A0089FF48 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = Locale/uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B231F1C7FF5130089FF48 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = Locale/vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		765B23201C7FF51C0089FF48 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Locale/zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		765B23211C7FF5320089FF48 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "Locale/zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		765B23221C7FF8AD0089FF48 /* Localize_Swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Localize_Swift.xcodeproj; path = "Localize-Swift/Localize_Swift.xcodeproj"; sourceTree = "<group>"; };
 		76DD6D381C7C2BF300CB5694 /* auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
-		76DD6D3B1C7C2D0000CB5694 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		DF069AB41C7D36EF0004702F /* BestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		DF069AB51C7D36EF0004702F /* BestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestViewController.xib; sourceTree = "<group>"; };
 		DF069AB81C7D3F1B0004702F /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
@@ -250,10 +324,10 @@
 		DF101BE51C6C18C00006B4D3 /* LibrariesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibrariesTableViewController.xib; sourceTree = "<group>"; };
 		DF101BE91C6C19080006B4D3 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		DF101BEA1C6C19080006B4D3 /* ProjectsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsTableViewController.xib; sourceTree = "<group>"; };
-		DF101BEF1C6C197F0006B4D3 /* PopularTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularTableViewController.swift; sourceTree = "<group>"; };
-		DF101BF01C6C197F0006B4D3 /* PopularTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularTableViewController.xib; sourceTree = "<group>"; };
-		DF101BFD1C6C2F940006B4D3 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
-		DF101BFE1C6C2F940006B4D3 /* PopularTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularTableViewCell.xib; sourceTree = "<group>"; };
+		DF101BEF1C6C197F0006B4D3 /* PopularBestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularBestTableViewController.swift; sourceTree = "<group>"; };
+		DF101BF01C6C197F0006B4D3 /* PopularBestTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularBestTableViewController.xib; sourceTree = "<group>"; };
+		DF101BFD1C6C2F940006B4D3 /* PopularBestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularBestTableViewCell.swift; sourceTree = "<group>"; };
+		DF101BFE1C6C2F940006B4D3 /* PopularBestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularBestTableViewCell.xib; sourceTree = "<group>"; };
 		DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
 		DF16A0B01C754C84006E4019 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7615F2761C7597E900ACBD3E /* SwiftyJSON.framework in Frameworks */,
+				765B232B1C7FF94D0089FF48 /* Localize_Swift.framework in Frameworks */,
 				7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,10 +451,33 @@
 		7615F2751C75975D00ACBD3E /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				765B23221C7FF8AD0089FF48 /* Localize_Swift.xcodeproj */,
 				7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */,
 				7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */,
 			);
 			name = Library;
+			sourceTree = "<group>";
+		};
+		7629CFA41C7EEA3A0092C5F3 /* Popular/Best */ = {
+			isa = PBXGroup;
+			children = (
+				DF101BEF1C6C197F0006B4D3 /* PopularBestTableViewController.swift */,
+				DF101BF01C6C197F0006B4D3 /* PopularBestTableViewController.xib */,
+				DF101BFD1C6C2F940006B4D3 /* PopularBestTableViewCell.swift */,
+				DF101BFE1C6C2F940006B4D3 /* PopularBestTableViewCell.xib */,
+				DF101BEE1C6C196A0006B4D3 /* Popular */,
+				DF101BF31C6C1B0B0006B4D3 /* Best */,
+			);
+			name = Popular/Best;
+			sourceTree = "<group>";
+		};
+		765B23231C7FF8AD0089FF48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				765B23281C7FF8AD0089FF48 /* Localize_Swift.framework */,
+				765B232A1C7FF8AD0089FF48 /* Localize_SwiftTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		76DD6D001C7C258900CB5694 /* Module */ = {
@@ -392,24 +490,21 @@
 			name = Module;
 			sourceTree = "<group>";
 		};
-		76DD6D3A1C7C2CE100CB5694 /* configuration */ = {
+		76DD6D3A1C7C2CE100CB5694 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				76DD6D3B1C7C2D0000CB5694 /* config.swift */,
+				765B22FE1C7FF2FC0089FF48 /* Localizable.strings */,
+				765B22FA1C7FF1810089FF48 /* config.swift */,
 			);
-			name = configuration;
+			name = Configuration;
 			sourceTree = "<group>";
 		};
 		DF101BC91C6C07F90006B4D3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				DF101BED1C6C19610006B4D3 /* Recently */,
-				DF101BEE1C6C196A0006B4D3 /* Popular */,
-				DF101BF31C6C1B0B0006B4D3 /* Best */,
+				7629CFA41C7EEA3A0092C5F3 /* Popular/Best */,
 				DF526F6B1C6D9397009971FF /* Local */,
-				DF16A0BD1C7593E3006E4019 /* Last Month */,
-				DF16A0BC1C7593AD006E4019 /* Last Week */,
-				DF526F701C6D94B0009971FF /* All time */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -437,6 +532,13 @@
 		DF101BDC1C6C16F80006B4D3 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				7629CF861C7E967A0092C5F3 /* Alessia Cara - Here.mp4 */,
+				7629CF871C7E967A0092C5F3 /* BlackBerry.mov */,
+				7629CF881C7E967A0092C5F3 /* Hello.mp4 */,
+				7629CF891C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 */,
+				7629CF8A1C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 */,
+				7629CF8B1C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 */,
+				7629CF8C1C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -496,10 +598,6 @@
 			children = (
 				DF526F6C1C6D94A9009971FF /* PopularViewController.swift */,
 				DF526F6D1C6D94A9009971FF /* PopularViewController.xib */,
-				DF101BEF1C6C197F0006B4D3 /* PopularTableViewController.swift */,
-				DF101BF01C6C197F0006B4D3 /* PopularTableViewController.xib */,
-				DF101BFD1C6C2F940006B4D3 /* PopularTableViewCell.swift */,
-				DF101BFE1C6C2F940006B4D3 /* PopularTableViewCell.xib */,
 			);
 			name = Popular;
 			sourceTree = "<group>";
@@ -527,20 +625,6 @@
 				DF16A0B91C755007006E4019 /* RecordingViewController.xib */,
 			);
 			name = Recording;
-			sourceTree = "<group>";
-		};
-		DF16A0BC1C7593AD006E4019 /* Last Week */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Last Week";
-			sourceTree = "<group>";
-		};
-		DF16A0BD1C7593E3006E4019 /* Last Month */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Last Month";
 			sourceTree = "<group>";
 		};
 		DF4CBD5F1C7AD30A00C3EE36 /* Template */ = {
@@ -607,13 +691,6 @@
 			name = Local;
 			sourceTree = "<group>";
 		};
-		DF526F701C6D94B0009971FF /* All time */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "All time";
-			sourceTree = "<group>";
-		};
 		DF6B705D1C7AE31200B655B6 /* User Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,7 +727,7 @@
 			isa = PBXGroup;
 			children = (
 				DFF4CBB31C6B0BD2008973D3 /* AppDelegate.swift */,
-				76DD6D3A1C7C2CE100CB5694 /* configuration */,
+				76DD6D3A1C7C2CE100CB5694 /* Configuration */,
 				76DD6D001C7C258900CB5694 /* Module */,
 				DF101BDC1C6C16F80006B4D3 /* Music */,
 				DF101BDB1C6C16ED0006B4D3 /* Libraries */,
@@ -783,6 +860,7 @@
 			dependencies = (
 				7615F2791C7597E900ACBD3E /* PBXTargetDependency */,
 				7615F27E1C7597EF00ACBD3E /* PBXTargetDependency */,
+				765B232E1C7FF94D0089FF48 /* PBXTargetDependency */,
 			);
 			name = doharmony;
 			productName = doharmony;
@@ -837,7 +915,7 @@
 				TargetAttributes = {
 					DFF4CBAF1C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3L7S37R5K7;
+						DevelopmentTeam = MY7PN5V7K8;
 					};
 					DFF4CBC31C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -858,6 +936,39 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				ca,
+				cs,
+				da,
+				de,
+				el,
+				"es-MX",
+				es,
+				fi,
+				fr,
+				he,
+				hr,
+				hu,
+				id,
+				it,
+				ja,
+				ko,
+				ms,
+				nb,
+				nl,
+				pl,
+				"pt-BR",
+				"pt-PT",
+				ro,
+				ru,
+				sk,
+				sv,
+				th,
+				tr,
+				uk,
+				vi,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = DFF4CBA71C6B0BD2008973D3;
 			productRefGroup = DFF4CBB11C6B0BD2008973D3 /* Products */;
@@ -866,6 +977,10 @@
 				{
 					ProductGroup = 7615F2451C75972800ACBD3E /* Products */;
 					ProjectRef = 7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = 765B23231C7FF8AD0089FF48 /* Products */;
+					ProjectRef = 765B23221C7FF8AD0089FF48 /* Localize_Swift.xcodeproj */;
 				},
 				{
 					ProductGroup = 7615F25D1C75973400ACBD3E /* Products */;
@@ -980,6 +1095,20 @@
 			remoteRef = 7615F2721C75973400ACBD3E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		765B23281C7FF8AD0089FF48 /* Localize_Swift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Localize_Swift.framework;
+			remoteRef = 765B23271C7FF8AD0089FF48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		765B232A1C7FF8AD0089FF48 /* Localize_SwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Localize_SwiftTests.xctest;
+			remoteRef = 765B23291C7FF8AD0089FF48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -988,31 +1117,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64802221C75AFEE00F6F083 /* TrackDetailsViewController.xib in Resources */,
+				7629CF931C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 in Resources */,
 				F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */,
 				DF6B70611C7AE33900B655B6 /* UserDetailsViewController.xib in Resources */,
 				DF526F621C6D73D1009971FF /* LibrariesTableViewCell.xib in Resources */,
+				765B23001C7FF2FC0089FF48 /* Localizable.strings in Resources */,
 				F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */,
+				7629CF901C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 in Resources */,
 				DF6B705C1C7ADF2200B655B6 /* FollowingsTableViewCell.xib in Resources */,
 				DF526F5E1C6D5EB6009971FF /* MyFriendsTableViewCell.xib in Resources */,
+				7629CF911C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 in Resources */,
 				F64802241C75AFEE00F6F083 /* CommentTableViewCell.xib in Resources */,
 				DF526F6F1C6D94A9009971FF /* PopularViewController.xib in Resources */,
 				DF526F741C6D9EBC009971FF /* AllMembersTableViewController.xib in Resources */,
 				DFF4CBBE1C6B0BD2008973D3 /* LaunchScreen.storyboard in Resources */,
+				7629CF8D1C7E967A0092C5F3 /* Alessia Cara - Here.mp4 in Resources */,
 				DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */,
 				DF6B70651C7AEA0400B655B6 /* UserTracksTableViewCell.xib in Resources */,
 				DF101BE71C6C18C00006B4D3 /* LibrariesTableViewController.xib in Resources */,
+				7629CF8E1C7E967A0092C5F3 /* BlackBerry.mov in Resources */,
 				DF16A0BB1C755007006E4019 /* RecordingViewController.xib in Resources */,
 				DF6B70581C7ADD9D00B655B6 /* FollowingsTableViewController.xib in Resources */,
 				DFF4CBBB1C6B0BD2008973D3 /* Assets.xcassets in Resources */,
 				DF526F781C6D9FBB009971FF /* AllMembersTableViewCell.xib in Resources */,
-				DF101BF21C6C197F0006B4D3 /* PopularTableViewController.xib in Resources */,
+				DF101BF21C6C197F0006B4D3 /* PopularBestTableViewController.xib in Resources */,
 				DF069AB71C7D36F00004702F /* BestViewController.xib in Resources */,
 				F6B5FB941C769E6C001B8868 /* LoginViewController.xib in Resources */,
+				7629CF8F1C7E967A0092C5F3 /* Hello.mp4 in Resources */,
 				DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */,
+				7629CF921C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 in Resources */,
 				DF526F581C6D5E63009971FF /* MyFriendsTableViewController.xib in Resources */,
 				DFF4CBB91C6B0BD2008973D3 /* Main.storyboard in Resources */,
 				F6B5FB991C76B20D001B8868 /* SignUpViewController.xib in Resources */,
-				DF101C001C6C2F940006B4D3 /* PopularTableViewCell.xib in Resources */,
+				DF101C001C6C2F940006B4D3 /* PopularBestTableViewCell.xib in Resources */,
 				F6CC20561C76C49D0033CF70 /* RecentViewController.xib in Resources */,
 				DF101BD91C6C14310006B4D3 /* LocalTableViewCell.xib in Resources */,
 				F6B5FBA81C76C1BA001B8868 /* RecentTableViewCell.xib in Resources */,
@@ -1055,14 +1192,14 @@
 				DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */,
 				76DD6D391C7C2BF300CB5694 /* auth.swift in Sources */,
 				DF526F5D1C6D5EB6009971FF /* MyFriendsTableViewCell.swift in Sources */,
-				76DD6D3C1C7C2D0000CB5694 /* config.swift in Sources */,
 				DF6B70571C7ADD9D00B655B6 /* FollowingsTableViewController.swift in Sources */,
-				DF101BF11C6C197F0006B4D3 /* PopularTableViewController.swift in Sources */,
+				DF101BF11C6C197F0006B4D3 /* PopularBestTableViewController.swift in Sources */,
 				DFF4CBB41C6B0BD2008973D3 /* AppDelegate.swift in Sources */,
 				DFF4CBED1C6B0CF2008973D3 /* CAPSPageMenu.swift in Sources */,
 				DF4CBD621C7AD37100C3EE36 /* TemplateViewController.swift in Sources */,
+				765B22FB1C7FF1810089FF48 /* config.swift in Sources */,
 				F648021F1C75AFEE00F6F083 /* PostsTableViewCell.swift in Sources */,
-				DF101BFF1C6C2F940006B4D3 /* PopularTableViewCell.swift in Sources */,
+				DF101BFF1C6C2F940006B4D3 /* PopularBestTableViewCell.swift in Sources */,
 				F64802211C75AFEE00F6F083 /* TrackDetailsViewController.swift in Sources */,
 				DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */,
 				DF069ABA1C7D3F1B0004702F /* LocalViewController.swift in Sources */,
@@ -1116,6 +1253,11 @@
 			name = "Alamofire iOS";
 			targetProxy = 7615F27D1C7597EF00ACBD3E /* PBXContainerItemProxy */;
 		};
+		765B232E1C7FF94D0089FF48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Localize_Swift;
+			targetProxy = 765B232D1C7FF94D0089FF48 /* PBXContainerItemProxy */;
+		};
 		DFF4CBC61C6B0BD2008973D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DFF4CBAF1C6B0BD2008973D3 /* doharmony */;
@@ -1129,6 +1271,47 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		765B22FE1C7FF2FC0089FF48 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				765B22FF1C7FF2FC0089FF48 /* en */,
+				765B23011C7FF3110089FF48 /* ar */,
+				765B23021C7FF3310089FF48 /* ca */,
+				765B23031C7FF34D0089FF48 /* cs */,
+				765B23041C7FF3660089FF48 /* da */,
+				765B23051C7FF3840089FF48 /* de */,
+				765B23061C7FF3AD0089FF48 /* el */,
+				765B23071C7FF3C30089FF48 /* es-MX */,
+				765B23081C7FF3D10089FF48 /* es */,
+				765B23091C7FF3DD0089FF48 /* fi */,
+				765B230A1C7FF3E90089FF48 /* fr */,
+				765B230B1C7FF3F90089FF48 /* he */,
+				765B230C1C7FF4030089FF48 /* hr */,
+				765B230D1C7FF4120089FF48 /* hu */,
+				765B230E1C7FF41B0089FF48 /* id */,
+				765B230F1C7FF42A0089FF48 /* it */,
+				765B23101C7FF43A0089FF48 /* ja */,
+				765B23111C7FF4440089FF48 /* ko */,
+				765B23121C7FF4500089FF48 /* ms */,
+				765B23131C7FF45E0089FF48 /* nb */,
+				765B23141C7FF46D0089FF48 /* nl */,
+				765B23151C7FF4800089FF48 /* pl */,
+				765B23161C7FF48B0089FF48 /* pt-BR */,
+				765B23171C7FF4970089FF48 /* pt-PT */,
+				765B23181C7FF4A60089FF48 /* ro */,
+				765B23191C7FF4B30089FF48 /* ru */,
+				765B231A1C7FF4C20089FF48 /* sk */,
+				765B231B1C7FF4D50089FF48 /* sv */,
+				765B231C1C7FF4DD0089FF48 /* th */,
+				765B231D1C7FF4F80089FF48 /* tr */,
+				765B231E1C7FF50A0089FF48 /* uk */,
+				765B231F1C7FF5130089FF48 /* vi */,
+				765B23201C7FF51C0089FF48 /* zh-Hans */,
+				765B23211C7FF5320089FF48 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DFF4CBB71C6B0BD2008973D3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1241,7 +1424,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyy;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1257,7 +1440,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyy;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyyy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

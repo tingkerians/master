@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Perubahan";
+
+"Hello world" = "Halo Dunia";
+
+"Reset" = "ulang";
+
+"Recent" = "Baru";
+
+"Popular" = "Populer";
+
+"Best" = "Terbaik";
+
+"Local" = "Lokal";
+
+"Last Week" = "Minggu lalu";
+
+"Last Month" = "Bulan lalu";
+
+"All Time" = "Sepanjang waktu";
+
+"Post" = "Pos";
+
+"My Friends" = "Teman teman saya";
+
+"All Members" = "Semua anggota";
+
+"Templates" = "template";
+
+"Record" = "Merekam";
+
+"Tracks" = "Lintasan";
+
+"My Profile" = "Profil saya";
+
+"My Tracks" = "Lintasan saya";
+
+"My Projects" = "Proyek saya";
+
+"Videos" = "video";
+
+"Friends" = "teman";
+
+"Followers" = "pengikut";
+
+"Following" = "Berikut";
+
+"Notification" = "Pemberitahuan";
+
+"Welcome" = "Menyambut";
+
+"Login" = "Masuk";
+
+"Logout" = "Keluar";
+
+"All" = "Semua";
