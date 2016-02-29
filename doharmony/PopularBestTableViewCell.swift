@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopularTableViewCell: UITableViewCell {
+class PopularBestTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ImageView: UIImageView!
 

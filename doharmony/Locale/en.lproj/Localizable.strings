@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Change";
+
+"Hello world" = "Hello world";
+
+"Reset" = "Reset";
+
+"Recent" = "Recents";
+
+"Popular" = "Popular";
+
+"Best" = "Best";
+
+"Local" = "Local";
+
+"Last Week" = "Last Week";
+
+"Last Month" = "Last Month";
+
+"All Time" = "All Time";
+
+"Post" = "Post";
+
+"My Friends" = "My Friends";
+
+"All Members" = "All Members";
+
+"Templates" = "Templates";
+
+"Record" = "Record";
+
+"Tracks" = "Tracks";
+
+"My Profile" = "My Profile";
+
+"My Tracks" = "My Tracks";
+
+"My Projects" = "My Projects";
+
+"Videos" = "Videos";
+
+"Friends" = "Friends";
+
+"Followers" = "Followers";
+
+"Following" = "Following";
+
+"Notification" = "Notification";
+
+"Welcome" = "Welcome";
+
+"Login" = "Login";
+
+"Logout" = "Logout";
+
+"All" = "All";

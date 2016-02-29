@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Přeměna";
+
+"Hello world" = "Ahoj světe";
+
+"Reset" = "resetovat";
+
+"Recent" = "nedávný";
+
+"Popular" = "Oblíbený";
+
+"Best" = "Nejlepší";
+
+"Local" = "Místní";
+
+"Last Week" = "Minulý týden";
+
+"Last Month" = "Minulý měsíc";
+
+"All Time" = "Pořád";
+
+"Post" = "Pošta";
+
+"My Friends" = "Moji přátelé";
+
+"All Members" = "Všichni členové";
+
+"Templates" = "šablony";
+
+"Record" = "Záznam";
+
+"Tracks" = "Skladby";
+
+"My Profile" = "Můj profil";
+
+"My Tracks" = "Moje Skladby";
+
+"My Projects" = "Mé projekty";
+
+"Videos" = "videa";
+
+"Friends" = "Kamarádi";
+
+"Followers" = "stoupenci";
+
+"Following" = "Následující";
+
+"Notification" = "Oznámení";
+
+"Welcome" = "Vítejte";
+
+"Login" = "Přihlásit se";
+
+"Logout" = "Odhlásit se";
+
+"All" = "Vše";

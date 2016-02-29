@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "כסף קטן";
+
+"Hello world" = "שלום עולם";
+
+"Reset" = "אִתחוּל";
+
+"Recent" = "אחרון";
+
+"Popular" = "פּוֹפּוּלָרִי";
+
+"Best" = "הטוב ביותר";
+
+"Local" = "מְקוֹמִי";
+
+"Last Week" = "שבוע שעבר";
+
+"Last Month" = "חודש שעבר";
+
+"All Time" = "כל הזמן";
+
+"Post" = "הודעה";
+
+"My Friends" = "החברים שלי";
+
+"All Members" = "כל החברים";
+
+"Templates" = "תבניות";
+
+"Record" = "רְשׁוּמָה";
+
+"Tracks" = "שירים";
+
+"My Profile" = "הפרופיל שלי";
+
+"My Tracks" = "המסלולים שלי '";
+
+"My Projects" = "הפרויקטים שלי";
+
+"Videos" = "וידאו";
+
+"Friends" = "חברים";
+
+"Followers" = "עוקב";
+
+"Following" = "הַבָּא";
+
+"Notification" = "הוֹדָעָה";
+
+"Welcome" = "ברוך הבא";
+
+"Login" = "התחבר";
+
+"Logout" = "להתנתק";
+
+"All" = "כל";

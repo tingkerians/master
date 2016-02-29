@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Thay đổi";
+
+"Hello world" = "Chào thế giới";
+
+"Reset" = "Thiết lập lại";
+
+"Recent" = "mới đây";
+
+"Popular" = "Phổ biến";
+
+"Best" = "Tốt";
+
+"Local" = "địa phương";
+
+"Last Week" = "Tuần trước";
+
+"Last Month" = "Tháng trước";
+
+"All Time" = "Tất cả Thời gian";
+
+"Post" = "Bài";
+
+"My Friends" = "Bạn bè của tôi";
+
+"All Members" = "Tất cả thành viên";
+
+"Templates" = "Templates";
+
+"Record" = "Ghi lại";
+
+"Tracks" = "Tracks";
+
+"My Profile" = "Tiểu sử của tôi";
+
+"My Tracks" = "My Tracks";
+
+"My Projects" = "Dự án của tôi";
+
+"Videos" = "video";
+
+"Friends" = "Bạn bè";
+
+"Followers" = "Người theo dõi";
+
+"Following" = "tiếp theo";
+
+"Notification" = "thông báo";
+
+"Welcome" = "Chào mừng";
+
+"Login" = "Đăng nhập";
+
+"Logout" = "Đăng xuất";
+
+"All" = "Toàn bộ";

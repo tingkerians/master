@@ -11,30 +11,36 @@ import UIKit
 class PopularViewController: UIViewController, UISearchBarDelegate {
 
     var pageMenu : CAPSPageMenu?
-    
+    var controllerArray : [UIViewController] = []
+    var parameters: [CAPSPageMenuOption]?
     @IBOutlet weak var SearchBar: UISearchBar!
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    
+    var controller1 : PopularBestTableViewController?
+    var controller2 : PopularBestTableViewController?
+    var controller3 : PopularBestTableViewController?
+    
+    override func viewDidLoad() {
+        self.controller1 = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
+        self.controller1!.title = "Last Week"
+        self.controller1!.category = "popular"
+        self.controller1!.date = "week"
+        controllerArray.append(self.controller1!)
+        
+        self.controller2 = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
+        self.controller2!.title = "Last Month"
+        self.controller2!.category = "popular"
+        self.controller2!.date = "month"
+        controllerArray.append(self.controller2!)
         
         
-        // MARK: - Scroll menu setup
-        
-        // Initialize view controllers to display and place in array
-        
-        var controllerArray : [UIViewController] = []
-        
-        let controller1 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
-        controller1.title = "Last Week"
-        controllerArray.append(controller1)
-        let controller2 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
-        controller2.title = "Last Month"
-        controllerArray.append(controller2)
-        let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
-        controller3.title = "All Time"
-        controllerArray.append(controller3)
+        self.controller3 = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
+        self.controller3!.title = "All Time"
+        self.controller3!.category = "popular"
+        self.controller3!.date = "all"
+        self.controllerArray.append(self.controller3!)
         
         // Customize menu (Optional)
-        let parameters: [CAPSPageMenuOption] = [
+        self.parameters = [
             .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
             .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
             .SelectionIndicatorColor(UIColor.orangeColor()),
@@ -44,9 +50,12 @@ class PopularViewController: UIViewController, UISearchBarDelegate {
             .MenuItemWidth(90.0),
             .CenterMenuItems(true)
         ]
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 44.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: self.controllerArray, frame: CGRectMake(0.0, 44.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: self.parameters)
         
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
@@ -54,4 +63,14 @@ class PopularViewController: UIViewController, UISearchBarDelegate {
         pageMenu!.didMoveToParentViewController(self)
     }
     
+    //search delegate
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        self.controller1!.search(searchText)
+        self.controller2!.search(searchText)
+        self.controller3!.search(searchText)
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
 }

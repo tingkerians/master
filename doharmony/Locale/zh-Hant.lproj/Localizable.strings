@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "更改";
+
+"Hello world" = "你好，世界";
+
+"Reset" = "重置";
+
+"Recent" = "最近";
+
+"Popular" = "流行";
+
+"Best" = "最好";
+
+"Local" = "本地";
+
+"Last Week" = "上個星期";
+
+"Last Month" = "上個月";
+
+"All Time" = "整天";
+
+"Post" = "崗位";
+
+"My Friends" = "我的朋友";
+
+"All Members" = "所有成員";
+
+"Templates" = "模板";
+
+"Record" = "記錄";
+
+"Tracks" = "曲目";
+
+"My Profile" = "我的簡歷";
+
+"My Tracks" = "我的足跡";
+
+"My Projects" = "我的項目";
+
+"Videos" = "影片";
+
+"Friends" = "友";
+
+"Followers" = "關注";
+
+"Following" = "以下";
+
+"Notification" = "通知";
+
+"Welcome" = "歡迎";
+
+"Login" = "登錄";
+
+"Logout" = "登出";
+
+"All" = "所有";

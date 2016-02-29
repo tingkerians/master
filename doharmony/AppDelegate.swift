@@ -8,15 +8,21 @@
 
 import UIKit
 import CoreData
+import Localize_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var lang = NSLocale.preferredLanguages()[0]
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        print(lang)
+        let langCode = lang.characters.split{$0 == "-"}.map(String.init)
+        print(langCode[0])
+        Localize.setCurrentLanguage(langCode[0])
+        
         return true
     }
 

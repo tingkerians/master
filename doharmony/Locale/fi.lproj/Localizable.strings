@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "Muuttaa";
+
+"Hello world" = "Hei maailma";
+
+"Reset" = "asettaa uudelleen";
+
+"Recent" = "viimeaikainen";
+
+"Popular" = "Suosittu";
+
+"Best" = "Parhaat";
+
+"Local" = "paikallinen";
+
+"Last Week" = "Viime viikko";
+
+"Last Month" = "Viime kuukausi";
+
+"All Time" = "Koko ajan";
+
+"Post" = "Lähettää";
+
+"My Friends" = "Ystäväni";
+
+"All Members" = "kaikki jäsenet";
+
+"Templates" = "Mallit";
+
+"Record" = "Tallentaa";
+
+"Tracks" = "Kappaleet";
+
+"My Profile" = "Profiilini";
+
+"My Tracks" = "Omat reitit";
+
+"My Projects" = "Omat projektit";
+
+"Videos" = "videoita";
+
+"Friends" = "Ystävät";
+
+"Followers" = "seuraajaa";
+
+"Following" = "Jälkeen";
+
+"Notification" = "ilmoitus";
+
+"Welcome" = "Tervetuloa";
+
+"Login" = "Kirjaudu sisään";
+
+"Logout" = "Kirjautua ulos";
+
+"All" = "Kaikki";

@@ -1,0 +1,63 @@
+/*
+ Localizable.strings
+ doharmony
+ 
+ Created by Kyle Rombaoa on 25/02/2016.
+ Copyright © 2016 Eleazer Toluan. All rights reserved.
+ */
+
+"Change" = "зміна";
+
+"Hello world" = "Привіт Світ";
+
+"Reset" = "скидання";
+
+"Recent" = "недавній";
+
+"Popular" = "популярний";
+
+"Best" = "кращий";
+
+"Local" = "місцевий";
+
+"Last Week" = "Минулого тижня";
+
+"Last Month" = "Минулого місяця";
+
+"All Time" = "Весь час";
+
+"Post" = "пост";
+
+"My Friends" = "Мої друзі";
+
+"All Members" = "всі члени";
+
+"Templates" = "шаблони";
+
+"Record" = "запис";
+
+"Tracks" = "доріжки";
+
+"My Profile" = "Мій профіль";
+
+"My Tracks" = "Мої треки";
+
+"My Projects" = "Мої проекти";
+
+"Videos" = "Відео";
+
+"Friends" = "друзі";
+
+"Followers" = "послідовники";
+
+"Following" = "після";
+
+"Notification" = "повідомлення";
+
+"Welcome" = "вітати";
+
+"Login" = "Ввійти";
+
+"Logout" = "Вийти";
+
+"All" = "всі";

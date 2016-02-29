@@ -13,27 +13,35 @@ import SwiftyJSON
 
 class _tracks{
     
-//    private var category: String?
-//    private var date: String?
-//    private var search: String?
-//    private var isLocal: Bool = false
+    private var category: String!
+    private var date: String!
+    private var search: String!
+    private var isLocal: Bool!
     
     init(){
+        self.isLocal = false
+        self.category = ""
+        self.date = ""
+        self.search = ""
     }
     
     func setCategory(category: String) -> Self {
+        self.category = category
         return self
     }
     
     func setDate(date: String) -> Self {
+        self.date = date
         return self
     }
     
     func setSearch(search: String) -> Self {
+        self.search = search
         return self
     }
     
     func isLocal(local: Bool) -> Self {
+        self.isLocal = local
         return self
     }
     
@@ -41,7 +49,9 @@ class _tracks{
         let url = "http://192.168.0.137:8080/api/tracks"
         
         let parameters = [
-            "category" : "popular"
+            "category" : self.category,
+            "search" : self.search,
+            "date" : self.date
         ];
         
         Alamofire.request(.GET, url, parameters: parameters)

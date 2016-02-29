@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
         let controller2 : LibrariesTableViewController = LibrariesTableViewController(nibName: "LibrariesTableViewController", bundle: nil)
         controller2.title = "My Tracks"
         controllerArray.append(controller2)
-        let controller3 : PopularTableViewController = PopularTableViewController(nibName: "PopularTableViewController", bundle: nil)
+        let controller3 : PopularBestTableViewController = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
         controller3.title = "My Projects"
         controllerArray.append(controller3)
         
