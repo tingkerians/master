@@ -34,22 +34,9 @@ class HomeViewController: UIViewController {
         controller4.title = locale.Local
         controllerArray.append(controller4)
         
-        // Customize menu (Optional)
-        let parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
-            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
-            .SelectionIndicatorColor(UIColor.orangeColor()),
-            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
-            .MenuHeight(40.0),
-            .MenuItemWidth(65.0),
-            .CenterMenuItems(true)
-        ]
-        
         // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: env.CAPSPageMenuOptions)
         
-        self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
     }
     

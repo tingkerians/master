@@ -9,20 +9,47 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import CoreData
 
+struct Track{
+    var id: String!
+    var imagePath: String!
+    var title: String!
+    var author: String!
+    var totalLikes: String!
+    var totalViews: String!
+    var dateCreated: String!
+    var dateUpdated: String!
+    var isLocal: Bool! = false
+    var trackPath: String!
+}
 
-class _tracks{
+class Tracks{
     
-    private var category: String!
-    private var date: String!
-    private var search: String!
-    private var isLocal: Bool!
+    private var category: String! = ""
+    private var date: String! = ""
+    private var searchNSPredicate: NSPredicate?
+    private var search: String! = "" {
+        didSet {
+            if(search.isEmpty){
+                searchNSPredicate = nil
+            }else{
+                searchNSPredicate = NSPredicate(format: "ANY title CONTAINS[c] %@", search)
+            }
+        }
+    }
     
-    init(){
-        self.isLocal = false
-        self.category = ""
-        self.date = ""
-        self.search = ""
+    init(){}
+    
+    static func createTrackFolder(){
+        let fileManger = NSFileManager.defaultManager()
+        let createpath = env.documentFolder.stringByAppendingPathComponent("\(env.tracksFolder)")
+        do {
+            try fileManger.createDirectoryAtPath(createpath, withIntermediateDirectories: false, attributes: nil)
+            //print("folder created")
+        } catch {
+            //print("folder already created")
+        }
     }
     
     func setCategory(category: String) -> Self {
@@ -40,12 +67,27 @@ class _tracks{
         return self
     }
     
-    func isLocal(local: Bool) -> Self {
-        self.isLocal = local
-        return self
+    func local() -> [Track]{
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "Tracks")
+        fetchRequest.predicate = self.searchNSPredicate
+        
+        var data : [NSManagedObject]?
+        var tracks: [Track]?
+        do{
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            data = results as? [NSManagedObject]
+            tracks = self.parse(data!)
+        } catch{
+            print("error3")
+        }
+        
+        return tracks!
     }
     
-    func request(callback: ((tracks: [JSON])->Void)?){
+    func request(callback: ((tracks: [Track])->Void)?){
         let url = "http://192.168.0.137:8080/api/tracks"
         
         let parameters = [
@@ -61,13 +103,53 @@ class _tracks{
                 case .Success:
                     let result = JSON(response.result.value!);
                     if let data = result["data"].arrayValue as [JSON]?{
-                        callback?(tracks: data)
+                        let tracks = self.parse(data)
+                        callback?(tracks: tracks)
                     }
                 case .Failure(let error):
                     print("error4: ", error);
                 }
         }
+    }
+    
+    func parse(data:[JSON]) -> [Track]{
+        var tracks: [Track]! = [Track]()
+        var track: Track! = Track()
         
+        data.forEach { (trackJSON) -> () in
+            track.id = trackJSON["id"].stringValue
+            track.title = trackJSON["title"].stringValue
+            track.imagePath = "http://192.168.0.137:8080/api/coverart/\(trackJSON["id"].stringValue)"
+            track.totalViews = trackJSON["views"].stringValue
+            track.totalLikes = trackJSON["likes"].stringValue
+            track.dateCreated = trackJSON["date_created"].stringValue
+            track.dateUpdated = trackJSON["date_updated"].stringValue
+            track.author = trackJSON["author"].stringValue
+            track.trackPath = ""
+            tracks?.append(track)
+        }
+      
+        return tracks!
+    }
+    
+    func parse(data: [NSManagedObject]) ->[Track]{
+        var tracks: [Track]! = [Track]()
+        var track: Track! = Track()
+        
+        data.forEach { (trackCoreData) -> () in
+            track.id = ""
+            track.title = trackCoreData.valueForKey("title") as? String
+            track.imagePath = trackCoreData.valueForKey("imagePath") as? String
+            track.dateCreated = trackCoreData.valueForKey("dateCreated") as? String
+            track.dateUpdated = trackCoreData.valueForKey("dateUpdated") as? String
+            track.author = trackCoreData.valueForKey("author") as? String
+            track.trackPath = trackCoreData.valueForKey("trackPath") as? String
+            track.isLocal = true
+            tracks?.append(track)
+            
+        }
+        
+        return tracks!
     }
     
 }

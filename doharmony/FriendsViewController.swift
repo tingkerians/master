@@ -9,16 +9,15 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
-    
     var pageMenu : CAPSPageMenu?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.navigationBarHidden = true
         
         // MARK: - Scroll menu setup
         
         // Initialize view controllers to display and place in array
+        
         var controllerArray : [UIViewController] = []
         
         let controller1 : PostsTableViewController = PostsTableViewController(nibName: "PostsTableViewController", bundle: nil)
@@ -34,65 +33,18 @@ class FriendsViewController: UIViewController {
         controller4.title = "All"
         controllerArray.append(controller4)
         
-        
-        // Customize menu (Optional)
-        let parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
-            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
-            .SelectionIndicatorColor(UIColor.orangeColor()),
-            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
-            .MenuHeight(40.0),
-            .MenuItemWidth(90.0),
-            .CenterMenuItems(true)
-        ]
-        
         // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: env.CAPSPageMenuOptions)
         
-        self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
     }
     
-//    override func viewWillDisappear(animated: Bool)
-//    {
-//        super.viewWillDisappear(animated)
-//        self.navigationController?.navigationBarHidden = false
-//    }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        self.navigationController?.navigationBarHidden = true
         
         
-        
-//        pageMenu!.didMoveToParentViewController(self)
     }
     
-//    func didTapGoToLeft() {
-//        let currentIndex = pageMenu!.currentPageIndex
-//        
-//        if currentIndex > 0 {
-//            pageMenu!.moveToPage(currentIndex - 1)
-//        }
-//    }
-//    
-//    func didTapGoToRight() {
-//        let currentIndex = pageMenu!.currentPageIndex
-//        
-//        if currentIndex < pageMenu!.controllerArray.count {
-//            pageMenu!.moveToPage(currentIndex + 1)
-//        }
-//    }
-//    
-//    // MARK: - Container View Controller
-//    override func shouldAutomaticallyForwardAppearanceMethods() -> Bool {
-//        return true
-//    }
-//    
-//    override func shouldAutomaticallyForwardRotationMethods() -> Bool {
-//        return true
-//    }
 }
 
 

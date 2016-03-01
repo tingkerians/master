@@ -24,22 +24,6 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         
         self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -16, 0)
-        print("tab bar init")
-        
-        
-//        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.magentaColor()], forState:.Normal)
-//        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState:.Selected)
-       
-        
-        
-        
-//        tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-//        UITabBarItem.appearance().title = nil;
-
-//        item0.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-//        item1.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-//        item2.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-//        item2.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     }
     
     override func viewWillLayoutSubviews() {

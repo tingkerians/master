@@ -14,29 +14,17 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var coreData = [NSManagedObject]()
-    
+    var data: [Track]?
+    var tracks: Tracks?
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "LocalTableViewCell", bundle: nil), forCellReuseIdentifier: "LocalTableViewCell")
         let _ = test()
-        fetchCoreData(nil)
+        self.tracks = Tracks()
+        self.data = self.tracks!.local()
     }
     
-    func fetchCoreData(filter: NSPredicate?){
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-       
-        let fetchRequest = NSFetchRequest(entityName: "Tracks")
-        fetchRequest.predicate = filter
-        do{
-            let results = try managedContext.executeFetchRequest(fetchRequest)
-            coreData = results as! [NSManagedObject]
-        } catch{
-            print("error3")
-        }
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -56,15 +44,16 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return coreData.count
+        return self.data!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : LocalTableViewCell = tableView.dequeueReusableCellWithIdentifier("LocalTableViewCell") as! LocalTableViewCell
         
-        cell.TitleLabel.text = coreData[indexPath.row].valueForKey("trackname") as? String
-        cell.authorLabel.text = coreData[indexPath.row].valueForKey("username") as? String
-        cell.ImageView.image = UIImage(named: (coreData[indexPath.row].valueForKey("trackimage") as? String)!)
+        let tracks = self.data!
+        cell.TitleLabel.text = tracks[indexPath.row].title
+        cell.authorLabel.text = tracks[indexPath.row].author
+        cell.ImageView.image = UIImage(named: (tracks[indexPath.row].imagePath)!)
         
         return cell
     }
@@ -93,14 +82,7 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
 
     //search delegate
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        let filter: NSPredicate?
-        if(searchText.isEmpty){
-            filter = nil
-        }else{
-            filter = NSPredicate(format: "ANY trackname CONTAINS[c] %@", searchText)
-        }
-        
-        fetchCoreData(filter)
+        self.data = self.tracks!.setSearch(searchText).local()
         tableView.reloadData()
         
     }

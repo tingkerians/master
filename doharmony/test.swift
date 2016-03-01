@@ -15,21 +15,13 @@ class test{
     
     init(){
         let fileManger = NSFileManager.defaultManager()
-        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
-        let createpath = documentDirectoryPath.stringByAppendingPathComponent("\(doharmonyFolder)")
-        do {
-            try fileManger.createDirectoryAtPath(createpath, withIntermediateDirectories: false, attributes: nil)
-            print("folder Created")
-        } catch {
-            print("error")
-        }
         extString = ["mp4","MP4","mov","MOV","m4v","M4V"]
         let file = fileManger.enumeratorAtPath(NSBundle.mainBundle().resourcePath! as String)
         while let files = file?.nextObject() {
             for(var index = 0; index < extString.count; index++) {
                 if files.pathExtension == extString[index] {
                     let nameOnly = (NSURL(fileURLWithPath: files as! String).URLByDeletingPathExtension?.lastPathComponent)
-                    let destinationPath = documentDirectoryPath.stringByAppendingPathComponent("\(doharmonyFolder)/\(files)")
+                    let destinationPath = env.documentFolder.stringByAppendingPathComponent("\(env.tracksFolder)/\(files)")
                     let sourcePath = NSBundle.mainBundle().pathForResource("\(nameOnly!)", ofType: "\(files.pathExtension!)")
                     do{
                         try fileManger.copyItemAtPath(sourcePath!, toPath: destinationPath)
@@ -55,10 +47,10 @@ class test{
         let entity = NSEntityDescription.entityForName("Tracks", inManagedObjectContext: manageContext)
         let music = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: manageContext)
         
-        music.setValue(destinationPath, forKey: "trackpath")
-        music.setValue(nameOnly, forKey: "trackname")
-        music.setValue(username, forKey: "username")
-        music.setValue(trackimage, forKey: "trackimage")
+        music.setValue(destinationPath, forKey: "trackPath")
+        music.setValue(nameOnly, forKey: "title")
+        music.setValue(username, forKey: "author")
+        music.setValue(trackimage, forKey: "imagePath")
         
         
         do{

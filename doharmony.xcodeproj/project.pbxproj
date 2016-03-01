@@ -726,12 +726,12 @@
 		DFF4CBB21C6B0BD2008973D3 /* doharmony */ = {
 			isa = PBXGroup;
 			children = (
-				DFF4CBB31C6B0BD2008973D3 /* AppDelegate.swift */,
 				76DD6D3A1C7C2CE100CB5694 /* Configuration */,
 				76DD6D001C7C258900CB5694 /* Module */,
 				DF101BDC1C6C16F80006B4D3 /* Music */,
 				DF101BDB1C6C16ED0006B4D3 /* Libraries */,
 				DFF4CBFA1C6B1961008973D3 /* Controllers */,
+				DFF4CBB31C6B0BD2008973D3 /* AppDelegate.swift */,
 				DFF4CBB71C6B0BD2008973D3 /* Main.storyboard */,
 				DFF4CBBA1C6B0BD2008973D3 /* Assets.xcassets */,
 				DFF4CBBC1C6B0BD2008973D3 /* LaunchScreen.storyboard */,

@@ -14,15 +14,16 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var data: [JSON]?
+    var data: [Track]?
+    var tracks: Tracks?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
         
-        let tracks = _tracks()
-        tracks.setCategory("recent").request { (tracks) -> Void in
+        self.tracks = Tracks()
+        self.tracks!.setCategory("recent").request { (tracks) -> Void in
             self.data = tracks
             self.tableView.reloadData()
         }
@@ -56,14 +57,14 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
         
         let tracks = self.data!
-        let coverArt: String = "http://192.168.0.137:8080/api/coverart/\(tracks[indexPath.row]["id"].stringValue)"
+        let coverArt: String = tracks[indexPath.row].imagePath
         
-        cell.TitleLabel.text = tracks[indexPath.row]["title"].stringValue
+        cell.TitleLabel.text = tracks[indexPath.row].title
         cell.ImageView.image =
             UIImage(data: NSData(contentsOfURL: NSURL(string: coverArt)!)!)
-        cell.ViewLabel.text = tracks[indexPath.row]["views"].stringValue + "V"
-        cell.LikeLabel.text = tracks[indexPath.row]["likes"].stringValue + "L"
-        cell.DateLabel.text = tracks[indexPath.row]["date_updated"].stringValue
+        cell.ViewLabel.text = tracks[indexPath.row].totalViews + "V"
+        cell.LikeLabel.text = tracks[indexPath.row].totalLikes + "L"
+        cell.DateLabel.text = tracks[indexPath.row].dateUpdated
         return cell
     }
     
@@ -91,8 +92,7 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     //search delegate
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        let tracks = _tracks()
-        tracks.setCategory("recent").setSearch(searchText).request { (tracks) -> Void in
+        self.tracks!.setCategory("recent").setSearch(searchText).request { (tracks) -> Void in
             self.data = tracks
             self.tableView.reloadData()
         }
