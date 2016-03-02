@@ -14,20 +14,38 @@ class PopularBestTableViewController: UITableViewController {
     var data: [Track]?
     var category: String?
     var date: String?
-    var tracks: Tracks?
+    var tracks: Tracks!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
-        self.tracks = Tracks()
-        self.tracks!.setCategory(self.category!).request { (tracks) -> Void in
-            self.data = tracks
+       
+        self.tracks = Tracks.sharedInstance
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if(self.tracks.data == nil){
+            self.tracks.setCategory(self.category!).request { (tracks) -> Void in
+                self.data = tracks
+                self.tableView.reloadData()
+            }
+        }else{
+            self.data = self.tracks.data!.sort({ (track1, track2) -> Bool in
+                if(self.category == "popular"){
+                    return track1.totalViews > track2.totalViews
+                }else{
+                    return track1.totalLikes > track2.totalLikes
+                }
+            })
             self.tableView.reloadData()
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

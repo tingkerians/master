@@ -483,6 +483,7 @@
 		76DD6D001C7C258900CB5694 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DFF4CBE11C6B0CF2008973D3 /* CAPSPageMenu.swift */,
 				76DD6D381C7C2BF300CB5694 /* auth.swift */,
 				765071C71C7D511700798B76 /* test.swift */,
 				765071E51C7D8FC800798B76 /* tracks.swift */,
@@ -519,14 +520,6 @@
 				DFF4CBFB1C6B1988008973D3 /* ProfileViewController.swift */,
 			);
 			name = "Tab Naviagation";
-			sourceTree = "<group>";
-		};
-		DF101BDB1C6C16ED0006B4D3 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				DFF4CBF91C6B0DCB008973D3 /* Page Menu */,
-			);
-			name = Libraries;
 			sourceTree = "<group>";
 		};
 		DF101BDC1C6C16F80006B4D3 /* Music */ = {
@@ -729,7 +722,6 @@
 				76DD6D3A1C7C2CE100CB5694 /* Configuration */,
 				76DD6D001C7C258900CB5694 /* Module */,
 				DF101BDC1C6C16F80006B4D3 /* Music */,
-				DF101BDB1C6C16ED0006B4D3 /* Libraries */,
 				DFF4CBFA1C6B1961008973D3 /* Controllers */,
 				DFF4CBB31C6B0BD2008973D3 /* AppDelegate.swift */,
 				DFF4CBB71C6B0BD2008973D3 /* Main.storyboard */,
@@ -757,14 +749,6 @@
 				DFF4CBD51C6B0BD2008973D3 /* Info.plist */,
 			);
 			path = doharmonyUITests;
-			sourceTree = "<group>";
-		};
-		DFF4CBF91C6B0DCB008973D3 /* Page Menu */ = {
-			isa = PBXGroup;
-			children = (
-				DFF4CBE11C6B0CF2008973D3 /* CAPSPageMenu.swift */,
-			);
-			name = "Page Menu";
 			sourceTree = "<group>";
 		};
 		DFF4CBFA1C6B1961008973D3 /* Controllers */ = {

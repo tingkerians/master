@@ -15,16 +15,27 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     @IBOutlet weak var tableView: UITableView!
     
     var data: [Track]?
-    var tracks: Tracks?
+    var tracks: Tracks!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
         
-        self.tracks = Tracks()
-        self.tracks!.setCategory("recent").request { (tracks) -> Void in
-            self.data = tracks
+        self.tracks = Tracks.sharedInstance
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        SearchBar.text = self.tracks.search
+        
+        if(self.tracks.data == nil){
+            self.tracks!.setCategory("recent").request { (tracks) -> Void in
+                self.data = tracks
+                self.tableView.reloadData()
+            }
+        }else{
+            self.data = self.tracks.data!
             self.tableView.reloadData()
         }
         

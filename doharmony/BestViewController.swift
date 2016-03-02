@@ -19,8 +19,11 @@ class BestViewController: UIViewController, UISearchBarDelegate  {
     var controller1 : PopularBestTableViewController?
     var controller2 : PopularBestTableViewController?
     var controller3 : PopularBestTableViewController?
+    var tracks: Tracks!
     
     override func viewDidLoad() {
+        self.tracks = Tracks.sharedInstance
+        
         self.controller1 = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
         self.controller1!.title = "Last Week"
         self.controller1!.category = "best"
@@ -44,6 +47,7 @@ class BestViewController: UIViewController, UISearchBarDelegate  {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        SearchBar.text = self.tracks.search
         var parameters = env.CAPSPageMenuOptions
         parameters.append(.MenuItemWidth(90.0))
         
