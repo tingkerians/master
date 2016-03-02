@@ -12,7 +12,7 @@ class PostsTableViewController: UITableViewController {
 var Template:UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableView.registerNib(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "PostsTableViewCell")    }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +36,7 @@ var Template:UIView!
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : PostsTableViewCell = tableView.dequeueReusableCellWithIdentifier("PostsTableViewCell") as! PostsTableViewCell
 
-        
+        cell.userInteractionEnabled = false
         return cell
     }
     
@@ -48,9 +48,10 @@ var Template:UIView!
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell  = tableView.cellForRowAtIndexPath(indexPath)
         cell!.contentView.backgroundColor = .clearColor()
-        let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.presentViewController(vc, animated: true, completion: nil)
+        
+//        let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {

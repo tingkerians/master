@@ -70,7 +70,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="q0j-lz-f9L">
             <objects>
-                <tabBarController modalTransitionStyle="crossDissolve" id="8H7-12-Xyt" customClass="TabBarController" customModule="doharmony" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8H7-12-Xyt" customClass="TabBarController" customModule="doharmony" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="tAA-Fi-Gnx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

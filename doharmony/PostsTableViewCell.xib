@@ -23,9 +23,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decemarie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRO-up-ER4">
-                        <rect key="frame" x="54" y="8" width="183" height="17"/>
+                        <rect key="frame" x="54" y="8" width="405" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="183" id="6DB-IY-ZQk"/>
+                            <constraint firstAttribute="width" constant="405" id="6DB-IY-ZQk"/>
                             <constraint firstAttribute="height" constant="17" id="vxR-Pz-3Am"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -134,6 +134,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="PostCover" destination="3Uk-Uk-KGa" id="hwZ-2y-S0o"/>
+                <outlet property="PostLike" destination="QJa-Au-NVD" id="d1Y-al-YCg"/>
+                <outlet property="PostTitle" destination="9Tg-t3-z54" id="BD2-WV-h0D"/>
+                <outlet property="PostView" destination="WHi-eP-8wn" id="ChM-ND-dPQ"/>
+                <outlet property="ProfileName" destination="NRO-up-ER4" id="iwg-1L-vl6"/>
                 <outlet property="ProfilePicture" destination="UHB-qJ-ohC" id="2w4-Oe-SV6"/>
             </connections>
             <point key="canvasLocation" x="412" y="304"/>

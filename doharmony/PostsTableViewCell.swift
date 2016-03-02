@@ -11,6 +11,12 @@ import UIKit
 class PostsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ProfilePicture: UIImageView!
+    @IBOutlet weak var ProfileName: UILabel!
+    @IBOutlet weak var PostTitle: UILabel!
+    @IBOutlet weak var PostCover: UIImageView!
+    @IBOutlet weak var PostView: UILabel!
+    @IBOutlet weak var PostLike: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +24,21 @@ class PostsTableViewCell: UITableViewCell {
         
         self.ProfilePicture.layer.masksToBounds = true
         self.ProfilePicture.layer.cornerRadius = self.ProfilePicture.frame.width / 2
-    }
+        
 
+//        nameTapAction()
+        
+        let tap = UITapGestureRecognizer(target: self, action: Selector("nameTapAction:"))
+        tap.delegate = self
+        ProfileName.addGestureRecognizer(tap)
+        
+    }
+    
+    func nameTapAction(gestureRecognizer: UITapGestureRecognizer) {
+        print("tapped")
+        // handling code
+    }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

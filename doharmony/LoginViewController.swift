@@ -10,8 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancelButton(sender: AnyObject) {
-        print("close")
-        self.dismissViewControllerAnimated(false, completion: nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! TabBarController
+        self.presentViewController(nextViewController, animated:true, completion:nil)
     }
 
     @IBAction func SignUpButton(sender: AnyObject) {

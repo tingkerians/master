@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="nc8-eb-l5n" secondAttribute="height" multiplier="22:25" id="rkt-dc-r9i"/>
                         </constraints>
-                        <state key="normal" title="Button" image="delete"/>
+                        <state key="normal" image="delete"/>
                         <connections>
                             <action selector="deleteTracks:" destination="3XZ-2J-fxB" eventType="touchUpInside" id="iND-tg-DGD"/>
                         </connections>
