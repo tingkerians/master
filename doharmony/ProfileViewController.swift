@@ -21,13 +21,13 @@ class ProfileViewController: UIViewController {
         var controllerArray : [UIViewController] = []
         
         let controller1 : MyProfileViewController = MyProfileViewController(nibName: "MyProfileViewController", bundle: nil)
-        controller1.title = "Profile"
+        controller1.title = locale.Profile
         controllerArray.append(controller1)
         let controller2 : LibrariesTableViewController = LibrariesTableViewController(nibName: "LibrariesTableViewController", bundle: nil)
-        controller2.title = "Track"
+        controller2.title = locale.Track
         controllerArray.append(controller2)
         let controller3 : LibrariesTableViewController = LibrariesTableViewController(nibName: "LibrariesTableViewController", bundle: nil)
-        controller3.title = "Project"
+        controller3.title = locale.Project
         controllerArray.append(controller3)
 
         

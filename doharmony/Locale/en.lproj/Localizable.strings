@@ -6,13 +6,9 @@
  Copyright © 2016 Eleazer Toluan. All rights reserved.
  */
 
-"Change" = "Change";
-
-"Hello world" = "Hello world";
-
 "Reset" = "Reset";
 
-"Recent" = "Recents";
+"Recent" = "Recent";
 
 "Popular" = "Popular";
 
@@ -20,23 +16,19 @@
 
 "Local" = "Local";
 
-"Last Week" = "Last Week";
+"This Week" = "This Week";
 
-"Last Month" = "Last Month";
+"This Month" = "This Month";
 
 "All Time" = "All Time";
 
 "Post" = "Post";
 
-"My Friends" = "My Friends";
-
-"All Members" = "All Members";
-
-"Templates" = "Templates";
+"Template" = "Template";
 
 "Record" = "Record";
 
-"Tracks" = "Tracks";
+"Track" = "Track";
 
 "My Profile" = "My Profile";
 
@@ -46,7 +38,11 @@
 
 "Videos" = "Videos";
 
+"Friend" = "Friend";
+
 "Friends" = "Friends";
+
+"Follower" = "Follower";
 
 "Followers" = "Followers";
 
@@ -60,4 +56,6 @@
 
 "Logout" = "Logout";
 
-"All" = "All";
+"Project" = "Project";
+
+"Profile" = "Profile";

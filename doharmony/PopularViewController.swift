@@ -23,20 +23,20 @@ class PopularViewController: UIViewController, UISearchBarDelegate {
         self.tracks = Tracks.sharedInstance
         
         self.controller1 = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
-        self.controller1!.title = "Last Week"
+        self.controller1!.title = locale.ThisWeek
         self.controller1!.category = "popular"
         self.controller1!.date = "week"
         controllerArray.append(self.controller1!)
         
         self.controller2 = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
-        self.controller2!.title = "Last Month"
+        self.controller2!.title = locale.ThisMonth
         self.controller2!.category = "popular"
         self.controller2!.date = "month"
         controllerArray.append(self.controller2!)
         
         
         self.controller3 = PopularBestTableViewController(nibName: "PopularBestTableViewController", bundle: nil)
-        self.controller3!.title = "All Time"
+        self.controller3!.title = locale.AllTime
         self.controller3!.category = "popular"
         self.controller3!.date = "all"
         self.controllerArray.append(self.controller3!)

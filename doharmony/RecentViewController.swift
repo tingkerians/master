@@ -73,8 +73,8 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         cell.TitleLabel.text = tracks[indexPath.row].title
         cell.ImageView.image =
             UIImage(data: NSData(contentsOfURL: NSURL(string: coverArt)!)!)
-        cell.ViewLabel.text = tracks[indexPath.row].totalViews + "V"
-        cell.LikeLabel.text = tracks[indexPath.row].totalLikes + "L"
+        cell.ViewLabel.text = tracks[indexPath.row].totalViews
+        cell.LikeLabel.text = tracks[indexPath.row].totalLikes
         cell.DateLabel.text = tracks[indexPath.row].dateUpdated
         return cell
     }
