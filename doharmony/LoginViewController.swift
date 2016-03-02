@@ -9,6 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    
     @IBAction func cancelButton(sender: AnyObject) {
         print("close")
         self.dismissViewControllerAnimated(false, completion: nil)
@@ -52,6 +53,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func tap(gesture: UITapGestureRecognizer){
         UsernameTextField.resignFirstResponder()
         PasswordTextField.resignFirstResponder()
+    }
+    
+    @IBAction func loginTapped(sender: AnyObject) {
+        let username = UsernameTextField.text!;
+        let password = PasswordTextField.text!;
+        
+        let auth = Auth();
+        auth.login(username, password: password) { error in
+            // If the login is a success
+            if (error == nil) {
+                // code here to redirect to home/landing/? page
+                print("No errors --- Login successful");
+            } else { // There's an error
+                // Show an alert or something similar here and display the `error` message.
+                print("Has errors --- Login failed");
+            }
+        }
+        
     }
 
     /*

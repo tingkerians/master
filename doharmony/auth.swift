@@ -18,26 +18,72 @@ import CoreData
 class Auth {
     
     // Login URL
-    let serverURL = "http://192.168.0.137:8080/api/login";
+    private let serverURL = "http://192.168.0.137:8080/api/login";
     
     /*
     Checks if the current user has an existing token saved on the device
-    returns `true` if there's an existing token
+    Returns true if there's an existing token (renews the token if it has expired)
+    Returns false if there's no existing token on the device.
     */
-    func isLoggedIn() -> Bool{
-        let data = getToken();
+    func isUserLoggedIn() -> Bool {
+        var loggedIn = false;
+        let dateNow = NSDate().description;
+//        let dateNow = "2016-04-01-, 11:14:16 +0800"; // February 1, 2016
+        let renewTokenURL = "http://192.168.0.137:8080/api/token";
         
-        if let _ = data["token"] {
-            return true;
+        let token = getToken();
+        
+        // Check if there's an existing token on the device
+        if token.count > 0 {
+            // There's an existing token, check if it's still hasn't expired
+            loggedIn = true;
+            let validityDate = token["validityDate"]!
+            let tokenValue = token["token"]!
+            
+            let dateComparisonResult: NSComparisonResult = dateNow.compare(validityDate);
+            // Compare dateNow and `token["validityDate"]`
+            
+            if dateComparisonResult == NSComparisonResult.OrderedDescending {
+                print("Token has expired");
+                // Get a new token from the server
+                let parameters = ["token" : tokenValue];
+                
+                Alamofire.request(.PUT, renewTokenURL, parameters: parameters, encoding: .JSON)
+                    .validate()
+                    .responseJSON { response in
+                        switch(response.result) {
+                        case .Success:
+                            let data = JSON(response.result.value!)
+                            self.saveToken(data["data"]["token"].stringValue, validityDate: data["data"]["validityDate"].stringValue);
+
+                        case .Failure(let error):
+                            print("HTTP RESPONSE: \n\(error.localizedDescription)");
+                        }
+                }
+            }
+            
         } else {
-            return false;
+            // There's no existing token on the device, The user is not logged in
+            loggedIn =  false;
         }
+        
+        return loggedIn;
     }
     
     /*
     Send a login request to the server with parameters `username` and `password`
+    
+    Usage:
+    auth.login(uname,pwd) { error in
+        if error == nil { // there are no errors
+            // code here for successful login
+        } else { // there are errors
+            // code here to display `error` variable 
+            print(error.localizedDescription);
+        }
+    }
     */
-    func login(username: String, password: String) {
+    func login(username: String, password: String, completionHandler: (NSError?) -> Void) {
         let parameters = [
             "username" : username,
             "password" : password
@@ -48,51 +94,54 @@ class Auth {
             .responseJSON { response in
                 switch response.result {
                 case .Success:
+                    completionHandler(nil);
                     let data = JSON(response.result.value!)
-                    self.saveToken(parameters["username"]!, token: data["token"].stringValue);
-                    
+                    self.saveToken(data["data"]["token"].stringValue, validityDate: data["data"]["validityDate"].stringValue);
+                
                 case .Failure(let error):
+                    completionHandler(error);
                     print("HTTP RESPONSE: \n\(error.localizedDescription)");
-//                    self.showAlert("Login failed", message: String(error.localizedDescription));
                 }
         }
         return;
     }
     
     /*
-    Save the tokens into the app
+    Save the tokens into the app edit username
     */
-    func saveToken(username: String, token: String) {
+    func saveToken(token: String, validityDate: String) {
         print("Save token");
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate);
         let context: NSManagedObjectContext = appDel.managedObjectContext;
-        
+
         // Check if there's an existing token
         let data = getToken()
         
         if data.count > 0 {
             // There's an existing token, overwrite it
-            let request = NSFetchRequest(entityName: "Users");
-            let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: context);
+            let request = NSFetchRequest(entityName: "Token");
+            let entityDescription = NSEntityDescription.entityForName("Token", inManagedObjectContext: context);
             request.entity = entityDescription;
             
+           
             do {
                 let result: NSArray = try context.executeFetchRequest(request);
-                let user = result[0] as! NSManagedObject;
-                user.setValue(username, forKey: "username");
-                user.setValue(token, forKey: "token");
+                let existingToken = result[0] as! NSManagedObject;
+
+                existingToken.setValue(token, forKey: "token");
+                existingToken.setValue(validityDate, forKey: "validityDate");
                 
-                try user.managedObjectContext?.save();
-                print("updated token");
+                try existingToken.managedObjectContext?.save();
+                print("Token updated");
             } catch let error as NSError {
                 print("Could not fetch \(error), \(error.userInfo)");
             }
-
+            
         } else {
             // No duplicates, create new entry
-            let newToken = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context);
-            newToken.setValue(username, forKey: "username");
+            let newToken = NSEntityDescription.insertNewObjectForEntityForName("Token", inManagedObjectContext: context);
             newToken.setValue(token, forKey: "token");
+            newToken.setValue(validityDate, forKey: "validityDate");
             
             do {
                 try context.save();
@@ -115,17 +164,17 @@ class Auth {
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate);
         let context: NSManagedObjectContext = appDel.managedObjectContext;
         
-        let request = NSFetchRequest(entityName: "Users");
-        let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: context);
+        let request = NSFetchRequest(entityName: "Token");
+        let entityDescription = NSEntityDescription.entityForName("Token", inManagedObjectContext: context);
         request.entity = entityDescription;
     
         do {
             let result: NSArray = try context.executeFetchRequest(request);
 
             if result.count > 0 {
-                let user = result[0] as! NSManagedObject;
-                data["username"] = (user.valueForKey("username") as! String);
-                data["token"] = (user.valueForKey("token") as! String);
+                let token = result[0] as! NSManagedObject;
+                data["token"] = (token.valueForKey("token") as! String);
+                data["validityDate"] = (token.valueForKey("validityDate") as! String);
             }
             print("Get Token done.");
             
@@ -134,7 +183,31 @@ class Auth {
         }
         return data;
     }
-
+    
+    /*
+    (For logout function)
+    Used to delete the contents of the coreData
+    */
+    func logout() {
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate);
+        let context: NSManagedObjectContext = appDel.managedObjectContext;
+        let request = NSFetchRequest(entityName: "Token");
+        
+        do {
+            let fetched = try context.executeFetchRequest(request);
+            
+            for item in fetched {
+                context.deleteObject(item as! NSManagedObject);
+            }
+            try context.save()
+            
+            print("`Token` core data deleted");
+            
+        } catch let error as NSError {
+            print("Could not delete \(error), \(error.userInfo)");
+        }
+    }
+    
     /*
     (For debugging purposes)
     Displays all token per user that is stored in the device
@@ -146,19 +219,17 @@ class Auth {
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate);
         let context: NSManagedObjectContext = appDel.managedObjectContext;
         
-        let request = NSFetchRequest(entityName: "Users");
-        let entityDescription = NSEntityDescription.entityForName("Users", inManagedObjectContext: context);
+        let request = NSFetchRequest(entityName: "Token");
+        let entityDescription = NSEntityDescription.entityForName("Token", inManagedObjectContext: context);
         
         request.entity = entityDescription;
-        // uncomment if searching for a specific token
-//        request.predicate = NSPredicate(format: "username = %@", username);
         
         do {
             let result: NSArray = try context.executeFetchRequest(request);
-            let user = result as! [NSManagedObject];
-            for u in user {
-                print("username:\(u.valueForKey("username")!)");
-                print("token:\(u.valueForKey("token")!)\n");
+            let tokens = result as! [NSManagedObject];
+            for token in tokens {
+                print("token:\(token.valueForKey("token")!)\n");
+                print("validityDate:\(token.valueForKey("validityDate")!)\n");
             }
             
         } catch let error as NSError {
@@ -167,82 +238,8 @@ class Auth {
     }
     
     
-    /*
-    (For logout function)
-    Used to delete the contents of the coreData
-    */
-    func unsetToken() {
-        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate);
-        let context: NSManagedObjectContext = appDel.managedObjectContext;
-        let request = NSFetchRequest(entityName: "Users");
-        
-        do {
-            let fetched = try context.executeFetchRequest(request);
 
-            for item in fetched {
-                context.deleteObject(item as! NSManagedObject);
-            }
-            
-            print("`Users` core data deleted");
-            
-        } catch let error as NSError {
-            print("Could not delete \(error), \(error.userInfo)");
-        }
-    }
-
-    /*
-    SAMPLE FUNCTION
-    Sends a request to the server together with an invalid token
-    */
-    func getTracks() {
-        var token = String();
-        let localData = getToken();
-        let url = "http://192.168.0.137:8080/api/getJSONTracks"
-        if localData.count > 0 {
-            print("Existing token: \(localData)");
-            token = localData["token"]!;
-        } else {
-            return;
-        }
-        
-        let parameters = [
-            "token" : token
-        ];
-        
-        Alamofire.request(.POST, url, parameters: parameters, encoding: .JSON)
-            .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .Success:
-                    let data = JSON(response.result.value!)
-                    print(data);
-                    
-                case .Failure(let error):
-                    var errorMessage = String();
-                    
-                    if let data = response.data {
-                        let responseJSON = JSON(data: data)
-                        
-                        if let responseToken: String = responseJSON["token"].stringValue {
-                            if !responseToken.isEmpty {
-                                errorMessage = "Invalid token";
-                                // Replace the current token with the new token sent by the server
-                                self.saveToken(localData["username"]!, token: responseToken);
-                            } else {
-                                errorMessage = error.localizedDescription;
-                            }
-                        }
-                    }
-
-//                    print("HTTP RESPONSE: \n\(error.localizedDescription)");
-                    print("HTTP RESPONSE: \(error.localizedDescription)");
-                }
-        }
-        return;
-    }
-
-    func renewToken() {
-        
-    }
+    
     
 }
+

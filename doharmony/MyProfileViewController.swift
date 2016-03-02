@@ -16,22 +16,35 @@ class MyProfileViewController: UIViewController {
         self.presentViewController(vc, animated: true, completion: nil)
         
     }
+
     
     @IBOutlet weak var ProfilePicture: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
         
         ProfilePicture.layer.cornerRadius = ProfilePicture.frame.width / 2
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        let auth = Auth();
+        if auth.isUserLoggedIn() {
+            print("Token found -- User logged in");
+        } else {
+            print("Token not found --- User is a `Guest`");
+            // User is not logged in(guest), redirect to login page
+            let vc = LoginViewController(nibName: "LoginViewController", bundle: nil);
+            self.navigationController?.pushViewController(vc, animated: true);
+            self.presentViewController(vc, animated: true, completion: nil);
+        }    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
 

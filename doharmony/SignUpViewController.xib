@@ -112,6 +112,9 @@
                     <state key="normal" title="Sign Up">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="signupTapped:" destination="-1" eventType="touchUpInside" id="rOw-90-tUX"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-yD-tjm">
                     <rect key="frame" x="188" y="479" width="225" height="30"/>
