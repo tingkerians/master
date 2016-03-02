@@ -7,127 +7,278 @@
 //
 
 import UIKit
+import AVFoundation
+import CoreData
 
-class RecordingViewController: UIViewController {
-
-    @IBOutlet weak var defaultFrame1: UIView!
-    @IBOutlet weak var defaultFrame2: UIView!
-    @IBOutlet weak var defaultFrame3: UIView!
+class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDelegate, TemplateViewControllerDelegate, timerControllerCountdownDelegate, timerControllerStopTimerDelegate, timerControllerDurationTimerDelegate{
     
+    @IBOutlet weak var layoutDisplay: UIView!
+    @IBOutlet weak var playButton: UIButton!
+    var defaultTemplate:UIView!
+    
+    let stopRecordButton = UIButton(type: UIButtonType.System)
+    
+    let db = RecordingData()
+    var Template:TemplateController!
+    let Capture = captureController()
+    let Cropper = Crop()
+    
+    var isPlaying = false
+    var isRecording = false
+    
+    let Metronome = timerController()
+    let Countdown = timerController()
+    let PlayerTimer = timerController()
+    let DurationTimer = timerController()
+    
+    @IBOutlet weak var metronomeSwitch: UISwitch!
+    @IBOutlet weak var metronomeView: UIView!
+    @IBOutlet weak var bpmSlider: UISlider!
+    @IBOutlet weak var bpmLabel: UILabel!
+    @IBOutlet weak var timeSignBtnsContainer: UIView!
+    var timeSignBtns = [UIButton]()
+    var timeSignature:Double = 1
+    
+    @IBOutlet weak var minutes: UILabel!
+    @IBOutlet weak var seconds: UILabel!
+    
+    var filename:String!
+    var framePointer = 0
+    
+    //VIEW DIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        defaultFrame1.addSubview(buttonsView(defaultFrame1))
-        defaultFrame2.addSubview(buttonsView(defaultFrame2))
-        defaultFrame3.addSubview(buttonsView(defaultFrame3))
+        bpmLabel.text = "\(Int(bpmSlider.value))"
+        
+        useTemplate()
     }
     
-    @IBAction func PlayButton(sender: AnyObject) {
-        print("Play")
+    //TEMPLATE
+    func useTemplate(){
+        for view in layoutDisplay.subviews{
+            view.removeFromSuperview()
+        }
+        Template = TemplateController()
+        Template.delegate = self
+        if Template.Layout == nil{
+            Template.setLayout(defaultTemplate)
+        }
+        layoutDisplay.addSubview(Template.Layout)
+        Template.refreshFrames()
     }
     
-    func dupe(template:UIView){
-        
-        print("Dup \(template.frame.width)")
-        let bounds = UIScreen.mainScreen().bounds
-        let width = bounds.size.width
-        //let height = bounds.size.height
-        //        print("screen width: \(width)")
-        //        print("screen height: \(height)")
-        
-        let templateWidth = template.frame.width * 3 - 10
-        let templateHeight = template.frame.height * 3 - 10
-        let leftMargin = (width - templateWidth) / 2
-        //        print("template width: \(templateWidth)")
-        //        print("template height: \(templateHeight)")
-        //        print("template margin: \(width - templateWidth)")
-        
-        let newTemplate = UIView.init(frame: CGRectMake( leftMargin , 80, templateWidth , templateHeight))
-        newTemplate.backgroundColor = UIColor.whiteColor()
-        newTemplate.contentMode = .ScaleAspectFit
-        //            print(template.frame.width)
-        //            print(template.frame.height)
-        
-        self.view.addSubview(newTemplate)
-        
-        
-        for sv:UIView in template.subviews{
-            print("frames \(sv.frame.width)")
-            let x = sv.frame.origin.x * 3 - 10
-            let y = sv.frame.origin.y * 3 - 10
-            let w = sv.frame.width * 3 + 10
-            let h = sv.frame.height * 3 + 10
+    
+    //METRONOME
+    @IBAction func showMetronome(sender: AnyObject) {
+        metronomeView.hidden=false
+        var tag = 0
+        for view:UIView in timeSignBtnsContainer.subviews{
+            if let btn = view as? UIButton{
+                btn.tag = tag
+                btn.userInteractionEnabled = true
+                btn.alpha = 1
+                btn.addTarget(self, action: "changeTS:", forControlEvents: UIControlEvents.TouchUpInside)
+                timeSignBtns.append(btn)
+                tag++
+            }
+        }
+        timeSignBtns[0].userInteractionEnabled = false
+        timeSignBtns[0].alpha = 0.5
+        timeSignature = 1
+        resetMetronome()
+    }
+    func changeTS(sender:UIButton){
+        timeSignature = Double(sender.tag+1)
+        for btn:UIButton in timeSignBtns{
+            btn.userInteractionEnabled = true
+            btn.alpha = 1
+        }
+        timeSignBtns[sender.tag].userInteractionEnabled = false
+        timeSignBtns[sender.tag].alpha = 0.5
+        resetMetronome()
+    }
+    func resetMetronome(){
+        if Metronome.isRunning{
+            Metronome.stop()
+        }
+        Metronome.setupMetronome(Double(bpmSlider.value), timeSignature: timeSignature)
+        Metronome.start()
+    }
+    @IBAction func changeBpm(sender: AnyObject) {
+        bpmLabel.text = "\(Int(bpmSlider.value))"
+    }
+    @IBAction func subtractBpm(sender: AnyObject) {
+        bpmSlider.value -= 1
+        bpmLabel.text = "\(Int(bpmSlider.value))"
+    }
+    @IBAction func addBpm(sender: AnyObject) {
+        bpmSlider.value += 1
+        bpmLabel.text = "\(Int(bpmSlider.value))"
+    }
+    @IBAction func closeMetronome(sender: AnyObject) {
+        metronomeView.hidden = true
+        if Metronome.isRunning{
+            Metronome.stop()
+        }
+    }
+    
+    //RECORD
+    @IBAction func changeCamera(sender: AnyObject) {
+        if Capture.captureSession.running && isRecording == false{
+            Capture.changeCamera()
+        }
+    }
+    func recordVideo(sender:UIButton){
+        if Capture.captureSession.running == false{
+            if isPlaying{
+                stopAll()
+            }
+            framePointer = sender.tag
+            print("tag",framePointer)
+            let frame = Template.Frames[framePointer]
+            Capture.setCaptureLayer(frame)
+            Capture.captureSession.startRunning()
             
-            let size = CGRectMake(x, y, w, h)
-            let frame:UIView = UIView.init(frame: size)
-            frame.backgroundColor = UIColor.darkGrayColor()
-            newTemplate.addSubview(frame)
-            frame.addSubview(buttonsView(frame))
+            Countdown.setupCountdown(5, frame: frame, delegate: self)
+            Countdown.start()
+        }
+    }
+    
+    func countdownExpires() {
+        filename = randomStringWithLength(5) as String
+        Capture.start(self, filename:filename)
+        
+        playButton.hidden = true
+        stopRecordButton.frame = playButton.bounds
+        stopRecordButton.frame.origin.x = playButton.frame.origin.x
+        stopRecordButton.frame.origin.y = playButton.frame.origin.y
+        stopRecordButton.setImage(UIImage(named: "stop"), forState: .Normal) //image
+        stopRecordButton.tintColor = .whiteColor()
+        stopRecordButton.addTarget(self, action: "stopRecord", forControlEvents:.TouchUpInside)
+        self.view.addSubview(stopRecordButton)
+        stopRecordButton.hidden = false
+    }
+    
+    func stopRecord(){
+        Capture.stop()
+    }
+    
+    func importVideo(sender:UIButton){
+        print("import video")
+        let Local = ImportViewController()
+        self.presentViewController(Local, animated: true, completion: nil)
+    }
+    func inviteFriend(sender:UIButton){
+        print("invite friend")
+    }
+    func addAudioEffects(sender:UIButton){
+        print("add audio effects")
+    }
+    
+    //PLAYBACK
+    @IBAction func playVideo(sender: AnyObject) {
+        playAll()
+    }
+    func playAll(){
+        var duration = CMTimeGetSeconds(Template.duration)
+        duration = Double(round(10*duration)/10)
+        for layer in Template.playerLayers{
+            layer.player?.seekToTime(kCMTimeZero)
+            layer.player?.play()
+        }
+        if duration != 0.0 || Capture.captureSession.running  == true{
+            DurationTimer.setupDurationTimer(self)
+            DurationTimer.start()
+            for btnView in Template.frameButtons{
+                btnView.hidden = true
+            }
+        }
+        //stopper
+        if duration != 0.0 && Capture.captureSession.running == false{
+            let stopTimer = timerController()
+            stopTimer.setupStopTimer(duration, delegate: self)
+            stopTimer.start()
+        }
+        isPlaying = true
+    }
+    func stopAll(){
+        isPlaying = false
+        for layer:AVPlayerLayer in Template.playerLayers{
+            layer.player?.seekToTime(kCMTimeZero)
+            layer.player?.pause()
+        }
+        DurationTimer.stop()
+        for btnView in Template.frameButtons{
+            btnView.hidden = false
+        }
+    }
+    
+    //timer delegates
+    func timeUpdate(h: Int, m: Int, s: Int) {
+        var mstring = "\(m)"
+        var sstring = "\(s)"
+        if s<10 {
+            sstring = "0\(s)"
+        }
+        if m<10 {
+            mstring = "0\(m)"
+        }
+        minutes.text = mstring
+        seconds.text = sstring
+    }
+    func stopTimerExpires() {
+        stopAll()
+    }
+    
+    //CAPTURE DELEGATES
+    func captureOutput(captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAtURL fileURL: NSURL!, fromConnections connections: [AnyObject]!) {
+        NSLog("recording started")
+        isRecording = true
+        
+        if metronomeSwitch.on{
+            Metronome.setupMetronome(Double(bpmSlider.value), timeSignature: timeSignature)
+            Metronome.start()
         }
         
-        
+        playAll()
     }
-
-    func buttonsView(frame:UIView) -> UIView {
-        let wFrame = frame.frame.size.width
-        let hFrame = frame.frame.size.height
-        let xButtonsView = wFrame / 3.2
-        let yButtonsView = hFrame / 2
+    func captureOutput(captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!, fromConnections connections: [AnyObject]!, error: NSError!) {
+        NSLog("recording Finished")
+        isRecording = false
         
-        let size = CGRectMake( xButtonsView , yButtonsView , wFrame * 0.4, 50)
-        let buttonsView:UIView = UIView.init(frame: size)
+        if Metronome.isRunning{
+            Metronome.stop()
+        }
         
-        let rec = UIImage(named: "recording") as UIImage?
-        let recButton   = UIButton(type: UIButtonType.System) as UIButton
-        recButton.frame = CGRectMake(6, 4, 20, 16)
-        recButton.setImage(rec, forState: .Normal)
-        recButton.tintColor = UIColor.whiteColor()
-        recButton.addTarget(self, action: "recordBtnTouched:", forControlEvents:.TouchUpInside)
-        buttonsView.addSubview(recButton)
+//        let croppedVideo = Cropper.crop(outputFileURL, frame: Frame, captureLayer: Capture.layer, filename: filename).path!
         
-        let importImage = UIImage(named: "import") as UIImage?
-        let importButton   = UIButton(type: UIButtonType.System) as UIButton
-        importButton.frame = CGRectMake(35, 4, 20, 20)
-        importButton.setImage(importImage, forState: .Normal)
-        importButton.tintColor = UIColor.whiteColor()
-        importButton.addTarget(self, action: "importBtnTouched:", forControlEvents:.TouchUpInside)
-        buttonsView.addSubview(importButton)
+        let filter = NSPredicate(format: "tag == %@", NSNumber(integer: framePointer))
+        let currentFrameVid = db.fetch("Recordings", predicate: filter)
+        let recordingPath = NSString(string: outputFileURL.absoluteString)
+        if currentFrameVid.count>0{
+            db.update("Recordings", predicate: filter, value: nil, key: "tag")
+        }
+        db.insert("Recordings", values: ["tag":framePointer , "path":recordingPath])
         
-        let inviteImage = UIImage(named: "invite") as UIImage?
-        let inviteButton   = UIButton(type: UIButtonType.System) as UIButton
-        inviteButton.frame = CGRectMake(60, 4, 20, 20)
-        inviteButton.setImage(inviteImage, forState: .Normal)
-        inviteButton.tintColor = UIColor.whiteColor()
-        inviteButton.addTarget(self, action: "inviteBtnTouched:", forControlEvents:.TouchUpInside)
-        buttonsView.addSubview(inviteButton)
+        Capture.layer.removeFromSuperlayer()
+        self.stopRecordButton.hidden = true
+        self.playButton.hidden = false
+        Template.refreshFrames()
         
-        //        buttonsView.center = frame.center
-        return buttonsView
-        
+        stopAll()
+        playAll()
     }
     
-    func recordBtnTouched(sender: UIButton!) {
-        print("record")
+    func randomStringWithLength (len : Int) -> NSString {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let randomString : NSMutableString = NSMutableString(capacity: len)
+        for (var i=0; i < len; i++){
+            let length = UInt32 (letters.length)
+            let rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+        }
+        return randomString
     }
-    
-    func importBtnTouched(sender: UIButton!) {
-        print("import")
-    }
-    
-    func inviteBtnTouched(sender: UIButton!) {
-        print("invite")
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -12,13 +12,6 @@
 		7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; };
 		7615F27C1C7597EF00ACBD3E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7615F2851C75A26700ACBD3E /* doharmony.xcdatamodeld */; };
-		7629CF8D1C7E967A0092C5F3 /* Alessia Cara - Here.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF861C7E967A0092C5F3 /* Alessia Cara - Here.mp4 */; };
-		7629CF8E1C7E967A0092C5F3 /* BlackBerry.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF871C7E967A0092C5F3 /* BlackBerry.mov */; };
-		7629CF8F1C7E967A0092C5F3 /* Hello.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF881C7E967A0092C5F3 /* Hello.mp4 */; };
-		7629CF901C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF891C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 */; };
-		7629CF911C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF8A1C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 */; };
-		7629CF921C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF8B1C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 */; };
-		7629CF931C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7629CF8C1C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 */; };
 		765071C81C7D511700798B76 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765071C71C7D511700798B76 /* test.swift */; };
 		765071E61C7D8FC800798B76 /* tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765071E51C7D8FC800798B76 /* tracks.swift */; };
 		765B22FB1C7FF1810089FF48 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B22FA1C7FF1810089FF48 /* config.swift */; };
@@ -43,8 +36,6 @@
 		DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */; };
 		DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */; };
 		DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16A0B01C754C84006E4019 /* RecordViewController.swift */; };
-		DF16A0BA1C755007006E4019 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16A0B81C755007006E4019 /* RecordingViewController.swift */; };
-		DF16A0BB1C755007006E4019 /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF16A0B91C755007006E4019 /* RecordingViewController.xib */; };
 		DF4CBD621C7AD37100C3EE36 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4CBD601C7AD37100C3EE36 /* TemplateViewController.swift */; };
 		DF4CBD631C7AD37100C3EE36 /* TemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4CBD611C7AD37100C3EE36 /* TemplateViewController.xib */; };
 		DF526F571C6D5E63009971FF /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF526F551C6D5E63009971FF /* MyFriendsTableViewController.swift */; };
@@ -96,6 +87,17 @@
 		F6CC20561C76C49D0033CF70 /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CC20541C76C49D0033CF70 /* RecentViewController.xib */; };
 		F6CC205C1C76DAE50033CF70 /* PlayTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC205A1C76DAE50033CF70 /* PlayTrackViewController.swift */; };
 		F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CC205B1C76DAE50033CF70 /* PlayTrackViewController.xib */; };
+		FB4125071C86ADB4007EC0D5 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4125051C86ADB4007EC0D5 /* ImportViewController.swift */; };
+		FB4125081C86ADB4007EC0D5 /* ImportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4125061C86ADB4007EC0D5 /* ImportViewController.xib */; };
+		FBA1A9EC1C86A417005A8F0B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E51C86A417005A8F0B /* Template.swift */; };
+		FBA1A9ED1C86A417005A8F0B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E61C86A417005A8F0B /* Timer.swift */; };
+		FBA1A9EE1C86A417005A8F0B /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E71C86A417005A8F0B /* Capture.swift */; };
+		FBA1A9EF1C86A417005A8F0B /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E81C86A417005A8F0B /* Crop.swift */; };
+		FBA1A9F01C86A417005A8F0B /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E91C86A417005A8F0B /* Merge.swift */; };
+		FBA1A9F11C86A417005A8F0B /* CameraRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9EA1C86A417005A8F0B /* CameraRoll.swift */; };
+		FBA1A9F21C86A417005A8F0B /* RecordingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9EB1C86A417005A8F0B /* RecordingData.swift */; };
+		FBA1A9F51C86A4F6005A8F0B /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA1A9F31C86A4F6005A8F0B /* RecordingViewController.xib */; };
+		FBA1A9F61C86A4F6005A8F0B /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9F41C86A4F6005A8F0B /* RecordingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,13 +270,6 @@
 		7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
-		7629CF861C7E967A0092C5F3 /* Alessia Cara - Here.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alessia Cara - Here.mp4"; sourceTree = "<group>"; };
-		7629CF871C7E967A0092C5F3 /* BlackBerry.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BlackBerry.mov; sourceTree = "<group>"; };
-		7629CF881C7E967A0092C5F3 /* Hello.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hello.mp4; sourceTree = "<group>"; };
-		7629CF891C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4"; sourceTree = "<group>"; };
-		7629CF8A1C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4"; sourceTree = "<group>"; };
-		7629CF8B1C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Chainsmokers - Roses (Official Video) ft. ROZES.mp4"; sourceTree = "<group>"; };
-		7629CF8C1C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4"; sourceTree = "<group>"; };
 		765071C71C7D511700798B76 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		765071E51C7D8FC800798B76 /* tracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tracks.swift; sourceTree = "<group>"; };
 		765B22FA1C7FF1810089FF48 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
@@ -331,8 +326,6 @@
 		DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
 		DF16A0B01C754C84006E4019 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		DF16A0B81C755007006E4019 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
-		DF16A0B91C755007006E4019 /* RecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
 		DF4CBD601C7AD37100C3EE36 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
 		DF4CBD611C7AD37100C3EE36 /* TemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplateViewController.xib; sourceTree = "<group>"; };
 		DF526F551C6D5E63009971FF /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -390,6 +383,17 @@
 		F6CC20541C76C49D0033CF70 /* RecentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentViewController.xib; sourceTree = "<group>"; };
 		F6CC205A1C76DAE50033CF70 /* PlayTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayTrackViewController.swift; sourceTree = "<group>"; };
 		F6CC205B1C76DAE50033CF70 /* PlayTrackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayTrackViewController.xib; sourceTree = "<group>"; };
+		FB4125051C86ADB4007EC0D5 /* ImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		FB4125061C86ADB4007EC0D5 /* ImportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportViewController.xib; sourceTree = "<group>"; };
+		FBA1A9E51C86A417005A8F0B /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		FBA1A9E61C86A417005A8F0B /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		FBA1A9E71C86A417005A8F0B /* Capture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
+		FBA1A9E81C86A417005A8F0B /* Crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+		FBA1A9E91C86A417005A8F0B /* Merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merge.swift; sourceTree = "<group>"; };
+		FBA1A9EA1C86A417005A8F0B /* CameraRoll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRoll.swift; sourceTree = "<group>"; };
+		FBA1A9EB1C86A417005A8F0B /* RecordingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingData.swift; sourceTree = "<group>"; };
+		FBA1A9F31C86A4F6005A8F0B /* RecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
+		FBA1A9F41C86A4F6005A8F0B /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,13 +536,6 @@
 		DF101BDC1C6C16F80006B4D3 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				7629CF861C7E967A0092C5F3 /* Alessia Cara - Here.mp4 */,
-				7629CF871C7E967A0092C5F3 /* BlackBerry.mov */,
-				7629CF881C7E967A0092C5F3 /* Hello.mp4 */,
-				7629CF891C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 */,
-				7629CF8A1C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 */,
-				7629CF8B1C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 */,
-				7629CF8C1C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -621,8 +618,16 @@
 		DF16A0B71C754FD1006E4019 /* Recording */ = {
 			isa = PBXGroup;
 			children = (
-				DF16A0B81C755007006E4019 /* RecordingViewController.swift */,
-				DF16A0B91C755007006E4019 /* RecordingViewController.xib */,
+				FBA1A9F31C86A4F6005A8F0B /* RecordingViewController.xib */,
+				FBA1A9F41C86A4F6005A8F0B /* RecordingViewController.swift */,
+				FBA1A9E51C86A417005A8F0B /* Template.swift */,
+				FBA1A9E61C86A417005A8F0B /* Timer.swift */,
+				FBA1A9E71C86A417005A8F0B /* Capture.swift */,
+				FBA1A9E81C86A417005A8F0B /* Crop.swift */,
+				FBA1A9E91C86A417005A8F0B /* Merge.swift */,
+				FBA1A9EA1C86A417005A8F0B /* CameraRoll.swift */,
+				FBA1A9EB1C86A417005A8F0B /* RecordingData.swift */,
+				FB4124F71C86AD7D007EC0D5 /* Local Import */,
 			);
 			name = Recording;
 			sourceTree = "<group>";
@@ -843,6 +848,15 @@
 			name = PlayTrack;
 			sourceTree = "<group>";
 		};
+		FB4124F71C86AD7D007EC0D5 /* Local Import */ = {
+			isa = PBXGroup;
+			children = (
+				FB4125051C86ADB4007EC0D5 /* ImportViewController.swift */,
+				FB4125061C86ADB4007EC0D5 /* ImportViewController.xib */,
+			);
+			name = "Local Import";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -915,7 +929,7 @@
 				TargetAttributes = {
 					DFF4CBAF1C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 3L7S37R5K7;
+						DevelopmentTeam = NGS85357U3;
 					};
 					DFF4CBC31C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1117,35 +1131,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64802221C75AFEE00F6F083 /* TrackDetailsViewController.xib in Resources */,
-				7629CF931C7E967A0092C5F3 /* twenty one pilots Stressed Out [OFFICIAL VIDEO].mp4 in Resources */,
 				F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */,
 				DF6B70611C7AE33900B655B6 /* UserDetailsViewController.xib in Resources */,
 				DF526F621C6D73D1009971FF /* LibrariesTableViewCell.xib in Resources */,
 				765B23001C7FF2FC0089FF48 /* Localizable.strings in Resources */,
 				F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */,
-				7629CF901C7E967A0092C5F3 /* Justin Bieber - Love Yourself (PURPOSE  The Movement).mp4 in Resources */,
 				DF6B705C1C7ADF2200B655B6 /* FollowingsTableViewCell.xib in Resources */,
 				DF526F5E1C6D5EB6009971FF /* MyFriendsTableViewCell.xib in Resources */,
-				7629CF911C7E967A0092C5F3 /* Meghan Trainor - Like I'm Gonna Lose You ft. John Legend.mp4 in Resources */,
 				F64802241C75AFEE00F6F083 /* CommentTableViewCell.xib in Resources */,
+				FB4125081C86ADB4007EC0D5 /* ImportViewController.xib in Resources */,
 				DF526F6F1C6D94A9009971FF /* PopularViewController.xib in Resources */,
 				DF526F741C6D9EBC009971FF /* AllMembersTableViewController.xib in Resources */,
 				DFF4CBBE1C6B0BD2008973D3 /* LaunchScreen.storyboard in Resources */,
-				7629CF8D1C7E967A0092C5F3 /* Alessia Cara - Here.mp4 in Resources */,
 				DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */,
 				DF6B70651C7AEA0400B655B6 /* UserTracksTableViewCell.xib in Resources */,
 				DF101BE71C6C18C00006B4D3 /* LibrariesTableViewController.xib in Resources */,
-				7629CF8E1C7E967A0092C5F3 /* BlackBerry.mov in Resources */,
-				DF16A0BB1C755007006E4019 /* RecordingViewController.xib in Resources */,
 				DF6B70581C7ADD9D00B655B6 /* FollowingsTableViewController.xib in Resources */,
 				DFF4CBBB1C6B0BD2008973D3 /* Assets.xcassets in Resources */,
 				DF526F781C6D9FBB009971FF /* AllMembersTableViewCell.xib in Resources */,
 				DF101BF21C6C197F0006B4D3 /* PopularBestTableViewController.xib in Resources */,
 				DF069AB71C7D36F00004702F /* BestViewController.xib in Resources */,
 				F6B5FB941C769E6C001B8868 /* LoginViewController.xib in Resources */,
-				7629CF8F1C7E967A0092C5F3 /* Hello.mp4 in Resources */,
 				DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */,
-				7629CF921C7E967A0092C5F3 /* The Chainsmokers - Roses (Official Video) ft. ROZES.mp4 in Resources */,
 				DF526F581C6D5E63009971FF /* MyFriendsTableViewController.xib in Resources */,
 				DFF4CBB91C6B0BD2008973D3 /* Main.storyboard in Resources */,
 				F6B5FB991C76B20D001B8868 /* SignUpViewController.xib in Resources */,
@@ -1156,6 +1163,7 @@
 				DF069ABB1C7D3F1B0004702F /* LocalViewController.xib in Resources */,
 				DF4CBD631C7AD37100C3EE36 /* TemplateViewController.xib in Resources */,
 				F648021E1C75AFEE00F6F083 /* PostsTableViewController.xib in Resources */,
+				FBA1A9F51C86A4F6005A8F0B /* RecordingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1184,8 +1192,9 @@
 				DF526F731C6D9EBC009971FF /* AllMembersTableViewController.swift in Sources */,
 				765071C81C7D511700798B76 /* test.swift in Sources */,
 				DF526F771C6D9FBB009971FF /* AllMembersTableViewCell.swift in Sources */,
+				FBA1A9F61C86A4F6005A8F0B /* RecordingViewController.swift in Sources */,
 				DFF4CBB61C6B0BD2008973D3 /* HomeViewController.swift in Sources */,
-				DF16A0BA1C755007006E4019 /* RecordingViewController.swift in Sources */,
+				FBA1A9F11C86A417005A8F0B /* CameraRoll.swift in Sources */,
 				765071E61C7D8FC800798B76 /* tracks.swift in Sources */,
 				DFF4CC021C6B1BCA008973D3 /* TabBarController.swift in Sources */,
 				DF101BEB1C6C19080006B4D3 /* ProjectsTableViewController.swift in Sources */,
@@ -1198,6 +1207,7 @@
 				DFF4CBED1C6B0CF2008973D3 /* CAPSPageMenu.swift in Sources */,
 				DF4CBD621C7AD37100C3EE36 /* TemplateViewController.swift in Sources */,
 				765B22FB1C7FF1810089FF48 /* config.swift in Sources */,
+				FBA1A9F01C86A417005A8F0B /* Merge.swift in Sources */,
 				F648021F1C75AFEE00F6F083 /* PostsTableViewCell.swift in Sources */,
 				DF101BFF1C6C2F940006B4D3 /* PopularBestTableViewCell.swift in Sources */,
 				F64802211C75AFEE00F6F083 /* TrackDetailsViewController.swift in Sources */,
@@ -1213,14 +1223,20 @@
 				DF526F571C6D5E63009971FF /* MyFriendsTableViewController.swift in Sources */,
 				DF6B70641C7AEA0400B655B6 /* UserTracksTableViewCell.swift in Sources */,
 				DF526F611C6D73D1009971FF /* LibrariesTableViewCell.swift in Sources */,
+				FBA1A9ED1C86A417005A8F0B /* Timer.swift in Sources */,
+				FBA1A9EC1C86A417005A8F0B /* Template.swift in Sources */,
+				FBA1A9F21C86A417005A8F0B /* RecordingData.swift in Sources */,
 				DFF4CBFC1C6B1988008973D3 /* ProfileViewController.swift in Sources */,
 				DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */,
 				DF069AB61C7D36F00004702F /* BestViewController.swift in Sources */,
+				FB4125071C86ADB4007EC0D5 /* ImportViewController.swift in Sources */,
 				DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */,
 				F6B5FBA71C76C1BA001B8868 /* RecentTableViewCell.swift in Sources */,
+				FBA1A9EE1C86A417005A8F0B /* Capture.swift in Sources */,
 				F6B5FB981C76B20D001B8868 /* SignUpViewController.swift in Sources */,
 				F6B5FB931C769E6C001B8868 /* LoginViewController.swift in Sources */,
 				DF526F6E1C6D94A9009971FF /* PopularViewController.swift in Sources */,
+				FBA1A9EF1C86A417005A8F0B /* Crop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1424,7 +1440,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyy;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.dh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1440,7 +1456,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.doharmonyyyyy;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.dh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

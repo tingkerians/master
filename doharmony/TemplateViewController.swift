@@ -1,99 +1,66 @@
-//
-//  TemplateViewController.swift
-//  doharmony
-//
-//  Created by Eleazer Toluan on 2/18/16.
-//  Copyright © 2016 Eleazer Toluan. All rights reserved.
-//
 
 import UIKit
+import CoreData
+
+protocol TemplateViewControllerDelegate{
+    func useTemplate()
+}
 
 class TemplateViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    var pageMenu : CAPSPageMenu?
     @IBOutlet var LayoutSelectionView: UIView!
     @IBOutlet weak var TemplateScrollView: UIScrollView!
-   
+    
+    @IBOutlet weak var defaultTemplate: UIView!
     
     var Template:UIView!
     var Frames = [UIView]()
     
+    var delegate:TemplateViewControllerDelegate?
+    var pageMenu:CAPSPageMenu?
+    let db = RecordingData()
+    
+    let app:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var context:NSManagedObjectContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        let bounds = UIScreen.mainScreen().bounds
-        let screenWidth = bounds.size.width
-        print("screen width: \(screenWidth)")
-        self.TemplateScrollView.contentSize.width = screenWidth
-        print(self.TemplateScrollView.frame.size.width)
-            
-        addTemplateTapAction()
         
-        let tap = UITapGestureRecognizer(target: self, action: nil)
-        tap.delegate = self
-        LayoutSelectionView.addGestureRecognizer(tap)
-
-    }
-    
-    override func viewDidAppear(animated: Bool) {
- 
-//        let bounds = UIScreen.mainScreen().bounds
-//        let screenWidth = bounds.size.width
-//        print("screen width: \(screenWidth)")
-//        self.TemplateScrollView.contentSize.width = screenWidth - 100
-//        print(self.TemplateScrollView.frame.size.width)
+        context = app.managedObjectContext
         
         addTemplateTapAction()
-        
-        let tap = UITapGestureRecognizer(target: self, action: nil)
-        tap.delegate = self
-        LayoutSelectionView.addGestureRecognizer(tap)
-
+        //let tap = UITapGestureRecognizer(target: self, action: nil)
+        //tap.delegate = self
+        //LayoutSelectionView.addGestureRecognizer(tap)
     }
     
- 
     func addTemplateTapAction(){
-
-        for temp:UIView in LayoutSelectionView.subviews{
+        for temp:UIView in TemplateScrollView.subviews{
             let tap = UITapGestureRecognizer(target: self, action: Selector("next:"))
             temp.addGestureRecognizer(tap)
         }
     }
     
     func next(sender: UITapGestureRecognizer){
+        db.clear("Layout")
         Template = sender.view
+        insertTemplate(Template, isSubview: false)
         for subview:UIView in Template.subviews{
-            Frames.append(subview)
+            insertTemplate(subview, isSubview: true)
         }
-       
-        let editPage =  RecordingViewController()
-        editPage.dupe(Template)
         
-//        pageMenu!.moveToPage(1)
-        
-        
-//                let recordPage: RecordingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RecordingPage") as! RecordingViewController
-//                recordPage.daryl = Template
-        //
-        //        self.dismissViewControllerAnimated(false, completion: nil)
-//        self.dismissViewControllerAnimated(false, completion: { ()  -> Void in
-//            let recordPage: Recording2ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RecordingPage") as! Recording2ViewController
-//            recordPage.daryl = self.Template
-//            self.presentViewController(recordPage, animated: true, completion: nil)
-//        })
-        //        self.performSegueWithIdentifier("toRecordingPage", sender: sender)
+        delegate!.useTemplate()
+        pageMenu!.moveToPage(1)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func insertTemplate(view:UIView, isSubview:Bool){
+        let height = view.frame.height
+        let width = view.frame.width
+        let x = view.frame.origin.x
+        let y = view.frame.origin.y
+        let layout:[String:AnyObject] = ["x":x , "y":y, "width":width, "height":height, "isSubview":isSubview]
+        db.insert("Layout", values: layout)
     }
-    */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -24,13 +24,18 @@ class RecordViewController: UIViewController {
         
         let controller1 : TemplateViewController = TemplateViewController(nibName: "TemplateViewController", bundle: nil)
         controller1.title = "Templates"
-        controllerArray.append(controller1)
         let controller2 : RecordingViewController = RecordingViewController(nibName: "RecordingViewController", bundle: nil)
         controller2.title = "Record"
-        controllerArray.append(controller2)
+        
+        controller1.delegate = controller2
+        
+        controllerArray = [controller1, controller2]
         
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: env.CAPSPageMenuOptions)
+        
+        controller2.defaultTemplate = controller1.defaultTemplate
+        controller1.pageMenu = pageMenu
         
         pageMenu!.scrollAnimationDurationOnMenuItemTap = 0
         pageMenu!.moveToPage(defaultIndex)

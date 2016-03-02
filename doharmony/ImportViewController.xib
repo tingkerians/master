@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImportViewController" customModule="doharmony" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="Tzo-NF-kua" id="cFT-Ca-h2S"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UR-2s-S8v">
+                    <rect key="frame" x="18" y="17" width="39" height="30"/>
+                    <state key="normal" title="Close">
+                        <color key="titleColor" red="1" green="0.77999082399999997" blue="0.1866753276" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="closeWindow:" destination="-1" eventType="touchUpInside" id="sxz-er-umD"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select media file to import" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfz-Cn-rEX">
+                    <rect key="frame" x="200" y="21" width="201" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tzo-NF-kua">
+                    <rect key="frame" x="8" y="55" width="584" height="537"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="XBH-8C-1QY"/>
+                        <outlet property="delegate" destination="-1" id="dpc-0Q-yhq"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tzo-NF-kua" secondAttribute="trailing" constant="8" id="A50-OH-m1b"/>
+                <constraint firstItem="Tzo-NF-kua" firstAttribute="top" secondItem="2UR-2s-S8v" secondAttribute="bottom" constant="8" id="HYO-xw-7Vk"/>
+                <constraint firstItem="2UR-2s-S8v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="18" id="JFO-Nz-aVw"/>
+                <constraint firstAttribute="bottom" secondItem="Tzo-NF-kua" secondAttribute="bottom" constant="8" id="KrV-SU-5Bf"/>
+                <constraint firstItem="Pfz-Cn-rEX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O1e-ZB-7Io"/>
+                <constraint firstItem="2UR-2s-S8v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="17" id="Rcm-ON-ivi"/>
+                <constraint firstItem="Tzo-NF-kua" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="dVi-3v-8nq"/>
+                <constraint firstItem="Pfz-Cn-rEX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="zYy-M7-3he"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
