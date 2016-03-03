@@ -50,7 +50,7 @@ class BestViewController: UIViewController, UISearchBarDelegate  {
         parameters.append(.MenuItemWidth(90.0))
         
         pageMenu = CAPSPageMenu(viewControllers: self.controllerArray, frame: CGRectMake(0.0, 44.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
-//        pageMenu!.didMoveToParentViewController(self)
+        pageMenu!.didMoveToParentViewController(self)
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
     }

@@ -27,16 +27,16 @@ class HomeViewController: UIViewController {
         let controller1 : RecentViewController = RecentViewController(nibName: "RecentViewController", bundle: nil)
         controller1.title = locale.Recent
         controllerArray.append(controller1)
-        let controller2 : PopularViewController = PopularViewController(nibName: "PopularBestViewController", bundle: nil)
+        let controller2 : PopularViewController = PopularViewController()
         controller2.title = locale.Popular
         controllerArray.append(controller2)
-        let controller3 : BestViewController = BestViewController(nibName: "PopularBestViewController", bundle: nil)
+        let controller3 : BestViewController = BestViewController()
         controller3.title = locale.Best
         controllerArray.append(controller3)
         let controller4 : LocalViewController = LocalViewController(nibName: "LocalViewController", bundle: nil)
         controller4.title = locale.Local
         controllerArray.append(controller4)
-        
+        print(self.view.frame.width)
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: env.CAPSPageMenuOptions)
         
