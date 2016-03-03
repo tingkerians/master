@@ -11,6 +11,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var pageMenu : CAPSPageMenu?
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +39,10 @@ class HomeViewController: UIViewController {
         
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: env.CAPSPageMenuOptions)
-        
+ 
         self.view.addSubview(pageMenu!.view)
+        self.view.bringSubviewToFront(searchBar)
+ 
     }
     
     override func viewDidAppear(animated: Bool) {
