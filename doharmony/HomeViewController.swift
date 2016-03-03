@@ -27,10 +27,10 @@ class HomeViewController: UIViewController {
         let controller1 : RecentViewController = RecentViewController(nibName: "RecentViewController", bundle: nil)
         controller1.title = locale.Recent
         controllerArray.append(controller1)
-        let controller2 : PopularViewController = PopularViewController(nibName: "PopularViewController", bundle: nil)
+        let controller2 : PopularViewController = PopularViewController(nibName: "PopularBestViewController", bundle: nil)
         controller2.title = locale.Popular
         controllerArray.append(controller2)
-        let controller3 : BestViewController = BestViewController(nibName: "BestViewController", bundle: nil)
+        let controller3 : BestViewController = BestViewController(nibName: "PopularBestViewController", bundle: nil)
         controller3.title = locale.Best
         controllerArray.append(controller3)
         let controller4 : LocalViewController = LocalViewController(nibName: "LocalViewController", bundle: nil)
@@ -39,7 +39,8 @@ class HomeViewController: UIViewController {
         
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: env.CAPSPageMenuOptions)
- 
+        
+        self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
         self.view.bringSubviewToFront(searchBar)
  

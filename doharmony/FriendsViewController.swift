@@ -36,6 +36,7 @@ class FriendsViewController: UIViewController {
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: env.CAPSPageMenuOptions)
         
+        self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
     }
     

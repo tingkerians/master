@@ -41,6 +41,7 @@ class RecordViewController: UIViewController {
         pageMenu!.moveToPage(defaultIndex)
         pageMenu!.scrollAnimationDurationOnMenuItemTap = 500
         
+        self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
     }
     

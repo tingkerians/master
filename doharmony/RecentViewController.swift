@@ -9,9 +9,8 @@
 import UIKit
 import SwiftyJSON
 
-class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate{
+class RecentViewController: UIViewController, UITableViewDelegate{
     
-    @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var data: [Track]?
@@ -19,25 +18,24 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SearchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
         
         self.tracks = Tracks.sharedInstance
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        SearchBar.text = self.tracks.search
-        
-        if(self.tracks.data == nil){
+//        if(self.tracks.data == nil){
             self.tracks!.setCategory("recent").request { (tracks) -> Void in
                 self.data = tracks
                 self.tableView.reloadData()
             }
-        }else{
-            self.data = self.tracks.data!
-            self.tableView.reloadData()
-        }
+//        }else{
+//            self.data = self.tracks.data!
+//            self.tableView.reloadData()
+//        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
         
     }
 
@@ -46,9 +44,6 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         // Dispose of any resources that can be recreated.
     }
 
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        SearchBar.resignFirstResponder()
-    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -101,16 +96,16 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         cell!.contentView.backgroundColor = .clearColor()
     }
     
-    //search delegate
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        self.tracks!.setCategory("recent").setSearch(searchText).request { (tracks) -> Void in
-            self.data = tracks
-            self.tableView.reloadData()
-        }
-    }
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.endEditing(true)
-    }
+//    //search delegate
+//    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+//        self.tracks!.setCategory("recent").setSearch(searchText).request { (tracks) -> Void in
+//            self.data = tracks
+//            self.tableView.reloadData()
+//        }
+//    }
+//    
+//    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+//        searchBar.endEditing(true)
+//    }
 
 }

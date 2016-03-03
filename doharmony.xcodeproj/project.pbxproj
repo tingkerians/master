@@ -23,9 +23,8 @@
 		76BF5E651C87D63000F5C1C3 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF5E631C87D63000F5C1C3 /* RecentViewController.swift */; };
 		76BF5E661C87D63000F5C1C3 /* RecentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BF5E641C87D63000F5C1C3 /* RecentViewController.xib */; };
 		76BF5E691C87D65200F5C1C3 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF5E671C87D65200F5C1C3 /* PopularViewController.swift */; };
-		76BF5E6A1C87D65200F5C1C3 /* PopularViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BF5E681C87D65200F5C1C3 /* PopularViewController.xib */; };
+		76BF5E6A1C87D65200F5C1C3 /* PopularBestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BF5E681C87D65200F5C1C3 /* PopularBestViewController.xib */; };
 		76BF5E6D1C87D66A00F5C1C3 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF5E6B1C87D66A00F5C1C3 /* BestViewController.swift */; };
-		76BF5E6E1C87D66A00F5C1C3 /* BestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BF5E6C1C87D66A00F5C1C3 /* BestViewController.xib */; };
 		76DD6D391C7C2BF300CB5694 /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD6D381C7C2BF300CB5694 /* auth.swift */; };
 		DF069ABA1C7D3F1B0004702F /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF069AB81C7D3F1B0004702F /* LocalViewController.swift */; };
 		DF069ABB1C7D3F1B0004702F /* LocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF069AB91C7D3F1B0004702F /* LocalViewController.xib */; };
@@ -314,9 +313,8 @@
 		76BF5E631C87D63000F5C1C3 /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
 		76BF5E641C87D63000F5C1C3 /* RecentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentViewController.xib; sourceTree = "<group>"; };
 		76BF5E671C87D65200F5C1C3 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
-		76BF5E681C87D65200F5C1C3 /* PopularViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularViewController.xib; sourceTree = "<group>"; };
+		76BF5E681C87D65200F5C1C3 /* PopularBestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularBestViewController.xib; sourceTree = "<group>"; };
 		76BF5E6B1C87D66A00F5C1C3 /* BestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
-		76BF5E6C1C87D66A00F5C1C3 /* BestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestViewController.xib; sourceTree = "<group>"; };
 		76DD6D381C7C2BF300CB5694 /* auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
 		DF069AB81C7D3F1B0004702F /* LocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		DF069AB91C7D3F1B0004702F /* LocalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocalViewController.xib; sourceTree = "<group>"; };
@@ -469,6 +467,7 @@
 			children = (
 				DF101BEF1C6C197F0006B4D3 /* PopularBestTableViewController.swift */,
 				DF101BF01C6C197F0006B4D3 /* PopularBestTableViewController.xib */,
+				76BF5E681C87D65200F5C1C3 /* PopularBestViewController.xib */,
 				DF101BEE1C6C196A0006B4D3 /* Popular */,
 				DF101BF31C6C1B0B0006B4D3 /* Best */,
 			);
@@ -587,7 +586,6 @@
 			isa = PBXGroup;
 			children = (
 				76BF5E671C87D65200F5C1C3 /* PopularViewController.swift */,
-				76BF5E681C87D65200F5C1C3 /* PopularViewController.xib */,
 			);
 			name = Popular;
 			sourceTree = "<group>";
@@ -596,7 +594,6 @@
 			isa = PBXGroup;
 			children = (
 				76BF5E6B1C87D66A00F5C1C3 /* BestViewController.swift */,
-				76BF5E6C1C87D66A00F5C1C3 /* BestViewController.xib */,
 			);
 			name = Best;
 			sourceTree = "<group>";
@@ -916,7 +913,7 @@
 				TargetAttributes = {
 					DFF4CBAF1C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = MY7PN5V7K8;
+						DevelopmentTeam = 3L7S37R5K7;
 					};
 					DFF4CBC31C6B0BD2008973D3 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1119,7 +1116,7 @@
 			files = (
 				FBA7EBF01C87D079007AC17A /* tsak.wav in Resources */,
 				F64802221C75AFEE00F6F083 /* TrackDetailsViewController.xib in Resources */,
-				76BF5E6A1C87D65200F5C1C3 /* PopularViewController.xib in Resources */,
+				76BF5E6A1C87D65200F5C1C3 /* PopularBestViewController.xib in Resources */,
 				F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */,
 				DF6B70611C7AE33900B655B6 /* UserDetailsViewController.xib in Resources */,
 				76BF5E601C87D50100F5C1C3 /* RecentTableViewCell.xib in Resources */,
@@ -1137,7 +1134,6 @@
 				DF6B70651C7AEA0400B655B6 /* UserTracksTableViewCell.xib in Resources */,
 				DF101BE71C6C18C00006B4D3 /* LibrariesTableViewController.xib in Resources */,
 				DF6B70581C7ADD9D00B655B6 /* FollowingsTableViewController.xib in Resources */,
-				76BF5E6E1C87D66A00F5C1C3 /* BestViewController.xib in Resources */,
 				DFF4CBBB1C6B0BD2008973D3 /* Assets.xcassets in Resources */,
 				DF526F781C6D9FBB009971FF /* AllMembersTableViewCell.xib in Resources */,
 				DF101BF21C6C197F0006B4D3 /* PopularBestTableViewController.xib in Resources */,
@@ -1428,7 +1424,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.dh22;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.dh223;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1444,7 +1440,7 @@
 				INFOPLIST_FILE = doharmony/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.dh22;
+				PRODUCT_BUNDLE_IDENTIFIER = tingkersoft.dh223;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
