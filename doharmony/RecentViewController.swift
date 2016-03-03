@@ -80,7 +80,7 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     }
     
    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50.0
+        return 80.0
     }
 
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
