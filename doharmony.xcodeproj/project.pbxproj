@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		335823471C7D9028007C1D80 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335823461C7D9028007C1D80 /* Auth.swift */; };
+		33CE8A411C86D1C800082764 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE8A401C86D1C800082764 /* Field.swift */; };
+		33CE8A431C86D1D600082764 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE8A421C86D1D600082764 /* Validator.swift */; };
+		33CE8A451C86D1E100082764 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE8A441C86D1E100082764 /* ValidationRule.swift */; };
 		7615F2761C7597E900ACBD3E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F2671C75973400ACBD3E /* SwiftyJSON.framework */; };
 		7615F2771C7597E900ACBD3E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F2671C75973400ACBD3E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7615F27B1C7597EF00ACBD3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615F24F1C75972800ACBD3E /* Alamofire.framework */; };
@@ -233,6 +236,9 @@
 
 /* Begin PBXFileReference section */
 		335823461C7D9028007C1D80 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		33CE8A401C86D1C800082764 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		33CE8A421C86D1D600082764 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		33CE8A441C86D1E100082764 /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		7615F2441C75972800ACBD3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		7615F25C1C75973400ACBD3E /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		7615F2861C75A26700ACBD3E /* doharmony.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = doharmony.xcdatamodel; sourceTree = "<group>"; };
@@ -343,6 +349,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33CE8A331C86D15800082764 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				33CE8A401C86D1C800082764 /* Field.swift */,
+				33CE8A421C86D1D600082764 /* Validator.swift */,
+				33CE8A441C86D1E100082764 /* ValidationRule.swift */,
+			);
+			name = Validator;
+			sourceTree = "<group>";
+		};
 		7615F2451C75972800ACBD3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +399,7 @@
 		76DD6D001C7C258900CB5694 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				33CE8A331C86D15800082764 /* Validator */,
 				765071C71C7D511700798B76 /* test.swift */,
 				335823461C7D9028007C1D80 /* Auth.swift */,
 			);
@@ -1044,6 +1061,7 @@
 				DF526F731C6D9EBC009971FF /* AllMembersTableViewController.swift in Sources */,
 				765071C81C7D511700798B76 /* test.swift in Sources */,
 				DF526F771C6D9FBB009971FF /* AllMembersTableViewCell.swift in Sources */,
+				33CE8A431C86D1D600082764 /* Validator.swift in Sources */,
 				DFF4CBB61C6B0BD2008973D3 /* HomeViewController.swift in Sources */,
 				DF16A0BA1C755007006E4019 /* RecordingViewController.swift in Sources */,
 				DFF4CC021C6B1BCA008973D3 /* TabBarController.swift in Sources */,
@@ -1055,6 +1073,7 @@
 				DF101BF11C6C197F0006B4D3 /* PopularTableViewController.swift in Sources */,
 				DFF4CBB41C6B0BD2008973D3 /* AppDelegate.swift in Sources */,
 				DFF4CBED1C6B0CF2008973D3 /* CAPSPageMenu.swift in Sources */,
+				33CE8A411C86D1C800082764 /* Field.swift in Sources */,
 				335823471C7D9028007C1D80 /* Auth.swift in Sources */,
 				DF4CBD621C7AD37100C3EE36 /* TemplateViewController.swift in Sources */,
 				F648021F1C75AFEE00F6F083 /* PostsTableViewCell.swift in Sources */,
@@ -1078,6 +1097,7 @@
 				DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */,
 				F6B5FBA71C76C1BA001B8868 /* RecentTableViewCell.swift in Sources */,
 				F6B5FB981C76B20D001B8868 /* SignUpViewController.swift in Sources */,
+				33CE8A451C86D1E100082764 /* ValidationRule.swift in Sources */,
 				F6B5FB931C769E6C001B8868 /* LoginViewController.swift in Sources */,
 				DF526F6E1C6D94A9009971FF /* PopularViewController.swift in Sources */,
 			);

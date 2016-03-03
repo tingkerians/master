@@ -21,10 +21,6 @@ class RecentViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         SearchBar.delegate = self
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
         // Do any additional setup after loading the view.
-        
-        let auth = Auth();
-//        auth.login("username", password: "password"); // Get a new token
-        auth.logout();
 
     }
 

@@ -28,24 +28,23 @@ class Auth {
     func isUserLoggedIn() -> Bool {
         var loggedIn = false;
         let dateNow = NSDate().description;
-//        let dateNow = "2016-04-01-, 11:14:16 +0800"; // February 1, 2016
         let renewTokenURL = "http://192.168.0.137:8080/api/token";
         
-        let token = getToken();
-        
         // Check if there's an existing token on the device
+        let token = getToken();
+
         if token.count > 0 {
             // There's an existing token, check if it's still hasn't expired
             loggedIn = true;
-            let validityDate = token["validityDate"]!
-            let tokenValue = token["token"]!
+            let validityDate = token["validityDate"]!;
+            let tokenValue = token["token"]!;
             
             let dateComparisonResult: NSComparisonResult = dateNow.compare(validityDate);
-            // Compare dateNow and `token["validityDate"]`
             
+            // Compare dateNow and `token["validityDate"]`
             if dateComparisonResult == NSComparisonResult.OrderedDescending {
                 print("Token has expired");
-                // Get a new token from the server
+                // Get a new token from the server (and attach the expired token)
                 let parameters = ["token" : tokenValue];
                 
                 Alamofire.request(.PUT, renewTokenURL, parameters: parameters, encoding: .JSON)
@@ -134,11 +133,11 @@ class Auth {
                 try existingToken.managedObjectContext?.save();
                 print("Token updated");
             } catch let error as NSError {
-                print("Could not fetch \(error), \(error.userInfo)");
+                print("Could not save token \(error) ---- \(error.userInfo)");
             }
             
         } else {
-            // No duplicates, create new entry
+            // No tokens, create new entry
             let newToken = NSEntityDescription.insertNewObjectForEntityForName("Token", inManagedObjectContext: context);
             newToken.setValue(token, forKey: "token");
             newToken.setValue(validityDate, forKey: "validityDate");
@@ -185,8 +184,7 @@ class Auth {
     }
     
     /*
-    (For logout function)
-    Used to delete the contents of the coreData
+    Used to delete the tokens in the core data
     */
     func logout() {
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate);
@@ -210,7 +208,7 @@ class Auth {
     
     /*
     (For debugging purposes)
-    Displays all token per user that is stored in the device
+    Display the token in the device
     */
     private func displayToken() {
         // Variable that will hold the token to be returned
