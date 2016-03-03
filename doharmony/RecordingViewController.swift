@@ -85,7 +85,6 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         }
         timeSignBtns[0].userInteractionEnabled = false
         timeSignBtns[0].alpha = 0.5
-        timeSignature = 1
         resetMetronome()
     }
     func changeTS(sender:UIButton){
@@ -102,6 +101,9 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         if Metronome.isRunning{
             Metronome.stop()
         }
+        
+        print("setupmetronome: ",bpmSlider.value,timeSignature
+        )
         Metronome.setupMetronome(Double(bpmSlider.value), timeSignature: timeSignature)
         Metronome.start()
     }

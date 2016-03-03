@@ -35,20 +35,21 @@ struct locale{
     static let Popular = "Popular".localized()
     static let Best = "Best".localized()
     static let Local = "Local".localized()
-    static let LastWeek = "Last Week".localized()
-    static let LastMonth = "Last Month".localized()
+    static let ThisWeek = "This Week".localized()
+    static let ThisMonth = "This Month".localized()
     static let AllTime = "All Time".localized()
     static let Post = "Post".localized()
     static let MyFriends = "My Friends".localized()
     static let AllMembers = "All Members".localized()
-    static let Templates = "Templates".localized()
+    static let Template = "Template".localized()
     static let Record = "Record".localized()
-    static let Tracks = "Tracks".localized()
+    static let Track = "Track".localized()
     static let MyProfile = "My Profile".localized()
     static let MyTracks = "My Tracks".localized()
     static let MyProjects = "My Project".localized()
     static let Videos = "Videos".localized()
     static let Friends = "Friends".localized()
+    static let Friend = "Friend".localized()
     static let Followers = "Followers".localized()
     static let Following = "Following".localized()
     static let Notification = "Notification".localized()
@@ -56,4 +57,13 @@ struct locale{
     static let Login = "Login".localized()
     static let Logout = "Logout".localized()
     static let All = "All".localized()
+    static let Project = "Project".localized()
+    static let Profile = "Profile".localized()
+}
+
+extension NSLayoutConstraint {
+    override public var description: String{
+        let id = identifier ?? ""
+        return "id: \(id), constant: \(constant)"
+    }
 }

@@ -25,11 +25,11 @@ struct Track{
 }
 
 class Tracks{
-    
+    static let sharedInstance: Tracks! = Tracks()
     private var category: String! = ""
     private var date: String! = ""
     private var searchNSPredicate: NSPredicate?
-    private var search: String! = "" {
+    var search: String! = "" {
         didSet {
             if(search.isEmpty){
                 searchNSPredicate = nil
@@ -38,8 +38,11 @@ class Tracks{
             }
         }
     }
+    var data: [Track]?
     
-    init(){}
+    init(){
+        print("initialized")
+    }
     
     static func createTrackFolder(){
         let fileManger = NSFileManager.defaultManager()
@@ -103,8 +106,9 @@ class Tracks{
                 case .Success:
                     let result = JSON(response.result.value!);
                     if let data = result["data"].arrayValue as [JSON]?{
-                        let tracks = self.parse(data)
-                        callback?(tracks: tracks)
+                        self.data = self.parse(data)
+                        //print(data)
+                        callback?(tracks: self.data!)
                     }
                 case .Failure(let error):
                     print("error4: ", error);
@@ -127,6 +131,7 @@ class Tracks{
             track.author = trackJSON["author"].stringValue
             track.trackPath = ""
             tracks?.append(track)
+            
         }
       
         return tracks!

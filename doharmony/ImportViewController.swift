@@ -8,11 +8,14 @@
 
 import UIKit
 import CoreData
+import AVFoundation
+
 
 class ImportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let records = localRecordings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +27,17 @@ class ImportViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return records.paths.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : LocalTableViewCell = tableView.dequeueReusableCellWithIdentifier("LocalTableViewCell") as! LocalTableViewCell
         
+//        let trackExist:Bool = AVAsset(URL: NSURL(fileURLWithPath: records.paths[indexPath.row])).tracksWithMediaType(AVMediaTypeVideo).count > 0
+//        if trackExist{
+            cell.ImageView.image = UIImage(named: "badge1")
+            cell.textLabel?.text = records.paths[indexPath.row]
+//        }
         return cell
     }
     

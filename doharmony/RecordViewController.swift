@@ -23,9 +23,9 @@ class RecordViewController: UIViewController {
         var controllerArray : [UIViewController] = []
         
         let controller1 : TemplateViewController = TemplateViewController(nibName: "TemplateViewController", bundle: nil)
-        controller1.title = "Templates"
+        controller1.title = locale.Template
         let controller2 : RecordingViewController = RecordingViewController(nibName: "RecordingViewController", bundle: nil)
-        controller2.title = "Record"
+        controller2.title = locale.Record
         
         controller1.delegate = controller2
         
