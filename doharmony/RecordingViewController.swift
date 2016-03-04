@@ -55,62 +55,6 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     }
     
     
-    //METRONOME
-    @IBAction func showMetronome(sender: AnyObject) {
-        metronomeView.hidden=false
-        var tag = 0
-        for view:UIView in timeSignBtnsContainer.subviews{
-            if let btn = view as? UIButton{
-                btn.tag = tag
-                btn.userInteractionEnabled = true
-                btn.alpha = 1
-                btn.addTarget(self, action: "changeTS:", forControlEvents: UIControlEvents.TouchUpInside)
-                timeSignBtns.append(btn)
-                tag++
-            }
-        }
-        timeSignBtns[0].userInteractionEnabled = false
-        timeSignBtns[0].alpha = 0.5
-        resetMetronome()
-    }
-    func changeTS(sender:UIButton){
-        timeSignature = Double(sender.tag+1)
-        for btn:UIButton in timeSignBtns{
-            btn.userInteractionEnabled = true
-            btn.alpha = 1
-        }
-        timeSignBtns[sender.tag].userInteractionEnabled = false
-        timeSignBtns[sender.tag].alpha = 0.5
-        resetMetronome()
-    }
-    func resetMetronome(){
-        if Metronome.isRunning{
-            Metronome.stop()
-        }
-        
-        print("setupmetronome: ",bpmSlider.value,timeSignature
-        )
-        Metronome.setupMetronome(Double(bpmSlider.value), timeSignature: timeSignature)
-        Metronome.start()
-    }
-    @IBAction func changeBpm(sender: AnyObject) {
-        bpmLabel.text = "\(Int(bpmSlider.value))"
-    }
-    @IBAction func subtractBpm(sender: AnyObject) {
-        bpmSlider.value -= 1
-        bpmLabel.text = "\(Int(bpmSlider.value))"
-    }
-    @IBAction func addBpm(sender: AnyObject) {
-        bpmSlider.value += 1
-        bpmLabel.text = "\(Int(bpmSlider.value))"
-    }
-    @IBAction func closeMetronome(sender: AnyObject) {
-        metronomeView.hidden = true
-        if Metronome.isRunning{
-            Metronome.stop()
-        }
-    }
-    
     //RECORD
     @IBAction func changeCamera(sender: AnyObject) {
         if Capture.captureSession.running && isRecording == false{
