@@ -50,8 +50,8 @@ class SignUpViewController: UIViewController {
         let nameMinLength = 1;
         let minLength = 6;
         let maxLength = 24;
-        let alphaNumRegex = "^[a-zA-Z0-9\\s]*$";
-        let usernameRegex = "^[a-zA-Z0-9_.]*$"
+        let alphaNumRegex = "^[a-zA-Z0-9\\s]*$"; // spaces allowed
+        let usernameRegex = "^[a-zA-Z0-9_.]*$" // no spaces allowed
         
         // Register fields to the validator
         // First name
@@ -90,7 +90,7 @@ class SignUpViewController: UIViewController {
         let fields = validator.allErrors();
         
         if fields.count > 0 {
-            // There are errors, show error messages
+            // There are validation errors, show error messages
             
             for field in fields {
                 field.viewLabel.text = field.errorMessage;
@@ -98,7 +98,8 @@ class SignUpViewController: UIViewController {
             
         } else {
             // All inputs are valid
-            print("No errors --- Proceeding to sending signup request");
+            
+            print("No validation errors --- Proceeding to sending signup request");
             let auth = Auth(); // Create an auth object for saving the token
             
             // Set the text field values as parameters for the signup request
@@ -126,7 +127,7 @@ class SignUpViewController: UIViewController {
         }
 
     }
-    
+    // Attach each of these to their corresponding textfields' `Did change`
     @IBAction func validateFirstName(sender: UITextField) {
         self.firstnameLabel.text = validator.hasError(sender)?.result();
     }
