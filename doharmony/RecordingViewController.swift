@@ -13,6 +13,7 @@ import CoreData
 class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDelegate, TemplateViewControllerDelegate, timerControllerCountdownDelegate, timerControllerStopTimerDelegate, timerControllerDurationTimerDelegate{
     
     @IBOutlet weak var layoutDisplay: UIView!
+    @IBOutlet weak var container: UIView!
     @IBOutlet weak var playButton: UIButton!
     var defaultTemplate:UIView!
     
@@ -26,18 +27,9 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     var isPlaying = false
     var isRecording = false
     
-    let Metronome = timerController()
     let Countdown = timerController()
     let PlayerTimer = timerController()
     let DurationTimer = timerController()
-    
-    @IBOutlet weak var metronomeSwitch: UISwitch!
-    @IBOutlet weak var metronomeView: UIView!
-    @IBOutlet weak var bpmSlider: UISlider!
-    @IBOutlet weak var bpmLabel: UILabel!
-    @IBOutlet weak var timeSignBtnsContainer: UIView!
-    var timeSignBtns = [UIButton]()
-    var timeSignature:Double = 1
     
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var seconds: UILabel!
@@ -45,26 +37,20 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     var filename:String!
     var framePointer = 0
     
+    
     //VIEW DIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bpmLabel.text = "\(Int(bpmSlider.value))"
-        
         useTemplate()
     }
-    
+        
     //TEMPLATE
     func useTemplate(){
-        for view in layoutDisplay.subviews{
+        for view in container.subviews{
             view.removeFromSuperview()
         }
-        Template = TemplateController()
+        Template = TemplateController(layout:container,defaultLayout: defaultTemplate)
         Template.delegate = self
-        if Template.Layout == nil{
-            Template.setLayout(defaultTemplate)
-        }
-        layoutDisplay.addSubview(Template.Layout)
         Template.refreshFrames()
     }
     
@@ -238,20 +224,11 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         NSLog("recording started")
         isRecording = true
         
-        if metronomeSwitch.on{
-            Metronome.setupMetronome(Double(bpmSlider.value), timeSignature: timeSignature)
-            Metronome.start()
-        }
-        
         playAll()
     }
     func captureOutput(captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!, fromConnections connections: [AnyObject]!, error: NSError!) {
         NSLog("recording Finished")
         isRecording = false
-        
-        if Metronome.isRunning{
-            Metronome.stop()
-        }
         
 //        let croppedVideo = Cropper.crop(outputFileURL, frame: Frame, captureLayer: Capture.layer, filename: filename).path!
         
