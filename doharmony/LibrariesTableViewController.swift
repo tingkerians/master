@@ -34,7 +34,7 @@ class LibrariesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : LibrariesTableViewCell = tableView.dequeueReusableCellWithIdentifier("LibrariesTableViewCell") as! LibrariesTableViewCell
-        
+        cell.selectionStyle = .None
         return cell
     }
     

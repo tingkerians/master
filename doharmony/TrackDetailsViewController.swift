@@ -66,7 +66,7 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(CommentTableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : CommentTableViewCell = CommentTableView.dequeueReusableCellWithIdentifier("CommentTableViewCell") as! CommentTableViewCell
-      
+        cell.selectionStyle = .None
         cell.nameLabel?.text = self.memberName[indexPath.row]
         cell.commentLabel?.text = self.comment[indexPath.row]
         cell.profilePicImage.image = self.profilePic[indexPath.row]

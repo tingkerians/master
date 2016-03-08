@@ -54,12 +54,12 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         if (indexPath.row == 0) {
             let cell : UserDetailsTableViewCell = TracksTableView.dequeueReusableCellWithIdentifier("UserDetailsCell", forIndexPath: indexPath) as! UserDetailsTableViewCell
-            
+            cell.selectionStyle = .None
             return cell
             
         } else {
             let cell : UserTracksTableViewCell = TracksTableView.dequeueReusableCellWithIdentifier("UserTracksCell", forIndexPath: indexPath) as! UserTracksTableViewCell
-            
+            cell.selectionStyle = .None
             cell.TitleLabel.text = TitleArray[indexPath.row]
             cell.ImageView.image = UIImage(named: CoverPhotoArray[indexPath.row])
             
@@ -72,7 +72,7 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(TracksTableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            return 250.0
+            return 230.0
         }else {
             return 50.0
         }
@@ -81,9 +81,11 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(TracksTableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.presentViewController(vc, animated: true, completion: nil)
+        if indexPath.row != 0 {
+            let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
         
     }
 

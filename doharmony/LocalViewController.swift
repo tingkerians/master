@@ -49,7 +49,7 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : LocalTableViewCell = tableView.dequeueReusableCellWithIdentifier("LocalTableViewCell") as! LocalTableViewCell
-        
+        cell.selectionStyle = .None
         let tracks = self.data!
         cell.TitleLabel.text = tracks[indexPath.row].title
         cell.authorLabel.text = tracks[indexPath.row].author

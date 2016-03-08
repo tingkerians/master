@@ -40,7 +40,7 @@ class FollowingsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FollowingsTableViewCell") as! FollowingsTableViewCell
-        
+        cell.selectionStyle = .None
         // Configure the cell...
         
         cell.ProfileName.text = namesArray[indexPath.row]

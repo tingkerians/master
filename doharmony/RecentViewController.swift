@@ -61,7 +61,7 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
-        
+        cell.selectionStyle = .None
         let tracks = self.data!
         let coverArt: String = tracks[indexPath.row].imagePath
         

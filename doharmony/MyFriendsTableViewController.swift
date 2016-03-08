@@ -40,7 +40,7 @@ class MyFriendsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MyFriendsTableViewCell") as! MyFriendsTableViewCell
-
+        cell.selectionStyle = .None
         // Configure the cell...
         
         cell.ProfileName.text = namesArray[indexPath.row]

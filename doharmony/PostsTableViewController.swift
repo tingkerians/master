@@ -35,7 +35,7 @@ var Template:UIView!
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : PostsTableViewCell = tableView.dequeueReusableCellWithIdentifier("PostsTableViewCell") as! PostsTableViewCell
-
+        cell.selectionStyle = .None
         
         return cell
     }

@@ -26,7 +26,7 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-xx-Yq7">
-                    <rect key="frame" x="8" y="13" width="34" height="33"/>
+                    <rect key="frame" x="8" y="8" width="34" height="33"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="MaT-xx-Yq7" secondAttribute="height" multiplier="31:30" id="Sq5-sp-1Km"/>
                     </constraints>
@@ -45,7 +45,7 @@
                 <constraint firstItem="bHQ-ou-bbt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5R8-fT-bRa"/>
                 <constraint firstAttribute="bottom" secondItem="bHQ-ou-bbt" secondAttribute="bottom" id="Pd0-ld-aze"/>
                 <constraint firstItem="MaT-xx-Yq7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="i64-5Y-o0O"/>
-                <constraint firstItem="MaT-xx-Yq7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="m00-W1-GhH"/>
+                <constraint firstItem="MaT-xx-Yq7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="m00-W1-GhH"/>
                 <constraint firstItem="bHQ-ou-bbt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mr5-lI-Lb8"/>
             </constraints>
             <point key="canvasLocation" x="654" y="310"/>

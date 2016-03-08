@@ -18,7 +18,7 @@ class UserDetailsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        ProfilePicture.layer.cornerRadius = ProfilePicture.frame.width / 2
+//        ProfilePicture.layer.cornerRadius = ProfilePicture.frame.width / 2
         FriendFollowButton(RelationshipImage)
     }
 
