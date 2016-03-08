@@ -14,55 +14,26 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    @IBOutlet weak var friendImage: UIButton!
-    @IBOutlet weak var ProfilePicture: UIImageView!
-    @IBOutlet weak var TracksTableView: UITableView!
 
+    @IBOutlet weak var TracksTableView: UITableView!
     
     var TitleArray : [String] = ["Little Star", "Jingle Bell", "Canon", "Two Tiger", "Bayer No.8", "Silent Night", "The Painter", "Gavotte", "Minuet 1", "Moments"]
     var CoverPhotoArray : [String] = ["littleStar", "jingleBell", "canon", "default", "default", "default", "default", "default", "default", "default"]
-    let relationship = "friend"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        ProfilePicture.layer.cornerRadius = ProfilePicture.frame.width / 2
+  
         
-        self.TracksTableView.registerNib(UINib(nibName: "UserTracksTableViewCell", bundle: nil), forCellReuseIdentifier: "UserTracksTableViewCell")
-//        self.TracksTableView.rowHeight = UITableViewAutomaticDimension
-//        self.TracksTableView.setNeedsLayout()
-//        self.TracksTableView.layoutIfNeeded()
+        self.TracksTableView.registerNib(UINib(nibName: "UserTracksTableViewCell", bundle: nil), forCellReuseIdentifier: "UserTracksCell")
+        self.TracksTableView.registerNib(UINib(nibName: "UserDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "UserDetailsCell")
+//        self.TracksTableView.registerNib(UINib(nibName: "UserTracksTableViewCell", bundle: nil), forCellReuseIdentifier: "UserTracksTableViewCell")
         
-        FriendFollowButton(friendImage)
     }
 
     
-    @IBAction func unFriendFollowButton(sender: AnyObject) {
-        var Image : UIImage!
-        if relationship == "friend" {
-            Image = UIImage(named: "friend");
-        } else if relationship == "following" {
-            Image = UIImage(named: "follow");
-        }
-        let tintedImage = Image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        friendImage.setImage(tintedImage, forState: .Normal)
-        friendImage.tintColor = UIColor.whiteColor()
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-        print("un\(relationship)!!!")
-    }
-
-    func FriendFollowButton(friendImage: UIButton) {
-        if relationship == "friend" {
-            friendImage.setImage(UIImage(named: "friend"), forState: UIControlState.Normal)
-            friendImage.tintColor = UIColor.whiteColor()
-        } else if relationship == "follow" {
-            friendImage.setImage(UIImage(named: "follow"), forState: UIControlState.Normal)
-            friendImage.tintColor = UIColor.orangeColor()
-        }
-        self.view.addSubview(friendImage)
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,16 +51,31 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(TracksTableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : UserTracksTableViewCell = TracksTableView.dequeueReusableCellWithIdentifier("UserTracksTableViewCell") as! UserTracksTableViewCell
         
-        cell.TitleLabel.text = TitleArray[indexPath.row]
-        cell.ImageView.image = UIImage(named: CoverPhotoArray[indexPath.row])
+        if (indexPath.row == 0) {
+            let cell : UserDetailsTableViewCell = TracksTableView.dequeueReusableCellWithIdentifier("UserDetailsCell", forIndexPath: indexPath) as! UserDetailsTableViewCell
+            
+            return cell
+            
+        } else {
+            let cell : UserTracksTableViewCell = TracksTableView.dequeueReusableCellWithIdentifier("UserTracksCell", forIndexPath: indexPath) as! UserTracksTableViewCell
+            
+            cell.TitleLabel.text = TitleArray[indexPath.row]
+            cell.ImageView.image = UIImage(named: CoverPhotoArray[indexPath.row])
+            
+            return cell
+            
+        }
         
-        return cell
+       
     }
     
     func tableView(TracksTableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50.0
+        if (indexPath.row == 0) {
+            return 250.0
+        }else {
+            return 50.0
+        }
     }
 
     

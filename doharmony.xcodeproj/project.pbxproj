@@ -38,6 +38,8 @@
 		DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */; };
 		DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */; };
 		DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16A0B01C754C84006E4019 /* RecordViewController.swift */; };
+		DF18CA281C8E57C500D3D634 /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18CA261C8E57C500D3D634 /* UserDetailsTableViewCell.swift */; };
+		DF18CA291C8E57C500D3D634 /* UserDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF18CA271C8E57C500D3D634 /* UserDetailsTableViewCell.xib */; };
 		DF4CBD621C7AD37100C3EE36 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4CBD601C7AD37100C3EE36 /* TemplateViewController.swift */; };
 		DF4CBD631C7AD37100C3EE36 /* TemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4CBD611C7AD37100C3EE36 /* TemplateViewController.xib */; };
 		DF526F571C6D5E63009971FF /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF526F551C6D5E63009971FF /* MyFriendsTableViewController.swift */; };
@@ -327,6 +329,8 @@
 		DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
 		DF16A0B01C754C84006E4019 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		DF18CA261C8E57C500D3D634 /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		DF18CA271C8E57C500D3D634 /* UserDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		DF4CBD601C7AD37100C3EE36 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
 		DF4CBD611C7AD37100C3EE36 /* TemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplateViewController.xib; sourceTree = "<group>"; };
 		DF526F551C6D5E63009971FF /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -677,6 +681,8 @@
 				DF6B705F1C7AE33900B655B6 /* UserDetailsViewController.xib */,
 				DF6B70621C7AEA0400B655B6 /* UserTracksTableViewCell.swift */,
 				DF6B70631C7AEA0400B655B6 /* UserTracksTableViewCell.xib */,
+				DF18CA261C8E57C500D3D634 /* UserDetailsTableViewCell.swift */,
+				DF18CA271C8E57C500D3D634 /* UserDetailsTableViewCell.xib */,
 			);
 			name = "User Details";
 			sourceTree = "<group>";
@@ -1110,6 +1116,7 @@
 				DF526F741C6D9EBC009971FF /* AllMembersTableViewController.xib in Resources */,
 				DFF4CBBE1C6B0BD2008973D3 /* LaunchScreen.storyboard in Resources */,
 				DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */,
+				DF18CA291C8E57C500D3D634 /* UserDetailsTableViewCell.xib in Resources */,
 				FBA7EBF11C87D079007AC17A /* tsik.wav in Resources */,
 				DF6B70651C7AEA0400B655B6 /* UserTracksTableViewCell.xib in Resources */,
 				DF101BE71C6C18C00006B4D3 /* LibrariesTableViewController.xib in Resources */,
@@ -1188,6 +1195,7 @@
 				76BF5E691C87D65200F5C1C3 /* PopularViewController.swift in Sources */,
 				DF526F571C6D5E63009971FF /* MyFriendsTableViewController.swift in Sources */,
 				DF6B70641C7AEA0400B655B6 /* UserTracksTableViewCell.swift in Sources */,
+				DF18CA281C8E57C500D3D634 /* UserDetailsTableViewCell.swift in Sources */,
 				DF526F611C6D73D1009971FF /* LibrariesTableViewCell.swift in Sources */,
 				FBA1A9ED1C86A417005A8F0B /* Timer.swift in Sources */,
 				FBA1A9EC1C86A417005A8F0B /* Template.swift in Sources */,
