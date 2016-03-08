@@ -39,16 +39,16 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     
     
     //VIEW DIDLOAD
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         useTemplate()
     }
-        
     //TEMPLATE
     func useTemplate(){
         for view in container.subviews{
             view.removeFromSuperview()
         }
+        print(container.bounds.width)
         Template = TemplateController(layout:container,defaultLayout: defaultTemplate)
         Template.delegate = self
         Template.refreshFrames()

@@ -40,9 +40,7 @@ class Tracks{
     }
     var data: [Track]?
     
-    init(){
-        print("initialized")
-    }
+    init(){}
     
     static func createTrackFolder(){
         let fileManger = NSFileManager.defaultManager()
