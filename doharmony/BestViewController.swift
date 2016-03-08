@@ -42,10 +42,6 @@ class BestViewController: UIViewController, UISearchBarDelegate  {
         self.controller3!.date = "all"
         self.controllerArray.append(self.controller3!)
         
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
         var parameters = env.CAPSPageMenuOptions
         parameters.append(.MenuItemWidth(90.0))
         
@@ -53,6 +49,12 @@ class BestViewController: UIViewController, UISearchBarDelegate  {
         pageMenu!.didMoveToParentViewController(self)
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+       
     }
 
 //    //search delegate

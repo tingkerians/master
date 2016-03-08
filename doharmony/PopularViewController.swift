@@ -41,19 +41,11 @@ class PopularViewController: UIViewController, UISearchBarDelegate {
         self.controller3!.date = "all"
         self.controllerArray.append(self.controller3!)
         
-        let parameters: [CAPSPageMenuOption] = [
-            .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
-            .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
-            .SelectionIndicatorColor(UIColor.orangeColor()),
-            .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
-            .MenuHeight(40.0),
-            .MenuItemWidth(90.0),
-            .CenterMenuItems(true)
-        ]
+        var parameters = env.CAPSPageMenuOptions
+        parameters.append(.MenuItemWidth(90.0))
         
         pageMenu = CAPSPageMenu(viewControllers: self.controllerArray, frame: CGRectMake(0.0, 44.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
-        //pageMenu!.didMoveToParentViewController(self)
+        pageMenu!.didMoveToParentViewController(self)
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
         
@@ -64,14 +56,4 @@ class PopularViewController: UIViewController, UISearchBarDelegate {
         
     }
     
-//    //search delegate
-//    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-//        self.controller1!.search(searchText)
-//        self.controller2!.search(searchText)
-//        self.controller3!.search(searchText)
-//    }
-//    
-//    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-//        searchBar.endEditing(true)
-//    }
 }

@@ -44,8 +44,6 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
         self.view.addSubview(pageMenu!.view)
         self.view.bringSubviewToFront(searchBar)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: "tap:")
-        view.addGestureRecognizer(tapGesture)
 
         
     }
@@ -57,6 +55,7 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
     func tap(gesture: UITapGestureRecognizer) {
         searchBar.showsCancelButton = false
         searchBar.endEditing(true)
+        self.view.gestureRecognizers?.forEach(self.view.removeGestureRecognizer)
     }
     //search delegate
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
@@ -64,16 +63,22 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
         nc.postNotificationName("searchHome", object: searchBar)
     }
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "tap:")
+        self.view.addGestureRecognizer(tapGesture)
+        
         searchBar.showsCancelButton = true
         return true
     }
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.endEditing(true)
+        self.view.gestureRecognizers?.forEach(self.view.removeGestureRecognizer)
     }
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.endEditing(true)
+        self.view.gestureRecognizers?.forEach(self.view.removeGestureRecognizer)
     }
    
 }
