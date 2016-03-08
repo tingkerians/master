@@ -8,12 +8,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,UISearchBarDelegate {
     
     var pageMenu : CAPSPageMenu?
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let nc = NSNotificationCenter.defaultCenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +44,41 @@ class HomeViewController: UIViewController {
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
         self.view.bringSubviewToFront(searchBar)
- 
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "tap:")
+        view.addGestureRecognizer(tapGesture)
+        
+//        let spinner = Spinner.sharedInstance
+//        spinner.show(self)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-       
     }
-
+    
+    func tap(gesture: UITapGestureRecognizer) {
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+    }
+    //search delegate
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        Tracks.sharedInstance.setSearch(searchText)
+        nc.postNotificationName("searchHome", object: searchBar)
+    }
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
+    }
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+    }
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+    }
+   
 }
 
 

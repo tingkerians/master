@@ -16,28 +16,26 @@ class PopularBestTableViewController: UITableViewController {
     var date: String?
     var tracks: Tracks!
     
+    var spinner: Spinner?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
+        self.spinner = Spinner(view: self)
+        let spinnerY = self.view.center.y - 60
+        self.spinner?.spinnerView.center = CGPointMake(self.view.center.x, spinnerY)
+        self.spinner!.start()
         
         self.tracks = Tracks.sharedInstance
+
+        self.tracks.setCategory(self.category!).setDate(self.date!).request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+            self.spinner!.stop()
+        }
         
-//        if(self.tracks.data == nil){
-            self.tracks.setCategory(self.category!).setDate(self.date!).request { (tracks) -> Void in
-                self.data = tracks
-                self.tableView.reloadData()
-            }
-//        }else{
-//            self.data = self.tracks.data!.sort({ (track1, track2) -> Bool in
-//                if(self.category == "popular"){
-//                    return track1.totalViews > track2.totalViews
-//                }else{
-//                    return track1.totalLikes > track2.totalLikes
-//                }
-//            })
-//            self.tableView.reloadData()
-//        }
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: "search", name: "searchHome", object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -102,11 +100,13 @@ class PopularBestTableViewController: UITableViewController {
         self.presentViewController(vc, animated: true, completion: nil)
         
     }
-//    //search delegate
-//    func search(searchText: String) {
-//        self.tracks!.setCategory(self.category!).setSearch(searchText).request { (tracks) -> Void in
-//            self.data = tracks
-//            self.tableView.reloadData()
-//        }
-//    }
+    
+    func search() {
+        self.spinner!.start()
+        self.tracks!.setCategory(self.category!).setDate(self.date!).request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+            self.spinner!.stop()
+        }
+    }
 }

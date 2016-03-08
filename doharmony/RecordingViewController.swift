@@ -69,6 +69,8 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
             framePointer = sender.tag
             print("tag",framePointer)
             let frame = Template.Frames[framePointer]
+            
+            Template.playerLayers[framePointer].player = AVPlayer()
             Capture.setCaptureLayer(frame)
             Capture.captureSession.startRunning()
             

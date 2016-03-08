@@ -16,20 +16,26 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     var data: [Track]?
     var tracks: Tracks!
     
+    var spinner: Spinner?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
         
+        self.spinner = Spinner(view: self)
+        
+        self.spinner!.start()
+        
         self.tracks = Tracks.sharedInstance
-//        if(self.tracks.data == nil){
-            self.tracks!.setCategory("recent").request { (tracks) -> Void in
-                self.data = tracks
-                self.tableView.reloadData()
-            }
-//        }else{
-//            self.data = self.tracks.data!
-//            self.tableView.reloadData()
-//        }
+
+        self.tracks!.setCategory("recent").request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+            self.spinner!.stop()
+        }
+        
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: "search", name: "searchHome", object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -96,16 +102,13 @@ class RecentViewController: UIViewController, UITableViewDelegate{
         cell!.contentView.backgroundColor = .clearColor()
     }
     
-//    //search delegate
-//    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-//        self.tracks!.setCategory("recent").setSearch(searchText).request { (tracks) -> Void in
-//            self.data = tracks
-//            self.tableView.reloadData()
-//        }
-//    }
-//    
-//    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-//        searchBar.endEditing(true)
-//    }
+    func search() {
+        self.spinner!.start()
+        self.tracks!.setCategory("recent").request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+            self.spinner!.stop()
+        }
+    }
 
 }
