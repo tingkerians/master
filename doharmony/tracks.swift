@@ -11,9 +11,25 @@ import Alamofire
 import SwiftyJSON
 import CoreData
 
-struct Track{
+class Track{
     var id: String!
-    var imagePath: String!
+    var image: UIImage!
+    var imagePath: String! = ""{
+        didSet {
+            if(imagePath.isEmpty){
+//                image = nil
+            }else{
+//                self.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.imagePath)!)!)
+//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND,0)) {
+//                    let coverArt = UIImage(data: NSData(contentsOfURL: NSURL(string: self.imagePath)!)!)
+//                    dispatch_async(dispatch_get_main_queue()) {
+//                        self.image = coverArt
+//                        //print(self)
+//                    }
+//                }
+            }
+        }
+    }
     var title: String!
     var author: String!
     var totalLikes: String!
@@ -116,12 +132,15 @@ class Tracks{
     
     func parse(data:[JSON]) -> [Track]{
         var tracks: [Track]! = [Track]()
-        var track: Track! = Track()
         
         data.forEach { (trackJSON) -> () in
+            
+            let track: Track! = Track()
             track.id = trackJSON["id"].stringValue
             track.title = trackJSON["title"].stringValue
             track.imagePath = "http://192.168.0.137:8080/api/coverart/\(trackJSON["id"].stringValue)"
+            
+            
             track.totalViews = trackJSON["views"].stringValue
             track.totalLikes = trackJSON["likes"].stringValue
             track.dateCreated = trackJSON["date_created"].stringValue
@@ -137,9 +156,10 @@ class Tracks{
     
     func parse(data: [NSManagedObject]) ->[Track]{
         var tracks: [Track]! = [Track]()
-        var track: Track! = Track()
         
         data.forEach { (trackCoreData) -> () in
+            
+            let track: Track! = Track()
             track.id = ""
             track.title = trackCoreData.valueForKey("title") as? String
             track.imagePath = trackCoreData.valueForKey("imagePath") as? String
@@ -154,5 +174,6 @@ class Tracks{
         
         return tracks!
     }
+    
     
 }

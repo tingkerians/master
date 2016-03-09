@@ -65,18 +65,26 @@ class PopularBestTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
-
+        
         let tracks = self.data!
-        let coverArt: String = tracks[indexPath.row].imagePath
         
         cell.TitleLabel.text = tracks[indexPath.row].title
-        cell.ImageView.image =
-            UIImage(data: NSData(contentsOfURL: NSURL(string: coverArt)!)!)
-        cell.ViewLabel.text = tracks[indexPath.row].totalViews + "V"
-        cell.LikeLabel.text = tracks[indexPath.row].totalLikes + "L"
+        cell.ViewLabel.text = tracks[indexPath.row].totalViews
+        cell.LikeLabel.text = tracks[indexPath.row].totalLikes
         cell.DateLabel.text = tracks[indexPath.row].dateUpdated
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND,0)) {
+            if(tracks[indexPath.row].image == nil){
+                tracks[indexPath.row].image = UIImage(data: NSData(contentsOfURL: NSURL(string: tracks[indexPath.row].imagePath)!)!)
+            }
+            let coverArt = tracks[indexPath.row].image
+            dispatch_async(dispatch_get_main_queue()) {
+                if let futureCell = tableView.cellForRowAtIndexPath(indexPath) as? RecentTableViewCell {
+                    futureCell.ImageView.image = coverArt
+                    
+                }
+            }
+        }
         return cell
-        
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
