@@ -121,7 +121,12 @@ class SignUpViewController: UIViewController {
                         // Redirection code to somewhere here
                         print(data);
                     case .Failure(let error):
-                        print("HTTP RESPONSE:\n\(error.localizedDescription)");
+                        let message = error.localizedDescription;
+                        if message.containsString("709") {
+                            print("Username is already taken");
+                        } else {
+                            print("HTTP RESPONSE:\n\(error.localizedDescription)");
+                        }
                     }
             }
         }

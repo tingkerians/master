@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelButton(sender: AnyObject) {
         print("close")
-        self.dismissViewControllerAnimated(false, completion: nil)
+        self.dismissViewControllerAnimated(false, completion: nil);
     }
 
     @IBAction func SignUpButton(sender: AnyObject) {
@@ -63,10 +63,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         auth.login(username, password: password) { error in
             // If the login is a success
             if (error == nil) {
-                // code here to redirect to home/landing/? page
                 print("No errors --- Login successful");
+                // code here to redirect to home/landing/? page
+                
             } else { // There's an error
-                // Show an alert or something similar here and display the `error` message.
+                // Show an alert or warning here and use the `error` variable to display the error message.
                 print("Has errors --- Login failed");
             }
         }

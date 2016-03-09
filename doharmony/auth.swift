@@ -72,6 +72,10 @@ class Auth {
     /*
     Send a login request to the server with parameters `username` and `password`
     
+    edit: since alamofire makes asynchronous requests,
+    a `completionHandler` is needed to be called once the
+    fetching of data has completed
+    
     Usage:
     auth.login(uname,pwd) { error in
         if error == nil { // there are no errors
@@ -156,7 +160,7 @@ class Auth {
     /*
     Retrieves token inside the core data
     */
-    private func getToken() -> Dictionary<String,String> {
+    func getToken() -> Dictionary<String,String> {
         // Variable that will hold the token to be returned
         var data = [String:String]();
 
@@ -199,7 +203,7 @@ class Auth {
             }
             try context.save()
             
-            print("`Token` core data deleted");
+            print("Logged out");
             
         } catch let error as NSError {
             print("Could not delete \(error), \(error.userInfo)");
