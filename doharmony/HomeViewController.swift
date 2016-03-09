@@ -51,6 +51,10 @@ class HomeViewController: UIViewController {
         
        
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
 }
 

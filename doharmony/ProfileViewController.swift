@@ -43,6 +43,11 @@ class ProfileViewController: UIViewController {
         
     }
 
+    
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 
 

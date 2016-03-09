@@ -46,6 +46,11 @@ class FriendsViewController: UIViewController {
         
     }
     
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
 }
 
 
