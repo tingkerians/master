@@ -16,14 +16,18 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     var data: [Track]?
     var tracks: Tracks!
     
+    var refreshControl: UIRefreshControl!
     var spinner: Spinner?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "reloadData:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(self.refreshControl)
         
         self.spinner = Spinner(view: self)
-        
         self.spinner!.start()
         
         self.tracks = Tracks.sharedInstance
@@ -38,8 +42,15 @@ class RecentViewController: UIViewController, UITableViewDelegate{
         nc.addObserver(self, selector: "search", name: "searchHome", object: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    func reloadData(sender:AnyObject){
+        self.tracks = Tracks.sharedInstance
+        
+        self.tracks!.setCategory("recent").request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

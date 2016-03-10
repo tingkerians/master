@@ -21,6 +21,11 @@ class PopularBestTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl!.addTarget(self, action: "reloadData:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(self.refreshControl!)
+        
         self.spinner = Spinner(view: self)
         let spinnerY = self.view.center.y - 60
         self.spinner?.spinnerView.center = CGPointMake(self.view.center.x, spinnerY)
@@ -38,8 +43,15 @@ class PopularBestTableViewController: UITableViewController {
         nc.addObserver(self, selector: "search", name: "searchHome", object: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    func reloadData(sender:AnyObject){
+        self.tracks = Tracks.sharedInstance
+        
+        self.tracks.setCategory(self.category!).setDate(self.date!).request { (tracks) -> Void in
+            self.data = tracks
+            self.tableView.reloadData()
+            self.refreshControl!.endRefreshing()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
