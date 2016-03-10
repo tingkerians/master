@@ -71,6 +71,7 @@ class RecentViewController: UIViewController, UITableViewDelegate{
         cell.ViewLabel.text = tracks[indexPath.row].totalViews
         cell.LikeLabel.text = tracks[indexPath.row].totalLikes
         cell.DateLabel.text = tracks[indexPath.row].dateUpdated
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND,0)) {
             if(tracks[indexPath.row].image == nil){
                 tracks[indexPath.row].image = UIImage(data: NSData(contentsOfURL: NSURL(string: tracks[indexPath.row].imagePath)!)!)

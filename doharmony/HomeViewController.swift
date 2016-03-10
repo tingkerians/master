@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController,UISearchBarDelegate {
+class HomeViewController: UIViewController,UISearchBarDelegate,UITabBarControllerDelegate {
     
     var pageMenu : CAPSPageMenu?
     
@@ -18,9 +18,9 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // MARK: - Scroll menu setup
         
+        self.tabBarController?.delegate = self
+                
         // Initialize view controllers to display and place in array
         
         var controllerArray : [UIViewController] = []
@@ -43,21 +43,24 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
         self.addChildViewController(pageMenu!)
         self.view.addSubview(pageMenu!.view)
         self.view.bringSubviewToFront(searchBar)
-        
-
-        
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        let selectedIndex = tabBarController.viewControllers?.indexOf(viewController)
+        tabBarTransition.selectedIndex = selectedIndex
+        tabBarTransition.prevSelectedIndex = tabBarController.selectedIndex
+        
+        
+        
+        return true
     }
     
+    //search
     func tap(gesture: UITapGestureRecognizer) {
         searchBar.showsCancelButton = false
         searchBar.endEditing(true)
         self.view.gestureRecognizers?.forEach(self.view.removeGestureRecognizer)
     }
-    //search delegate
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         Tracks.sharedInstance.setSearch(searchText)
         nc.postNotificationName("searchHome", object: searchBar)

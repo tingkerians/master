@@ -12,6 +12,10 @@
         <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="Token" syncable="YES">
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validityDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Tracks" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,8 +26,9 @@
         <attribute name="trackPath" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tracks" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Layout" positionX="0" positionY="81" width="128" height="135"/>
         <element name="Recordings" positionX="-27" positionY="72" width="128" height="30"/>
-        <element name="Layout" positionX="0" positionY="81" width="128" height="30"/>
+        <element name="Tracks" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Token" positionX="-27" positionY="36" width="128" height="75"/>
     </elements>
 </model>

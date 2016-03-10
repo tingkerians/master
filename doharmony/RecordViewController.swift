@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecordViewController: UIViewController {
+class RecordViewController: UIViewController,UITabBarControllerDelegate {
 
     var pageMenu : CAPSPageMenu?
     let defaultIndex = 1
@@ -16,7 +16,7 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: - Scroll menu setup
+        self.tabBarController?.delegate = self
         
         // Initialize view controllers to display and place in array
         
@@ -45,7 +45,11 @@ class RecordViewController: UIViewController {
         self.view.addSubview(pageMenu!.view)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        let selectedIndex = tabBarController.viewControllers?.indexOf(viewController)
+        tabBarTransition.selectedIndex = selectedIndex
+        tabBarTransition.prevSelectedIndex = tabBarController.selectedIndex
+        
+        return true
     }
 }

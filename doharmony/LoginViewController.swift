@@ -9,9 +9,10 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    
     @IBAction func cancelButton(sender: AnyObject) {
-        print("close")
-        self.dismissViewControllerAnimated(false, completion: nil)
+        tabBarTransition.rootController?.selectedIndex = tabBarTransition.prevSelectedIndex
+         self.dismissViewControllerAnimated(false, completion: nil)
     }
 
     @IBAction func SignUpButton(sender: AnyObject) {
@@ -52,6 +53,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func tap(gesture: UITapGestureRecognizer){
         UsernameTextField.resignFirstResponder()
         PasswordTextField.resignFirstResponder()
+    }
+    
+    @IBAction func loginTapped(sender: AnyObject) {
+        let username = UsernameTextField.text!;
+        let password = PasswordTextField.text!;
+        
+        let auth = Auth.sharedInstance;
+        auth.login(username, password: password) { error in
+            // If the login is a success
+            if (error == nil) {
+                self.dismissViewControllerAnimated(false, completion: nil)
+            } else { // There's an error
+                // Show an alert or something similar here and display the `error` message.
+                print("Has errors --- Login failed");
+            }
+        }
+        
     }
 
     /*

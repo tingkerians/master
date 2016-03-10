@@ -26,8 +26,8 @@
                         <constraint firstAttribute="width" secondItem="GXg-Xj-dbu" secondAttribute="height" multiplier="20:7" id="Lrv-vI-1iB"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg1-Px-Umf">
-                    <rect key="frame" x="266" y="211" width="68" height="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg1-Px-Umf">
+                    <rect key="frame" x="259" y="205" width="82" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Bg1-Px-Umf" secondAttribute="height" multiplier="41:17" id="sZy-5P-YHT"/>
                     </constraints>
@@ -52,7 +52,7 @@
                         <constraint firstAttribute="width" secondItem="vs1-h9-Pri" secondAttribute="height" multiplier="23:3" id="sy6-gL-fmU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="aUs-xz-ELn"/>
                     </connections>
@@ -100,6 +100,9 @@
                     <state key="normal" title="Login">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="loginTapped:" destination="-1" eventType="touchUpInside" id="K6r-3f-kki"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>

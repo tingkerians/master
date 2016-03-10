@@ -9,8 +9,8 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
-
+    
+    static let sharedInstance: TabBarController! = TabBarController()
     @IBOutlet weak var tabBarItems: UITabBar!
     
     let barColor = UIColor(red: 41.0/255.0, green: 40.0/255.0, blue: 39.0/255.0, alpha: 1.0)
@@ -19,11 +19,11 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         UITabBar.appearance().barTintColor = barColor
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         
         self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -16, 0)
+        tabBarTransition.rootController = self
     }
     
     override func viewWillLayoutSubviews() {
@@ -33,5 +33,5 @@ class TabBarController: UITabBarController {
         tabFrame.origin.y = self.view.frame.size.height - 50
         self.tabBar.frame = tabFrame
     }
-    
+  
 }

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewControllerProtectedPage,UITabBarControllerDelegate {
     
     var pageMenu : CAPSPageMenu?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: - Scroll menu setup
+        self.tabBarController?.delegate = self
         
         // Initialize view controllers to display and place in array
         var controllerArray : [UIViewController] = []
@@ -38,11 +38,13 @@ class ProfileViewController: UIViewController {
         self.view.addSubview(pageMenu!.view)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        let selectedIndex = tabBarController.viewControllers?.indexOf(viewController)
+        tabBarTransition.selectedIndex = selectedIndex
+        tabBarTransition.prevSelectedIndex = tabBarController.selectedIndex
         
+        return true
     }
-
 }
 
 
