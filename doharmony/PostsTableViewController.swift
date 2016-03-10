@@ -9,10 +9,13 @@
 import UIKit
 
 class PostsTableViewController: UITableViewController {
-var Template:UIView!
+    
+    
+    
+    var Template:UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.tableView.registerNib(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "PostsTableViewCell")    }
 
     override func didReceiveMemoryWarning() {

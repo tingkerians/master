@@ -12,11 +12,28 @@ class CommentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profilePicImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var commentLabel: UITextView!
-       
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var showLess: UIButton!
+    @IBOutlet weak var seeMore: UIButton!
+    
+    @IBAction func showLess(sender: AnyObject){
+        self.frame.size.height = 100
+        self.seeMore.hidden = false
+        self.showLess.hidden = true
+    }
+    @IBAction func seeMore(sender: AnyObject) {
+        self.frame.size.height = 200
+        self.showLess.hidden = false
+        self.seeMore.hidden = true
+        print("see more")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         print("table view cell")
+        self.showLess.hidden = true
+        self.seeMore.hidden = true
         // Initialization code
     }
 
@@ -25,5 +42,5 @@ class CommentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

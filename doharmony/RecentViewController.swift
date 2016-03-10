@@ -8,30 +8,48 @@
 
 import UIKit
 import SwiftyJSON
+//import SwiftSpinner
 
 class RecentViewController: UIViewController, UITableViewDelegate{
     
+
+    @IBOutlet weak var NoInternetAccessView: UIView!
+    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
+    var refreshControl: UIRefreshControl!
+//    self.NoConnection.h
     var data: [Track]?
     var tracks: Tracks!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.NoInternetAccessView.NoInternetAccessViewController(nibName: "NoInternetAccessViewController", bundle: nil)
+//        self.NoInternetAccessView.registerNib(UINib(nibName: "NoInternetAccessViewController", bundle: nil), forCellReuseIdentifier: "NoInternetAccessViewController")
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
         
-        self.tracks = Tracks.sharedInstance
+//        self.tracks = Tracks.sharedInstance
 //        if(self.tracks.data == nil){
-            self.tracks!.setCategory("recent").request { (tracks) -> Void in
-                self.data = tracks
-                self.tableView.reloadData()
-            }
+//            self.tracks!.setCategory("recent").request { (tracks) -> Void in
+//                
+//                self.refreshControl = UIRefreshControl()
+//                self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+//                self.refreshControl.addTarget(self, action: "didRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+//                self.tableView.addSubview(self.refreshControl)
+//                
+//                self.data = tracks
+//                self.tableView.reloadData()
+//                self.ActivityIndicator.stopAnimating()
+//            }
 //        }else{
 //            self.data = self.tracks.data!
 //            self.tableView.reloadData()
 //        }
     }
-    
+    func didRefresh(sender:AnyObject)
+    {
+        self.refreshControl.endRefreshing()
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentViewController">
             <connections>
+                <outlet property="ActivityIndicator" destination="16X-fC-t0M" id="QKf-4f-0Gp"/>
+                <outlet property="NoInternetAccessView" destination="bhe-Aq-lH8" id="s1N-f7-WYR"/>
                 <outlet property="tableView" destination="IhC-UX-6tc" id="x7I-ni-pFt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,6 +27,22 @@
                         <outlet property="delegate" destination="-1" id="Cgk-U4-Fe7"/>
                     </connections>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="16X-fC-t0M">
+                    <rect key="frame" x="283" y="281" width="37" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="ftO-10-K5s"/>
+                        <constraint firstAttribute="height" constant="37" id="g4e-nj-kpj"/>
+                    </constraints>
+                    <color key="color" red="0.90588235289999997" green="0.31764705879999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhe-Aq-lH8">
+                    <rect key="frame" x="169" y="218" width="262" height="164"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bhe-Aq-lH8" secondAttribute="height" multiplier="131:82" id="eaL-Do-4Ri"/>
+                        <constraint firstAttribute="height" constant="164" id="tDZ-oV-aWf"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -32,6 +51,10 @@
                 <constraint firstItem="IhC-UX-6tc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9jo-Du-bmx"/>
                 <constraint firstAttribute="trailing" secondItem="IhC-UX-6tc" secondAttribute="trailing" id="Ban-Ym-xKR"/>
                 <constraint firstItem="IhC-UX-6tc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="QJl-6S-u52"/>
+                <constraint firstItem="16X-fC-t0M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="QWC-LB-D4V"/>
+                <constraint firstItem="16X-fC-t0M" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jJl-e3-AMG"/>
+                <constraint firstItem="bhe-Aq-lH8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jQZ-m1-8D7"/>
+                <constraint firstItem="bhe-Aq-lH8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mTt-Yt-rVh"/>
             </constraints>
         </view>
     </objects>
