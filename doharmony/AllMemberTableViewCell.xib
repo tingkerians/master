@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="aqE-ZC-aLS" customClass="AllMembersTableViewCell" customModule="doharmony" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="aqE-ZC-aLS" customClass="AllMemberTableViewCell" customModule="doharmony" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="498" height="65"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aqE-ZC-aLS" id="SMu-N7-WjI">
@@ -94,7 +94,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
-                <outlet property="ProfileName" destination="0u5-uI-rqG" id="OpH-nw-YNs"/>
+                <outlet property="ProfileName" destination="0u5-uI-rqG" id="HWh-Vi-f2D"/>
                 <outlet property="ProfilePicture" destination="Xto-p7-OqR" id="xfk-qY-Sec"/>
             </connections>
             <point key="canvasLocation" x="432" y="317.5"/>

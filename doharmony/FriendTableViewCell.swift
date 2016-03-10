@@ -8,7 +8,7 @@
 
 import UIKit
 
-class  MyFriendsTableViewCell: UITableViewCell {
+class  FriendTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ProfileName: UILabel!
 
@@ -28,7 +28,7 @@ class  MyFriendsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.backgroundColor = UIColor .clearColor()
+        self.backgroundColor = UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)
         self.ProfilePicture.layer.masksToBounds = true
         self.ProfilePicture.layer.cornerRadius = self.ProfilePicture.frame.width / 3
     }

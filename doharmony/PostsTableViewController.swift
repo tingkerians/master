@@ -12,7 +12,7 @@ class PostsTableViewController: UITableViewController {
 var Template:UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)
         self.tableView.registerNib(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "PostsTableViewCell")    }
 
     override func didReceiveMemoryWarning() {
