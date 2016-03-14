@@ -30,12 +30,29 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+
         self.CommentTableView.registerNib(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
         self.CommentTableView.registerNib(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "playerCell")
         self.CommentTableView.registerNib(UINib(nibName: "TrackDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "trackDetailsCell")
 
     }
-    
+    func dismissKeyboard(){
+               print("view click")
+        view.endEditing(true)
+    }
+    func keyboardWillShow(sender: NSNotification) {
+        print("keyboardWillShow")
+        view.frame.origin.y -= 150
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        view.frame.origin.y += 150
+        print("keyboardWillHide")
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
