@@ -12,8 +12,9 @@ import SwiftyJSON
 
 class RecentViewController: UIViewController, UITableViewDelegate{
     
+    
+    @IBOutlet weak var NoInternetAccess: UIView!
 
-    @IBOutlet weak var NoInternetAccessView: UIView!
     @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,10 +25,11 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.NoInternetAccessView.NoInternetAccessViewController(nibName: "NoInternetAccessViewController", bundle: nil)
-//        self.NoInternetAccessView.registerNib(UINib(nibName: "NoInternetAccessViewController", bundle: nil), forCellReuseIdentifier: "NoInternetAccessViewController")
-        self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
-        
+       
+        let nibView = NSBundle.mainBundle().loadNibNamed("NoInternetAccessViewController", owner: self, options: nil)[0] as! UIView
+        self.NoInternetAccess.addSubview(nibView)
+
+//        self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
 //        self.tracks = Tracks.sharedInstance
 //        if(self.tracks.data == nil){
 //            self.tracks!.setCategory("recent").request { (tracks) -> Void in
@@ -40,6 +42,7 @@ class RecentViewController: UIViewController, UITableViewDelegate{
 //                self.data = tracks
 //                self.tableView.reloadData()
 //                self.ActivityIndicator.stopAnimating()
+//                
 //            }
 //        }else{
 //            self.data = self.tracks.data!

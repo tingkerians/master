@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentViewController">
             <connections>
                 <outlet property="ActivityIndicator" destination="16X-fC-t0M" id="QKf-4f-0Gp"/>
-                <outlet property="NoInternetAccessView" destination="bhe-Aq-lH8" id="s1N-f7-WYR"/>
+                <outlet property="NoInternetAccess" destination="bhe-Aq-lH8" id="kZK-sM-8ay"/>
                 <outlet property="tableView" destination="IhC-UX-6tc" id="x7I-ni-pFt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
