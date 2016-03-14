@@ -29,7 +29,6 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -41,18 +40,25 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
 
     }
     func dismissKeyboard(){
-               print("view click")
         view.endEditing(true)
     }
     func keyboardWillShow(sender: NSNotification) {
-        print("keyboardWillShow")
-        view.frame.origin.y -= 150
+        let userInfo:NSDictionary = sender.userInfo!
+        let keyboardFrame:NSValue = userInfo.valueForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let keyboardRectangle = keyboardFrame.CGRectValue()
+        let keyboardHeight = keyboardRectangle.height
+        view.frame.origin.y -= keyboardHeight
+        print("keyboardWillShow \(keyboardHeight)")
+        
     }
     func keyboardWillHide(sender: NSNotification) {
-        view.frame.origin.y += 150
+        let userInfo:NSDictionary = sender.userInfo!
+        let keyboardFrame:NSValue = userInfo.valueForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let keyboardRectangle = keyboardFrame.CGRectValue()
+        let keyboardHeight = keyboardRectangle.height
+        view.frame.origin.y += keyboardHeight
         print("keyboardWillHide")
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
