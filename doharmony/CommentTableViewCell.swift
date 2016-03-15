@@ -31,7 +31,6 @@ class CommentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        print("table view cell")
         self.showLess.hidden = true
         self.seeMore.hidden = true
         // Initialization code

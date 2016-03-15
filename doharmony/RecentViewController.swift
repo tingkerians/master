@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+import Alamofire
 
 class RecentViewController: UIViewController, UITableViewDelegate{
     
@@ -17,38 +17,57 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     var tracks: Tracks!
     
     var refreshControl: UIRefreshControl!
-    var spinner: Spinner?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerNib(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentTableViewCell")
+        
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: "reloadData:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.tintColor = UIColor.whiteColor()
+        self.refreshControl.addTarget(self, action: "reloadData", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(self.refreshControl)
-        
-        self.spinner = Spinner(view: self)
-        self.spinner!.start()
-        
-        self.tracks = Tracks.sharedInstance
-
-        self.tracks!.setCategory("recent").request { (tracks) -> Void in
-            self.data = tracks
-            self.tableView.reloadData()
-            self.spinner!.stop()
-        }
         
         let nc = NSNotificationCenter.defaultCenter()
         nc.addObserver(self, selector: "search", name: "searchHome", object: nil)
+        
+        //check for internet connection
+        let nibView = NoInternetAccessViewController(nibName: "NoInternetAccessViewController", bundle: nil)
+        self.tableView.superview!.addSubview(nibView.view)
+        
+        let manager = NetworkReachabilityManager(host: "www.apple.com")
+        manager?.listener = { status in
+            if  manager?.isReachable == false {
+                nibView.view.hidden = false
+            }else{
+                if(self.data == nil || self.data!.count == 0){
+                    self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height)
+                    self.refreshControl.beginRefreshing()
+                    self.reloadData()
+                }
+                nibView.view.hidden = true
+            }
+        }
+        manager?.startListening()
+        
     }
     
-    func reloadData(sender:AnyObject){
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if(self.data == nil || self.data!.count == 0){
+            self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height)
+            self.refreshControl.beginRefreshing()
+            reloadData()
+        }
+    }
+    
+    func reloadData(){
         self.tracks = Tracks.sharedInstance
-        
         self.tracks!.setCategory("recent").request { (tracks) -> Void in
-            self.data = tracks
-            self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
+            if(tracks.count > 0){
+                self.data = tracks
+                self.tableView.reloadData()
+            }
+            self.refreshControl.performSelector("endRefreshing", withObject: nil, afterDelay: 0.5)
         }
         
     }
@@ -74,6 +93,7 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell : RecentTableViewCell = tableView.dequeueReusableCellWithIdentifier("RecentTableViewCell") as! RecentTableViewCell
         
         let tracks = self.data!
@@ -90,12 +110,13 @@ class RecentViewController: UIViewController, UITableViewDelegate{
             let coverArt = tracks[indexPath.row].image
             dispatch_async(dispatch_get_main_queue()) {
                 if let futureCell = tableView.cellForRowAtIndexPath(indexPath) as? RecentTableViewCell {
-                     futureCell.ImageView.image = coverArt
+                    futureCell.ImageView.image = coverArt
                     
                 }
             }
         }
         return cell
+        
     }
     
    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -103,8 +124,9 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     }
 
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        let tracks = self.data!
         let vc = TrackDetailsViewController(nibName: "TrackDetailsViewController", bundle: nil)
+        vc.track = tracks[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
         self.presentViewController(vc, animated: true, completion: nil)
 
@@ -121,12 +143,9 @@ class RecentViewController: UIViewController, UITableViewDelegate{
     }
     
     func search() {
-        self.spinner!.start()
-        self.tracks!.setCategory("recent").request { (tracks) -> Void in
-            self.data = tracks
-            self.tableView.reloadData()
-            self.spinner!.stop()
-        }
+        self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height)
+        self.refreshControl.beginRefreshing()
+        reloadData()
     }
 
 }

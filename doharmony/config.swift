@@ -7,7 +7,7 @@
 //
 import UIKit
 struct env{
-    static let apiUrl = "192.168.0.1/api/"
+    static let apiUrl = "http://192.168.0.137:8080/api/"
     static let doharmonyUrl = "www.doharmony.com"
     
     static let documentFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString

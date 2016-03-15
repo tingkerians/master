@@ -9,12 +9,13 @@
 import UIKit
 
 class PostsTableViewController: UITableViewController {
-var Template:UIView!
+
+    var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.tableView.registerNib(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "PostsTableViewCell")    }
-
+        self.tableView.registerNib(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "PostsTableViewCell")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

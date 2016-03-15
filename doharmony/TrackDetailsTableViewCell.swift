@@ -11,6 +11,11 @@ import UIKit
 class TrackDetailsTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet var commentTextView: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var viewsLabel: UILabel!
+    @IBOutlet weak var userPicImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +23,8 @@ class TrackDetailsTableViewCell: UITableViewCell, UITextViewDelegate {
         self.commentTextView.text = "Add comment"
         self.commentTextView.textColor = UIColor.lightGrayColor()
         commentTextView.delegate = self
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        
+      
         let tapGesture = UITapGestureRecognizer(target: self, action: "tap:")
         self.addGestureRecognizer(tapGesture)
         // Initialization code
@@ -30,12 +35,12 @@ class TrackDetailsTableViewCell: UITableViewCell, UITextViewDelegate {
 
         // Configure the view for the selected state
     }
-//    func keyboardWillShow(sender: NSNotification) {
-//        self.frame.origin.y -= 150
-//    }
-//    func keyboardWillHide(sender: NSNotification) {
-//        self.frame.origin.y += 150
-//    }
+    func keyboardWillShow(sender: NSNotification) {
+        self.frame.origin.y -= 150
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        self.frame.origin.y += 150
+    }
     func textFieldShouldReturn(commentTextfield: UITextField) -> Bool {
         print("return keyboard")
         commentTextfield.resignFirstResponder()

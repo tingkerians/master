@@ -14,22 +14,7 @@ import CoreData
 class Track{
     var id: String!
     var image: UIImage!
-    var imagePath: String! = ""{
-        didSet {
-            if(imagePath.isEmpty){
-//                image = nil
-            }else{
-//                self.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.imagePath)!)!)
-//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND,0)) {
-//                    let coverArt = UIImage(data: NSData(contentsOfURL: NSURL(string: self.imagePath)!)!)
-//                    dispatch_async(dispatch_get_main_queue()) {
-//                        self.image = coverArt
-//                        //print(self)
-//                    }
-//                }
-            }
-        }
-    }
+    var imagePath: String! = ""
     var title: String!
     var author: String!
     var totalLikes: String!
@@ -105,7 +90,7 @@ class Tracks{
     }
     
     func request(callback: ((tracks: [Track])->Void)?){
-        let url = "http://192.168.0.137:8080/api/tracks"
+        let url = env.apiUrl+"tracks"
         
         let parameters = [
             "category" : self.category,
@@ -120,14 +105,29 @@ class Tracks{
                 case .Success:
                     let result = JSON(response.result.value!);
                     if let data = result["data"].arrayValue as [JSON]?{
+                        print(data)
                         self.data = self.parse(data)
-                        //print(data)
                         callback?(tracks: self.data!)
                     }
                 case .Failure(let error):
-                    print("error4: ", error);
+                    print(error)
+                    print("Tracks Network Error!");
+                    self.data = [Track]()
+                    callback?(tracks: self.data!)
                 }
         }
+    }
+    
+    func insertRecord(data: Track, callback: ((result: Bool)->Void)?){
+        
+    }
+    
+    func updateRecord(data: Track, callback: ((result: Bool)->Void)?){
+        
+    }
+    
+    func deleteRecord(data: Track, callback: ((result: Bool)->Void)?){
+        
     }
     
     func parse(data:[JSON]) -> [Track]{
@@ -138,7 +138,7 @@ class Tracks{
             let track: Track! = Track()
             track.id = trackJSON["id"].stringValue
             track.title = trackJSON["title"].stringValue
-            track.imagePath = "http://192.168.0.137:8080/api/coverart/\(trackJSON["id"].stringValue)"
+            track.imagePath = env.apiUrl+"coverart/\(trackJSON["id"].stringValue)"
             
             
             track.totalViews = trackJSON["views"].stringValue
@@ -174,6 +174,5 @@ class Tracks{
         
         return tracks!
     }
-    
     
 }

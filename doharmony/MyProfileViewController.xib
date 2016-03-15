@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -46,7 +46,7 @@
                         <action selector="LoginButton:" destination="-1" eventType="touchUpInside" id="dTL-FN-zYI"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byC-L5-MNP">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byC-L5-MNP">
                     <rect key="frame" x="150" y="112" width="300" height="57"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBA-Ls-Zh7">
@@ -116,13 +116,16 @@
                 <constraint firstItem="dt0-eJ-bd9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="4L3-1K-mKY"/>
                 <constraint firstItem="dt0-eJ-bd9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="6yv-Ls-Sfm"/>
                 <constraint firstAttribute="trailing" secondItem="qce-18-Ytv" secondAttribute="trailing" constant="14" id="7eT-JX-6uE"/>
+                <constraint firstItem="byC-L5-MNP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="150" id="BAg-il-S0u"/>
                 <constraint firstItem="byC-L5-MNP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BcT-FD-Z1m"/>
                 <constraint firstItem="qce-18-Ytv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="G5H-fc-PKg"/>
+                <constraint firstAttribute="bottom" secondItem="byC-L5-MNP" secondAttribute="bottom" constant="431" id="HN3-HI-ebw"/>
                 <constraint firstItem="594-ZQ-gtP" firstAttribute="leading" secondItem="dt0-eJ-bd9" secondAttribute="trailing" constant="14" id="Jfd-VK-Tdm"/>
                 <constraint firstItem="55k-rV-Fmt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="OJe-ax-QzC"/>
                 <constraint firstItem="55k-rV-Fmt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="189" id="VvE-XO-p94"/>
                 <constraint firstAttribute="trailing" secondItem="594-ZQ-gtP" secondAttribute="trailing" constant="14" id="mDA-7U-siP"/>
                 <constraint firstItem="594-ZQ-gtP" firstAttribute="top" secondItem="qce-18-Ytv" secondAttribute="bottom" constant="16" id="pcL-EJ-ioB"/>
+                <constraint firstItem="byC-L5-MNP" firstAttribute="top" secondItem="594-ZQ-gtP" secondAttribute="bottom" constant="30" id="qKn-dy-bgr"/>
             </constraints>
         </view>
         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7Zi-P4-oc7">

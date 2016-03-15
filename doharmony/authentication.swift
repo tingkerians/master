@@ -20,7 +20,7 @@ class Auth {
     static let sharedInstance: Auth! = Auth()
     
     // Login URL
-    private let serverURL = "http://192.168.0.137:8080/api/login";
+    private let serverURL = env.apiUrl+"login";
     
     var isUserLoggedIn: Bool = false
     
@@ -80,11 +80,12 @@ class Auth {
                 switch response.result {
                 case .Success:
                     let data = JSON(response.result.value!)
+                    print(data)
                     self.saveToken(data["data"]["token"].stringValue, validityDate: data["data"]["validityDate"].stringValue);
                     self.isUserLoggedIn = true
                     completionHandler(nil);
                 case .Failure(let error):
-                    print("HTTP RESPONSE: \n\(error.localizedDescription)");
+                    print("Authentication Network Error!");
                     completionHandler(error);
                 }
         }

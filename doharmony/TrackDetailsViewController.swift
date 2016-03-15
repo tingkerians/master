@@ -7,19 +7,17 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIScrollViewDelegate{
-    @IBOutlet weak var ScrollView: UIScrollView!
-    var label = UILabel()
-    
-    @IBOutlet weak var commentBox: UIView!
-    @IBOutlet weak var postButton: UIButton!
-    @IBOutlet var commentTextView: UITextView!
+
     @IBOutlet weak var CommentTableView: UITableView!
-    @IBOutlet weak var TrackTitle: UILabel!
+    
+    var track: Track?
+    var player: AVPlayer?
     
     @IBAction func closeButton(sender: AnyObject) {
-        print("close")
         self.dismissViewControllerAnimated(false, completion: nil)
     }
     
@@ -29,13 +27,35 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+
+        let fileUrl = env.apiUrl + "play/" + track!.id
+        let url:NSURL = NSURL(string: fileUrl)!
+        
+        player = AVPlayer(URL: url)
+        
         
         self.CommentTableView.registerNib(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
         self.CommentTableView.registerNib(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "playerCell")
         self.CommentTableView.registerNib(UINib(nibName: "TrackDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "trackDetailsCell")
 
     }
-    
+    func dismissKeyboard(){
+               print("view click")
+        view.endEditing(true)
+    }
+    func keyboardWillShow(sender: NSNotification) {
+        print("keyboardWillShow")
+        view.frame.origin.y -= 150
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        view.frame.origin.y += 150
+        print("keyboardWillHide")
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -53,11 +73,18 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
         if (indexPath.row == 0) {
             let cell : PlayerTableViewCell = CommentTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath) as! PlayerTableViewCell
             cell.selectionStyle = .None
+            cell.playerController.player = self.player
+            self.player?.play()
             return cell
             
         } else if (indexPath.row == 1){
             let cell : TrackDetailsTableViewCell = CommentTableView.dequeueReusableCellWithIdentifier("trackDetailsCell", forIndexPath: indexPath) as! TrackDetailsTableViewCell
             cell.selectionStyle = .None
+            cell.titleLabel.text = track?.title
+            //cell.authorLabel.text = track?.author
+            cell.likesLabel.text = track?.totalLikes
+            cell.viewsLabel.text = track?.totalViews
+            //cell.userPicImage.image =
             return cell
 
         }else {
@@ -73,10 +100,7 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
 
     func tableView(CommentTableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            let bounds = UIScreen.mainScreen().bounds
-            let screenWidth = bounds.size.width
-            print("screenWidth: \(screenWidth)")
-            return screenWidth
+            return 263
         } else if (indexPath.row == 1){
             return 190.0
         }else {

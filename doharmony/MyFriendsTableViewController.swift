@@ -13,7 +13,7 @@ class MyFriendsTableViewController: UITableViewController {
     var namesArray : [String] = ["Lauren Richard", "Nicholas Ray", "Kim White", "Charles Gray", "Timothy Jones", "Sarah Underwood", "William Pearl", "Juan Rodriguez", "Anna Hunt", "George Porter", "Zachary Hecker", "David Fletcher"]
     var photoNameArray : [String] = ["woman1", "man1", "woman2", "woman3", "man2", "man3", "man4", "man5", "woman4", "woman5", "man6" , "man8"]
 
-    
+    var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 

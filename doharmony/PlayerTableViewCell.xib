@@ -3,88 +3,26 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerCell" rowHeight="436" id="KGk-i7-Jjw" customClass="PlayerTableViewCell" customModule="doharmony" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="264"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="599"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="263"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flE-xu-8IK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="599"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="xhz-UX-xR4">
-                                <rect key="frame" x="260" y="260" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xhz-UX-xR4" secondAttribute="height" multiplier="1:1" id="Lqn-9v-Zzi"/>
-                                    <constraint firstAttribute="width" constant="80" id="fwV-fK-7Bh"/>
-                                    <constraint firstAttribute="height" constant="80" id="zka-so-Pvv"/>
-                                </constraints>
-                            </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="75" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-94-Uox">
-                                <rect key="frame" x="6" y="547" width="588" height="31"/>
-                                <color key="tintColor" red="0.90588235289999997" green="0.31764705879999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8dX-WP-yYA"/>
-                                </constraints>
-                            </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volume" translatesAutoresizingMaskIntoConstraints="NO" id="Za7-Uo-KtR">
-                                <rect key="frame" x="8" y="572" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="J8r-ty-UHo"/>
-                                    <constraint firstAttribute="width" constant="20" id="hZ2-oY-vzZ"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullScreen" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-A1-2CG">
-                                <rect key="frame" x="572" y="571" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="5Ph-bA-9Qn"/>
-                                    <constraint firstAttribute="height" constant="20" id="7W9-9F-e6L"/>
-                                </constraints>
-                            </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8kI-gH-ege">
-                                <rect key="frame" x="34" y="567" width="118" height="31"/>
-                                <color key="tintColor" red="0.90588235289999997" green="0.31764705879999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ncb-ra-WS6"/>
-                                    <constraint firstAttribute="width" secondItem="8kI-gH-ege" secondAttribute="height" multiplier="19:5" id="W9U-M9-TSl"/>
-                                </constraints>
-                            </slider>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Za7-Uo-KtR" firstAttribute="leading" secondItem="flE-xu-8IK" secondAttribute="leading" constant="8" id="0S2-ax-Jbq"/>
-                            <constraint firstItem="8kI-gH-ege" firstAttribute="leading" secondItem="Za7-Uo-KtR" secondAttribute="trailing" constant="8" id="2hW-nL-JJ9"/>
-                            <constraint firstAttribute="bottom" secondItem="wUE-A1-2CG" secondAttribute="bottom" constant="8" id="6Ff-hv-wpB"/>
-                            <constraint firstAttribute="bottom" secondItem="Za7-Uo-KtR" secondAttribute="bottom" constant="7" id="90B-Sr-UbH"/>
-                            <constraint firstItem="xhz-UX-xR4" firstAttribute="centerY" secondItem="flE-xu-8IK" secondAttribute="centerY" id="FRv-0W-T3C"/>
-                            <constraint firstItem="xhz-UX-xR4" firstAttribute="centerX" secondItem="flE-xu-8IK" secondAttribute="centerX" id="Ybk-5l-nW6"/>
-                            <constraint firstAttribute="bottom" secondItem="8kI-gH-ege" secondAttribute="bottom" constant="2" id="c7f-pc-At6"/>
-                            <constraint firstItem="hRb-94-Uox" firstAttribute="leading" secondItem="flE-xu-8IK" secondAttribute="leading" constant="8" id="fbh-om-LzC"/>
-                            <constraint firstAttribute="trailing" secondItem="hRb-94-Uox" secondAttribute="trailing" constant="8" id="ftn-ta-cVH"/>
-                            <constraint firstAttribute="trailing" secondItem="wUE-A1-2CG" secondAttribute="trailing" constant="8" id="gSM-G0-SoL"/>
-                            <constraint firstAttribute="bottom" secondItem="hRb-94-Uox" secondAttribute="bottom" constant="22" id="zR9-MX-8t3"/>
-                        </constraints>
-                    </view>
+                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xXk-TB-wZb">
+                        <rect key="frame" x="-2" y="233" width="604" height="31"/>
+                    </slider>
                 </subviews>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="flE-xu-8IK" secondAttribute="trailing" id="BtJ-YU-UaP"/>
-                    <constraint firstItem="flE-xu-8IK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QBQ-ai-Q6t"/>
-                    <constraint firstAttribute="bottom" secondItem="flE-xu-8IK" secondAttribute="bottom" id="bZo-py-ynn"/>
-                    <constraint firstItem="flE-xu-8IK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="foK-0E-W6b"/>
-                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="playerSlider" destination="xXk-TB-wZb" id="xdm-OA-92G"/>
+            </connections>
             <point key="canvasLocation" x="597" y="302"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="fullScreen" width="512" height="512"/>
-        <image name="play" width="137" height="137"/>
-        <image name="volume" width="512" height="512"/>
-    </resources>
 </document>

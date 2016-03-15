@@ -97,7 +97,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XjH-9Y-4o1"/>
-                        <segue destination="CF4-OB-Ijd" kind="relationship" relationship="viewControllers" id="zmM-FT-c9K"/>
+                        <segue destination="fuv-jO-mW8" kind="relationship" relationship="viewControllers" id="I2w-Ca-ode"/>
                         <segue destination="CIJ-iy-iBE" kind="relationship" relationship="viewControllers" id="aAj-JN-S0j"/>
                         <segue destination="mgu-Xp-G3O" kind="relationship" relationship="viewControllers" id="NOl-0B-SVU"/>
                         <segue destination="90L-uc-b5Y" kind="relationship" relationship="viewControllers" id="x7W-i3-wmV"/>
@@ -105,29 +105,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6v-8J-SDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="1614"/>
-        </scene>
-        <!--Friends View Controller-->
-        <scene sceneID="M3t-mo-yJc">
-            <objects>
-                <viewController id="CF4-OB-Ijd" customClass="FriendsViewController" customModule="doharmony" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kzG-Do-8pJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="ra1-vF-JHE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9uM-aw-QL8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab-friends" id="uhq-YV-iwE">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="100"/>
-                    </tabBarItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8Z-BH-WDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="553" y="2334"/>
+            <point key="canvasLocation" x="-216" y="1613"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y4c-GS-RRA">
@@ -185,6 +163,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1M-bm-IPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="553" y="3026"/>
+        </scene>
+        <!--Friends View Controller-->
+        <scene sceneID="uer-k4-07R">
+            <objects>
+                <viewController id="fuv-jO-mW8" customClass="FriendsViewController" customModule="doharmony" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dBy-Cf-EnN"/>
+                        <viewControllerLayoutGuide type="bottom" id="sE6-0C-MzF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z7A-Ka-QR9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KEL-12-xkK">
+                                <rect key="frame" x="0.0" y="40" width="600" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fuv-jO-mW8" id="wNQ-Ul-wcT"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KEL-12-xkK" firstAttribute="top" secondItem="dBy-Cf-EnN" secondAttribute="bottom" constant="20" id="3ZC-v4-WcR"/>
+                            <constraint firstAttribute="trailing" secondItem="KEL-12-xkK" secondAttribute="trailing" id="EvE-Bl-wnk"/>
+                            <constraint firstItem="KEL-12-xkK" firstAttribute="centerX" secondItem="z7A-Ka-QR9" secondAttribute="centerX" id="VWB-zN-NK5"/>
+                            <constraint firstItem="KEL-12-xkK" firstAttribute="leading" secondItem="z7A-Ka-QR9" secondAttribute="leading" id="jt3-uu-qIc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab-friends" id="uv1-I3-SH8"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="KEL-12-xkK" id="ZsB-RC-2MG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9h-6c-PpE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="2340"/>
         </scene>
     </scenes>
     <resources>

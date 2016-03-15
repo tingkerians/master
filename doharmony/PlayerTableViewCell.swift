@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class PlayerTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var playerSlider: UISlider!
+    var playerController = AVPlayerViewController()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        playerController.view.frame = self.bounds
+        self.addSubview(playerController.view)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
