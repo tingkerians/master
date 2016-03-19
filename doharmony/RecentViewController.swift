@@ -30,24 +30,24 @@ class RecentViewController: UIViewController, UITableViewDelegate{
         let nc = NSNotificationCenter.defaultCenter()
         nc.addObserver(self, selector: "search", name: "searchHome", object: nil)
         
-        //check for internet connection
-        let nibView = NoInternetAccessViewController(nibName: "NoInternetAccessViewController", bundle: nil)
-        self.tableView.superview!.addSubview(nibView.view)
-        
-        let manager = NetworkReachabilityManager(host: "www.apple.com")
-        manager?.listener = { status in
-            if  manager?.isReachable == false {
-                nibView.view.hidden = false
-            }else{
-                if(self.data == nil || self.data!.count == 0){
-                    self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height)
-                    self.refreshControl.beginRefreshing()
-                    self.reloadData()
-                }
-                nibView.view.hidden = true
-            }
-        }
-        manager?.startListening()
+//        //check for internet connection
+//        let nibView = NoInternetAccessViewController(nibName: "NoInternetAccessViewController", bundle: nil)
+//        self.tableView.superview!.addSubview(nibView.view)
+//        
+//        let manager = NetworkReachabilityManager(host: "www.apple.com")
+//        manager?.listener = { status in
+//            if  manager?.isReachable == false {
+//                nibView.view.hidden = false
+//            }else{
+//                if(self.data == nil || self.data!.count == 0){
+//                    self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height)
+//                    self.refreshControl.beginRefreshing()
+//                    self.reloadData()
+//                }
+//                nibView.view.hidden = true
+//            }
+//        }
+//        manager?.startListening()
         
     }
     

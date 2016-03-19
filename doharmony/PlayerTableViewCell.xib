@@ -13,15 +13,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="600" height="263"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xXk-TB-wZb">
-                        <rect key="frame" x="-2" y="233" width="604" height="31"/>
-                    </slider>
-                </subviews>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="playerSlider" destination="xXk-TB-wZb" id="xdm-OA-92G"/>
-            </connections>
             <point key="canvasLocation" x="597" y="302"/>
         </tableViewCell>
     </objects>
