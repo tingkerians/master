@@ -18,6 +18,7 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
     var player: AVPlayer?
     
     @IBAction func closeButton(sender: AnyObject) {
+        self.player = nil
         self.dismissViewControllerAnimated(false, completion: nil)
     }
     
@@ -36,7 +37,7 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
         let url:NSURL = NSURL(string: fileUrl)!
         
         player = AVPlayer(URL: url)
-        
+        self.player?.play()
         
         self.CommentTableView.registerNib(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
         self.CommentTableView.registerNib(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "playerCell")
@@ -74,17 +75,29 @@ class TrackDetailsViewController: UIViewController, UITableViewDataSource, UITab
             let cell : PlayerTableViewCell = CommentTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath) as! PlayerTableViewCell
             cell.selectionStyle = .None
             cell.playerController.player = self.player
-            self.player?.play()
             return cell
             
         } else if (indexPath.row == 1){
             let cell : TrackDetailsTableViewCell = CommentTableView.dequeueReusableCellWithIdentifier("trackDetailsCell", forIndexPath: indexPath) as! TrackDetailsTableViewCell
             cell.selectionStyle = .None
             cell.titleLabel.text = track?.title
-            //cell.authorLabel.text = track?.author
+            cell.authorLabel.text = track?.authorName
             cell.likesLabel.text = track?.totalLikes
             cell.viewsLabel.text = track?.totalViews
-            //cell.userPicImage.image =
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND,0)) {
+                if(self.track!.authorPic == nil){
+                    self.track!.authorPic = UIImage(data: NSData(contentsOfURL: NSURL(string: self.track!.authorPicPath)!)!)
+                }
+                let photoArt = self.track!.authorPic
+                dispatch_async(dispatch_get_main_queue()) {
+                    if let futureCell = CommentTableView.cellForRowAtIndexPath(indexPath) as? TrackDetailsTableViewCell {
+                        futureCell.userPicImage.image = photoArt
+                        
+                    }
+                }
+            }
+            
             return cell
 
         }else {

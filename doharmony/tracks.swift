@@ -16,7 +16,10 @@ class Track{
     var image: UIImage!
     var imagePath: String! = ""
     var title: String!
-    var author: String!
+    var authorId: String!
+    var authorName: String!
+    var authorPic: UIImage?
+    var authorPicPath: String! = ""
     var totalLikes: String!
     var totalViews: String!
     var dateCreated: String!
@@ -105,7 +108,7 @@ class Tracks{
                 case .Success:
                     let result = JSON(response.result.value!);
                     if let data = result["data"].arrayValue as [JSON]?{
-                        print(data)
+//                        print(data)
                         self.data = self.parse(data)
                         callback?(tracks: self.data!)
                     }
@@ -139,13 +142,13 @@ class Tracks{
             track.id = trackJSON["id"].stringValue
             track.title = trackJSON["title"].stringValue
             track.imagePath = env.apiUrl+"coverart/\(trackJSON["id"].stringValue)"
-            
-            
             track.totalViews = trackJSON["views"].stringValue
             track.totalLikes = trackJSON["likes"].stringValue
             track.dateCreated = trackJSON["date_created"].stringValue
             track.dateUpdated = trackJSON["date_updated"].stringValue
-            track.author = trackJSON["author"].stringValue
+            track.authorId = trackJSON["author_id"].stringValue
+            track.authorName = trackJSON["author_username"].stringValue
+            track.authorPicPath = env.apiUrl+"photo/\(trackJSON["author_id"].stringValue)"
             track.trackPath = ""
             tracks?.append(track)
             
@@ -165,7 +168,8 @@ class Tracks{
             track.imagePath = trackCoreData.valueForKey("imagePath") as? String
             track.dateCreated = trackCoreData.valueForKey("dateCreated") as? String
             track.dateUpdated = trackCoreData.valueForKey("dateUpdated") as? String
-            track.author = trackCoreData.valueForKey("author") as? String
+            track.authorId = trackCoreData.valueForKey("author_id") as? String
+            track.authorName = trackCoreData.valueForKey("author_username") as? String
             track.trackPath = trackCoreData.valueForKey("trackPath") as? String
             track.isLocal = true
             tracks?.append(track)

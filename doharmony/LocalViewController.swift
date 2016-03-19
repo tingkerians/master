@@ -52,7 +52,7 @@ class LocalViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         
         let tracks = self.data!
         cell.TitleLabel.text = tracks[indexPath.row].title
-        cell.authorLabel.text = tracks[indexPath.row].author
+        cell.authorLabel.text = tracks[indexPath.row].authorName
         cell.ImageView.image = UIImage(named: (tracks[indexPath.row].imagePath)!)
         
         return cell

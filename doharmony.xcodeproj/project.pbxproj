@@ -54,7 +54,7 @@
 		DF101BE71C6C18C00006B4D3 /* LibrariesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BE51C6C18C00006B4D3 /* LibrariesTableViewController.xib */; };
 		DF101BEB1C6C19080006B4D3 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BE91C6C19080006B4D3 /* ProjectsTableViewController.swift */; };
 		DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BEA1C6C19080006B4D3 /* ProjectsTableViewController.xib */; };
-		DF101BF11C6C197F0006B4D3 /* PopularBestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BEF1C6C197F0006B4D3 /* PopularBestTableViewController.swift */; };
+		DF101BF11C6C197F0006B4D3 /*  PopularBestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101BEF1C6C197F0006B4D3 /*  PopularBestTableViewController.swift */; };
 		DF101BF21C6C197F0006B4D3 /* PopularBestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101BF01C6C197F0006B4D3 /* PopularBestTableViewController.xib */; };
 		DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */; };
 		DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */; };
@@ -358,7 +358,7 @@
 		DF101BE51C6C18C00006B4D3 /* LibrariesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibrariesTableViewController.xib; sourceTree = "<group>"; };
 		DF101BE91C6C19080006B4D3 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		DF101BEA1C6C19080006B4D3 /* ProjectsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectsTableViewController.xib; sourceTree = "<group>"; };
-		DF101BEF1C6C197F0006B4D3 /* PopularBestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularBestTableViewController.swift; sourceTree = "<group>"; };
+		DF101BEF1C6C197F0006B4D3 /*  PopularBestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " PopularBestTableViewController.swift"; sourceTree = "<group>"; };
 		DF101BF01C6C197F0006B4D3 /* PopularBestTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularBestTableViewController.xib; sourceTree = "<group>"; };
 		DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
@@ -521,7 +521,7 @@
 		7629CFA41C7EEA3A0092C5F3 /* Popular/Best */ = {
 			isa = PBXGroup;
 			children = (
-				DF101BEF1C6C197F0006B4D3 /* PopularBestTableViewController.swift */,
+				DF101BEF1C6C197F0006B4D3 /*  PopularBestTableViewController.swift */,
 				DF101BF01C6C197F0006B4D3 /* PopularBestTableViewController.xib */,
 				76BF5E671C87D65200F5C1C3 /* PopularViewController.swift */,
 				76BF5E6B1C87D66A00F5C1C3 /* BestViewController.swift */,
@@ -1247,7 +1247,7 @@
 				DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */,
 				DF526F5D1C6D5EB6009971FF /* MyFriendsTableViewCell.swift in Sources */,
 				DF6B70571C7ADD9D00B655B6 /* FollowingsTableViewController.swift in Sources */,
-				DF101BF11C6C197F0006B4D3 /* PopularBestTableViewController.swift in Sources */,
+				DF101BF11C6C197F0006B4D3 /*  PopularBestTableViewController.swift in Sources */,
 				DFF4CBB41C6B0BD2008973D3 /* AppDelegate.swift in Sources */,
 				765795651C97B17B0098B946 /* CommentTableViewCell.swift in Sources */,
 				76BF5E651C87D63000F5C1C3 /* RecentViewController.swift in Sources */,
