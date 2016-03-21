@@ -32,9 +32,9 @@ class UserDetailsTableViewCell: UITableViewCell {
     @IBAction func RelationshipButton(sender: AnyObject) {
         var Image : UIImage!
         if relationship == "friend" {
-            Image = UIImage(named: "friend");
+            Image = UIImage(named: "friend")
         } else if relationship == "following" {
-            Image = UIImage(named: "follow");
+            Image = UIImage(named: "follow")
         }
         let tintedImage = Image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         RelationshipImage.setImage(tintedImage, forState: .Normal)

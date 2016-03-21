@@ -11,7 +11,7 @@ import UIKit
 class MyProfileViewController: UIViewController {
 
     @IBAction func LoginButton(sender: AnyObject) {
-        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let vc = SaveProjectViewController(nibName: "SaveProjectViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
         self.presentViewController(vc, animated: true, completion: nil)
         

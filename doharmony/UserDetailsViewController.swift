@@ -47,7 +47,7 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(TracksTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return TitleArray.count
+        return TitleArray.count + 1
     }
     
     func tableView(TracksTableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -60,8 +60,8 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         } else {
             let cell : UserTracksTableViewCell = TracksTableView.dequeueReusableCellWithIdentifier("UserTracksCell", forIndexPath: indexPath) as! UserTracksTableViewCell
             cell.selectionStyle = .None
-            cell.TitleLabel.text = TitleArray[indexPath.row]
-            cell.ImageView.image = UIImage(named: CoverPhotoArray[indexPath.row])
+            cell.TitleLabel.text = TitleArray[indexPath.row - 1]
+            cell.ImageView.image = UIImage(named: CoverPhotoArray[indexPath.row - 1])
             
             return cell
             
