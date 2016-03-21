@@ -10,6 +10,10 @@ import UIKit
 import AVFoundation
 import CoreData
 
+struct Layout{
+    static var currentFrame:Int!
+}
+
 class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDelegate, TemplateViewControllerDelegate, timerControllerCountdownDelegate, timerControllerStopTimerDelegate, timerControllerDurationTimerDelegate{
     
     @IBOutlet weak var layoutDisplay: UIView!
@@ -23,32 +27,39 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     var Template:TemplateController!
     let Capture = captureController()
     let Cropper = Crop()
+    let MetronomeView = MetronomeViewController()
     
     var isPlaying = false
     var isRecording = false
     
+    var metronomeTimer = timerController()
     let Countdown = timerController()
     let PlayerTimer = timerController()
     let DurationTimer = timerController()
+    let stopTimer = timerController()
     
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var seconds: UILabel!
     
     var filename:String!
-    var framePointer = 0
     
     
     //VIEW DIDLOAD
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Capture.delegate = self
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         useTemplate()
     }
+        
     //TEMPLATE
     func useTemplate(){
         for view in container.subviews{
             view.removeFromSuperview()
         }
-        print(container.bounds.width)
         Template = TemplateController(layout:container,defaultLayout: defaultTemplate)
         Template.delegate = self
         Template.refreshFrames()
@@ -66,11 +77,11 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
             if isPlaying{
                 stopAll()
             }
-            framePointer = sender.tag
-            print("tag",framePointer)
-            let frame = Template.Frames[framePointer]
+            Layout.currentFrame = sender.tag
+            let frame = Template.Frames[Layout.currentFrame]
             
-            Template.playerLayers[framePointer].player = AVPlayer()
+            Template.playerLayers[Layout.currentFrame].player = nil
+            
             Capture.setCaptureLayer(frame)
             Capture.captureSession.startRunning()
             
@@ -79,9 +90,10 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         }
     }
     
+    
     func countdownExpires() {
         filename = randomStringWithLength(5) as String
-        Capture.start(self, filename:filename)
+        Capture.start(filename)
         
         playButton.hidden = true
         stopRecordButton.frame = playButton.bounds
@@ -98,43 +110,72 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         Capture.stop()
     }
     
+    //METRONOME
+    @IBAction func openMetronomeWindow(sender: AnyObject) {
+        MetronomeView.timer = metronomeTimer
+        self.presentViewController(MetronomeView, animated: true, completion: nil)
+    }
+    
+    //IMPORT
     func importVideo(sender:UIButton){
-        print("import video")
+        print("IMPORT VIDEO")
+        Layout.currentFrame = sender.tag
         let Local = ImportViewController()
         self.presentViewController(Local, animated: true, completion: nil)
     }
+    
+    //INVITE
     func inviteFriend(sender:UIButton){
-        print("invite friend")
+        print("INVITE FRIEND")
     }
+    
+    //ADD Audio Effects
     func addAudioEffects(sender:UIButton){
-        print("add audio effects")
+        print("ADD AUDIO EFFECTS")
+        Layout.currentFrame = sender.tag
+        let AudioEffects = AudioEffectsController()
+        self.presentViewController(AudioEffects, animated: true, completion: nil)
     }
     
     //PLAYBACK
     @IBAction func playVideo(sender: AnyObject) {
-        playAll()
+        if Capture.captureSession.running == false{
+            playAll()
+        }
     }
     func playAll(){
+        minutes.text = "00"; seconds.text = "00"
+        if DurationTimer.isRunning {DurationTimer.stop()}
+        if stopTimer.isRunning {stopTimer.stop()}
+        
         var duration = CMTimeGetSeconds(Template.duration)
         duration = Double(round(10*duration)/10)
-        for layer in Template.playerLayers{
-            layer.player?.seekToTime(kCMTimeZero)
-            layer.player?.play()
-        }
-        if duration != 0.0 || Capture.captureSession.running  == true{
+        
+        if duration > 0.0 {
+            for layer in Template.playerLayers{
+                layer.player?.seekToTime(kCMTimeZero)
+                layer.player?.play()
+            }
             DurationTimer.setupDurationTimer(self)
             DurationTimer.start()
             for btnView in Template.frameButtons{
                 btnView.hidden = true
             }
+            isPlaying = true
+            
+            if Capture.captureSession.running == false{
+                stopTimer.setupStopTimer(duration, delegate: self)
+                stopTimer.start()
+            }
+        }else{
+            if Capture.captureSession.running == true{
+                DurationTimer.setupDurationTimer(self)
+                DurationTimer.start()
+                for btnView in Template.frameButtons{
+                    btnView.hidden = true
+                }
+            }
         }
-        //stopper
-        if duration != 0.0 && Capture.captureSession.running == false{
-            let stopTimer = timerController()
-            stopTimer.setupStopTimer(duration, delegate: self)
-            stopTimer.start()
-        }
-        isPlaying = true
     }
     func stopAll(){
         isPlaying = false
@@ -152,12 +193,8 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     func timeUpdate(h: Int, m: Int, s: Int) {
         var mstring = "\(m)"
         var sstring = "\(s)"
-        if s<10 {
-            sstring = "0\(s)"
-        }
-        if m<10 {
-            mstring = "0\(m)"
-        }
+        if s<10 {sstring = "0\(s)"}
+        if m<10 {mstring = "0\(m)"}
         minutes.text = mstring
         seconds.text = sstring
     }
@@ -167,25 +204,34 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
     
     //CAPTURE DELEGATES
     func captureOutput(captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAtURL fileURL: NSURL!, fromConnections connections: [AnyObject]!) {
-        NSLog("recording started")
+        NSLog("[RECORD] capture started")
         isRecording = true
+        
+        if MetronomeView.metronomeSwitch != nil && MetronomeView.metronomeSwitch.on {
+            metronomeTimer.start()
+        }
         
         playAll()
     }
     func captureOutput(captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAtURL outputFileURL: NSURL!, fromConnections connections: [AnyObject]!, error: NSError!) {
-        NSLog("recording Finished")
+        if error != nil {
+            print(error)
+        }
         isRecording = false
+        let recordingFilename = "Recording/\(outputFileURL.lastPathComponent!)"
         
-//        let croppedVideo = Cropper.crop(outputFileURL, frame: Frame, captureLayer: Capture.layer, filename: filename).path!
+        if MetronomeView.metronomeSwitch != nil && MetronomeView.metronomeSwitch.on {
+            metronomeTimer.stop()
+        }
         
-        let filter = NSPredicate(format: "tag == %@", NSNumber(integer: framePointer))
+        NSLog("[RECORD] capture finished -> \(recordingFilename)")
+        let filter = NSPredicate(format: "tag == %@", NSNumber(integer: Layout.currentFrame))
         let currentFrameVid = db.fetch("Recordings", predicate: filter)
-        let recordingPath = NSString(string: outputFileURL.absoluteString)
         if currentFrameVid.count>0{
             db.update("Recordings", predicate: filter, value: nil, key: "tag")
         }
-        db.insert("Recordings", values: ["tag":framePointer , "path":recordingPath])
-        
+        db.insert("Recordings", values: ["tag":Layout.currentFrame , "record":NSString(string: recordingFilename)])
+
         Capture.layer.removeFromSuperlayer()
         self.stopRecordButton.hidden = true
         self.playButton.hidden = false
@@ -206,4 +252,15 @@ class RecordingViewController: UIViewController, AVCaptureFileOutputRecordingDel
         return randomString
     }
 
+    @IBAction func SAVE(sender: AnyObject) {
+        print("SAVE")
+//        let Saver = SaveProjectController()
+//        Saver.Layout = Template.Layout
+//        self.presentViewController(Saver, animated: true, completion: nil)
+        
+        let vc = SaveProjectController(nibName: "SaveProjectController", bundle: nil);
+        vc.Layout = Template.Layout
+        self.navigationController?.pushViewController(vc, animated: true);
+        self.presentViewController(vc, animated: true, completion: nil);
+    }
 }

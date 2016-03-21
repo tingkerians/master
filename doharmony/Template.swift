@@ -16,21 +16,24 @@ class TemplateController{
     
     init(layout:UIView, defaultLayout:UIView){
         Layout = layout
+        playerLayers = []
+        frameButtons = []
         let fetchTemplate = db.fetch("Layout", predicate: NSPredicate(format: "isSubview == %@", false))
         if fetchTemplate.count>0{
             print("use selected layout")
             let template = fetchTemplate[0]
             let W = template.valueForKey("width") as! CGFloat
             let H = template.valueForKey("height") as! CGFloat
-            print("template (\(fetchTemplate.count)):",W,H)
             
             let fetchSubviews = db.fetch("Layout", predicate: NSPredicate(format: "isSubview == %@", true))
             var index = 0
             for subview in fetchSubviews{
-                let w = subview.valueForKey("width") as! CGFloat * (Layout.bounds.width/W)
-                let h = subview.valueForKey("height") as! CGFloat * (Layout.bounds.height/H)
-                let x = subview.valueForKey("x") as! CGFloat  * (Layout.bounds.width/W)
-                let y = subview.valueForKey("y") as! CGFloat * (Layout.bounds.height/H)
+                var x = subview.valueForKey("x") as! CGFloat  * (Layout.bounds.width/W)
+                var y = subview.valueForKey("y") as! CGFloat * (Layout.bounds.height/H)
+                var w = subview.valueForKey("width") as! CGFloat * (Layout.bounds.width/W)
+                var h = subview.valueForKey("height") as! CGFloat * (Layout.bounds.height/H)
+                
+                x-=2;y-=2;w+=4;h+=4;
                 
                 let frame = UIView(frame: CGRectMake(x,y,w,h))
                 frame.backgroundColor = UIColor.blackColor()
@@ -48,13 +51,14 @@ class TemplateController{
         let W = layout.frame.width
         let H = layout.frame.height
         var index = 0
-        for subview in layout.subviews {
-            let x = subview.frame.origin.x * (Layout.bounds.width/W)
-            let y = subview.frame.origin.y * (Layout.bounds.height/H)
-            let w = subview.frame.width * (Layout.bounds.width/W)
-            let h = subview.frame.height * (Layout.bounds.height/H)
-            let frame = UIView(frame: CGRectMake(x,y,w,h))
-            initFrameArrays(frame, tag: index)
+        for var subview in layout.subviews {
+            var x = subview.frame.origin.x * (Layout.bounds.width/W)
+            var y = subview.frame.origin.y * (Layout.bounds.height/H)
+            var w = subview.frame.width * (Layout.bounds.width/W)
+            var h = subview.frame.height * (Layout.bounds.height/H)
+            x-=2;y-=2;w+=4;h+=4;
+            subview = UIView(frame: CGRectMake(x,y,w,h))
+            initFrameArrays(subview, tag: index)
             index++
         }
     }
@@ -62,7 +66,7 @@ class TemplateController{
     func initFrameArrays(frame:UIView, tag:Int){
         frame.backgroundColor = UIColor.blackColor()
         frame.tag = tag
-        playerLayers.append(AVPlayerLayer(player:AVPlayer()))
+        playerLayers.append(AVPlayerLayer())
         frameButtons.append(UIView())
         Frames.append(frame)
         Layout.addSubview(frame)
@@ -77,15 +81,18 @@ class TemplateController{
             var player = AVPlayer()
             
             if data.count>0{
-                let path = data[0].valueForKey("path") as! String
-                let url = NSURL(string: path)!
+                let filename = data[0].valueForKey("record") as! String
+                let path = env.documentFolder.stringByAppendingPathComponent("/\(filename)")
+                let url = NSURL(fileURLWithPath: path)
                 let testAsset = AVAsset(URL: url)
-                if testAsset.tracksWithMediaType(AVMediaTypeVideo).count > 0{
-                    if testAsset.duration > duration{
-                        duration = testAsset.duration
+                
+                if NSFileManager.defaultManager().fileExistsAtPath(path) {
+                    if testAsset.duration > self.duration{
+                        self.duration = testAsset.duration
                     }
                     player = AVPlayer(URL: url)
                     frameHasVideo = true
+                    
                 }
             }
             
@@ -151,6 +158,7 @@ class TemplateController{
         buttonsView.addSubview(recordButton)
         
         if frameHasVideo{
+            afxButton.tag = tag
             buttonsView.addSubview(afxButton)
         }
         

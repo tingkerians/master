@@ -132,11 +132,11 @@ class timerController:NSObject{
     //durationtimer
     func durationtimer(){
         counter++
-        if counter == 10{
+        if counter == 60{
             counter = 0
             minute++
         }
-        if minute == 10{
+        if minute == 60{
             minute = 0
             hour++
         }

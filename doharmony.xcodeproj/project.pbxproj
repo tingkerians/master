@@ -20,6 +20,18 @@
 		7620FBC31C913AEF00B8C5A8 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7620FBC01C913AEF00B8C5A8 /* Field.swift */; };
 		7620FBC41C913AEF00B8C5A8 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7620FBC11C913AEF00B8C5A8 /* Validator.swift */; };
 		7620FBC51C913AEF00B8C5A8 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7620FBC21C913AEF00B8C5A8 /* ValidationRule.swift */; };
+		762AACEB1C9D1A05004516A2 /* AudioEffectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762AACE91C9D1A05004516A2 /* AudioEffectsController.swift */; };
+		762AACEC1C9D1A05004516A2 /* AudioEffectsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762AACEA1C9D1A05004516A2 /* AudioEffectsController.xib */; };
+		762AACF01C9D1A30004516A2 /* SaveProjectController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762AACEE1C9D1A30004516A2 /* SaveProjectController.xib */; };
+		762AACF11C9D1A30004516A2 /* SaveProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762AACEF1C9D1A30004516A2 /* SaveProjectController.swift */; };
+		762AACF71C9D1A81004516A2 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762AACF31C9D1A81004516A2 /* ImportViewController.swift */; };
+		762AACF81C9D1A81004516A2 /* ImportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762AACF41C9D1A81004516A2 /* ImportViewController.xib */; };
+		762AACF91C9D1A81004516A2 /* ImportViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762AACF51C9D1A81004516A2 /* ImportViewTableCell.swift */; };
+		762AACFA1C9D1A81004516A2 /* ImportViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762AACF61C9D1A81004516A2 /* ImportViewTableCell.xib */; };
+		762AACFF1C9D1A91004516A2 /* MetronomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762AACFB1C9D1A91004516A2 /* MetronomeViewController.xib */; };
+		762AAD001C9D1A91004516A2 /* MetronomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762AACFC1C9D1A91004516A2 /* MetronomeViewController.swift */; };
+		762AAD011C9D1A91004516A2 /* tsak.wav in Resources */ = {isa = PBXBuildFile; fileRef = 762AACFD1C9D1A91004516A2 /* tsak.wav */; };
+		762AAD021C9D1A91004516A2 /* tsik.wav in Resources */ = {isa = PBXBuildFile; fileRef = 762AACFE1C9D1A91004516A2 /* tsik.wav */; };
 		762E478C1C94FF1A0005EF70 /* users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E478B1C94FF1A0005EF70 /* users.swift */; };
 		765071C81C7D511700798B76 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765071C71C7D511700798B76 /* test.swift */; };
 		765795631C97B17B0098B946 /* TrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7657955B1C97B17B0098B946 /* TrackDetailsViewController.swift */; };
@@ -31,6 +43,18 @@
 		765795691C97B17B0098B946 /* TrackDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765795611C97B17B0098B946 /* TrackDetailsTableViewCell.swift */; };
 		7657956A1C97B17B0098B946 /* TrackDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765795621C97B17B0098B946 /* TrackDetailsTableViewCell.xib */; };
 		765795711C97EB4D0098B946 /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765795701C97EB4D0098B946 /* GSMessage.swift */; };
+		7659572D1C9D28DE009EF315 /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765957231C9D28DE009EF315 /* RecordingViewController.xib */; };
+		7659572E1C9D28DE009EF315 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765957241C9D28DE009EF315 /* RecordingViewController.swift */; };
+		7659572F1C9D28DE009EF315 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765957251C9D28DE009EF315 /* Template.swift */; };
+		765957301C9D28DE009EF315 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765957261C9D28DE009EF315 /* Timer.swift */; };
+		765957311C9D28DE009EF315 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765957271C9D28DE009EF315 /* Capture.swift */; };
+		765957321C9D28DE009EF315 /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765957281C9D28DE009EF315 /* Crop.swift */; };
+		765957331C9D28DE009EF315 /* RecordingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765957291C9D28DE009EF315 /* RecordingData.swift */; };
+		765957341C9D28DE009EF315 /* LocalRecordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659572A1C9D28DE009EF315 /* LocalRecordings.swift */; };
+		765957351C9D28DE009EF315 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659572B1C9D28DE009EF315 /* Merge.swift */; };
+		765957361C9D28DE009EF315 /* CameraRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659572C1C9D28DE009EF315 /* CameraRoll.swift */; };
+		765957391C9D2A64009EF315 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765957371C9D2A64009EF315 /* TemplateViewController.swift */; };
+		7659573A1C9D2A64009EF315 /* TemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765957381C9D2A64009EF315 /* TemplateViewController.xib */; };
 		765981171C8FF48900E3E1EF /* authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765981161C8FF48900E3E1EF /* authentication.swift */; };
 		7659811B1C90070800E3E1EF /* protectedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7659811A1C90070800E3E1EF /* protectedPage.swift */; };
 		765981221C90169000E3E1EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765981201C90169000E3E1EF /* LoginViewController.swift */; };
@@ -59,8 +83,6 @@
 		DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */; };
 		DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */; };
 		DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16A0B01C754C84006E4019 /* RecordViewController.swift */; };
-		DF4CBD621C7AD37100C3EE36 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4CBD601C7AD37100C3EE36 /* TemplateViewController.swift */; };
-		DF4CBD631C7AD37100C3EE36 /* TemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4CBD611C7AD37100C3EE36 /* TemplateViewController.xib */; };
 		DF526F571C6D5E63009971FF /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF526F551C6D5E63009971FF /* MyFriendsTableViewController.swift */; };
 		DF526F581C6D5E63009971FF /* MyFriendsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF526F561C6D5E63009971FF /* MyFriendsTableViewController.xib */; };
 		DF526F5D1C6D5EB6009971FF /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF526F5B1C6D5EB6009971FF /* MyFriendsTableViewCell.swift */; };
@@ -96,22 +118,6 @@
 		F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F64802181C75AFEE00F6F083 /* PostsTableViewCell.xib */; };
 		F6CC205C1C76DAE50033CF70 /* PlayTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC205A1C76DAE50033CF70 /* PlayTrackViewController.swift */; };
 		F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CC205B1C76DAE50033CF70 /* PlayTrackViewController.xib */; };
-		FB4125071C86ADB4007EC0D5 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4125051C86ADB4007EC0D5 /* ImportViewController.swift */; };
-		FB4125081C86ADB4007EC0D5 /* ImportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4125061C86ADB4007EC0D5 /* ImportViewController.xib */; };
-		FB4772E81C87D30200DE020D /* MetronomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4772E61C87D30200DE020D /* MetronomeViewController.swift */; };
-		FB4772E91C87D30200DE020D /* MetronomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4772E71C87D30200DE020D /* MetronomeViewController.xib */; };
-		FBA1A9EC1C86A417005A8F0B /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E51C86A417005A8F0B /* Template.swift */; };
-		FBA1A9ED1C86A417005A8F0B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E61C86A417005A8F0B /* Timer.swift */; };
-		FBA1A9EE1C86A417005A8F0B /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E71C86A417005A8F0B /* Capture.swift */; };
-		FBA1A9EF1C86A417005A8F0B /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E81C86A417005A8F0B /* Crop.swift */; };
-		FBA1A9F01C86A417005A8F0B /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9E91C86A417005A8F0B /* Merge.swift */; };
-		FBA1A9F11C86A417005A8F0B /* CameraRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9EA1C86A417005A8F0B /* CameraRoll.swift */; };
-		FBA1A9F21C86A417005A8F0B /* RecordingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9EB1C86A417005A8F0B /* RecordingData.swift */; };
-		FBA1A9F51C86A4F6005A8F0B /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA1A9F31C86A4F6005A8F0B /* RecordingViewController.xib */; };
-		FBA1A9F61C86A4F6005A8F0B /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A9F41C86A4F6005A8F0B /* RecordingViewController.swift */; };
-		FBA7EBE01C87C0C8007AC17A /* LocalRecordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7EBDF1C87C0C8007AC17A /* LocalRecordings.swift */; };
-		FBA7EBF01C87D079007AC17A /* tsak.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBA7EBEE1C87D079007AC17A /* tsak.wav */; };
-		FBA7EBF11C87D079007AC17A /* tsik.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBA7EBEF1C87D079007AC17A /* tsik.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +298,18 @@
 		7620FBC01C913AEF00B8C5A8 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		7620FBC11C913AEF00B8C5A8 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7620FBC21C913AEF00B8C5A8 /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		762AACE91C9D1A05004516A2 /* AudioEffectsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEffectsController.swift; sourceTree = "<group>"; };
+		762AACEA1C9D1A05004516A2 /* AudioEffectsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioEffectsController.xib; sourceTree = "<group>"; };
+		762AACEE1C9D1A30004516A2 /* SaveProjectController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveProjectController.xib; sourceTree = "<group>"; };
+		762AACEF1C9D1A30004516A2 /* SaveProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveProjectController.swift; sourceTree = "<group>"; };
+		762AACF31C9D1A81004516A2 /* ImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		762AACF41C9D1A81004516A2 /* ImportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportViewController.xib; sourceTree = "<group>"; };
+		762AACF51C9D1A81004516A2 /* ImportViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewTableCell.swift; sourceTree = "<group>"; };
+		762AACF61C9D1A81004516A2 /* ImportViewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportViewTableCell.xib; sourceTree = "<group>"; };
+		762AACFB1C9D1A91004516A2 /* MetronomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MetronomeViewController.xib; sourceTree = "<group>"; };
+		762AACFC1C9D1A91004516A2 /* MetronomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeViewController.swift; sourceTree = "<group>"; };
+		762AACFD1C9D1A91004516A2 /* tsak.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tsak.wav; sourceTree = "<group>"; };
+		762AACFE1C9D1A91004516A2 /* tsik.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tsik.wav; sourceTree = "<group>"; };
 		762E478B1C94FF1A0005EF70 /* users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = users.swift; sourceTree = "<group>"; };
 		765071C71C7D511700798B76 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		7657955B1C97B17B0098B946 /* TrackDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +321,18 @@
 		765795611C97B17B0098B946 /* TrackDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		765795621C97B17B0098B946 /* TrackDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		765795701C97EB4D0098B946 /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
+		765957231C9D28DE009EF315 /* RecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
+		765957241C9D28DE009EF315 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		765957251C9D28DE009EF315 /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		765957261C9D28DE009EF315 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		765957271C9D28DE009EF315 /* Capture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
+		765957281C9D28DE009EF315 /* Crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+		765957291C9D28DE009EF315 /* RecordingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingData.swift; sourceTree = "<group>"; };
+		7659572A1C9D28DE009EF315 /* LocalRecordings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalRecordings.swift; sourceTree = "<group>"; };
+		7659572B1C9D28DE009EF315 /* Merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merge.swift; sourceTree = "<group>"; };
+		7659572C1C9D28DE009EF315 /* CameraRoll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRoll.swift; sourceTree = "<group>"; };
+		765957371C9D2A64009EF315 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		765957381C9D2A64009EF315 /* TemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplateViewController.xib; sourceTree = "<group>"; };
 		765981161C8FF48900E3E1EF /* authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authentication.swift; sourceTree = "<group>"; };
 		7659811A1C90070800E3E1EF /* protectedPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protectedPage.swift; sourceTree = "<group>"; };
 		765981201C90169000E3E1EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -363,8 +393,6 @@
 		DF101C011C6C46D10006B4D3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		DF101C021C6C46D10006B4D3 /* MyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProfileViewController.xib; sourceTree = "<group>"; };
 		DF16A0B01C754C84006E4019 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		DF4CBD601C7AD37100C3EE36 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
-		DF4CBD611C7AD37100C3EE36 /* TemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplateViewController.xib; sourceTree = "<group>"; };
 		DF526F551C6D5E63009971FF /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
 		DF526F561C6D5E63009971FF /* MyFriendsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFriendsTableViewController.xib; sourceTree = "<group>"; };
 		DF526F5B1C6D5EB6009971FF /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
@@ -406,22 +434,6 @@
 		F64802181C75AFEE00F6F083 /* PostsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
 		F6CC205A1C76DAE50033CF70 /* PlayTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayTrackViewController.swift; sourceTree = "<group>"; };
 		F6CC205B1C76DAE50033CF70 /* PlayTrackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayTrackViewController.xib; sourceTree = "<group>"; };
-		FB4125051C86ADB4007EC0D5 /* ImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
-		FB4125061C86ADB4007EC0D5 /* ImportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportViewController.xib; sourceTree = "<group>"; };
-		FB4772E61C87D30200DE020D /* MetronomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeViewController.swift; sourceTree = "<group>"; };
-		FB4772E71C87D30200DE020D /* MetronomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MetronomeViewController.xib; sourceTree = "<group>"; };
-		FBA1A9E51C86A417005A8F0B /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
-		FBA1A9E61C86A417005A8F0B /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
-		FBA1A9E71C86A417005A8F0B /* Capture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
-		FBA1A9E81C86A417005A8F0B /* Crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
-		FBA1A9E91C86A417005A8F0B /* Merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merge.swift; sourceTree = "<group>"; };
-		FBA1A9EA1C86A417005A8F0B /* CameraRoll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRoll.swift; sourceTree = "<group>"; };
-		FBA1A9EB1C86A417005A8F0B /* RecordingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingData.swift; sourceTree = "<group>"; };
-		FBA1A9F31C86A4F6005A8F0B /* RecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
-		FBA1A9F41C86A4F6005A8F0B /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
-		FBA7EBDF1C87C0C8007AC17A /* LocalRecordings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalRecordings.swift; sourceTree = "<group>"; };
-		FBA7EBEE1C87D079007AC17A /* tsak.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tsak.wav; sourceTree = "<group>"; };
-		FBA7EBEF1C87D079007AC17A /* tsik.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tsik.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -527,6 +539,24 @@
 				76BF5E6B1C87D66A00F5C1C3 /* BestViewController.swift */,
 			);
 			name = Popular/Best;
+			sourceTree = "<group>";
+		};
+		762AACED1C9D1A0C004516A2 /* Audio Effects */ = {
+			isa = PBXGroup;
+			children = (
+				762AACE91C9D1A05004516A2 /* AudioEffectsController.swift */,
+				762AACEA1C9D1A05004516A2 /* AudioEffectsController.xib */,
+			);
+			name = "Audio Effects";
+			sourceTree = "<group>";
+		};
+		762AACF21C9D1A35004516A2 /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				762AACEE1C9D1A30004516A2 /* SaveProjectController.xib */,
+				762AACEF1C9D1A30004516A2 /* SaveProjectController.swift */,
+			);
+			name = Save;
 			sourceTree = "<group>";
 		};
 		765B23231C7FF8AD0089FF48 /* Products */ = {
@@ -651,18 +681,20 @@
 		DF16A0B71C754FD1006E4019 /* Recording */ = {
 			isa = PBXGroup;
 			children = (
-				FBA1A9F31C86A4F6005A8F0B /* RecordingViewController.xib */,
-				FBA1A9F41C86A4F6005A8F0B /* RecordingViewController.swift */,
-				FBA1A9E51C86A417005A8F0B /* Template.swift */,
-				FBA1A9E61C86A417005A8F0B /* Timer.swift */,
-				FBA1A9E71C86A417005A8F0B /* Capture.swift */,
-				FBA1A9E81C86A417005A8F0B /* Crop.swift */,
-				FBA1A9E91C86A417005A8F0B /* Merge.swift */,
-				FBA1A9EA1C86A417005A8F0B /* CameraRoll.swift */,
-				FBA1A9EB1C86A417005A8F0B /* RecordingData.swift */,
-				FBA7EBDF1C87C0C8007AC17A /* LocalRecordings.swift */,
+				765957231C9D28DE009EF315 /* RecordingViewController.xib */,
+				765957241C9D28DE009EF315 /* RecordingViewController.swift */,
+				765957251C9D28DE009EF315 /* Template.swift */,
+				765957261C9D28DE009EF315 /* Timer.swift */,
+				765957271C9D28DE009EF315 /* Capture.swift */,
+				765957281C9D28DE009EF315 /* Crop.swift */,
+				765957291C9D28DE009EF315 /* RecordingData.swift */,
+				7659572A1C9D28DE009EF315 /* LocalRecordings.swift */,
+				7659572B1C9D28DE009EF315 /* Merge.swift */,
+				7659572C1C9D28DE009EF315 /* CameraRoll.swift */,
 				FB4772D81C87D2D600DE020D /* Metronome */,
 				FB4124F71C86AD7D007EC0D5 /* Local Import */,
+				762AACED1C9D1A0C004516A2 /* Audio Effects */,
+				762AACF21C9D1A35004516A2 /* Save */,
 			);
 			name = Recording;
 			sourceTree = "<group>";
@@ -670,8 +702,8 @@
 		DF4CBD5F1C7AD30A00C3EE36 /* Template */ = {
 			isa = PBXGroup;
 			children = (
-				DF4CBD601C7AD37100C3EE36 /* TemplateViewController.swift */,
-				DF4CBD611C7AD37100C3EE36 /* TemplateViewController.xib */,
+				765957371C9D2A64009EF315 /* TemplateViewController.swift */,
+				765957381C9D2A64009EF315 /* TemplateViewController.xib */,
 			);
 			name = Template;
 			sourceTree = "<group>";
@@ -882,8 +914,10 @@
 		FB4124F71C86AD7D007EC0D5 /* Local Import */ = {
 			isa = PBXGroup;
 			children = (
-				FB4125051C86ADB4007EC0D5 /* ImportViewController.swift */,
-				FB4125061C86ADB4007EC0D5 /* ImportViewController.xib */,
+				762AACF31C9D1A81004516A2 /* ImportViewController.swift */,
+				762AACF41C9D1A81004516A2 /* ImportViewController.xib */,
+				762AACF51C9D1A81004516A2 /* ImportViewTableCell.swift */,
+				762AACF61C9D1A81004516A2 /* ImportViewTableCell.xib */,
 			);
 			name = "Local Import";
 			sourceTree = "<group>";
@@ -891,10 +925,10 @@
 		FB4772D81C87D2D600DE020D /* Metronome */ = {
 			isa = PBXGroup;
 			children = (
-				FB4772E61C87D30200DE020D /* MetronomeViewController.swift */,
-				FB4772E71C87D30200DE020D /* MetronomeViewController.xib */,
-				FBA7EBEE1C87D079007AC17A /* tsak.wav */,
-				FBA7EBEF1C87D079007AC17A /* tsik.wav */,
+				762AACFB1C9D1A91004516A2 /* MetronomeViewController.xib */,
+				762AACFC1C9D1A91004516A2 /* MetronomeViewController.swift */,
+				762AACFD1C9D1A91004516A2 /* tsak.wav */,
+				762AACFE1C9D1A91004516A2 /* tsik.wav */,
 			);
 			name = Metronome;
 			sourceTree = "<group>";
@@ -1172,7 +1206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBA7EBF01C87D079007AC17A /* tsak.wav in Resources */,
+				762AACF01C9D1A30004516A2 /* SaveProjectController.xib in Resources */,
 				F64802201C75AFEE00F6F083 /* PostsTableViewCell.xib in Resources */,
 				DF6B70611C7AE33900B655B6 /* UserDetailsViewController.xib in Resources */,
 				76BF5E601C87D50100F5C1C3 /* RecentTableViewCell.xib in Resources */,
@@ -1182,33 +1216,36 @@
 				7620FBBF1C913AC300B8C5A8 /* SignUpViewController.xib in Resources */,
 				765B23001C7FF2FC0089FF48 /* Localizable.strings in Resources */,
 				765795681C97B17B0098B946 /* PlayerTableViewCell.xib in Resources */,
+				762AACF81C9D1A81004516A2 /* ImportViewController.xib in Resources */,
 				F6CC205D1C76DAE50033CF70 /* PlayTrackViewController.xib in Resources */,
 				765981231C90169000E3E1EF /* LoginViewController.xib in Resources */,
+				762AACFA1C9D1A81004516A2 /* ImportViewTableCell.xib in Resources */,
 				DF6B705C1C7ADF2200B655B6 /* FollowingsTableViewCell.xib in Resources */,
+				762AAD021C9D1A91004516A2 /* tsik.wav in Resources */,
+				762AAD011C9D1A91004516A2 /* tsak.wav in Resources */,
 				DF526F5E1C6D5EB6009971FF /* MyFriendsTableViewCell.xib in Resources */,
-				FB4125081C86ADB4007EC0D5 /* ImportViewController.xib in Resources */,
 				DF526F741C6D9EBC009971FF /* AllMembersTableViewController.xib in Resources */,
 				DFF4CBBE1C6B0BD2008973D3 /* LaunchScreen.storyboard in Resources */,
 				DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */,
-				FBA7EBF11C87D079007AC17A /* tsik.wav in Resources */,
 				DF6B70651C7AEA0400B655B6 /* UserTracksTableViewCell.xib in Resources */,
 				DF101BE71C6C18C00006B4D3 /* LibrariesTableViewController.xib in Resources */,
 				DF6B70581C7ADD9D00B655B6 /* FollowingsTableViewController.xib in Resources */,
 				DFF4CBBB1C6B0BD2008973D3 /* Assets.xcassets in Resources */,
 				DF526F781C6D9FBB009971FF /* AllMembersTableViewCell.xib in Resources */,
 				DF101BF21C6C197F0006B4D3 /* PopularBestTableViewController.xib in Resources */,
+				762AACEC1C9D1A05004516A2 /* AudioEffectsController.xib in Resources */,
 				76BF5E661C87D63000F5C1C3 /* RecentViewController.xib in Resources */,
 				DF101BEC1C6C19080006B4D3 /* ProjectsTableViewController.xib in Resources */,
 				761885291C96974D00EEAAAF /* NoInternetAccessViewController.xib in Resources */,
 				DF526F581C6D5E63009971FF /* MyFriendsTableViewController.xib in Resources */,
+				7659572D1C9D28DE009EF315 /* RecordingViewController.xib in Resources */,
 				DFF4CBB91C6B0BD2008973D3 /* Main.storyboard in Resources */,
 				765795641C97B17B0098B946 /* TrackDetailsViewController.xib in Resources */,
 				DF101BD91C6C14310006B4D3 /* LocalTableViewCell.xib in Resources */,
 				DF069ABB1C7D3F1B0004702F /* LocalViewController.xib in Resources */,
-				DF4CBD631C7AD37100C3EE36 /* TemplateViewController.xib in Resources */,
 				F648021E1C75AFEE00F6F083 /* PostsTableViewController.xib in Resources */,
-				FB4772E91C87D30200DE020D /* MetronomeViewController.xib in Resources */,
-				FBA1A9F51C86A4F6005A8F0B /* RecordingViewController.xib in Resources */,
+				7659573A1C9D2A64009EF315 /* TemplateViewController.xib in Resources */,
+				762AACFF1C9D1A91004516A2 /* MetronomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1234,43 +1271,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				7615F2871C75A26700ACBD3E /* doharmony.xcdatamodeld in Sources */,
+				765957331C9D28DE009EF315 /* RecordingData.swift in Sources */,
 				DF526F731C6D9EBC009971FF /* AllMembersTableViewController.swift in Sources */,
 				765071C81C7D511700798B76 /* test.swift in Sources */,
 				DF526F771C6D9FBB009971FF /* AllMembersTableViewCell.swift in Sources */,
 				7659811B1C90070800E3E1EF /* protectedPage.swift in Sources */,
-				FBA1A9F61C86A4F6005A8F0B /* RecordingViewController.swift in Sources */,
+				7659572F1C9D28DE009EF315 /* Template.swift in Sources */,
 				DFF4CBB61C6B0BD2008973D3 /* HomeViewController.swift in Sources */,
-				FBA1A9F11C86A417005A8F0B /* CameraRoll.swift in Sources */,
 				DFF4CC021C6B1BCA008973D3 /* TabBarController.swift in Sources */,
 				DF101BEB1C6C19080006B4D3 /* ProjectsTableViewController.swift in Sources */,
 				765795631C97B17B0098B946 /* TrackDetailsViewController.swift in Sources */,
 				DF101BD81C6C14310006B4D3 /* LocalTableViewCell.swift in Sources */,
 				DF526F5D1C6D5EB6009971FF /* MyFriendsTableViewCell.swift in Sources */,
 				DF6B70571C7ADD9D00B655B6 /* FollowingsTableViewController.swift in Sources */,
+				762AACF11C9D1A30004516A2 /* SaveProjectController.swift in Sources */,
 				DF101BF11C6C197F0006B4D3 /*  PopularBestTableViewController.swift in Sources */,
 				DFF4CBB41C6B0BD2008973D3 /* AppDelegate.swift in Sources */,
+				765957321C9D28DE009EF315 /* Crop.swift in Sources */,
 				765795651C97B17B0098B946 /* CommentTableViewCell.swift in Sources */,
+				762AACF71C9D1A81004516A2 /* ImportViewController.swift in Sources */,
 				76BF5E651C87D63000F5C1C3 /* RecentViewController.swift in Sources */,
 				76BF5E5F1C87D50100F5C1C3 /* RecentTableViewCell.swift in Sources */,
 				DFF4CBED1C6B0CF2008973D3 /* CAPSPageMenu.swift in Sources */,
-				DF4CBD621C7AD37100C3EE36 /* TemplateViewController.swift in Sources */,
 				76070C6E1C93F3CC000E5F11 /* comments.swift in Sources */,
 				765B22FB1C7FF1810089FF48 /* config.swift in Sources */,
-				FBA7EBE01C87C0C8007AC17A /* LocalRecordings.swift in Sources */,
 				761885281C96974D00EEAAAF /* NoInternetAccessViewController.swift in Sources */,
-				FBA1A9F01C86A417005A8F0B /* Merge.swift in Sources */,
 				F648021F1C75AFEE00F6F083 /* PostsTableViewCell.swift in Sources */,
 				76BF5E6D1C87D66A00F5C1C3 /* BestViewController.swift in Sources */,
-				FB4772E81C87D30200DE020D /* MetronomeViewController.swift in Sources */,
+				765957301C9D28DE009EF315 /* Timer.swift in Sources */,
 				765981221C90169000E3E1EF /* LoginViewController.swift in Sources */,
 				DF16A0B11C754C84006E4019 /* RecordViewController.swift in Sources */,
 				7620FBC41C913AEF00B8C5A8 /* Validator.swift in Sources */,
 				DF069ABA1C7D3F1B0004702F /* LocalViewController.swift in Sources */,
+				765957351C9D28DE009EF315 /* Merge.swift in Sources */,
+				765957361C9D28DE009EF315 /* CameraRoll.swift in Sources */,
 				F648021D1C75AFEE00F6F083 /* PostsTableViewController.swift in Sources */,
 				DF6B705B1C7ADF2200B655B6 /* FollowingsTableViewCell.swift in Sources */,
+				762AACF91C9D1A81004516A2 /* ImportViewTableCell.swift in Sources */,
 				7620FBC31C913AEF00B8C5A8 /* Field.swift in Sources */,
+				762AACEB1C9D1A05004516A2 /* AudioEffectsController.swift in Sources */,
 				F6CC205C1C76DAE50033CF70 /* PlayTrackViewController.swift in Sources */,
 				DF6B70601C7AE33900B655B6 /* UserDetailsViewController.swift in Sources */,
+				765957341C9D28DE009EF315 /* LocalRecordings.swift in Sources */,
 				DFF4CBFE1C6B1A47008973D3 /* FriendsViewController.swift in Sources */,
 				76BF5E691C87D65200F5C1C3 /* PopularViewController.swift in Sources */,
 				765795671C97B17B0098B946 /* PlayerTableViewCell.swift in Sources */,
@@ -1280,19 +1322,17 @@
 				DF526F611C6D73D1009971FF /* LibrariesTableViewCell.swift in Sources */,
 				765795691C97B17B0098B946 /* TrackDetailsTableViewCell.swift in Sources */,
 				7620FBC51C913AEF00B8C5A8 /* ValidationRule.swift in Sources */,
-				FBA1A9ED1C86A417005A8F0B /* Timer.swift in Sources */,
-				FBA1A9EC1C86A417005A8F0B /* Template.swift in Sources */,
-				FBA1A9F21C86A417005A8F0B /* RecordingData.swift in Sources */,
 				765981171C8FF48900E3E1EF /* authentication.swift in Sources */,
 				DFF4CBFC1C6B1988008973D3 /* ProfileViewController.swift in Sources */,
+				762AAD001C9D1A91004516A2 /* MetronomeViewController.swift in Sources */,
 				DF101C031C6C46D10006B4D3 /* MyProfileViewController.swift in Sources */,
-				FB4125071C86ADB4007EC0D5 /* ImportViewController.swift in Sources */,
 				DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */,
-				FBA1A9EE1C86A417005A8F0B /* Capture.swift in Sources */,
+				7659572E1C9D28DE009EF315 /* RecordingViewController.swift in Sources */,
 				762E478C1C94FF1A0005EF70 /* users.swift in Sources */,
 				76BF5E621C87D5FF00F5C1C3 /* tracks.swift in Sources */,
+				765957311C9D28DE009EF315 /* Capture.swift in Sources */,
 				7620FBBE1C913AC300B8C5A8 /* SignUpViewController.swift in Sources */,
-				FBA1A9EF1C86A417005A8F0B /* Crop.swift in Sources */,
+				765957391C9D2A64009EF315 /* TemplateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

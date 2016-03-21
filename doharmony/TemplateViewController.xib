@@ -8,10 +8,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateViewController" customModule="doharmony" customModuleProvider="target">
             <connections>
-                <outlet property="LayoutSelectionView" destination="i5M-Pr-FkT" id="7RS-ls-l98"/>
-                <outlet property="TemplateScrollView" destination="sAI-dZ-chV" id="4el-dN-SEf"/>
-                <outlet property="defaultTemplate" destination="hWH-UX-UbF" id="d6X-rc-7OM"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="LayoutSelectionView" destination="i5M-Pr-FkT" id="DWI-0k-JH4"/>
+                <outlet property="TemplateScrollView" destination="sAI-dZ-chV" id="gMc-De-T1D"/>
+                <outlet property="defaultTemplate" destination="hWH-UX-UbF" id="SCU-d9-UoL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="G94-2Z-P9D"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -509,35 +509,35 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-dC-jZ3">
                             <rect key="frame" x="158" y="650" width="104" height="104"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7en-Mc-Al0">
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7en-Mc-Al0">
                                     <rect key="frame" x="53" y="2" width="49" height="32"/>
                                     <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="7en-Mc-Al0" secondAttribute="height" multiplier="49:32" id="BuH-tz-my3"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-7h-NzR">
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-7h-NzR">
                                     <rect key="frame" x="2" y="70" width="49" height="32"/>
                                     <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="EW5-7h-NzR" secondAttribute="height" multiplier="49:32" id="D8e-io-N8u"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-k2-355">
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-k2-355">
                                     <rect key="frame" x="53" y="36" width="49" height="32"/>
                                     <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="fvr-k2-355" secondAttribute="height" multiplier="49:32" id="MNE-8U-Qm2"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRO-gK-Q7g">
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WRO-gK-Q7g">
                                     <rect key="frame" x="2" y="2" width="49" height="66"/>
                                     <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="WRO-gK-Q7g" secondAttribute="height" multiplier="49:66" id="9fR-uj-0F1"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apo-WG-KMR">
+                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apo-WG-KMR">
                                     <rect key="frame" x="53" y="70" width="49" height="32"/>
                                     <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>

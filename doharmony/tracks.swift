@@ -48,13 +48,22 @@ class Tracks{
     
     static func createTrackFolder(){
         let fileManger = NSFileManager.defaultManager()
-        let createpath = env.documentFolder.stringByAppendingPathComponent("\(env.tracksFolder)")
+        
+        let trackPath = env.documentFolder.stringByAppendingPathComponent("\(env.tracksFolder)")
+        let cropPath = env.documentFolder.stringByAppendingPathComponent("\(env.cropFolder)")
+        let recordingPath = env.documentFolder.stringByAppendingPathComponent("\(env.recordingFolder)")
+        let recordingAudioPath = env.documentFolder.stringByAppendingPathComponent("\(env.recordingFolder)/Audio")
         do {
-            try fileManger.createDirectoryAtPath(createpath, withIntermediateDirectories: false, attributes: nil)
-            //print("folder created")
+            try fileManger.createDirectoryAtPath(trackPath, withIntermediateDirectories: false, attributes: nil)
+            try fileManger.createDirectoryAtPath(recordingPath, withIntermediateDirectories: false, attributes: nil)
+            try fileManger.createDirectoryAtPath(cropPath, withIntermediateDirectories: false, attributes: nil)
+            try fileManger.createDirectoryAtPath(recordingAudioPath, withIntermediateDirectories: false, attributes: nil)
+            
         } catch {
             //print("folder already created")
         }
+        
+
     }
     
     func setCategory(category: String) -> Self {

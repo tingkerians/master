@@ -3,14 +3,18 @@ import UIKit
 
 class captureController{
     
+    var audioSession:AVAudioSession
     var captureSession:AVCaptureSession
     var output:AVCaptureMovieFileOutput
     var outputPath:NSURL
     var layer:AVCaptureVideoPreviewLayer
     var Camera:AVCaptureDeviceInput
+    var delegate:AVCaptureFileOutputRecordingDelegate!
     
     init(){
         captureSession = AVCaptureSession()
+        audioSession = AVAudioSession()
+        
         output = AVCaptureMovieFileOutput()
         captureSession.sessionPreset = AVCaptureSessionPresetHigh
         
@@ -61,9 +65,9 @@ class captureController{
     }
     
     
-    func start(delegate:AVCaptureFileOutputRecordingDelegate,filename:String){
-        let Documents = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-        let recordOutputPath = NSURL.fileURLWithPath(Documents.stringByAppendingFormat("/record-\(filename).mov"))
+    func start(filename:String){
+        let Documents = env.documentFolder as String
+        let recordOutputPath = NSURL.fileURLWithPath(Documents.stringByAppendingFormat("/\(env.recordingFolder)/record-\(filename).mov"))
         output.startRecordingToOutputFileURL(recordOutputPath, recordingDelegate: delegate)
     }
     
@@ -71,5 +75,7 @@ class captureController{
         output.stopRecording()
         captureSession.stopRunning()
     }
+    
+    
     
 }

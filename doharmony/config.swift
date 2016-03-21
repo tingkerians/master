@@ -12,6 +12,8 @@ struct env{
     
     static let documentFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
     static let tracksFolder = "Doharmony"
+    static let recordingFolder = "Recording"
+    static let cropFolder = "Crop"
     
     static let languageCode = ((NSLocale.preferredLanguages()[0]).characters.split{$0 == "-"}.map(String.init))[0]
     

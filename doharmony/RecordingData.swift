@@ -2,6 +2,7 @@
 import CoreData
 import UIKit
 
+
 class RecordingData{
     
     let app:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

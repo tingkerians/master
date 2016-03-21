@@ -1,24 +1,29 @@
 import AVFoundation
 import UIKit
 
+protocol mergeDelegate{
+    func mergeSuccess(outputFileURL:NSURL)
+}
+
 class Merge{
     
+    var delegate:mergeDelegate!
     
     func exportSingleVideo(template:UIView, assets:[AVAsset], duration:CMTime){
-        
+        NSLog("[MERGE] merging assets")
         let composition = AVMutableComposition()
         var tracks = [AVMutableCompositionTrack]()
         
         for asset:AVAsset in assets{
-            
-            if asset.tracksWithMediaType(AVMediaTypeVideo).count > 0{
+            let assetIsVideo:Bool = asset.tracksWithMediaType(AVMediaTypeVideo).count > 0
+            if assetIsVideo{
                 let video = composition.addMutableTrackWithMediaType(AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid)
                 let audio = composition.addMutableTrackWithMediaType(AVMediaTypeAudio, preferredTrackID: kCMPersistentTrackID_Invalid)
                 do{
                     try video.insertTimeRange(CMTimeRangeMake(kCMTimeZero, duration), ofTrack: asset.tracksWithMediaType(AVMediaTypeVideo)[0], atTime: kCMTimeZero)
                     try audio.insertTimeRange(CMTimeRangeMake(kCMTimeZero, duration), ofTrack: asset.tracksWithMediaType(AVMediaTypeAudio)[0], atTime: kCMTimeZero)
                 }catch{
-                    NSLog("track insertion failed")
+                    NSLog("[MERGE] track insertion failed")
                 }
                 tracks.append(video)
             }else{
@@ -26,14 +31,20 @@ class Merge{
                 do{
                     try track.insertTimeRange(CMTimeRangeMake(kCMTimeZero, duration), ofTrack: asset.tracksWithMediaType(AVMediaTypeAudio)[0], atTime: kCMTimeZero)
                 }catch{
-                    NSLog("track insertion failed")
+                    NSLog("[MERGE] track insertion failed")
                 }
             }
         }
-        //main composition
+        //main composition0
+        var renderWidth = CGFloat(Int(template.frame.width))
+        var renderHeight = CGFloat(Int(template.frame.height))
+        
+        while renderWidth%4 != 0 {renderWidth--}
+        while renderHeight%4 != 0 {renderHeight--}
+        
         let mainComposition = AVMutableVideoComposition()
         mainComposition.frameDuration = CMTimeMake(1,30)
-        mainComposition.renderSize = CGSizeMake(template.frame.width,template.frame.height)
+        mainComposition.renderSize = CGSizeMake(renderWidth,renderHeight)
         
         //instructions
         let mainInstruction = AVMutableVideoCompositionInstruction()
@@ -42,11 +53,13 @@ class Merge{
         var instructions = [AVMutableVideoCompositionLayerInstruction]()
         var index = 0
         for subview:UIView in template.subviews {
+            
             let scaleX = (subview.frame.width / template.frame.width) / (tracks[index].naturalSize.width /  mainComposition.renderSize.width)
             let scaleY = (subview.frame.height / template.frame.height) / (tracks[index].naturalSize.height /  mainComposition.renderSize.height)
+                        
             let x = subview.frame.origin.x
             let y = subview.frame.origin.y
-            
+                        
             let scale = CGAffineTransformMakeScale(scaleX, scaleY)
             let translate = CGAffineTransformMakeTranslation(x,y)
             let transform = CGAffineTransformConcat(scale, translate)
@@ -62,7 +75,7 @@ class Merge{
         //export
         let filename = randomStringWithLength(10)
         let Documents = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-        let mergedOutputPath = NSURL.fileURLWithPath(Documents.stringByAppendingString("/merged/merge-\(filename).mov"))
+        let mergedOutputPath = NSURL.fileURLWithPath(Documents.stringByAppendingString("/\(env.tracksFolder)/merge-\(filename).mov"))
         
         let exportSession = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality)
         exportSession!.outputURL = mergedOutputPath
@@ -72,11 +85,12 @@ class Merge{
         exportSession!.exportAsynchronouslyWithCompletionHandler({
             switch exportSession!.status{
             case .Failed:
-                NSLog("export Failed")
+                NSLog("[MERGE] merge failed: \(exportSession?.error)")
             case .Cancelled:
-                NSLog("export Canceled")
+                NSLog("[MERGE] merging cancelled")
             default:
-                NSLog("export Success")
+                NSLog("[MERGE] merging success -> merge-\(filename).mov")
+                CameraRoll().save(mergedOutputPath)
             }
         })
         
