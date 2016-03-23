@@ -11,7 +11,10 @@ import UIKit
 class MyProfileViewController: UIViewController {
 
     @IBAction func LoginButton(sender: AnyObject) {
-        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+//        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        self.presentViewController(vc, animated: true, completion: nil)
+        let vc = AudioEffectsViewController(nibName: "AudioEffectsViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
         self.presentViewController(vc, animated: true, completion: nil)
         

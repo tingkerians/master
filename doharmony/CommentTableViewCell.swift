@@ -15,17 +15,21 @@ class CommentTableViewCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var showLess: UIButton!
     @IBOutlet weak var seeMore: UIButton!
-    
+    var commentHeight = 0
+
     @IBAction func showLess(sender: AnyObject){
-        self.frame.size.height = 100
+        self.frame.size.height = 80
         self.seeMore.hidden = false
         self.showLess.hidden = true
     }
     @IBAction func seeMore(sender: AnyObject) {
-        self.frame.size.height = 200
+        let myHeight = 80
+        let addHeight = commentHeight * 14
+        let totalHeight = myHeight + addHeight
+        self.frame.size.height = CGFloat(totalHeight)
         self.showLess.hidden = false
         self.seeMore.hidden = true
-        print("see more")
+        print("see more \(commentHeight)")
     }
     
     override func awakeFromNib() {
@@ -36,8 +40,8 @@ class CommentTableViewCell: UITableViewCell {
         self.seeMore.hidden = true
         // Initialization code
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
+    
+       override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

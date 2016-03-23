@@ -50,7 +50,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nex-ao-zNT">
-                        <rect key="frame" x="62" y="62" width="76" height="18"/>
+                        <rect key="frame" x="62" y="65" width="76" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="MOW-St-OwN"/>
                             <constraint firstAttribute="width" constant="76" id="coz-vR-NTH"/>
@@ -93,7 +93,7 @@
                     <constraint firstItem="cfI-8b-Slq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="h0d-IB-1mf"/>
                     <constraint firstItem="nex-ao-zNT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="62" id="hA8-6Z-U9C"/>
                     <constraint firstAttribute="bottomMargin" secondItem="0DA-ab-YXp" secondAttribute="bottom" constant="10" id="hFO-8K-YH1"/>
-                    <constraint firstAttribute="bottom" secondItem="nex-ao-zNT" secondAttribute="bottom" constant="7" id="xkh-Pw-NHt"/>
+                    <constraint firstAttribute="bottom" secondItem="nex-ao-zNT" secondAttribute="bottom" constant="4" id="xkh-Pw-NHt"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

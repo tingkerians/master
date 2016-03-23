@@ -35,8 +35,8 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300,564 views" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoZ-fy-tay">
-                        <rect key="frame" x="451" y="58" width="141" height="19"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="300,564 views" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoZ-fy-tay">
+                        <rect key="frame" x="451" y="57" width="141" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="141" id="AJD-ed-dba"/>
                             <constraint firstAttribute="height" constant="19" id="mcy-6p-aez"/>
@@ -106,7 +106,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.096858638740000003" green="0.096858638740000003" blue="0.096858638740000003" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.1518324607" green="0.1518324607" blue="0.1518324607" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="1ab-nc-8Ho" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-1" id="0tL-yL-wAJ"/>
                     <constraint firstItem="CKa-Q8-hV9" firstAttribute="top" secondItem="MoZ-fy-tay" secondAttribute="bottom" constant="23" id="811-ox-1bN"/>

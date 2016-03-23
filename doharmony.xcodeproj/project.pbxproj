@@ -78,6 +78,8 @@
 		F6283F4F1C8FC144000970D6 /* TrackDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6283F4B1C8FC144000970D6 /* TrackDetailsViewController.xib */; };
 		F6283F501C8FC144000970D6 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6283F4C1C8FC144000970D6 /* CommentTableViewCell.swift */; };
 		F6283F511C8FC144000970D6 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6283F4D1C8FC144000970D6 /* CommentTableViewCell.xib */; };
+		F63D5B431C9B90B300A12F83 /* AudioEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63D5B411C9B90B300A12F83 /* AudioEffectsViewController.swift */; };
+		F63D5B441C9B90B300A12F83 /* AudioEffectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63D5B421C9B90B300A12F83 /* AudioEffectsViewController.xib */; };
 		F63F10601C8922F20016B729 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63F105F1C8922F20016B729 /* SwiftSpinner.swift */; };
 		F63F10641C892D5A0016B729 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63F10621C892D5A0016B729 /* IndicatorViewController.swift */; };
 		F63F10651C892D5A0016B729 /* IndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63F10631C892D5A0016B729 /* IndicatorViewController.xib */; };
@@ -384,6 +386,8 @@
 		F6283F4B1C8FC144000970D6 /* TrackDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackDetailsViewController.xib; sourceTree = "<group>"; };
 		F6283F4C1C8FC144000970D6 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		F6283F4D1C8FC144000970D6 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		F63D5B411C9B90B300A12F83 /* AudioEffectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioEffectsViewController.swift; sourceTree = "<group>"; };
+		F63D5B421C9B90B300A12F83 /* AudioEffectsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioEffectsViewController.xib; sourceTree = "<group>"; };
 		F63F105F1C8922F20016B729 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftSpinner.swift; path = "../Localize-Swift/SwiftSpinner.swift"; sourceTree = "<group>"; };
 		F63F10621C892D5A0016B729 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
 		F63F10631C892D5A0016B729 /* IndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndicatorViewController.xib; sourceTree = "<group>"; };
@@ -766,6 +770,7 @@
 				F63F10611C892C440016B729 /* Activity Indicator */,
 				DF101BDA1C6C163C0006B4D3 /* Tab Naviagation */,
 				F6D23CC91C911C6F00482B32 /* No Internet Access */,
+				F63D5B331C9B908000A12F83 /* Audio Effects */,
 				DF6B705D1C7AE31200B655B6 /* User Details */,
 				F6CC20591C76D4EE0033CF70 /* PlayTrack */,
 				F64802251C75BBC000F6F083 /* Track Details */,
@@ -787,6 +792,15 @@
 				DF16A0B71C754FD1006E4019 /* Recording */,
 			);
 			name = Recording;
+			sourceTree = "<group>";
+		};
+		F63D5B331C9B908000A12F83 /* Audio Effects */ = {
+			isa = PBXGroup;
+			children = (
+				F63D5B411C9B90B300A12F83 /* AudioEffectsViewController.swift */,
+				F63D5B421C9B90B300A12F83 /* AudioEffectsViewController.xib */,
+			);
+			name = "Audio Effects";
 			sourceTree = "<group>";
 		};
 		F63F10611C892C440016B729 /* Activity Indicator */ = {
@@ -1160,6 +1174,7 @@
 				DF526F741C6D9EBC009971FF /* AllMembersTableViewController.xib in Resources */,
 				DFF4CBBE1C6B0BD2008973D3 /* LaunchScreen.storyboard in Resources */,
 				DF101C041C6C46D10006B4D3 /* MyProfileViewController.xib in Resources */,
+				F63D5B441C9B90B300A12F83 /* AudioEffectsViewController.xib in Resources */,
 				FBA7EBF11C87D079007AC17A /* tsik.wav in Resources */,
 				DF6B70651C7AEA0400B655B6 /* UserTracksTableViewCell.xib in Resources */,
 				F6283F4F1C8FC144000970D6 /* TrackDetailsViewController.xib in Resources */,
@@ -1254,6 +1269,7 @@
 				FB4125071C86ADB4007EC0D5 /* ImportViewController.swift in Sources */,
 				DF101BE61C6C18C00006B4D3 /* LibrariesTableViewController.swift in Sources */,
 				F610F73D1C8FAB3100E00D85 /* PlayerTableViewCell.swift in Sources */,
+				F63D5B431C9B90B300A12F83 /* AudioEffectsViewController.swift in Sources */,
 				FBA1A9EE1C86A417005A8F0B /* Capture.swift in Sources */,
 				F6B5FB981C76B20D001B8868 /* SignUpViewController.swift in Sources */,
 				F6283F501C8FC144000970D6 /* CommentTableViewCell.swift in Sources */,

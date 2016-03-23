@@ -26,13 +26,13 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ug-Q1-ORb">
-                    <rect key="frame" x="8" y="26" width="35" height="39"/>
+                    <rect key="frame" x="8" y="26" width="35" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="39" id="7Uf-A8-8Gd"/>
+                        <constraint firstAttribute="height" constant="35" id="7Uf-A8-8Gd"/>
                         <constraint firstAttribute="width" constant="35" id="bS1-Q8-6Sj"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <state key="normal" title="X">
+                    <state key="normal" backgroundImage="close-btn">
                         <color key="titleColor" red="0.79607843140000001" green="0.28235294119999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -53,4 +53,7 @@
             <point key="canvasLocation" x="502" y="439.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="close-btn" width="1082" height="1075"/>
+    </resources>
 </document>
